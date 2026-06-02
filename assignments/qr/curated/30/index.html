@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qr Positioning</title>   
+    <link rel="stylesheet" href="123456.css" />
+</head>
+<body>
+    <h1>QR Positionining</h1>
+    <div id="mapContainer">
+        <img src="map.png" id="map" alt ="map" />
+        <div id="marker"></div>
+    </div>
+    <button id="btn" onclick="toggleScanner()">SCAN</button> <!-- TASK " : HERE IS THE BUTTON -->
+    <!--TASK 3: Creating "placeholders" for values from Javascript (will be updated dynamically)-->
+    <div id="inventoryBox"> <!--creating a box for visual purposes -->
+        <h2>Inventory</h2>
+        <p id="itemName"></p> <!--p == individual item -->
+        <p id="itemStock"></p>
+        <p id="itemPrice"></p>
+    </div>
+
+    
+    <div id="camera"></div>
+
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script src="123456.js"></script> <!--ctsl enter to access file VERY USEFULto jump to files-->
+</body>
+</html>

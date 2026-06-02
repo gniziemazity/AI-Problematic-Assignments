@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)file:///D:/Python%20Karelia%20UAS/Code/Web%20progarmming/week2/lecture%201/XXX.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>Chess Board</title>
+        <style>
+            /* styling by ID */
+            #chess-board {
+                width: 450px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            /* CSS class */
+            .cell {
+                height: 45px;
+                width: 50px;
+                /* commented styling - not in use - just an example 
+                margin: 10px;
+                padding: 5px; */
+                border: 6px solid gray;
+                border-radius: 7px;
+                box-sizing: border-box; /* size includes padding and border */
+            }
+            .light {
+                background-color: rgb(223,66,66);
+            }
+            .dark {
+                background-color: rgb(173,44,5);
+            }
+            .half-width{
+                width:25px;
+            }
+        </style>
+    <style type="text/css" id="operaUserStyle"></style></head>
+    <body>
+        <h1>Chess Board</h1>
+
+        <div id="chess-board">
+            <!-- Row 1 (light start, dark end) -->
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light half-width"></div>
+
+            <!-- Row 2 (dark start, light end) -->
+            <div class="cell light half-width"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+
+            <!-- Row 3 (light start, dark end) -->
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light half-width"></div>
+
+            <!-- Row 4 (dark start, light end) -->
+            <div class="cell light half-width"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+
+            <!-- Row 5 (light start, dark end) -->
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light half-width"></div>
+
+            <!-- Row 6 (dark start, light end) -->
+            <div class="cell light half-width"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+
+            <!-- Row 7 (light start, dark end) -->
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light half-width"></div>
+
+            <!-- Row 8 (dark start, light end) -->
+            <div class="cell light half-width"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+        </div>
+
+        <!-- div with Inline Style (not recommended) 
+        <div style="
+            height: 50px;
+            background-color: black;
+            width: 50px;
+        "></div> -->
+
+        <a href="https://www.w3schools.com/" target="_blank">
+            Visit W3Schools.com!
+        </a>
+    
+</body></html>

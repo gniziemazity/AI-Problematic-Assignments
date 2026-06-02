@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    background: #1a1a2e;
+    color: #eee;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #e0e0ff;
+}
+
+#controls {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+#controls label {
+    color: #aaa;
+}
+
+#speed-slider {
+    accent-color: #6c63ff;
+    width: 150px;
+    cursor: pointer;
+}
+
+#speed-display {
+    color: #6c63ff;
+    font-weight: bold;
+    min-width: 30px;
+}
+
+#vis-container {
+    position: relative;
+    width: 600px;
+    height: 220px;
+}
+
+#vis-123456 {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    background: #16213e;
+    border-radius: 8px;
+    padding: 10px 8px 0 8px;
+    box-sizing: border-box;
+}
+
+.bar {
+    flex: 1;
+    background: linear-gradient(to top, #6c63ff, #a29bfe);
+    margin: 0px 1px;
+    border-radius: 2px 2px 0 0;
+    transition: height 0.05s;
+}
+
+.bar.comparing {
+    background: linear-gradient(to top, #fd79a8, #e84393);
+}
+
+#motorcycle {
+    position: absolute;
+    font-size: 28px;
+    top: 0;
+    left: -40px;
+    display: none;
+    filter: drop-shadow(0 0 8px rgba(108, 99, 255, 0.8));
+    transition: left 0.05s linear;
+    z-index: 10;
+    pointer-events: none;
+    transform: scaleX(1);
+}
+
+#status {
+    margin-top: 14px;
+    font-size: 13px;
+    color: #888;
+    height: 18px;
+}

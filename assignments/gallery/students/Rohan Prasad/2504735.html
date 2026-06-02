@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lesson</title>
+</head>
+<body>
+    <div id="container">
+        My first Emmet abbreviation:
+        <ol>
+            <li>! (HTML boilerplate)</li>
+            <li>div#container</li>
+            <li>ol>li*3</li>
+        </ol>
+        (all followed by Tab/Enter)
+    </div>
+
+    <canvas id="Canvas" width="1000" height="200"></canvas>
+
+    <script src = "dog.js"></script>
+    <script src = "cat.js"></script>
+    <script src = "script.js"></script>
+
+    <!-- sound-->
+     <audio id="catSound" src="meow.mp3"></audio>
+     <audio id="dogSound" src="dog.mp3"></audio>
+
+
+    <script>
+        myNumber = 25.2; //never define a variable without var, let, or const
+        console.log(myNumber);
+
+
+        const myString = "I study at Karelia-UAS";
+        console.log(myString);
+
+        let myBoolean = true;
+        var oppositeBoolean = !myBoolean; // let and const are preferred over var
+        
+        console.log(myBoolean, oppositeBoolean);// accepts multiple parameters
+        myBoolean = false;
+        oppositeBoolean = !myBoolean;
+        console.log(myBoolean, oppositeBoolean);
+        
+        console.log(!42, !"ABC", ![]);
+        console.log(!null, !undefined, !0, !""); //Zero is "falsy"
+
+        //arrays are like python lists
+        const myArray = [1, 2, 3, "Karelia-UAS", true, null];
+        myArray.length = 0; //empties the array
+        myArray[0] = 9;
+        myArray[1] = 8;
+        myArray[2] = 7;
+        // myArray = [1, 2, 3]; ERROR! Program would fail here!
+        console.log(myArray);
+
+        try {
+            myArray = [1, 2, 3]; //ERROR! Program would fail here!
+        } catch (error) {
+            console.error(error);
+        }
+
+
+        myArray.push(6);
+        myArray.push(11);
+        myArray.sort(function(a,b) {return a - b}); //sorts in ascending order
+        myArray.sort(function(a,b) {return b - a}); //sorts in descending order
+        myArray.sort();
+
+        console.log(myArray);
+
+
+        //objects are like python dictionaries
+
+        // const dog = {
+        //     name: "Max",
+        //     age: 5,
+        //     furr: "black",
+        //     eyes: "brown",
+        // };
+        // console.log(dog);
+        // console.table(dog); //prints the object in a table format
+        // console.log(dog.name); //accessing a property of the object
+        // dog.name ="charlie";
+        // console.log(dog["name"]);
+
+
+        // const anotherDog =  new Dog( "Rex",7,"brown","black");
+        // console.log(anotherDog);
+        // anotherDog.talk(); //calls the talk method of the Dog class
+
+        // const canvas = anotherDog.render();
+        // container.appendChild(canvas); //adds the canvas element to the container div
+
+        // const cat = {
+        //     name: "Whiskers",
+        //     age: 5,
+        //     furr: "black",
+        //     eyes: "brown",
+        // };
+
+        // console.log(cat);
+        // console.table(cat); //prints the object in a table format
+        // console.log(cat.name); //accessing a property of the object
+        // cat.name ="fluffy";
+        // console.log(cat["name"]);
+
+
+        // const anotherCat =  new Cat( "Fluffy",7,"brown","black");
+        // console.log(anotherCat);
+        // anotherCat.talk(); //calls the talk method of the Cat class
+
+        // const canvas2 = anotherCat.render();
+        // container.appendChild(canvas2); //adds the canvas element to the container div
+
+
+
+
+
+        /*
+        no need for document.getElementById("container") 
+        ids that are valid JS names are automatically global variables
+        invalid names:
+        * start with a number
+        * contain spaces or other characters (like -)
+        */
+        
+
+        let a = 5;
+        let b = 2;
+        console.log(a + b);
+
+        a = "5";
+        console.log(a + b); //string concatenation, not addition
+
+        console.log(a - b); //string is converted to number, subtraction works as expected
+        console.log(a * b); //string is converted to number, multiplication works as expected
+        console.log(a / b); //string is converted to number, division works as expected
+        console.log(a % b); //string is converted to number, modulus works as expected
+        console.log(a ** b); //string is converted to number, exponentiation works as expected
+        console.log(Math.pow(a, b)); //string is converted to number, exponentiation works as expected  
+        console.log(Math.sqrt(b)); //string is converted to number, square root works as expected
+        console.log(Math.pow(b, 0.5)); //string is converted to number, square root works as expected
+        console.log(b ** 0.5); //string is converted to number, square root works as expected   
+
+
+        a = Number(a) + 5;
+
+        console.log(a);
+
+        a += 5; //shorthand for a = a + 5
+        a *= 2;
+        a /=3;
+        a %= 4;
+        a **= 10;
+        console.log(a);
+
+
+
+        const s1 = "Welcome to Karelia-UAS!";
+        const s2 = 'Welcome to Karelia-UAS!';
+        const s3 = "welcome to \"Karelia-UAS\"!"; //escape character with \
+        console.log(s1, s2, s3);
+
+        const age = 23;
+        console.log("I am " + age + " years old."); //string concatenation
+        console.log(`I am ${age} years old.`); //template literal, allows for string interpolation
+
+
+        let today = new Date();
+        console.log(today);
+        let someDate = new Date("August 24, 2025");
+        console.log(someDate);
+
+        console.log(today.getDay()); //0-6, 0 is Sunday
+        switch (today.getDay()) {
+            case 1: console.log("Monday"); break;
+            case 2: console.log("Tuesday"); break;
+            case 3: console.log("Wednesday"); break;
+            case 4: console.log("Thursday"); break;
+            case 5: console.log("Friday"); break;
+            case 6: console.log("Saturday"); break;
+            default: console.log("Weekend"); break;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!--The game works as expexted but without rules.There is no concept of 
+turns,either side can move any piece at any time.There is no any legal 
+moves or whose turn is it.-->>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess 123456</title>
+        <style>
+            .cell  { 
+                border: 2px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+            }
+             
+            /*I have changed the .light colour of chess board because 
+            the white piece of chess has disappeared due to white background*/
+            .light { background-color: rgba(192, 186, 186, 0.874); }
+            .dark  { background-color: gray;  }
+
+            #chess-board {
+                width: 400px;
+                height: 400px;
+                display: grid;
+                grid-template-rows: repeat(8, 1fr); /* 1 fraction */
+                grid-template-columns: repeat(8, 1fr);
+            }
+
+            img {
+                width: 50%;
+                
+            }
+            .invert-color {
+                filter: invert(100%);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chess Game</h1>
+
+        <div id="chess-board">
+            <div class="cell light"><img src="images/p2.png" /></div>
+            <div class="cell dark"><img src="images/p5.png"/></div>
+            <div class="cell light"> <img src="images/p6.png" /></div>
+            <div class="cell dark"><img src="images/p3.png" /></div>
+            <div class="cell light"><img src="images/p4.png" /></div>
+            <div class="cell dark"><img src="images/p6.png" /></div>
+            <div class="cell light"><img src="images/p5.png" /></div>
+            <div class="cell dark"><img src="images/p2.png" /></div>
+            
+            <div class="cell dark"><img src="images/p1.png" /></div>
+            <div class="cell light"><img src="images/p1.png" /></div>
+            <div class="cell dark"><img src="images/p1.png" /></div>
+            <div class="cell light"><img src="images/p1.png" /></div>
+            <div class="cell dark"><img src="images/p1.png" /></div>
+            <div class="cell light"><img src="images/p1.png" /></div>
+            <div class="cell dark"><img src="images/p1.png" /></div>
+            <div class="cell light"><img src="images/p1.png" /></div>
+            
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            
+            <div class="cell light"><img src="images/p1.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="images/p1.png" class="invert-color"/></div>
+            <div class="cell light"><img src="images/p1.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="images/p1.png" class="invert-color"/></div>
+            <div class="cell light"><img src="images/p1.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="images/p1.png" class="invert-color"/></div>
+            <div class="cell light"><img src="images/p1.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="images/p1.png" class="invert-color"/></div>
+            
+            <div class="cell dark"><img src="images/p2.png"class="invert-color" /></div>
+            <div class="cell light"><img src="images/p5.png" class="invert-color"/></div>
+            <div class="cell dark"> <img src="images/p6.png" class="invert-color"/></div>
+            <div class="cell light"><img src="images/p3.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="images/p4.png" class="invert-color"/></div>
+            <div class="cell light"><img src="images/p6.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="images/p5.png" class="invert-color"/></div>
+            <div class="cell light"><img src="images/p2.png" class="invert-color"/></div>
+        </div>
+
+        <script>
+            let selectedPiece = null;
+            const cells = document.getElementsByClassName("cell");
+            console.log(cells);
+
+            //This is 5th method number from video.
+
+            for (const cell of cells) {
+                cell.onclick = function () { // anonymous function
+                    handleClick(cell);
+                };
+            }
+
+            function handleClick(element) {
+                for (const cell of cells) {
+                    cell.style.border = "";
+                }
+                if (selectedPiece != null) {
+                    element.replaceChildren(selectedPiece);
+                    selectedPiece = null;
+                } else if (element.children.length > 0) {
+                    selectedPiece = element.children[0];
+                    element.style.border = "4px solid red";
+                }
+            }
+        </script>
+    </body>
+</html>

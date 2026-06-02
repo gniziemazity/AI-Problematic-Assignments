@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--2. Problem that I noted was the colour, I changed the background and inversion % a bit, notes in the code-->
+<html> 
+    <head>
+        <title>Chess 123456 </title>
+        <style>
+            .cell { 
+                border: 2px solid black; 
+                display: flex;
+                align-items: center;
+                justify-content: center; /* these lines make the chess images be centered in cells!*/
+            }
+            .light { background-color: ivory; } /*swapped to ivory instead of pure white, makes the white pieces visible*/
+            .dark { background-color: gray; }
+
+            #chess-board {
+                width: 400px;
+                height: 400px;
+                display: grid; /*creates an invisivble grid that can be used as a foundation*/
+                grid-template-rows: repeat(8, 1fr); /*1fr means 1 fraction */
+                grid-template-columns: repeat(8, 1fr) /* these additions have created a grid*/
+            }
+
+            img {
+                width: 50%; /*50% of the grid cell it is on */
+                 /*this makes all the images have specific size, in this case it works due to chess pieces*/
+                 /*please do not do this trick in "normal" works, it will alter ALL images, including banners etc.*/
+            }
+
+            .invert-color { /*invert swapped from 100% to 90%, the white pieces would have blended too much*/
+                filter: invert(90%) /* this can be used to invert the chess piece colours!*/
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chess Game</h1>
+
+        <div id="chess-board">
+            <div class="cell light">
+                <img src="pieces/p2.png" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p5.png"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p6.png"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p3.png"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p4.png"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p6.png"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p5.png"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p2.png"/>
+            </div>
+
+            <div class="cell dark">
+                <img src="pieces/p1.png"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png"/>
+            </div>
+
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+
+            <div class="cell light"> 
+                <img src="pieces/p1.png" class = "invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class = "invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" class = "invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class = "invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" class = "invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class = "invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" class = "invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class = "invert-color"/>
+            </div>
+
+            <div class="cell dark">
+                <img src="pieces/p2.png" class = "invert-color" />
+            </div>
+            <div class="cell light">
+                <img src="pieces/p5.png" class = "invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p6.png" class = "invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p3.png" class = "invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p4.png" class = "invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p6.png" class = "invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p5.png" class = "invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p2.png" class = "invert-color"/>
+            </div>
+
+        </div>
+
+        <script>
+            /*this is where the magic happens. it is java   SCRIPT. JAVASCRIPT. NOT JAVA. */
+            let selectedPiece = null; /*let can be read as "allow for alternations"*/
+            const cells = document.getElementsByClassName("cell"); /*const means "stay constant" (please dont mess this up)*/
+            console.log(cells);
+
+            /* Section 3 bit: this for of loop appears to be Method 5 from the video */
+            for (const cell of cells) {
+                cell.onclick = function () { /*yes, a function inside a function to fix an issue*/
+                handleClick(cell); 
+                }; /*it's an anonymous function, javascript wizardry- if this is not done it would mess the handle up*/
+            }
+
+
+            function handleClick(element) {
+            for (const cell of cells) {
+                cell.style.border = ""; /*this makes it so that clicking new cell removes red from current*/
+            }
+            if (selectedPiece != null) {
+                element.replaceChildren(selectedPiece)
+                selectedPiece = null;
+            } else if (element.children.length > 0) {
+                selectedPiece = element.children[0]; /* if else lines here handle moving / eating the cell's child and taking its place.       (in the program)*/
+            }
+            element.style.border = "4px solid red"; /* red border to the clicked cell*/
+            }
+        </script>
+    </body>
+</html>

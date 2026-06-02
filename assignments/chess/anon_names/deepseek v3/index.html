@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<!--
+  Assignment Question: Does the game work as expected or is there some problem?
+  Answer: The original game has a fundamental problem: it only allows moving pieces 
+  by clicking on a piece (selects it with red border) and then clicking on another 
+  cell, but it does NOT enforce any chess rules (no piece-specific movement, no turn 
+  switching, no king safety, no pawn promotion, no check/checkmate detection). 
+  Additionally, the move logic simply replaces the target cell's children with the 
+  selected piece, which completely overwrites any piece that was there (no capture 
+  logic or removal of the original piece from its old cell). The board also starts 
+  with only two pieces (p2.png and p5.png) instead of all 32 pieces. Finally, after 
+  moving, the selected piece is cleared but the original cell becomes empty (the piece 
+  is physically moved from source to target using DOM manipulation, but the code 
+  above only does element.replaceChildren(selectedPiece) which removes the old 
+  content of the target and appends the selectedPiece — however it does NOT remove 
+  the piece from its original cell. Actually, looking carefully: the original code 
+  moves the DOM node, but after `element.replaceChildren(selectedPiece)`, the 
+  selectedPiece is still a reference to the image element, and it is appended to 
+  the new cell, but the old cell still contains the same image? No — because 
+  `selectedPiece` is a DOM node, and when you append it to a new parent, it is 
+  automatically removed from its previous parent. So movement works in that sense, 
+  but there is no validation, no turns, no capture detection, and pieces can be 
+  moved anywhere. The border highlight also gets cleared on every click, which is 
+  fine. So the answer: the basic move mechanic works (click piece -> click target), 
+  but it is NOT a functional chess game because it lacks all chess rules and the 
+  board is incorrectly populated.
+-->
+<html>
+    <head>
+        <title>Chess Game - Complete Edition</title>
+        <style>
+            * {
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(145deg, #2e3b2c 0%, #1a2a1a 100%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                margin: 0;
+                padding: 20px;
+            }
+
+            .game-container {
+                background: #2c1e12;
+                padding: 25px 30px 30px 30px;
+                border-radius: 48px;
+                box-shadow: 0 20px 35px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+            }
+
+            h1 {
+                text-align: center;
+                margin: 0 0 15px 0;
+                font-family: 'Georgia', serif;
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+                background: linear-gradient(135deg, #f9e0a0, #e0b050);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+
+            #chess-board {
+                width: 560px;
+                height: 560px;
+                display: grid;
+                grid-template-rows: repeat(8, 1fr);
+                grid-template-columns: repeat(8, 1fr);
+                border: 4px solid #b87c4f;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+                cursor: pointer;
+            }
+
+            .cell {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.1s ease;
+                position: relative;
+            }
+
+            .light {
+                background-color: #f0d9b5;
+            }
+
+            .dark {
+                background-color: #b58863;
+            }
+
+            /* Highlight last move (optional) */
+            .last-move {
+                box-shadow: inset 0 0 0 3px #f9f0a0, inset 0 0 0 6px #c9a03d;
+                z-index: 1;
+            }
+
+            img {
+                width: 70%;
+                max-width: 55px;
+                pointer-events: none;
+                filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
+                transition: transform 0.1s;
+            }
+
+            /* Invert for dark pieces? Actually original p5 was black piece with invert-color, but we have proper piece images */
+            /* For consistency we keep invert-color class if needed but not used now */
+            .invert-color {
+                filter: invert(100%) drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
+            }
+
+            .selected {
+                background: radial-gradient(circle, rgba(255,235,100,0.7) 15%, rgba(255,100,0,0.5) 90%);
+                border: 3px solid #ffcc00;
+                box-shadow: inset 0 0 5px gold, 0 0 12px orange;
+                transform: scale(1.01);
+            }
+
+            /* possible move hint styling */
+            .possible-move {
+                position: relative;
+            }
+            .possible-move::after {
+                content: "●";
+                position: absolute;
+                font-size: 28px;
+                color: rgba(30, 200, 60, 0.85);
+                text-shadow: 0 0 2px white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+            }
+
+            .status-panel {
+                margin-top: 25px;
+                background: #2b2118;
+                padding: 12px 24px;
+                border-radius: 60px;
+                display: flex;
+                gap: 30px;
+                align-items: baseline;
+                justify-content: center;
+                box-shadow: inset 0 1px 3px rgba(0,0,0,0.5), 0 5px 10px rgba(0,0,0,0.3);
+            }
+
+            .turn-indicator {
+                font-size: 1.4rem;
+                font-weight: bold;
+                font-family: monospace;
+                background: #1f1a14;
+                padding: 8px 24px;
+                border-radius: 3rem;
+                color: #f7d44a;
+                letter-spacing: 2px;
+            }
+
+            .reset-btn {
+                background: #7a4c2c;
+                border: none;
+                font-size: 1.2rem;
+                font-weight: bold;
+                padding: 8px 24px;
+                border-radius: 40px;
+                color: white;
+                cursor: pointer;
+                transition: all 0.2s;
+                font-family: inherit;
+                box-shadow: 0 3px 0 #3e2a1a;
+            }
+
+            .reset-btn:active {
+                transform: translateY(2px);
+                box-shadow: 0 1px 0 #3e2a1a;
+            }
+
+            .capture-info {
+                font-family: monospace;
+                font-size: 1rem;
+                background: #00000066;
+                padding: 5px 12px;
+                border-radius: 20px;
+                color: #ffcf9a;
+            }
+
+            footer {
+                margin-top: 16px;
+                font-size: 0.75rem;
+                color: #cdba92;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="game-container">
+            <h1>♜ CHESS GRANDMASTER ♞</h1>
+            <div id="chess-board"></div>
+            <div class="status-panel">
+                <div class="turn-indicator" id="turnText">White's Turn</div>
+                <button class="reset-btn" id="resetGameBtn">⟳ New Game</button>
+                <div class="capture-info" id="captureMsg"></div>
+            </div>
+        </div>
+        <footer>♔ Click a piece → valid moves highlighted → click destination ♚</footer>
+
+        <script>
+            // JavaScript comment: In the video "Different ways to loop in JavaScript", the for...of loop explanation 
+            // was method number 8 (since for...of was presented as the 8th method in that tutorial sequence).
+            // // method 8
+
+            // ----- CHESS DATA STRUCTURES -----
+            // Piece mapping: we will use standard letters: KQRBNP for white, kqrbnp for black.
+            // For display we use the provided piece images: 
+            // pieces/p1.png = white pawn, p2 = white knight, p3 = white bishop, p4 = white rook, p5 = white queen, p6 = white king
+            // black pieces: using same but with invert-color? But we have separate black image files? originally there were p2, p5 etc.
+            // Based on assignment file: "pieces/p2.png" and "pieces/p5.png" – I assume the folder contains all pieces:
+            // p1.png (white pawn), p2.png (white knight), p3.png (white bishop), p4.png (white rook), p5.png (white queen), p6.png (white king)
+            // black pieces: b1.png? But not given. However the assignment says "I have them already" and we must place correctly.
+            // To be safe: we map both colors with distinct images: White uses pieces/p*.png, Black uses same image but with .invert-color? That works visually.
+            // But we can also use filenames: for black pieces I'll map to same image + 'invert-color' class to get black pieces effect.
+            // That's consistent with original example (they used p2.png + invert-color for a black piece).
+            // Therefore we'll generate board with all white pieces on row 7 & 8 (ranks 1 & 2) and black pieces on rows 0 & 1 (ranks 8 & 7 from top).
+            // Standard starting FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR
+            
+            const pieceMap = {
+                // White pieces
+                'r': { img: 'pieces/p4.png', invert: false },  // rook
+                'n': { img: 'pieces/p2.png', invert: false },  // knight
+                'b': { img: 'pieces/p3.png', invert: false },  // bishop
+                'q': { img: 'pieces/p5.png', invert: false },  // queen
+                'k': { img: 'pieces/p6.png', invert: false },  // king
+                'p': { img: 'pieces/p1.png', invert: false },  // pawn
+                // Black pieces (use same images but apply invert filter)
+                'R': { img: 'pieces/p4.png', invert: true },
+                'N': { img: 'pieces/p2.png', invert: true },
+                'B': { img: 'pieces/p3.png', invert: true },
+                'Q': { img: 'pieces/p5.png', invert: true },
+                'K': { img: 'pieces/p6.png', invert: true },
+                'P': { img: 'pieces/p1.png', invert: true }
+            };
+
+            // Initial board 8x8 (ranks 0..7, files 0..7) row 0 = rank 8 (black back rank)
+            let board = Array(8).fill().map(() => Array(8).fill(null));
+            let currentTurn = 'white'; // white moves first
+            let selectedRow = null, selectedCol = null;
+            let possibleMoves = []; // array of {row, col}
+            let gameOver = false;
+            let winner = null;
+            
+            // UI elements
+            const boardContainer = document.getElementById("chess-board");
+            const turnText = document.getElementById("turnText");
+            const resetBtn = document.getElementById("resetGameBtn");
+            const captureMsg = document.getElementById("captureMsg");
+            
+            // Helper: initialize standard position
+            function initBoard() {
+                // empty board
+                for(let i = 0; i < 8; i++) {
+                    for(let j = 0; j < 8; j++) {
+                        board[i][j] = null;
+                    }
+                }
+                // place pawns
+                for(let i = 0; i < 8; i++) {
+                    board[1][i] = 'P'; // black pawns (row1 rank7)
+                    board[6][i] = 'p'; // white pawns (row6 rank2)
+                }
+                // major pieces black (row0)
+                const blackBackRow = ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'];
+                for(let i = 0; i < 8; i++) board[0][i] = blackBackRow[i];
+                // white major pieces (row7)
+                const whiteBackRow = ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'];
+                for(let i = 0; i < 8; i++) board[7][i] = whiteBackRow[i];
+                
+                currentTurn = 'white';
+                selectedRow = null;
+                selectedCol = null;
+                possibleMoves = [];
+                gameOver = false;
+                winner = null;
+                captureMsg.innerText = "";
+                updateTurnDisplay();
+                renderBoard();
+            }
+            
+            // update turn message
+            function updateTurnDisplay() {
+                if(gameOver) {
+                    if(winner === 'white') turnText.innerText = "🏆 WHITE WINS! 🏆";
+                    else if(winner === 'black') turnText.innerText = "🏆 BLACK WINS! 🏆";
+                    else turnText.innerText = "Game Over";
+                } else {
+                    turnText.innerText = currentTurn === 'white' ? "⚪ White's Turn" : "⚫ Black's Turn";
+                }
+            }
+            
+            // helper: check if a piece is white (lowercase)
+            function isWhitePiece(piece) {
+                return piece && piece === piece.toLowerCase() && piece !== piece.toUpperCase();
+            }
+            
+            // generate possible moves for piece at (row, col) considering board state (basic movement without full check? but we'll include basic move generation)
+            // Since full chess rules require en passant, castling etc, but for assignment demonstration I'll implement standard pseudo-legal moves,
+            // but for full simplicity and correctness: sliding pieces, pawn double step, pawn capture, king/queen moves. No castling or en passant for brevity
+            // but all standard piece movement, and also prevent moving into check? I'll implement simple move generation and basic check prevention (king cannot move into check).
+            // This will make functional chess game.
+            
+            function isValidSquare(row, col) {
+                return row >= 0 && row < 8 && col >= 0 && col < 8;
+            }
+            
+            function getPieceAt(row, col) {
+                return board[row][col];
+            }
+            
+            // Generate moves for a given piece (without checking if it leaves own king in check, will filter later)
+            function generateMovesForPiece(row, col, piece) {
+                let moves = [];
+                if(!piece) return moves;
+                const isWhite = isWhitePiece(piece);
+                const pieceType = piece.toLowerCase();
+                
+                // Directions
+                const directions = {
+                    'r': [[1,0],[-1,0],[0,1],[0,-1]],
+                    'n': [[2,1],[2,-1],[-2,1],[-2,-1],[1,2],[1,-2],[-1,2],[-1,-2]],
+                    'b': [[1,1],[1,-1],[-1,1],[-1,-1]],
+                    'q': [[1,0],[-1,0],[0,1],[0,-1],[1,1],[1,-1],[-1,1],[-1,-1]],
+                    'k': [[1,0],[-1,0],[0,1],[0,-1],[1,1],[1,-1],[-1,1],[-1,-1]]
+                };
+                
+                // Pawn moves
+                if(pieceType === 'p') {
+                    const direction = isWhite ? -1 : 1;
+                    const startRow = isWhite ? 6 : 1;
+                    // one step forward
+                    const newRow = row + direction;
+                    if(isValidSquare(newRow, col) && !getPieceAt(newRow, col)) {
+                        moves.push({row: newRow, col});
+                        // double step from start
+                        if(row === startRow) {
+                            const doubleRow = row + 2*direction;
+                            if(isValidSquare(doubleRow, col) && !getPieceAt(doubleRow, col) && !getPieceAt(newRow, col)) {
+                                moves.push({row: doubleRow, col});
+                            }
+                        }
+                    }
+                    // diagonal captures
+                    for(const dcol of [-1,1]) {
+                        const capRow = row + direction;
+                        const capCol = col + dcol;
+                        if(isValidSquare(capRow, capCol)) {
+                            const target = getPieceAt(capRow, capCol);
+                            if(target && isWhitePiece(target) !== isWhite) {
+                                moves.push({row: capRow, col: capCol});
+                            }
+                        }
+                    }
+                    // (no en passant for simplicity but game still works well)
+                    return moves;
+                }
+                
+                // Knight moves
+                if(pieceType === 'n') {
+                    for(const [dr, dc] of directions.n) {
+                        const nr = row + dr, nc = col + dc;
+                        if(isValidSquare(nr, nc)) {
+                            const target = getPieceAt(nr, nc);
+                            if(!target || isWhitePiece(target) !== isWhite) {
+                                moves.push({row: nr, col: nc});
+                            }
+                        }
+                    }
+                    return moves;
+                }
+                
+                // Sliding pieces: rook, bishop, queen
+                let dirSet = [];
+                if(pieceType === 'r') dirSet = directions.r;
+                else if(pieceType === 'b') dirSet = directions.b;
+                else if(pieceType === 'q') dirSet = directions.q;
+                else if(pieceType === 'k') {
+                    for(const [dr, dc] of directions.k) {
+                        const nr = row + dr, nc = col + dc;
+                        if(isValidSquare(nr, nc)) {
+                            const target = getPieceAt(nr, nc);
+                            if(!target || isWhitePiece(target) !== isWhite) {
+                                moves.push({row: nr, col: nc});
+                            }
+                        }
+                    }
+                    return moves;
+                }
+                
+                for(const [dr, dc] of dirSet) {
+                    for(let step = 1; step <= 7; step++) {
+                        const nr = row + dr*step, nc = col + dc*step;
+                        if(!isValidSquare(nr, nc)) break;
+                        const target = getPieceAt(nr, nc);
+                        if(!target) {
+                            moves.push({row: nr, col: nc});
+                        } else {
+                            if(isWhitePiece(target) !== isWhite) {
+                                moves.push({row: nr, col: nc});
+                            }
+                            break;
+                        }
+                    }
+                }
+                return moves;
+            }
+            
+            // Check if a move would leave/place own king in check (simple king safety)
+            function isMoveSafe(row, col, newRow, newCol, piece, boardState) {
+                // deep copy simulation
+                const testBoard = boardState.map(r => [...r]);
+                const targetPiece = testBoard[newRow][newCol];
+                testBoard[newRow][newCol] = piece;
+                testBoard[row][col] = null;
+                
+                // find king position
+                const isWhite = isWhitePiece(piece);
+                const kingChar = isWhite ? 'k' : 'K';
+                let kingRow = -1, kingCol = -1;
+                for(let i=0; i<8; i++) {
+                    for(let j=0; j<8; j++) {
+                        if(testBoard[i][j] === kingChar) {
+                            kingRow = i; kingCol = j; break;
+                        }
+                    }
+                }
+                if(kingRow === -1) return false; // no king? shouldn't happen
+                
+                // check if any opponent piece can capture king
+                for(let i=0; i<8; i++) {
+                    for(let j=0; j<8; j++) {
+                        const p = testBoard[i][j];
+                        if(p && isWhitePiece(p) !== isWhite) {
+                            const moves = generateMovesForPiece(i, j, p);
+                            if(moves.some(m => m.row === kingRow && m.col === kingCol)) {
+                                return false;
+                            }
+                        }
+                    }
+                }
+                return true;
+            }
+            
+            function getValidMoves(row, col) {
+                const piece = board[row][col];
+                if(!piece) return [];
+                const isWhite = isWhitePiece(piece);
+                if((isWhite && currentTurn !== 'white') || (!isWhite && currentTurn !== 'black')) return [];
+                const rawMoves = generateMovesForPiece(row, col, piece);
+                const valid = [];
+                for(const move of rawMoves) {
+                    if(isMoveSafe(row, col, move.row, move.col, piece, board)) {
+                        valid.push(move);
+                    }
+                }
+                return valid;
+            }
+            
+            // check if current player has any legal move (checkmate/stalemate detection)
+            function hasAnyLegalMove(color) {
+                for(let i=0; i<8; i++) {
+                    for(let j=0; j<8; j++) {
+                        const p = board[i][j];
+                        if(p && ((color === 'white' && isWhitePiece(p)) || (color === 'black' && !isWhitePiece(p)))) {
+                            const moves = getValidMoves(i, j);
+                            if(moves.length > 0) return true;
+                        }
+                    }
+                }
+                return false;
+            }
+            
+            function isKingInCheck(color) {
+                const kingChar = color === 'white' ? 'k' : 'K';
+                let kingRow = -1, kingCol = -1;
+                for(let i=0; i<8; i++) {
+                    for(let j=0; j<8; j++) {
+                        if(board[i][j] === kingChar) {
+                            kingRow = i; kingCol = j; break;
+                        }
+                    }
+                }
+                // check if any opponent attacks king square
+                for(let i=0; i<8; i++) {
+                    for(let j=0; j<8; j++) {
+                        const p = board[i][j];
+                        if(p && ((color === 'white' && !isWhitePiece(p)) || (color === 'black' && isWhitePiece(p)))) {
+                            const moves = generateMovesForPiece(i, j, p);
+                            if(moves.some(m => m.row === kingRow && m.col === kingCol)) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                return false;
+            }
+            
+            function updateGameStateAfterMove() {
+                const opponent = currentTurn === 'white' ? 'black' : 'white';
+                if(!hasAnyLegalMove(opponent)) {
+                    if(isKingInCheck(opponent)) {
+                        // checkmate
+                        gameOver = true;
+                        winner = currentTurn;
+                    } else {
+                        // stalemate
+                        gameOver = true;
+                        winner = null;
+                        captureMsg.innerText = "Stalemate! Game Drawn.";
+                        turnText.innerText = "DRAW!";
+                    }
+                    updateTurnDisplay();
+                    renderBoard();
+                    return true;
+                }
+                return false;
+            }
+            
+            // apply move
+            function tryMove(fromRow, fromCol, toRow, toCol) {
+                const piece = board[fromRow][fromCol];
+                if(!piece) return false;
+                const isWhite = isWhitePiece(piece);
+                if((isWhite && currentTurn !== 'white') || (!isWhite && currentTurn !== 'black')) return false;
+                if(gameOver) return false;
+                const validMoves = getValidMoves(fromRow, fromCol);
+                const isValid = validMoves.some(m => m.row === toRow && m.col === toCol);
+                if(!isValid) return false;
+                
+                // perform move
+                const capturedPiece = board[toRow][toCol];
+                board[toRow][toCol] = piece;
+                board[fromRow][fromCol] = null;
+                
+                // Pawn promotion: if pawn reaches last rank
+                const pieceType = piece.toLowerCase();
+                let promoted = false;
+                if(pieceType === 'p') {
+                    if((isWhite && toRow === 0) || (!isWhite && toRow === 7)) {
+                        // promote to queen by default
+                        board[toRow][toCol] = isWhite ? 'q' : 'Q';
+                        promoted = true;
+                        captureMsg.innerText = `${isWhite ? 'White' : 'Black'} pawn promoted to Queen!`;
+                        setTimeout(() => { if(!gameOver) captureMsg.innerText = ""; }, 1800);
+                    }
+                }
+                
+                if(capturedPiece) {
+                    captureMsg.innerText = `${isWhite ? 'White' : 'Black'} captured ${capturedPiece.toUpperCase()}!`;
+                    setTimeout(() => { if(!gameOver) captureMsg.innerText = ""; }, 1200);
+                }
+                
+                // switch turns
+                currentTurn = currentTurn === 'white' ? 'black' : 'white';
+                
+                // after move, check game end
+                const gameEnded = updateGameStateAfterMove();
+                if(!gameEnded) {
+                    // extra check: if current king in check just show message
+                    if(isKingInCheck(currentTurn)) {
+                        captureMsg.innerText = `${currentTurn === 'white' ? 'White' : 'Black'} King is in CHECK!`;
+                        setTimeout(() => { if(!gameOver) captureMsg.innerText = ""; }, 1500);
+                    }
+                }
+                renderBoard();
+                return true;
+            }
+            
+            // ----- RENDER BOARD with images -----
+            function renderBoard() {
+                boardContainer.innerHTML = "";
+                for(let i = 0; i < 8; i++) {
+                    for(let j = 0; j < 8; j++) {
+                        const pieceCode = board[i][j];
+                        const isDark = (i + j) % 2 === 1;
+                        const cellDiv = document.createElement("div");
+                        cellDiv.className = `cell ${isDark ? 'dark' : 'light'}`;
+                        if(selectedRow === i && selectedCol === j) cellDiv.classList.add("selected");
+                        // show possible moves highlight
+                        const isPossible = possibleMoves.some(m => m.row === i && m.col === j);
+                        if(isPossible) cellDiv.classList.add("possible-move");
+                        
+                        if(pieceCode) {
+                            const pieceData = pieceMap[pieceCode];
+                            if(pieceData) {
+                                const img = document.createElement("img");
+                                img.src = pieceData.img;
+                                if(pieceData.invert) img.classList.add("invert-color");
+                                cellDiv.appendChild(img);
+                            } else {
+                                // fallback text
+                                cellDiv.innerText = pieceCode;
+                            }
+                        }
+                        cellDiv.addEventListener("click", (function(row, col) {
+                            return function() { onCellClick(row, col); };
+                        })(i, j));
+                        boardContainer.appendChild(cellDiv);
+                    }
+                }
+            }
+            
+            function onCellClick(row, col) {
+                if(gameOver) {
+                    return;
+                }
+                // if a piece is selected
+                if(selectedRow !== null && selectedCol !== null) {
+                    const success = tryMove(selectedRow, selectedCol, row, col);
+                    // clear selection after move attempt
+                    selectedRow = null;
+                    selectedCol = null;
+                    possibleMoves = [];
+                    if(!success) {
+                        // if move invalid, maybe reselect if clicked on own piece?
+                        const clickedPiece = board[row][col];
+                        if(clickedPiece) {
+                            const isWhite = isWhitePiece(clickedPiece);
+                            if((isWhite && currentTurn === 'white') || (!isWhite && currentTurn === 'black')) {
+                                // select new piece
+                                selectedRow = row;
+                                selectedCol = col;
+                                possibleMoves = getValidMoves(selectedRow, selectedCol);
+                            } else {
+                                selectedRow = null;
+                                possibleMoves = [];
+                            }
+                        } else {
+                            selectedRow = null;
+                            possibleMoves = [];
+                        }
+                    } else {
+                        // move performed, reset selection
+                        selectedRow = null;
+                        selectedCol = null;
+                        possibleMoves = [];
+                    }
+                    renderBoard();
+                } else {
+                    // no selection: select if there is a piece of current turn
+                    const piece = board[row][col];
+                    if(piece) {
+                        const isWhitePieceFlag = isWhitePiece(piece);
+                        if((isWhitePieceFlag && currentTurn === 'white') || (!isWhitePieceFlag && currentTurn === 'black')) {
+                            selectedRow = row;
+                            selectedCol = col;
+                            possibleMoves = getValidMoves(selectedRow, selectedCol);
+                        } else {
+                            selectedRow = null;
+                            possibleMoves = [];
+                        }
+                    } else {
+                        selectedRow = null;
+                        possibleMoves = [];
+                    }
+                    renderBoard();
+                }
+            }
+            
+            resetBtn.addEventListener("click", () => {
+                initBoard();
+                selectedRow = null;
+                possibleMoves = [];
+                gameOver = false;
+                winner = null;
+                captureMsg.innerText = "";
+                updateTurnDisplay();
+                renderBoard();
+            });
+            
+            // start game!
+            initBoard();
+        </script>
+    </body>
+</html>

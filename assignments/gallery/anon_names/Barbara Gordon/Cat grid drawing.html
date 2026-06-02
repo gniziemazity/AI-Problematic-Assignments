@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Animal Grid</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --card-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 { color: #2c3e50; margin-bottom: 30px; }
+
+        /* 1. THE GRID SYSTEM */
+        #grid {
+            display: grid;
+            /* Creates as many 120px columns as fit on screen */
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* 2. THE ANIMAL BOX STYLE */
+        .animal-box {
+            background: var(--card-white);
+            border-radius: 20px;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid transparent;
+            user-select: none;
+        }
+
+        .animal-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: #3498db;
+        }
+
+        /* The "Pressed" Effect */
+        .animal-box:active {
+            transform: scale(0.9);
+            background-color: #eef2f3;
+        }
+
+        .animal-icon {
+            font-size: 50px;
+            margin-bottom: 5px;
+        }
+
+        .label {
+            font-size: 12px;
+            color: #7f8c8d;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🐾 Interactive Cats and Dogs Grid</h1>
+    <div id="grid"></div>
+
+    <script>
+        // --- THE ANIMAL CLASS ---
+        class Animal {
+            constructor(name, type, soundUrl) {
+                this.name = name;
+                this.type = type;
+                this.audio = new Audio(soundUrl);
+            }
+
+            talk() {
+                console.log(`${this.name} (${this.type}) is making a sound!`);
+                // Reset audio so it can play rapidly on multiple clicks
+                this.audio.currentTime = 0;
+                this.audio.play();
+            }
+        }
+        /*VARIANT 2 (Async/Await) because it is cleaner and handles errors linearly.*/
+        async function fetchData() { // Declare asynchronous function
+            try { // Start error handling block
+                const response = await fetch("https://radufromfinland.com/animals/"); // Pause until request finishes
+                const data = await response.json(); // Pause until JSON is parsed
+                console.log(data); // Log the resulting data array
+                
+                renderGrid(data); // Call function to draw the animals
+            } catch(err) { // If anything fails in the try block
+                console.error(err); // Log the specific error
+            }
+        }
+
+        // --- THE DATA (Variants) ---
+        const CATS = [
+            { icon: '🐱', sound: 'https://www.myinstants.com/media/sounds/kitten-meow.mp3' },
+            { icon: '😸', sound: 'https://www.soundsnap.com/cat_vocalization_short_meow_3' },
+            { icon: '🦁', sound: 'https://www.soundsnap.com/lion_cub_bark_meow_sharp_inquisitive_exclamation_5_5' }
+        ];
+
+        const DOGS = [
+            { icon: '🐶', sound: 'https://www.soundsnap.com/king_charles_cavalier_spaniel_small_dogs_bark_and_growls_1' },
+            { icon: '🐕', sound: 'https://www.myinstants.com/media/sounds/puppy-bark.mp3' },
+            { icon: '🐩', sound: 'https://www.soundsnap.com/epona_bark_single_bright_sharp_loud_playful_wav' }
+        ];
+
+        const gridElement = document.getElementById('grid');
+
+        // --- RENDER FUNCTION ---
+        function createGrid(count) {
+            for (let i = 0; i < count; i++) {
+                const isCat = i % 2 === 0;
+                const pool = isCat ? CATS : DOGS;
+                
+                // Pick a random variant from the pool
+                const variant = pool[Math.floor(Math.random() * pool.length)];
+                
+                // 1. Create the Logic Instance
+                const animal = new Animal(isCat ? "Kitty" : "Puppy", isCat ? "Cat" : "Dog", variant.sound);
+
+                // 2. Create the HTML Element
+                const box = document.createElement('div');
+                box.className = 'animal-box';
+                
+                // Add a random slight rotation for a "hand-drawn" feel
+                const randomRot = (Math.random() * 6 - 3).toFixed(2);
+                box.style.transform = `rotate(${randomRot}deg)`;
+
+                box.innerHTML = `
+                    <div class="animal-icon">${variant.icon}</div>
+                    <div class="label">${isCat ? 'Cat' : 'Dog'}</div>
+                `;
+
+                // 3. Attach the 'onmousedown' event
+                box.onmousedown = () => animal.talk();
+
+                gridElement.appendChild(box);
+            }
+        }
+
+        // Generate 40 boxes on load
+        createGrid(40);
+        /* VARIANT 1: Promises approach
+        fetch("https://radufromfinland.com/animals/") // Start network request
+            .then(function(response) { // Wait for headers
+                return response.json(); // Parse body as JSON
+            })
+            .then(function(data) { // Handle the data
+                console.log(data); // Log data to console
+            })
+            .catch(function(err) { // Handle any errors
+                console.error(err); // Log error to console
+            });
+        */
+    </script>
+</body>
+</html>

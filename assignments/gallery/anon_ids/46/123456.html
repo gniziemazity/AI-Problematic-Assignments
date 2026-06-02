@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals Grid</title>
+</head>
+<body>
+
+<div id="container">
+    <h2>100 Random Animals</h2>
+    <div id="animalGrid"></div>
+</div>
+
+<script src="https://www.radufromfinland.com/dog.js"></script>
+<script src="cat.js"></script>
+
+<script>
+    const animalGrid = document.getElementById("animalGrid");
+
+    async function fetchData() {
+        try {
+            const response = await fetch("https://radufromfinland.com/animals/");
+            const data = await response.json();
+
+            for (let i = 0; i < 100; i++) {
+                const randomAnimal = data[Math.floor(Math.random() * data.length)];
+                let animal;
+
+                if (Math.random() < 0.5) {
+                    // 🐶 DOG (bigger, brownish colors)
+                    animal = new Dog(
+                        randomAnimal.name,
+                        randomAnimal.age,
+                        getRandomColor(["brown", "black", "goldenrod"]),
+                        "black"
+                    );
+                } else {
+                    // 🐱 CAT (smaller, colorful)
+                    animal = new Cat(
+                        randomAnimal.name,
+                        randomAnimal.age,
+                        getRandomColor(["gray", "white", "orange", "pink"]),
+                        "green"
+                    );
+                }
+
+                const canvas = animal.render();
+                animalGrid.appendChild(canvas);
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
+    // 🎨 helper for random colors
+    function getRandomColor(colors) {
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    fetchData();
+</script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    #animalGrid {
+        display: grid;
+        grid-template-columns: repeat(5, 80px);
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    canvas {
+        border: 1px solid #333;
+        background: #fff;
+    }
+</style>
+
+</body>
+</html>

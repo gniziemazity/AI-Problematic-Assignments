@@ -1,0 +1,64 @@
+:root {
+    --theme: #280; /* CSS variable */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: var(--theme);
+    margin-bottom: 20px;
+}
+
+#marker {
+    width: 3vw; /* 3% of viewport width */
+    height: 3vw;
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme);
+    border: 5px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+} /* <-- FIXED closing brace */
+
+#mapContainer {
+    position: relative;
+    display: none;
+}
+
+#camera {
+    width: 100%;
+    max-width: 400px; /* optional for mobile */
+    height: 300px; /* required for camera */
+    display: none; /* initially hidden */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* BUTTON STYLE */
+button {
+    background-color: var(--theme); /* uses CSS variable */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer; /* always include for buttons */
+}
+
+/* HOVER EFFECT */
+button:hover {
+    background-color: #1e6f00; /* darker shade on hover */
+    transform: scale(1.05);
+}
+

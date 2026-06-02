@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+.control-panel {
+    margin-bottom: 20px;
+}
+
+.visualizer-container {
+    position: relative;
+    width: 400px; /* 50 bars * 8px (7px width + 1px margin) */
+    height: 240px;
+}
+
+#motorcycle-track {
+    position: absolute;
+    bottom: 200px; /* Sits right on top of the 200px tall visualizer container */
+    left: 0;
+    width: 100%;
+    height: 30px;
+    pointer-events: none;
+}
+
+#motorcycle {
+    position: absolute;
+    left: -30px; /* Start hidden off-screen to the left */
+    font-size: 24px;
+    transition: left 0.1s linear; /* Smooth movement between bar positions */
+    display: none; /* Hidden until sorting finishes */
+}
+
+#vis-123456 {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.bar {
+    width: 7px;
+    height: 100%;
+    background-color: black;
+    margin: 0px 1px;
+}

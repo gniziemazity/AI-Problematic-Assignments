@@ -1,0 +1,29 @@
+
+            body {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+            }
+            #vis-123456 {
+                height: 200px;
+                display: flex;
+                align-items: flex-end;
+                position: relative;
+            }
+            .bar {
+                width: 7px;
+                background-color: black;
+                margin: 0px 1px;
+               
+            }
+            .emoji{
+                font-size: 20px;
+                transform: scaleX(-1); 
+                position: absolute;  
+                left: -5%;
+                top: 78%;
+                display: none;
+            }
+
+            
+          

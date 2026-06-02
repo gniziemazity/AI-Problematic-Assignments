@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Animals</title>
+
+        <style>
+            #container{
+                display:grid;
+                grid-template-columns: repeat(25, 1fr);
+                gap:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container"></div>
+
+        <audio id="dogSound" preload="auto">
+            <source src="bark.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="catSound" preload="auto">
+            <source src="meow.mp3" type="audio/mpeg">
+        </audio>
+        
+        <script src="dog.js"></script>
+        <script src="cat.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

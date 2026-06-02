@@ -1,0 +1,28 @@
+:root {
+    --theme: #000000; 
+}
+
+#btn {
+    background-color: var(--theme);  /* Black button background */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#btn:hover {
+    background-color: #333333;  /* Dark grey or lighter black on hover */
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+#btn:active {
+    transform: scale(1);  /* Maintain original size on click */
+    background-color: var(--theme);  /* Keep black background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

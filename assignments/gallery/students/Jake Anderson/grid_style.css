@@ -1,0 +1,16 @@
+
+/*Task 2: Styling the grid so that it has outlines */
+  #grid { 
+    display: grid; /* turns div into a grid container */
+    grid-template-columns: repeat(4, 60px); /* creates 4 columns , widthe 60 px */
+    grid-auto-rows: 60px; /* auto height */ 
+    gap: 5px; /* gap between*/ 
+    justify-content: center; /* centers the grid horizontally on the web page */
+  }
+
+  #grid canvas {
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    /* forces the canvas to fit perfectly inside the grid cell*/
+}

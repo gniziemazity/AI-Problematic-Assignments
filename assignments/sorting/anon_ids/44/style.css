@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#visualizer {
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    
+    
+    
+}
+
+#motorcycle {
+    position: absolute;
+    font-size: 35px;
+    display: none;
+    transform: scaleX(-1);
+    
+}
+
+.bar {
+    width: 7px;
+    height: 100%;
+    background-color: black;
+    margin: 0px 1px;
+}

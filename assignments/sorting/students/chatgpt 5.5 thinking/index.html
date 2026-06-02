@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sorting Visualizer</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Sorting Visualizer</h1>
+
+        <div class="controls">
+            <label for="speedSlider">Animation speed:</label>
+            <input id="speedSlider" type="range" min="10" max="300" value="100">
+            <span id="speedValue">100 ms</span>
+        </div>
+
+        <div id="vis-123456">
+            <div id="bars"></div>
+            <div id="motorcycle" aria-label="motorcycle">🏍️</div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+:root {
+    --theme: #280; /* CSS variable */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Arial";
+    color: var(--theme);
+}
+
+#map {
+    width: 100%;
+}
+
+#marker {
+    width: 3vw;
+    height: 3vw;
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme);
+    border: 5px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+#mapContainer {
+    position: relative;
+    display: none;
+}
+
+#camera {
+    width: 100%;
+}
+
+/* Button Styling */
+#btn {
+    background-color: var(--theme);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Arial";
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#btn:hover {
+    cursor: pointer;
+    background-color: #3a0;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+#btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Inventory Display Styling */
+#inventory {
+    display: none;
+    font-family: "Arial";
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid var(--theme);
+    border-radius: 10px;
+    min-width: 250px;
+    background-color: #f9f9f9;
+}
+
+#itemName {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--theme);
+    margin: 10px 0;
+}
+
+#itemStock {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#itemPrice {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}

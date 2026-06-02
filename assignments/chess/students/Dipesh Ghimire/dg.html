@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess Board 2504685</title>
+    <style>
+        #chess-board {
+            width: 400px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .cell {
+            height: 50px;
+            width: 50px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .light { background-color: white; }
+        .dark { background-color: black; }
+        img { width: 40px; }
+        .white-piece { filter: invert(100%); }
+    </style>
+</head>
+
+<body>
+    <h1>Chess Board</h1>
+
+    <div id="chess-board">
+
+        <!-- ROW 1 — BLACK MAJOR PIECES -->
+        <div class="cell light"><img src="pieces/p2.png"></div> <!-- rook -->
+        <div class="cell dark"><img src="pieces/p3.png"></div> <!-- knight -->
+        <div class="cell light"><img src="pieces/p4.png"></div> <!-- bishop -->
+        <div class="cell dark"><img src="pieces/p5.png"></div> <!-- queen -->
+        <div class="cell light"><img src="pieces/p6.png"></div> <!-- king -->
+        <div class="cell dark"><img src="pieces/p4.png"></div> <!-- bishop -->
+        <div class="cell light"><img src="pieces/p3.png"></div> <!-- knight -->
+        <div class="cell dark"><img src="pieces/p2.png"></div> <!-- rook -->
+
+        <!-- ROW 2 — BLACK PAWNS -->
+        <div class="cell dark"><img src="pieces/p1.png"></div>
+        <div class="cell light"><img src="pieces/p1.png"></div>
+        <div class="cell dark"><img src="pieces/p1.png"></div>
+        <div class="cell light"><img src="pieces/p1.png"></div>
+        <div class="cell dark"><img src="pieces/p1.png"></div>
+        <div class="cell light"><img src="pieces/p1.png"></div>
+        <div class="cell dark"><img src="pieces/p1.png"></div>
+        <div class="cell light"><img src="pieces/p1.png"></div>
+
+        <!-- ROW 3 -->
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+
+        <!-- ROW 4 -->
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+
+        <!-- ROW 5 -->
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+
+        <!-- ROW 6 -->
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+
+        <!-- ROW 7 — WHITE PAWNS -->
+        <div class="cell light"><img src="pieces/p1.png" class="white-piece"></div>
+        <div class="cell dark"><img src="pieces/p1.png" class="white-piece"></div>
+        <div class="cell light"><img src="pieces/p1.png" class="white-piece"></div>
+        <div class="cell dark"><img src="pieces/p1.png" class="white-piece"></div>
+        <div class="cell light"><img src="pieces/p1.png" class="white-piece"></div>
+        <div class="cell dark"><img src="pieces/p1.png" class="white-piece"></div>
+        <div class="cell light"><img src="pieces/p1.png" class="white-piece"></div>
+        <div class="cell dark"><img src="pieces/p1.png" class="white-piece"></div>
+
+        <!-- ROW 8 — WHITE MAJOR PIECES -->
+        <div class="cell dark"><img src="pieces/p2.png" class="white-piece"></div>
+        <div class="cell light"><img src="pieces/p3.png" class="white-piece"></div>
+        <div class="cell dark"><img src="pieces/p4.png" class="white-piece"></div>
+        <div class="cell light"><img src="pieces/p5.png" class="white-piece"></div>
+        <div class="cell dark"><img src="pieces/p6.png" class="white-piece"></div>
+        <div class="cell light"><img src="pieces/p4.png" class="white-piece"></div>
+        <div class="cell dark"><img src="pieces/p3.png" class="white-piece"></div>
+        <div class="cell light"><img src="pieces/p2.png" class="white-piece"></div>
+
+    </div>
+
+</body>
+</html>

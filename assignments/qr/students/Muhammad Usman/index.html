@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Positioning</title>
+    <link rel="stylesheet" href="123456.css" />
+</head>
+<body>
+    <h1>QR Positioning</h1>
+
+    <!-- QR Scanner Section -->
+    <div id="qr-reader"></div>  <!-- This is where the camera feed will show -->
+
+    <!-- Display the Item Details after Scanning -->
+    <p id="item-name">Name: </p>
+    <p id="in-stock">In Stock: </p>
+    <p id="price">Price: </p>
+
+    <!-- Button to Start/Stop the QR Scanner -->
+    <button id="btn" onclick="toggleScanner()">SCAN</button>
+
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script src="123456.js"></script>  <!-- Your JavaScript file with QR scanning logic -->
+</body>
+</html>

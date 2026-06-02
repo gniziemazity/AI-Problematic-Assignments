@@ -1,0 +1,3041 @@
+{
+	"token_matching": "ideal",
+	"teacher_files": {
+		"index.html": [
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 460,
+				"end": 461
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 461,
+				"end": 462
+			},
+			{
+				"token": "global",
+				"label": "comment",
+				"start": 463,
+				"end": 469
+			},
+			{
+				"token": "variables",
+				"label": "comment",
+				"start": 470,
+				"end": 479
+			},
+			{
+				"token": "50",
+				"label": "missing",
+				"start": 497,
+				"end": 499,
+				"paired_with": {
+					"file": "script.js",
+					"start": 34,
+					"end": 37,
+					"token": "100",
+					"label": "extra"
+				}
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 607,
+				"end": 608
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 608,
+				"end": 609
+			},
+			{
+				"token": "numbers",
+				"label": "comment",
+				"start": 610,
+				"end": 617
+			},
+			{
+				"token": "between",
+				"label": "comment",
+				"start": 618,
+				"end": 625
+			},
+			{
+				"token": "0",
+				"label": "comment",
+				"start": 626,
+				"end": 627
+			},
+			{
+				"token": "and",
+				"label": "comment",
+				"start": 628,
+				"end": 631
+			},
+			{
+				"token": "1",
+				"label": "comment",
+				"start": 632,
+				"end": 633
+			},
+			{
+				"token": "100",
+				"label": "missing",
+				"start": 893,
+				"end": 896,
+				"paired_with": {
+					"file": "script.js",
+					"start": 852,
+					"end": 855,
+					"token": "120",
+					"label": "extra"
+				}
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 904,
+				"end": 905
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 905,
+				"end": 906
+			},
+			{
+				"token": "+",
+				"label": "comment",
+				"start": 907,
+				"end": 908
+			},
+			{
+				"token": "here",
+				"label": "comment",
+				"start": 909,
+				"end": 913
+			},
+			{
+				"token": "is",
+				"label": "comment",
+				"start": 914,
+				"end": 916
+			},
+			{
+				"token": "string",
+				"label": "comment",
+				"start": 923,
+				"end": 929
+			},
+			{
+				"token": "concatenation",
+				"label": "comment",
+				"start": 930,
+				"end": 943
+			},
+			{
+				"token": "because",
+				"label": "comment",
+				"start": 944,
+				"end": 951
+			},
+			{
+				"token": "the",
+				"label": "comment",
+				"start": 958,
+				"end": 961
+			},
+			{
+				"token": "second",
+				"label": "comment",
+				"start": 962,
+				"end": 968
+			},
+			{
+				"token": "item",
+				"label": "comment",
+				"start": 969,
+				"end": 973
+			},
+			{
+				"token": "\"",
+				"label": "comment",
+				"start": 974,
+				"end": 975
+			},
+			{
+				"token": "%",
+				"label": "comment",
+				"start": 975,
+				"end": 976
+			},
+			{
+				"token": "\"",
+				"label": "comment",
+				"start": 976,
+				"end": 977
+			},
+			{
+				"token": "is",
+				"label": "comment",
+				"start": 978,
+				"end": 980
+			},
+			{
+				"token": "a",
+				"label": "comment",
+				"start": 981,
+				"end": 982
+			},
+			{
+				"token": "string",
+				"label": "comment",
+				"start": 983,
+				"end": 989
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 990,
+				"end": 991
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 991,
+				"end": 992
+			},
+			{
+				"token": "100",
+				"label": "missing",
+				"start": 1557,
+				"end": 1560,
+				"insert_at": {
+					"file": "script.js",
+					"pos": 1523
+				}
+			}
+		]
+	},
+	"student_files": {
+		"index.html": [
+			{
+				"token": "<",
+				"label": "extra",
+				"start": 34,
+				"end": 35
+			},
+			{
+				"token": "meta",
+				"label": "extra",
+				"start": 35,
+				"end": 39
+			},
+			{
+				"token": "charset",
+				"label": "extra",
+				"start": 40,
+				"end": 47
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 47,
+				"end": 48
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 48,
+				"end": 49
+			},
+			{
+				"token": "UTF",
+				"label": "extra",
+				"start": 49,
+				"end": 52
+			},
+			{
+				"token": "-",
+				"label": "extra",
+				"start": 52,
+				"end": 53
+			},
+			{
+				"token": "8",
+				"label": "extra",
+				"start": 53,
+				"end": 54
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 54,
+				"end": 55
+			},
+			{
+				"token": ">",
+				"label": "extra",
+				"start": 55,
+				"end": 56
+			},
+			{
+				"token": "<",
+				"label": "extra",
+				"start": 193,
+				"end": 194
+			},
+			{
+				"token": "label",
+				"label": "extra",
+				"start": 194,
+				"end": 199
+			},
+			{
+				"token": "for",
+				"label": "extra",
+				"start": 200,
+				"end": 203
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 203,
+				"end": 204
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 204,
+				"end": 205
+			},
+			{
+				"token": "speedRange",
+				"label": "extra",
+				"start": 205,
+				"end": 215
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 215,
+				"end": 216
+			},
+			{
+				"token": ">",
+				"label": "extra",
+				"start": 216,
+				"end": 217
+			},
+			{
+				"token": "Animation",
+				"label": "extra",
+				"start": 217,
+				"end": 226
+			},
+			{
+				"token": "Speed",
+				"label": "extra",
+				"start": 227,
+				"end": 232
+			},
+			{
+				"token": ":",
+				"label": "extra",
+				"start": 232,
+				"end": 233
+			},
+			{
+				"token": "<",
+				"label": "extra",
+				"start": 233,
+				"end": 234
+			},
+			{
+				"token": "/",
+				"label": "extra",
+				"start": 234,
+				"end": 235
+			},
+			{
+				"token": "label",
+				"label": "extra",
+				"start": 235,
+				"end": 240
+			},
+			{
+				"token": ">",
+				"label": "extra",
+				"start": 240,
+				"end": 241
+			},
+			{
+				"token": "<",
+				"label": "extra",
+				"start": 246,
+				"end": 247
+			},
+			{
+				"token": "input",
+				"label": "extra",
+				"start": 247,
+				"end": 252
+			},
+			{
+				"token": "type",
+				"label": "extra",
+				"start": 253,
+				"end": 257
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 257,
+				"end": 258
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 258,
+				"end": 259
+			},
+			{
+				"token": "range",
+				"label": "extra",
+				"start": 259,
+				"end": 264
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 264,
+				"end": 265
+			},
+			{
+				"token": "id",
+				"label": "extra",
+				"start": 266,
+				"end": 268
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 268,
+				"end": 269
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 269,
+				"end": 270
+			},
+			{
+				"token": "speedRange",
+				"label": "extra",
+				"start": 270,
+				"end": 280
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 280,
+				"end": 281
+			},
+			{
+				"token": "min",
+				"label": "extra",
+				"start": 282,
+				"end": 285
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 285,
+				"end": 286
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 286,
+				"end": 287
+			},
+			{
+				"token": "10",
+				"label": "extra",
+				"start": 287,
+				"end": 289
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 289,
+				"end": 290
+			},
+			{
+				"token": "max",
+				"label": "extra",
+				"start": 291,
+				"end": 294
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 294,
+				"end": 295
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 295,
+				"end": 296
+			},
+			{
+				"token": "500",
+				"label": "extra",
+				"start": 296,
+				"end": 299
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 299,
+				"end": 300
+			},
+			{
+				"token": "value",
+				"label": "extra",
+				"start": 301,
+				"end": 306
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 306,
+				"end": 307
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 307,
+				"end": 308
+			},
+			{
+				"token": "100",
+				"label": "extra",
+				"start": 308,
+				"end": 311
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 311,
+				"end": 312
+			},
+			{
+				"token": ">",
+				"label": "extra",
+				"start": 312,
+				"end": 313
+			},
+			{
+				"token": "<",
+				"label": "extra",
+				"start": 318,
+				"end": 319
+			},
+			{
+				"token": "div",
+				"label": "extra",
+				"start": 319,
+				"end": 322
+			},
+			{
+				"token": "id",
+				"label": "extra",
+				"start": 323,
+				"end": 325
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 325,
+				"end": 326
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 326,
+				"end": 327
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 327,
+				"end": 337
+			},
+			{
+				"token": "-",
+				"label": "extra",
+				"start": 337,
+				"end": 338
+			},
+			{
+				"token": "container",
+				"label": "extra",
+				"start": 338,
+				"end": 347
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 347,
+				"end": 348
+			},
+			{
+				"token": ">",
+				"label": "extra",
+				"start": 348,
+				"end": 349
+			},
+			{
+				"token": "<",
+				"label": "extra",
+				"start": 349,
+				"end": 350
+			},
+			{
+				"token": "/",
+				"label": "extra",
+				"start": 350,
+				"end": 351
+			},
+			{
+				"token": "div",
+				"label": "extra",
+				"start": 351,
+				"end": 354
+			},
+			{
+				"token": ">",
+				"label": "extra",
+				"start": 354,
+				"end": 355
+			},
+			{
+				"token": "<",
+				"label": "comment",
+				"start": 356,
+				"end": 357
+			},
+			{
+				"token": "!",
+				"label": "comment",
+				"start": 357,
+				"end": 358
+			},
+			{
+				"token": "-",
+				"label": "comment",
+				"start": 358,
+				"end": 359
+			},
+			{
+				"token": "-",
+				"label": "comment",
+				"start": 359,
+				"end": 360
+			},
+			{
+				"token": "container",
+				"label": "comment",
+				"start": 361,
+				"end": 370
+			},
+			{
+				"token": "for",
+				"label": "comment",
+				"start": 371,
+				"end": 374
+			},
+			{
+				"token": "motorcycle",
+				"label": "comment",
+				"start": 375,
+				"end": 385
+			},
+			{
+				"token": "-",
+				"label": "comment",
+				"start": 386,
+				"end": 387
+			},
+			{
+				"token": "-",
+				"label": "comment",
+				"start": 387,
+				"end": 388
+			},
+			{
+				"token": ">",
+				"label": "comment",
+				"start": 388,
+				"end": 389
+			}
+		],
+		"style.css": [
+			{
+				"token": "#",
+				"label": "extra",
+				"start": 0,
+				"end": 1
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 1,
+				"end": 11
+			},
+			{
+				"token": "-",
+				"label": "extra",
+				"start": 11,
+				"end": 12
+			},
+			{
+				"token": "container",
+				"label": "extra",
+				"start": 12,
+				"end": 21
+			},
+			{
+				"token": "{",
+				"label": "extra",
+				"start": 22,
+				"end": 23
+			},
+			{
+				"token": "height",
+				"label": "extra",
+				"start": 28,
+				"end": 34
+			},
+			{
+				"token": ":",
+				"label": "extra",
+				"start": 34,
+				"end": 35
+			},
+			{
+				"token": "30px",
+				"label": "extra",
+				"start": 36,
+				"end": 40
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 40,
+				"end": 41
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 42,
+				"end": 43
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 43,
+				"end": 44
+			},
+			{
+				"token": "space",
+				"label": "comment",
+				"start": 45,
+				"end": 50
+			},
+			{
+				"token": "above",
+				"label": "comment",
+				"start": 51,
+				"end": 56
+			},
+			{
+				"token": "bars",
+				"label": "comment",
+				"start": 57,
+				"end": 61
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 62,
+				"end": 63
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 63,
+				"end": 64
+			},
+			{
+				"token": "position",
+				"label": "extra",
+				"start": 69,
+				"end": 77
+			},
+			{
+				"token": ":",
+				"label": "extra",
+				"start": 77,
+				"end": 78
+			},
+			{
+				"token": "relative",
+				"label": "extra",
+				"start": 79,
+				"end": 87
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 87,
+				"end": 88
+			},
+			{
+				"token": "width",
+				"label": "extra",
+				"start": 93,
+				"end": 98
+			},
+			{
+				"token": ":",
+				"label": "extra",
+				"start": 98,
+				"end": 99
+			},
+			{
+				"token": "100",
+				"label": "extra",
+				"start": 100,
+				"end": 103
+			},
+			{
+				"token": "%",
+				"label": "extra",
+				"start": 103,
+				"end": 104
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 104,
+				"end": 105
+			},
+			{
+				"token": "}",
+				"label": "extra",
+				"start": 106,
+				"end": 107
+			},
+			{
+				"token": "#",
+				"label": "extra",
+				"start": 109,
+				"end": 110
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 110,
+				"end": 120
+			},
+			{
+				"token": "{",
+				"label": "extra",
+				"start": 121,
+				"end": 122
+			},
+			{
+				"token": "position",
+				"label": "extra",
+				"start": 127,
+				"end": 135
+			},
+			{
+				"token": ":",
+				"label": "extra",
+				"start": 135,
+				"end": 136
+			},
+			{
+				"token": "absolute",
+				"label": "extra",
+				"start": 137,
+				"end": 145
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 145,
+				"end": 146
+			},
+			{
+				"token": "font",
+				"label": "extra",
+				"start": 151,
+				"end": 155
+			},
+			{
+				"token": "-",
+				"label": "extra",
+				"start": 155,
+				"end": 156
+			},
+			{
+				"token": "size",
+				"label": "extra",
+				"start": 156,
+				"end": 160
+			},
+			{
+				"token": ":",
+				"label": "extra",
+				"start": 160,
+				"end": 161
+			},
+			{
+				"token": "28px",
+				"label": "extra",
+				"start": 162,
+				"end": 166
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 166,
+				"end": 167
+			},
+			{
+				"token": "transition",
+				"label": "extra",
+				"start": 172,
+				"end": 182
+			},
+			{
+				"token": ":",
+				"label": "extra",
+				"start": 182,
+				"end": 183
+			},
+			{
+				"token": "left",
+				"label": "extra",
+				"start": 184,
+				"end": 188
+			},
+			{
+				"token": "0",
+				"label": "extra",
+				"start": 189,
+				"end": 190
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 190,
+				"end": 191
+			},
+			{
+				"token": "3s",
+				"label": "extra",
+				"start": 191,
+				"end": 193
+			},
+			{
+				"token": "ease",
+				"label": "extra",
+				"start": 194,
+				"end": 198
+			},
+			{
+				"token": ",",
+				"label": "extra",
+				"start": 198,
+				"end": 199
+			},
+			{
+				"token": "top",
+				"label": "extra",
+				"start": 200,
+				"end": 203
+			},
+			{
+				"token": "0",
+				"label": "extra",
+				"start": 204,
+				"end": 205
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 205,
+				"end": 206
+			},
+			{
+				"token": "3s",
+				"label": "extra",
+				"start": 206,
+				"end": 208
+			},
+			{
+				"token": "ease",
+				"label": "extra",
+				"start": 209,
+				"end": 213
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 213,
+				"end": 214
+			},
+			{
+				"token": "transform",
+				"label": "extra",
+				"start": 219,
+				"end": 228
+			},
+			{
+				"token": ":",
+				"label": "extra",
+				"start": 228,
+				"end": 229
+			},
+			{
+				"token": "scaleX",
+				"label": "extra",
+				"start": 230,
+				"end": 236
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 236,
+				"end": 237
+			},
+			{
+				"token": "-",
+				"label": "extra",
+				"start": 237,
+				"end": 238
+			},
+			{
+				"token": "1",
+				"label": "extra",
+				"start": 238,
+				"end": 239
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 239,
+				"end": 240
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 240,
+				"end": 241
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 242,
+				"end": 243
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 243,
+				"end": 244
+			},
+			{
+				"token": "flip",
+				"label": "comment",
+				"start": 245,
+				"end": 249
+			},
+			{
+				"token": "right",
+				"label": "comment",
+				"start": 250,
+				"end": 255
+			},
+			{
+				"token": "-",
+				"label": "comment",
+				"start": 255,
+				"end": 256
+			},
+			{
+				"token": "facing",
+				"label": "comment",
+				"start": 256,
+				"end": 262
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 263,
+				"end": 264
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 264,
+				"end": 265
+			},
+			{
+				"token": "pointer",
+				"label": "extra",
+				"start": 270,
+				"end": 277
+			},
+			{
+				"token": "-",
+				"label": "extra",
+				"start": 277,
+				"end": 278
+			},
+			{
+				"token": "events",
+				"label": "extra",
+				"start": 278,
+				"end": 284
+			},
+			{
+				"token": ":",
+				"label": "extra",
+				"start": 284,
+				"end": 285
+			},
+			{
+				"token": "none",
+				"label": "extra",
+				"start": 286,
+				"end": 290
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 290,
+				"end": 291
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 292,
+				"end": 293
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 293,
+				"end": 294
+			},
+			{
+				"token": "so",
+				"label": "comment",
+				"start": 295,
+				"end": 297
+			},
+			{
+				"token": "it",
+				"label": "comment",
+				"start": 298,
+				"end": 300
+			},
+			{
+				"token": "doesn",
+				"label": "comment",
+				"start": 301,
+				"end": 306
+			},
+			{
+				"token": "'",
+				"label": "comment",
+				"start": 306,
+				"end": 307
+			},
+			{
+				"token": "t",
+				"label": "comment",
+				"start": 307,
+				"end": 308
+			},
+			{
+				"token": "interfere",
+				"label": "comment",
+				"start": 309,
+				"end": 318
+			},
+			{
+				"token": "with",
+				"label": "comment",
+				"start": 319,
+				"end": 323
+			},
+			{
+				"token": "mouse",
+				"label": "comment",
+				"start": 324,
+				"end": 329
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 330,
+				"end": 331
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 331,
+				"end": 332
+			},
+			{
+				"token": "}",
+				"label": "extra",
+				"start": 333,
+				"end": 334
+			}
+		],
+		"script.js": [
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 0,
+				"end": 1
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 1,
+				"end": 2
+			},
+			{
+				"token": "global",
+				"label": "comment",
+				"start": 3,
+				"end": 9
+			},
+			{
+				"token": "variables",
+				"label": "comment",
+				"start": 10,
+				"end": 19
+			},
+			{
+				"token": "100",
+				"label": "extra",
+				"start": 34,
+				"end": 37,
+				"paired_with": {
+					"file": "index.html",
+					"start": 497,
+					"end": 499,
+					"token": "50",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "var",
+				"label": "extra",
+				"start": 71,
+				"end": 74
+			},
+			{
+				"token": "var",
+				"label": "extra",
+				"start": 75,
+				"end": 78
+			},
+			{
+				"token": "_",
+				"label": "extra",
+				"start": 78,
+				"end": 79
+			},
+			{
+				"token": "speed",
+				"label": "extra",
+				"start": 79,
+				"end": 84
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 85,
+				"end": 86
+			},
+			{
+				"token": "100",
+				"label": "extra",
+				"start": 87,
+				"end": 90
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 90,
+				"end": 91
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 92,
+				"end": 93
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 93,
+				"end": 94
+			},
+			{
+				"token": "controls",
+				"label": "comment",
+				"start": 95,
+				"end": 103
+			},
+			{
+				"token": "animation",
+				"label": "comment",
+				"start": 104,
+				"end": 113
+			},
+			{
+				"token": "speed",
+				"label": "comment",
+				"start": 114,
+				"end": 119
+			},
+			{
+				"token": "in",
+				"label": "comment",
+				"start": 120,
+				"end": 122
+			},
+			{
+				"token": "milliseconds",
+				"label": "comment",
+				"start": 123,
+				"end": 135
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 137,
+				"end": 138
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 138,
+				"end": 139
+			},
+			{
+				"token": "Connect",
+				"label": "comment",
+				"start": 140,
+				"end": 147
+			},
+			{
+				"token": "slider",
+				"label": "comment",
+				"start": 148,
+				"end": 154
+			},
+			{
+				"token": "const",
+				"label": "extra",
+				"start": 155,
+				"end": 160
+			},
+			{
+				"token": "speedSlider",
+				"label": "extra",
+				"start": 161,
+				"end": 172
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 173,
+				"end": 174
+			},
+			{
+				"token": "document",
+				"label": "extra",
+				"start": 175,
+				"end": 183
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 183,
+				"end": 184
+			},
+			{
+				"token": "getElementById",
+				"label": "extra",
+				"start": 184,
+				"end": 198
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 198,
+				"end": 199
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 199,
+				"end": 200
+			},
+			{
+				"token": "speedRange",
+				"label": "extra",
+				"start": 200,
+				"end": 210
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 210,
+				"end": 211
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 211,
+				"end": 212
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 212,
+				"end": 213
+			},
+			{
+				"token": "speedSlider",
+				"label": "extra",
+				"start": 214,
+				"end": 225
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 225,
+				"end": 226
+			},
+			{
+				"token": "oninput",
+				"label": "extra",
+				"start": 226,
+				"end": 233
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 234,
+				"end": 235
+			},
+			{
+				"token": "function",
+				"label": "extra",
+				"start": 236,
+				"end": 244
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 244,
+				"end": 245
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 245,
+				"end": 246
+			},
+			{
+				"token": "{",
+				"label": "extra",
+				"start": 247,
+				"end": 248
+			},
+			{
+				"token": "var",
+				"label": "extra",
+				"start": 253,
+				"end": 256
+			},
+			{
+				"token": "_",
+				"label": "extra",
+				"start": 256,
+				"end": 257
+			},
+			{
+				"token": "speed",
+				"label": "extra",
+				"start": 257,
+				"end": 262
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 263,
+				"end": 264
+			},
+			{
+				"token": "parseInt",
+				"label": "extra",
+				"start": 265,
+				"end": 273
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 273,
+				"end": 274
+			},
+			{
+				"token": "this",
+				"label": "extra",
+				"start": 274,
+				"end": 278
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 278,
+				"end": 279
+			},
+			{
+				"token": "value",
+				"label": "extra",
+				"start": 279,
+				"end": 284
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 284,
+				"end": 285
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 285,
+				"end": 286
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 287,
+				"end": 288
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 288,
+				"end": 289
+			},
+			{
+				"token": "update",
+				"label": "comment",
+				"start": 290,
+				"end": 296
+			},
+			{
+				"token": "global",
+				"label": "comment",
+				"start": 297,
+				"end": 303
+			},
+			{
+				"token": "speed",
+				"label": "comment",
+				"start": 304,
+				"end": 309
+			},
+			{
+				"token": "}",
+				"label": "extra",
+				"start": 310,
+				"end": 311
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 311,
+				"end": 312
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 378,
+				"end": 379
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 379,
+				"end": 380
+			},
+			{
+				"token": "numbers",
+				"label": "comment",
+				"start": 381,
+				"end": 388
+			},
+			{
+				"token": "between",
+				"label": "comment",
+				"start": 389,
+				"end": 396
+			},
+			{
+				"token": "0",
+				"label": "comment",
+				"start": 397,
+				"end": 398
+			},
+			{
+				"token": "and",
+				"label": "comment",
+				"start": 399,
+				"end": 402
+			},
+			{
+				"token": "1",
+				"label": "comment",
+				"start": 403,
+				"end": 404
+			},
+			{
+				"token": "120",
+				"label": "extra",
+				"start": 852,
+				"end": 855,
+				"paired_with": {
+					"file": "index.html",
+					"start": 893,
+					"end": 896,
+					"token": "100",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 871,
+				"end": 872
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 872,
+				"end": 873
+			},
+			{
+				"token": "create",
+				"label": "comment",
+				"start": 874,
+				"end": 880
+			},
+			{
+				"token": "motorcycle",
+				"label": "comment",
+				"start": 881,
+				"end": 891
+			},
+			{
+				"token": "element",
+				"label": "comment",
+				"start": 892,
+				"end": 899
+			},
+			{
+				"token": "const",
+				"label": "extra",
+				"start": 900,
+				"end": 905
+			},
+			{
+				"token": "motoContainer",
+				"label": "extra",
+				"start": 906,
+				"end": 919
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 920,
+				"end": 921
+			},
+			{
+				"token": "document",
+				"label": "extra",
+				"start": 922,
+				"end": 930
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 930,
+				"end": 931
+			},
+			{
+				"token": "getElementById",
+				"label": "extra",
+				"start": 931,
+				"end": 945
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 945,
+				"end": 946
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 946,
+				"end": 947
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 947,
+				"end": 957
+			},
+			{
+				"token": "-",
+				"label": "extra",
+				"start": 957,
+				"end": 958
+			},
+			{
+				"token": "container",
+				"label": "extra",
+				"start": 958,
+				"end": 967
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 967,
+				"end": 968
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 968,
+				"end": 969
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 969,
+				"end": 970
+			},
+			{
+				"token": "const",
+				"label": "extra",
+				"start": 971,
+				"end": 976
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 977,
+				"end": 987
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 988,
+				"end": 989
+			},
+			{
+				"token": "document",
+				"label": "extra",
+				"start": 990,
+				"end": 998
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 998,
+				"end": 999
+			},
+			{
+				"token": "createElement",
+				"label": "extra",
+				"start": 999,
+				"end": 1012
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 1012,
+				"end": 1013
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 1013,
+				"end": 1014
+			},
+			{
+				"token": "div",
+				"label": "extra",
+				"start": 1014,
+				"end": 1017
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 1017,
+				"end": 1018
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 1018,
+				"end": 1019
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1019,
+				"end": 1020
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 1021,
+				"end": 1031
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 1031,
+				"end": 1032
+			},
+			{
+				"token": "id",
+				"label": "extra",
+				"start": 1032,
+				"end": 1034
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 1035,
+				"end": 1036
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 1037,
+				"end": 1038
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 1038,
+				"end": 1048
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 1048,
+				"end": 1049
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1049,
+				"end": 1050
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 1051,
+				"end": 1061
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 1061,
+				"end": 1062
+			},
+			{
+				"token": "textContent",
+				"label": "extra",
+				"start": 1062,
+				"end": 1073
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 1074,
+				"end": 1075
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 1076,
+				"end": 1077
+			},
+			{
+				"token": "🏍",
+				"label": "extra",
+				"start": 1077,
+				"end": 1078
+			},
+			{
+				"token": "️",
+				"label": "extra",
+				"start": 1079,
+				"end": 1080
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 1080,
+				"end": 1081
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1081,
+				"end": 1082
+			},
+			{
+				"token": "motoContainer",
+				"label": "extra",
+				"start": 1083,
+				"end": 1096
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 1096,
+				"end": 1097
+			},
+			{
+				"token": "appendChild",
+				"label": "extra",
+				"start": 1097,
+				"end": 1108
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 1108,
+				"end": 1109
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 1109,
+				"end": 1119
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 1119,
+				"end": 1120
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1120,
+				"end": 1121
+			},
+			{
+				"token": "var",
+				"label": "extra",
+				"start": 1514,
+				"end": 1517
+			},
+			{
+				"token": "_",
+				"label": "extra",
+				"start": 1517,
+				"end": 1518
+			},
+			{
+				"token": "speed",
+				"label": "extra",
+				"start": 1518,
+				"end": 1523
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 1579,
+				"end": 1580
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 1580,
+				"end": 1581
+			},
+			{
+				"token": "Sorting",
+				"label": "comment",
+				"start": 1582,
+				"end": 1589
+			},
+			{
+				"token": "finished",
+				"label": "comment",
+				"start": 1590,
+				"end": 1598
+			},
+			{
+				"token": "→",
+				"label": "comment",
+				"start": 1599,
+				"end": 1600
+			},
+			{
+				"token": "animate",
+				"label": "comment",
+				"start": 1601,
+				"end": 1608
+			},
+			{
+				"token": "motorcycle",
+				"label": "comment",
+				"start": 1609,
+				"end": 1619
+			},
+			{
+				"token": "await",
+				"label": "extra",
+				"start": 1624,
+				"end": 1629
+			},
+			{
+				"token": "animateMotorcycle",
+				"label": "extra",
+				"start": 1630,
+				"end": 1647
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 1647,
+				"end": 1648
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 1648,
+				"end": 1649
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1649,
+				"end": 1650
+			},
+			{
+				"token": "async",
+				"label": "extra",
+				"start": 1655,
+				"end": 1660
+			},
+			{
+				"token": "function",
+				"label": "extra",
+				"start": 1661,
+				"end": 1669
+			},
+			{
+				"token": "animateMotorcycle",
+				"label": "extra",
+				"start": 1670,
+				"end": 1687
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 1687,
+				"end": 1688
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 1688,
+				"end": 1689
+			},
+			{
+				"token": "{",
+				"label": "extra",
+				"start": 1690,
+				"end": 1691
+			},
+			{
+				"token": "const",
+				"label": "extra",
+				"start": 1696,
+				"end": 1701
+			},
+			{
+				"token": "bars",
+				"label": "extra",
+				"start": 1702,
+				"end": 1706
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 1707,
+				"end": 1708
+			},
+			{
+				"token": "document",
+				"label": "extra",
+				"start": 1709,
+				"end": 1717
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 1717,
+				"end": 1718
+			},
+			{
+				"token": "getElementsByClassName",
+				"label": "extra",
+				"start": 1718,
+				"end": 1740
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 1740,
+				"end": 1741
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 1741,
+				"end": 1742
+			},
+			{
+				"token": "bar",
+				"label": "extra",
+				"start": 1742,
+				"end": 1745
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 1745,
+				"end": 1746
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 1746,
+				"end": 1747
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1747,
+				"end": 1748
+			},
+			{
+				"token": "const",
+				"label": "extra",
+				"start": 1753,
+				"end": 1758
+			},
+			{
+				"token": "containerHeight",
+				"label": "extra",
+				"start": 1759,
+				"end": 1774
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 1775,
+				"end": 1776
+			},
+			{
+				"token": "visualizer",
+				"label": "extra",
+				"start": 1777,
+				"end": 1787
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 1787,
+				"end": 1788
+			},
+			{
+				"token": "clientHeight",
+				"label": "extra",
+				"start": 1788,
+				"end": 1800
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1800,
+				"end": 1801
+			},
+			{
+				"token": "for",
+				"label": "extra",
+				"start": 1807,
+				"end": 1810
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 1811,
+				"end": 1812
+			},
+			{
+				"token": "let",
+				"label": "extra",
+				"start": 1812,
+				"end": 1815
+			},
+			{
+				"token": "i",
+				"label": "extra",
+				"start": 1816,
+				"end": 1817
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 1818,
+				"end": 1819
+			},
+			{
+				"token": "0",
+				"label": "extra",
+				"start": 1820,
+				"end": 1821
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1821,
+				"end": 1822
+			},
+			{
+				"token": "i",
+				"label": "extra",
+				"start": 1823,
+				"end": 1824
+			},
+			{
+				"token": "<",
+				"label": "extra",
+				"start": 1825,
+				"end": 1826
+			},
+			{
+				"token": "bars",
+				"label": "extra",
+				"start": 1827,
+				"end": 1831
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 1831,
+				"end": 1832
+			},
+			{
+				"token": "length",
+				"label": "extra",
+				"start": 1832,
+				"end": 1838
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1838,
+				"end": 1839
+			},
+			{
+				"token": "i",
+				"label": "extra",
+				"start": 1840,
+				"end": 1841
+			},
+			{
+				"token": "+",
+				"label": "extra",
+				"start": 1841,
+				"end": 1842
+			},
+			{
+				"token": "+",
+				"label": "extra",
+				"start": 1842,
+				"end": 1843
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 1843,
+				"end": 1844
+			},
+			{
+				"token": "{",
+				"label": "extra",
+				"start": 1845,
+				"end": 1846
+			},
+			{
+				"token": "const",
+				"label": "extra",
+				"start": 1855,
+				"end": 1860
+			},
+			{
+				"token": "bar",
+				"label": "extra",
+				"start": 1861,
+				"end": 1864
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 1865,
+				"end": 1866
+			},
+			{
+				"token": "bars",
+				"label": "extra",
+				"start": 1867,
+				"end": 1871
+			},
+			{
+				"token": "[",
+				"label": "extra",
+				"start": 1871,
+				"end": 1872
+			},
+			{
+				"token": "i",
+				"label": "extra",
+				"start": 1872,
+				"end": 1873
+			},
+			{
+				"token": "]",
+				"label": "extra",
+				"start": 1873,
+				"end": 1874
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1874,
+				"end": 1875
+			},
+			{
+				"token": "const",
+				"label": "extra",
+				"start": 1884,
+				"end": 1889
+			},
+			{
+				"token": "barHeight",
+				"label": "extra",
+				"start": 1890,
+				"end": 1899
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 1900,
+				"end": 1901
+			},
+			{
+				"token": "bar",
+				"label": "extra",
+				"start": 1902,
+				"end": 1905
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 1905,
+				"end": 1906
+			},
+			{
+				"token": "offsetHeight",
+				"label": "extra",
+				"start": 1906,
+				"end": 1918
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1918,
+				"end": 1919
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 1929,
+				"end": 1930
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 1930,
+				"end": 1931
+			},
+			{
+				"token": "Set",
+				"label": "comment",
+				"start": 1932,
+				"end": 1935
+			},
+			{
+				"token": "horizontal",
+				"label": "comment",
+				"start": 1936,
+				"end": 1946
+			},
+			{
+				"token": "position",
+				"label": "comment",
+				"start": 1947,
+				"end": 1955
+			},
+			{
+				"token": "(",
+				"label": "comment",
+				"start": 1956,
+				"end": 1957
+			},
+			{
+				"token": "left",
+				"label": "comment",
+				"start": 1957,
+				"end": 1961
+			},
+			{
+				"token": ")",
+				"label": "comment",
+				"start": 1961,
+				"end": 1962
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 1971,
+				"end": 1981
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 1981,
+				"end": 1982
+			},
+			{
+				"token": "style",
+				"label": "extra",
+				"start": 1982,
+				"end": 1987
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 1987,
+				"end": 1988
+			},
+			{
+				"token": "left",
+				"label": "extra",
+				"start": 1988,
+				"end": 1992
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 1993,
+				"end": 1994
+			},
+			{
+				"token": "bar",
+				"label": "extra",
+				"start": 1995,
+				"end": 1998
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 1998,
+				"end": 1999
+			},
+			{
+				"token": "offsetLeft",
+				"label": "extra",
+				"start": 1999,
+				"end": 2009
+			},
+			{
+				"token": "+",
+				"label": "extra",
+				"start": 2010,
+				"end": 2011
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 2012,
+				"end": 2013
+			},
+			{
+				"token": "px",
+				"label": "extra",
+				"start": 2013,
+				"end": 2015
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 2015,
+				"end": 2016
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 2016,
+				"end": 2017
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 2027,
+				"end": 2028
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 2028,
+				"end": 2029
+			},
+			{
+				"token": "Set",
+				"label": "comment",
+				"start": 2030,
+				"end": 2033
+			},
+			{
+				"token": "vertical",
+				"label": "comment",
+				"start": 2034,
+				"end": 2042
+			},
+			{
+				"token": "position",
+				"label": "comment",
+				"start": 2043,
+				"end": 2051
+			},
+			{
+				"token": "(",
+				"label": "comment",
+				"start": 2052,
+				"end": 2053
+			},
+			{
+				"token": "top",
+				"label": "comment",
+				"start": 2053,
+				"end": 2056
+			},
+			{
+				"token": ")",
+				"label": "comment",
+				"start": 2056,
+				"end": 2057
+			},
+			{
+				"token": "so",
+				"label": "comment",
+				"start": 2058,
+				"end": 2060
+			},
+			{
+				"token": "bike",
+				"label": "comment",
+				"start": 2061,
+				"end": 2065
+			},
+			{
+				"token": "rides",
+				"label": "comment",
+				"start": 2066,
+				"end": 2071
+			},
+			{
+				"token": "on",
+				"label": "comment",
+				"start": 2072,
+				"end": 2074
+			},
+			{
+				"token": "bar",
+				"label": "comment",
+				"start": 2075,
+				"end": 2078
+			},
+			{
+				"token": "top",
+				"label": "comment",
+				"start": 2079,
+				"end": 2082
+			},
+			{
+				"token": ",",
+				"label": "comment",
+				"start": 2082,
+				"end": 2083
+			},
+			{
+				"token": "adjust",
+				"label": "comment",
+				"start": 2084,
+				"end": 2090
+			},
+			{
+				"token": "5px",
+				"label": "comment",
+				"start": 2091,
+				"end": 2094
+			},
+			{
+				"token": "above",
+				"label": "comment",
+				"start": 2095,
+				"end": 2100
+			},
+			{
+				"token": "for",
+				"label": "comment",
+				"start": 2101,
+				"end": 2104
+			},
+			{
+				"token": "better",
+				"label": "comment",
+				"start": 2105,
+				"end": 2111
+			},
+			{
+				"token": "visual",
+				"label": "comment",
+				"start": 2112,
+				"end": 2118
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 2127,
+				"end": 2137
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 2137,
+				"end": 2138
+			},
+			{
+				"token": "style",
+				"label": "extra",
+				"start": 2138,
+				"end": 2143
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 2143,
+				"end": 2144
+			},
+			{
+				"token": "top",
+				"label": "extra",
+				"start": 2144,
+				"end": 2147
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 2148,
+				"end": 2149
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 2150,
+				"end": 2151
+			},
+			{
+				"token": "containerHeight",
+				"label": "extra",
+				"start": 2151,
+				"end": 2166
+			},
+			{
+				"token": "-",
+				"label": "extra",
+				"start": 2167,
+				"end": 2168
+			},
+			{
+				"token": "barHeight",
+				"label": "extra",
+				"start": 2169,
+				"end": 2178
+			},
+			{
+				"token": "-",
+				"label": "extra",
+				"start": 2179,
+				"end": 2180
+			},
+			{
+				"token": "motorcycle",
+				"label": "extra",
+				"start": 2181,
+				"end": 2191
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 2191,
+				"end": 2192
+			},
+			{
+				"token": "offsetHeight",
+				"label": "extra",
+				"start": 2192,
+				"end": 2204
+			},
+			{
+				"token": "-",
+				"label": "extra",
+				"start": 2205,
+				"end": 2206
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 2207,
+				"end": 2208
+			},
+			{
+				"token": "-",
+				"label": "extra",
+				"start": 2208,
+				"end": 2209
+			},
+			{
+				"token": "15",
+				"label": "extra",
+				"start": 2209,
+				"end": 2211
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 2211,
+				"end": 2212
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 2212,
+				"end": 2213
+			},
+			{
+				"token": "+",
+				"label": "extra",
+				"start": 2214,
+				"end": 2215
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 2216,
+				"end": 2217
+			},
+			{
+				"token": "px",
+				"label": "extra",
+				"start": 2217,
+				"end": 2219
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 2219,
+				"end": 2220
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 2220,
+				"end": 2221
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 2231,
+				"end": 2232
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 2232,
+				"end": 2233
+			},
+			{
+				"token": "Wait",
+				"label": "comment",
+				"start": 2234,
+				"end": 2238
+			},
+			{
+				"token": "for",
+				"label": "comment",
+				"start": 2239,
+				"end": 2242
+			},
+			{
+				"token": "the",
+				"label": "comment",
+				"start": 2243,
+				"end": 2246
+			},
+			{
+				"token": "transition",
+				"label": "comment",
+				"start": 2247,
+				"end": 2257
+			},
+			{
+				"token": "to",
+				"label": "comment",
+				"start": 2258,
+				"end": 2260
+			},
+			{
+				"token": "complete",
+				"label": "comment",
+				"start": 2261,
+				"end": 2269
+			},
+			{
+				"token": "before",
+				"label": "comment",
+				"start": 2270,
+				"end": 2276
+			},
+			{
+				"token": "moving",
+				"label": "comment",
+				"start": 2277,
+				"end": 2283
+			},
+			{
+				"token": "to",
+				"label": "comment",
+				"start": 2284,
+				"end": 2286
+			},
+			{
+				"token": "next",
+				"label": "comment",
+				"start": 2287,
+				"end": 2291
+			},
+			{
+				"token": "bar",
+				"label": "comment",
+				"start": 2292,
+				"end": 2295
+			},
+			{
+				"token": "await",
+				"label": "extra",
+				"start": 2304,
+				"end": 2309
+			},
+			{
+				"token": "new",
+				"label": "extra",
+				"start": 2310,
+				"end": 2313
+			},
+			{
+				"token": "Promise",
+				"label": "extra",
+				"start": 2314,
+				"end": 2321
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 2321,
+				"end": 2322
+			},
+			{
+				"token": "resolve",
+				"label": "extra",
+				"start": 2322,
+				"end": 2329
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 2330,
+				"end": 2331
+			},
+			{
+				"token": ">",
+				"label": "extra",
+				"start": 2331,
+				"end": 2332
+			},
+			{
+				"token": "setTimeout",
+				"label": "extra",
+				"start": 2333,
+				"end": 2343
+			},
+			{
+				"token": "(",
+				"label": "extra",
+				"start": 2343,
+				"end": 2344
+			},
+			{
+				"token": "resolve",
+				"label": "extra",
+				"start": 2344,
+				"end": 2351
+			},
+			{
+				"token": ",",
+				"label": "extra",
+				"start": 2351,
+				"end": 2352
+			},
+			{
+				"token": "70",
+				"label": "extra",
+				"start": 2353,
+				"end": 2355
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 2355,
+				"end": 2356
+			},
+			{
+				"token": ")",
+				"label": "extra",
+				"start": 2356,
+				"end": 2357
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 2357,
+				"end": 2358
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 2360,
+				"end": 2361
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 2361,
+				"end": 2362
+			},
+			{
+				"token": "match",
+				"label": "comment",
+				"start": 2363,
+				"end": 2368
+			},
+			{
+				"token": "CSS",
+				"label": "comment",
+				"start": 2369,
+				"end": 2372
+			},
+			{
+				"token": "transition",
+				"label": "comment",
+				"start": 2373,
+				"end": 2383
+			},
+			{
+				"token": "duration",
+				"label": "comment",
+				"start": 2384,
+				"end": 2392
+			},
+			{
+				"token": "}",
+				"label": "extra",
+				"start": 2397,
+				"end": 2398
+			},
+			{
+				"token": "}",
+				"label": "extra",
+				"start": 2399,
+				"end": 2400
+			}
+		]
+	}
+}

@@ -1,0 +1,104 @@
+:root {
+    --theme: #280; /* CSS variable */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Arial";
+    color: var(--theme);
+}
+
+#map {
+    width: 100%;
+}
+
+#marker {
+    width: 3vw; /* 3% of the viewport width */
+    height: 3vw;
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme); /* does not affect the size */
+    border: 5px solid white; /* affects the size */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+#mapContainer {
+    position: relative;
+    display: none;
+}
+
+#camera {
+    width: 100%;
+}
+
+#btn {
+    margin-top: 16px;
+    padding: 12px 36px;
+    font-family: "Arial";
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: white;
+    background-color: var(--theme);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+
+#btn:hover {
+    background-color: #1a5200;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+#itemInfo {
+    margin-top: 20px;
+    font-family: "Arial";
+    text-align: center;
+    background: #f4f9f4;
+    border: 2px solid var(--theme);
+    border-radius: 8px;
+    padding: 16px 28px;
+    display: none;
+}
+
+#itemInfo p {
+    margin: 6px 0;
+    font-size: 1rem;
+    color: #222;
+}
+
+#itemInfo .label {
+    font-weight: bold;
+    color: var(--theme);
+}
+
+#inStock {
+    font-weight: bold;
+}
+
+#inStock.yes {
+    color: #280;
+}
+
+#inStock.no {
+    color: #c00;
+}
+

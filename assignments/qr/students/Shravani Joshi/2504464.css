@@ -1,0 +1,57 @@
+:root {
+    --theme: #280;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+h1{
+    font-family: "Arial";
+    color: var(--theme);
+}
+
+#map {
+    width: 100%;
+}
+
+#marker{
+    width: 3vw; /* 3% of the viewport width */
+    height: 3vw;
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme); /* does not affect the size */
+    border: 5px solid white; /* affects the size */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+#mapContainer {
+    position: relative;
+    display: none;
+}
+
+#btn{
+    background-color: var(--theme);
+    color: white;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+#btn:hover{
+    background-color: #3aa300;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3),0 0 12px rgba(0,136,0,0.6);
+    
+}
+
+#camera {
+    width: 100%;
+}

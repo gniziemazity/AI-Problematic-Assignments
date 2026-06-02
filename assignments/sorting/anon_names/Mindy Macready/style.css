@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#vis-123456 {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.bar {
+    width: 7px;
+    background-color: black;
+    margin: 0px 1px;
+}
+
+#moto {
+    font-size: 40px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transition: left 0.1s linear, bottom 0.1s linear;
+    transform: scaleX(-1);
+}

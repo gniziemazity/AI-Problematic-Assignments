@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4 Cats and Dogs</title>
+</head>
+<body>
+    <div id ="segments"></div>
+    <script src="https://www.radufromfinland.com/dog.js"></script>
+    <script src="CAT.js"></script> 
+
+    <audio id ="meow" src ="dragon-studio-cute-cat-meow-472372.mp3"></audio> /
+    <audio id ="bark" src="dragon-studio-free-dog-bark-419014.mp3"></audio>
+
+    <script>
+        //I am unsure if student number needs to be here as the homework called this section index.html. 
+        //But just in case, it is 123456
+
+
+
+        //Note, this was workshopped in a group on Thursday, so if there are similarities, it is because of that.
+        // (even as a part it was just shared suffering at that point.)
+        //Originally I intended to get the audios on script file by get element by ID. It did not work however
+        //As a result, I ditched the method and made it var x = new audio(audo file name)
+        //The audio ids can be ripped off if need be but as they are not causing issues, I have left them be.
+
+
+        const sampleCat = new Cat("Leopold", 15, "white", "black") //this was a sample that would draw a cat outside the grid
+        console.log(sampleCat); //it has some of the info inside the console.log still, however it being rendered is disabled.
+        /*sampleCat.talk(); //good to note that it would be comically sized due to its age.
+        const canvas = sampleCat.render(); */
+
+    </script>
+</body>
+</html>

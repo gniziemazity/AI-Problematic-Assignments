@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    align-items: center; /* aligns content on center */
+    flex-direction: column;
+}
+#vis-123456 {
+    height: 200px;
+    display: flex;
+    align-items:flex-end;
+}
+.bar 
+{
+    width: 7px;
+    height: 100%;
+    background-color: black;
+    margin: 0px 1px;
+}
+
+.slider { 
+  width: 225px;
+  height: 10px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/*slider section above, needed for the visuals.*/
+
+/*the webkit stuff is general failsafe things for generic browsers, these days most likely a bit over the top*/
+/*However as I was learning this code from W3 schools tutorials, I will rather not rip stuff out.*/
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; 
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+/*Mozilla browser failsafes, makes sure Firefox version is safe*/
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px; /* these here set the size of the green dot on the slider */
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}

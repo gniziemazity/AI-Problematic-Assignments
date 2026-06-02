@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Lession</title>
+        <style>
+            #animalsGrid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            My first Emmet abbreviatios:
+            <ol>
+                <li>! (HTML boilerplate)</li>
+                <li>div#container (div with id)</li>
+                <li>ol>li*3 (ordered list with 3 items)</li>
+            </ol>
+            (all followed by Tab / Enter)
+        </div>
+        
+        <div id="animalsGrid"></div>
+
+        <audio id="dogAudio" src="dog.mp3"></audio>  <!-- https://overwatch.fandom.com/wiki/Hazard/Quotes "Woof woof!" Hazard voice line -->
+        <audio id="catAudio" src="cat.mp3"></audio>  <!-- Recorded "Taunting" voiceline from Jetpack cat in Overwatch -->
+
+        <script src="https://www.radufromfinland.com/dog.js"></script>
+        <script src="cat.js"></script>
+        <script>
+            myNumber = 25.2; // never define without const, let (or var)
+            console.log(myNumber);
+
+            const myString = "I study at Karelia";
+            console.log(myString);
+
+            let myBoolean = true;
+            var oppositeBoolean = !myBoolean; // var was "replaced" by let and const
+            console.log(myBoolean, oppositeBoolean); // accepts multiple parameters
+            myBoolean = false;
+            oppositeBoolean = !myBoolean;
+            console.log(myBoolean, oppositeBoolean);
+
+            console.log(!42, !"ABC", ![]);
+            console.log(!null, !undefined, !0); // zero is falsy
+
+            // arrays are like python lists
+            const myArray = [1, 2, 3, "Karelia", true, null];
+            myArray.length = 0;
+            myArray[0] = 9;
+            myArray[1] = 8;
+            myArray[2] = 7;
+            // myArray = [1, 2, 3]; ERROR! Program would fail here!
+            try {
+                myArray = [1, 2, 3];
+            } catch(err) {
+                console.log(err);
+            }
+            myArray.push(6);
+            myArray.push(11);
+            myArray.sort(function(a, b){return a - b});
+            console.log(myArray);
+
+            // object are like Python dictionaries
+            const dog = {
+                name: "Max",
+                age: 5,
+                furr: "black",
+                eyes: "brown"
+            }
+            console.log(dog);
+            console.table(dog);
+            console.log(dog.name);
+            dog.name = "Charlie";
+            console.log(dog["name"]);
+
+            const anotherDog = new Dog("Rex", 7, "brown", "black");
+            console.log(anotherDog);
+            anotherDog.talk();
+            const canvas = anotherDog.render();
+            container.appendChild(canvas); /*
+                no need for document.getElementId("container")
+                ids that are valid JS names are automatically global variables
+                invalid names:
+                 * start with a number
+                 * contain spaces or special characters (like -)
+            */
+
+            // using the cat class
+            const myCat = new Cat("Luna", 3, "darkOrange", "green");
+            console.log(myCat);
+            myCat.talk();
+
+            const catCanvas = myCat.render();
+            container.appendChild(catCanvas);
+
+            let a = 5;
+            let b = 2;
+            // operators
+            console.log(a + b);
+            a = "5";
+            console.log(a + b); // concatenation
+            console.log(a - b);
+            console.log(a * b);
+            console.log(a / b);
+            console.log(a % b);
+            console.log(a ** b);
+            console.log(Math.pow(a, b));
+            console.log(Math.sqrt(b));
+            console.log(Math.pow(b, 0.5));
+            console.log(b ** 0.5);
+
+            a = Number(a) + 5;
+            console.log(a);
+            a += 5;
+            a *= 2;
+            a /= 3;
+            a %= 4;
+            a **= 10;
+            console.log(a);
+
+            const s1 = "Welcome to Karelia!";
+            const s2 = 'Welcome to "Karelia!"';
+            const s3 = "Welcome to \"Karelia\"!"; // escaping with \
+            console.log(s1, s2, s3);
+
+            const age = 22;
+            console.log("I am " + age + " years old");
+            console.log(`I am ${age} years old`); // template literal
+
+            let today = new Date();
+            console.log(today);
+            let someDate = new Date("August 24, 2025");
+            console.log(someDate);
+
+            console.log(today.getDay());
+            switch (today.getDay()) {
+                case 1: console.log("Monday"); break;
+                case 2: console.log("Tuesday"); break;
+                case 3: console.log("Wednesday"); break;
+                case 4: console.log("Thursday"); break;
+                case 5: console.log("Friday"); break;
+                default: console.log("Weekend"); break;
+            }
+
+            /*
+            // variant 1
+            fetch("https://radufromfinland.com/animals/") // Send request to API
+                .then(function(response) { // When response arrives..
+                    return response.json(); // ..convert response to JSON
+                })
+                .then(function(data) { // When JSON is ready..
+                    console.log(data); // ..print data to console
+                })
+                .catch(function(err) { // If there's an error..
+                    console.error(err); // ..print it
+                });
+            */
+           
+            // variant 2
+            async function fetchAnimals() { // Define async function
+                try {
+                    const response = await fetch("https://radufromfinland.com/animals/"); // Wait for API response..
+                    const data = await response.json(); // ..convert response to JSON
+                    const grid = document.getElementById("animalsGrid");
+
+                    const dogAudio = document.getElementById("dogAudio");
+                    const catAudio = document.getElementById("catAudio");
+
+                    data.slice(0, 100).forEach(animalData => {
+                        let animal;
+
+                        if (animalData.type === "DOG") {
+                            animal = new Dog(animalData.name, animalData.age, animalData.furr, animalData.eyes);
+                        } else {
+                            animal = new Cat(animalData.name, animalData.age, animalData.furr, animalData.eyes);
+                        }
+
+                        const canvas = animal.render();
+
+                        canvas.onmousedown = () => {
+                            animal.talk();
+
+                            if (animalData.type === "DOG") {
+                                dogAudio.currentTime = 0; // restart sound
+                                dogAudio.play();
+                            } else {
+                                catAudio.currentTime = 0;
+                                catAudio.play();
+                            }
+                        };
+
+                        grid.appendChild(canvas);
+                    });
+
+                    console.log(data); // Print data
+                } catch(err) {
+                    console.error(err); // Handle errors
+                }
+            }
+            fetchAnimals(); // Call the function
+        </script>
+    </body>
+</html>

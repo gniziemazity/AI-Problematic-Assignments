@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess Board Assignment – All Steps</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Step 1 - Left-offset */
+        .step1 .left-offset {
+            margin-left: 25px;
+        }
+
+        .step1 .dark { background-color: black; }
+        .step1 .light { background-color: white; }
+
+        /* Step 2 - Dark cells yellow */
+        .step2 .dark { background-color: yellow; }
+        .step2 .light { background-color: white; }
+
+        /* Step 3 - Red / Dark Red */
+        .step3 .dark { background-color: rgb(139,0,0); }
+        .step3 .light { background-color: rgb(255,0,0); }
+
+        /* Step 4 & 5 - Half-width + Brick style */
+        .step4 td, .step5 td {
+            border: 3px solid #8B0000;
+            border-radius: 5px;
+            height: 25px;
+        }
+        .step4 .half-width, .step5 .half-width {
+            width: 25px;
+        }
+        .step4 .dark, .step5 .dark { background-color: rgb(139,0,0); }
+        .step4 .light, .step5 .light { background-color: rgb(255,0,0); }
+
+        h3 { margin-bottom: 5px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+<h1>Chess Board Assignment – All Steps</h1>
+
+<!-- Step 1 -->
+<h3>Step 1 – Left-Offset Rows</h3>
+<table class="step1">
+    <tr class="left-offset">
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+    </tr>
+</table>
+
+<!-- Step 2 -->
+<h3>Step 2 – Dark Cells Yellow</h3>
+<table class="step2">
+    <tr>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+    </tr>
+</table>
+
+<!-- Step 3 -->
+<h3>Step 3 – Red / Dark Red Brick Wall</h3>
+<table class="step3">
+    <tr>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+    </tr>
+</table>
+
+<!-- Step 4 – Half-Width Cells -->
+<h3>Step 4 – Half-Width Cells</h3>
+<table class="step4">
+    <tr>
+        <td class="light half-width">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="light half-width">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+    </tr>
+</table>
+
+<!-- Step 5 – Adjusted Height, Border, Border-Radius -->
+<h3>Step 5 – Brick Wall Final</h3>
+<table class="step5">
+    <tr>
+        <td class="light half-width">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="light half-width">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+        <td class="dark">&nbsp;</td>
+        <td class="light">&nbsp;</td>
+    </tr>
+</table>
+
+</body>
+</html>

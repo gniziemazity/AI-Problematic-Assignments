@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals Grid</title>
+</head>
+<body>
+
+<canvas id="canvas" width="1300" height="300">
+    Your browser does not support canvas.
+</canvas>
+
+<!-- Dog sound source: https://cdn.freesound.org/sounds/625/625496-3ef38835-2383-4c48-9e62-cc8e57b8f2af?filename=625496__abhisheky948__animal-dog-bark-21.wav -->
+<audio id="dogSound" src="dog.mp3" preload="auto"></audio>
+
+<!-- Cat sound source: https://www.fesliyanstudios.com/play-mp3/387 -->
+<audio id="catSound" src="cat.mp3" preload="auto"></audio>
+
+<!-- Script order: Dog class → Cat class → Main logic -->
+<script src="dog.js"></script>
+<script src="cat.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!-- There is a problem: the game lets pieces move anywhere, so normal chess rules like legal moves, turns, check, and checkmate are not enforced. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess Game</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-family: Arial, sans-serif;
+                background-color: #f3f0e8;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            #chess-board {
+                width: min(90vw, 560px);
+                height: min(90vw, 560px);
+                display: grid;
+                grid-template-rows: repeat(8, 1fr);
+                grid-template-columns: repeat(8, 1fr);
+                border: 6px solid #3b2617;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            }
+
+            .cell {
+                border: 1px solid rgba(0, 0, 0, 0.25);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+            .light {
+                background-color: #f0d9b5;
+            }
+
+            .dark {
+                background-color: #b58863;
+            }
+
+            .cell.selected {
+                outline: 5px solid #e63946;
+                outline-offset: -5px;
+            }
+
+            img {
+                width: 70%;
+                max-height: 70%;
+                object-fit: contain;
+                pointer-events: none;
+            }
+
+            .white-piece {
+                filter: invert(100%) drop-shadow(0 0 2px black);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chess Game</h1>
+        <div id="chess-board"></div>
+
+        <script>
+            let selectedPiece = null;
+            let selectedCell = null;
+
+            const board = document.getElementById("chess-board");
+            const startingPieces = [
+                ["p2", "p5", "p6", "p3", "p4", "p6", "p5", "p2"],
+                ["p1", "p1", "p1", "p1", "p1", "p1", "p1", "p1"],
+                ["", "", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", ""],
+                ["p1", "p1", "p1", "p1", "p1", "p1", "p1", "p1"],
+                ["p2", "p5", "p6", "p3", "p4", "p6", "p5", "p2"]
+            ];
+
+            // method 8
+            for (const [rowNumber, row] of startingPieces.entries()) {
+                for (const [columnNumber, piece] of row.entries()) {
+                    const cell = document.createElement("div");
+                    cell.className = (rowNumber + columnNumber) % 2 === 0 ? "cell light" : "cell dark";
+
+                    if (piece !== "") {
+                        const image = document.createElement("img");
+                        image.src = "pieces/" + piece + ".png";
+                        image.alt = piece;
+                        image.dataset.color = rowNumber < 2 ? "black" : "white";
+
+                        if (image.dataset.color === "white") {
+                            image.classList.add("white-piece");
+                        }
+
+                        cell.appendChild(image);
+                    }
+
+                    cell.onclick = function () {
+                        handleClick(cell);
+                    };
+
+                    board.appendChild(cell);
+                }
+            }
+
+            function handleClick(cell) {
+                if (selectedPiece !== null) {
+                    if (cell === selectedCell) {
+                        clearSelection();
+                        return;
+                    }
+
+                    const targetPiece = cell.children[0];
+                    if (targetPiece && targetPiece.dataset.color === selectedPiece.dataset.color) {
+                        clearSelection();
+                        selectPiece(cell);
+                        return;
+                    }
+
+                    cell.replaceChildren(selectedPiece);
+                    clearSelection();
+                } else if (cell.children.length > 0) {
+                    selectPiece(cell);
+                }
+            }
+
+            function selectPiece(cell) {
+                selectedCell = cell;
+                selectedPiece = cell.children[0];
+                cell.classList.add("selected");
+            }
+
+            function clearSelection() {
+                if (selectedCell !== null) {
+                    selectedCell.classList.remove("selected");
+                }
+
+                selectedPiece = null;
+                selectedCell = null;
+            }
+        </script>
+    </body>
+</html>

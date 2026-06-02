@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Sorting Visualizer | Bubble Sort with Moto Animation</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🏍️ Sorting Visualizer · Bubble Sort</h1>
+    <p class="subtitle">Watch the bars get sorted — then a motorcycle rides across!</p>
+
+    <!-- main visualization container (relative for absolute motorcycle) -->
+    <div id="vis-container" class="vis-container"></div>
+
+    <!-- control panel -->
+    <div class="controls">
+        <div class="speed-control">
+            <label for="speedSlider">🐢 animation speed &nbsp;→&nbsp; 🐇</label>
+            <input type="range" id="speedSlider" min="5" max="300" value="80" step="5">
+            <span id="speedValue">80</span> <span>ms</span>
+        </div>
+        <div class="button-group">
+            <button id="generateBtn" class="btn">🎲 generate new array</button>
+            <button id="sortBtn" class="btn btn-primary">✨ start bubble sort</button>
+        </div>
+        <div class="info-note">
+            💡 slider changes speed on‑the‑fly • motorcycle appears after sorting ends
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

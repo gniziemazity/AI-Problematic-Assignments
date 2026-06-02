@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+Assignment: Chess Game Completion
+Question: Does the chess game work correctly or is there some problem?
+Answer: The game works for picking up a piece with one click and placing it on another square
+with a second click, but it does NOT enforce chess rules (any piece can move anywhere, no turns,
+no legal-move checking, no check/checkmate detection). So this is only a basic piece-mover,
+not a full chess game.
+Method number: 5 (for...of loop from the video)
+-->
+<html>
+    <head>
+        <title>Chess 123456</title>
+        <style>
+            .cell {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+
+            .light { background-color: #ecf0f1; }
+            .dark  { background-color: #7b8181;  }
+
+            #chess-board {
+                width: 480px;
+                height: 480px;
+                display: grid;
+                grid-template-rows: repeat(8, 1fr);
+                grid-template-columns: repeat(8, 1fr);
+                border: 8px solid #34495e;
+                box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            }
+
+            img {
+                width: 70%;
+                height: 70%;
+                object-fit: contain;
+            }
+
+            /* Rook and Knight smaller size */
+            img.small-piece {
+                width: 55%;
+                height: 55%;
+            }
+
+            .black-piece {
+                filter: brightness(0) saturate(100%);
+            }
+
+            .white-piece {
+                filter: brightness(0) saturate(100%) invert(100%)
+                        drop-shadow(0px 0px 2px #000)
+                        drop-shadow(0px 0px 2px #000);
+            }
+
+            /* Move status message */
+            #status {
+                margin-top: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                color: darkgreen;
+                height: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chess Game</h1>
+
+        <div id="chess-board">
+
+            <!-- Row 8 - Black pieces (top) -->
+            <div class="cell light"><img src="pieces/p2.png" class="black-piece small-piece"/></div> <!-- rook -->
+            <div class="cell dark"><img src="pieces/p5.png" class="black-piece small-piece"/></div>  <!-- knight -->
+            <div class="cell light"><img src="pieces/p6.png" class="black-piece"/></div>             <!-- bishop -->
+            <div class="cell dark"><img src="pieces/p3.png" class="black-piece"/></div>              <!-- queen -->
+            <div class="cell light"><img src="pieces/p4.png" class="black-piece"/></div>             <!-- king -->
+            <div class="cell dark"><img src="pieces/p6.png" class="black-piece"/></div>              <!-- bishop -->
+            <div class="cell light"><img src="pieces/p5.png" class="black-piece small-piece"/></div> <!-- knight -->
+            <div class="cell dark"><img src="pieces/p2.png" class="black-piece small-piece"/></div>  <!-- rook -->
+
+            <!-- Row 7 - Black pawns -->
+            <div class="cell dark"><img src="pieces/p1.png" class="black-piece"/></div>
+            <div class="cell light"><img src="pieces/p1.png" class="black-piece"/></div>
+            <div class="cell dark"><img src="pieces/p1.png" class="black-piece"/></div>
+            <div class="cell light"><img src="pieces/p1.png" class="black-piece"/></div>
+            <div class="cell dark"><img src="pieces/p1.png" class="black-piece"/></div>
+            <div class="cell light"><img src="pieces/p1.png" class="black-piece"/></div>
+            <div class="cell dark"><img src="pieces/p1.png" class="black-piece"/></div>
+            <div class="cell light"><img src="pieces/p1.png" class="black-piece"/></div>
+
+            <!-- Row 6 - Empty -->
+            <div class="cell light"></div><div class="cell dark"></div>
+            <div class="cell light"></div><div class="cell dark"></div>
+            <div class="cell light"></div><div class="cell dark"></div>
+            <div class="cell light"></div><div class="cell dark"></div>
+
+            <!-- Row 5 - Empty -->
+            <div class="cell dark"></div><div class="cell light"></div>
+            <div class="cell dark"></div><div class="cell light"></div>
+            <div class="cell dark"></div><div class="cell light"></div>
+            <div class="cell dark"></div><div class="cell light"></div>
+
+            <!-- Row 4 - Empty -->
+            <div class="cell light"></div><div class="cell dark"></div>
+            <div class="cell light"></div><div class="cell dark"></div>
+            <div class="cell light"></div><div class="cell dark"></div>
+            <div class="cell light"></div><div class="cell dark"></div>
+
+            <!-- Row 3 - Empty -->
+            <div class="cell dark"></div><div class="cell light"></div>
+            <div class="cell dark"></div><div class="cell light"></div>
+            <div class="cell dark"></div><div class="cell light"></div>
+            <div class="cell dark"></div><div class="cell light"></div>
+
+            <!-- Row 2 - White pawns -->
+            <div class="cell light"><img src="pieces/p1.png" class="white-piece"/></div>
+            <div class="cell dark"><img src="pieces/p1.png" class="white-piece"/></div>
+            <div class="cell light"><img src="pieces/p1.png" class="white-piece"/></div>
+            <div class="cell dark"><img src="pieces/p1.png" class="white-piece"/></div>
+            <div class="cell light"><img src="pieces/p1.png" class="white-piece"/></div>
+            <div class="cell dark"><img src="pieces/p1.png" class="white-piece"/></div>
+            <div class="cell light"><img src="pieces/p1.png" class="white-piece"/></div>
+            <div class="cell dark"><img src="pieces/p1.png" class="white-piece"/></div>
+
+            <!-- Row 1 - White pieces (bottom) -->
+            <div class="cell dark"><img src="pieces/p2.png" class="white-piece small-piece"/></div>  <!-- rook -->
+            <div class="cell light"><img src="pieces/p5.png" class="white-piece small-piece"/></div> <!-- knight -->
+            <div class="cell dark"><img src="pieces/p6.png" class="white-piece"/></div>              <!-- bishop -->
+            <div class="cell light"><img src="pieces/p3.png" class="white-piece"/></div>             <!-- queen -->
+            <div class="cell dark"><img src="pieces/p4.png" class="white-piece"/></div>              <!-- king -->
+            <div class="cell light"><img src="pieces/p6.png" class="white-piece"/></div>             <!-- bishop -->
+            <div class="cell dark"><img src="pieces/p5.png" class="white-piece small-piece"/></div>  <!-- knight -->
+            <div class="cell light"><img src="pieces/p2.png" class="white-piece small-piece"/></div> <!-- rook -->
+
+        </div>
+
+        <!-- Move status shown here -->
+        <div id="status"></div>
+
+        <script>
+            let selectedPiece = null;
+            const cells = document.getElementsByClassName("cell");
+            const status = document.getElementById("status");
+            console.log(cells);
+
+            // method 5: for...of loop (from the video)
+            for (const cell of cells) {
+                cell.onclick = function () {
+                    handleClick(cell);
+                };
+            }
+
+            function handleClick(element) {
+                //Reset borders
+                for (const cell of cells) {
+                    cell.style.border = "";
+                }
+                if (selectedPiece != null) {
+                    // Place the piece
+                    element.replaceChildren(selectedPiece);
+                    selectedPiece = null;
+                    status.textContent = "✅ Piece moved successfully!";
+                    setTimeout(() => status.textContent = "", 2000);
+                } else if (element.children.length > 0) {
+                    selectedPiece = element.children[0];
+                    element.style.border = "4px solid red";
+                    status.textContent = "🔴 Piece selected — click a square to move!";
+                }
+            }
+        </script>
+    </body>
+</html>

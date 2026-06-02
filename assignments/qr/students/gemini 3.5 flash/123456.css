@@ -1,0 +1,36 @@
+/* Styling for the Scan/Cancel Button */
+#btn {
+    background-color: var(--theme);
+    color: white;
+    font-family: "Arial", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Setup the smooth transition */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effects */
+#btn:hover {
+    cursor: pointer;
+    background-color: #1e6000; /* A slightly darker shade of your theme green */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); /* Makes the button float up slightly */
+}
+
+/* Styling for the new inventory display area */
+#inventory {
+    font-family: "Arial", sans-serif;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#inventory p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}

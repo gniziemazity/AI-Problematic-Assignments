@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chess 123456</title>
+
+<style>
+.cell  { 
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.light { background-color: purple; }
+.dark  { background-color: rgb(68, 202, 6);  }
+
+/* new offset class */
+.left-offset{
+    margin-left:25px;
+}
+
+#chess-board{
+    width:450px; /* increased to fit offset rows */
+    height:450px;
+    display:grid;
+    grid-template-rows:repeat(8,1fr);
+    grid-template-columns:repeat(8,1fr);
+}
+
+img{
+    width:50%;
+}
+
+.invert-color{
+    filter:invert(100%);
+}
+</style>
+</head>
+
+<body>
+
+<h1>Chess Game</h1>
+
+<div id="chess-board">
+
+<!-- Black Row 8  -->
+<div class="cell dark "><img src="pieces/p2.png" class="invert-color"></div>
+<div class="cell light "><img src="pieces/p5.png" class="invert-color"></div>
+<div class="cell dark "><img src="pieces/p6.png" class="invert-color"></div>
+<div class="cell light "><img src="pieces/p3.png" class="invert-color"></div>
+<div class="cell dark "><img src="pieces/p4.png" class="invert-color"></div>
+<div class="cell light "><img src="pieces/p6.png" class="invert-color"></div>
+<div class="cell dark "><img src="pieces/p5.png" class="invert-color"></div>
+<div class="cell light "><img src="pieces/p2.png" class="invert-color"></div>
+
+<!-- Row 7 -->
+<div class="cell light"><img src="pieces/p1.png" class="invert-color"></div>
+<div class="cell dark"><img src="pieces/p1.png" class="invert-color"></div>
+<div class="cell light"><img src="pieces/p1.png" class="invert-color"></div>
+<div class="cell dark"><img src="pieces/p1.png" class="invert-color"></div>
+<div class="cell light"><img src="pieces/p1.png" class="invert-color"></div>
+<div class="cell dark"><img src="pieces/p1.png" class="invert-color"></div>
+<div class="cell light"><img src="pieces/p1.png" class="invert-color"></div>
+<div class="cell dark"><img src="pieces/p1.png" class="invert-color"></div>
+
+<!-- Row 6 -->
+<div class="cell dark "></div>
+<div class="cell light "></div>
+<div class="cell dark "></div>
+<div class="cell light "></div>
+<div class="cell dark "></div>
+<div class="cell light "></div>
+<div class="cell dark "></div>
+<div class="cell light "></div>
+
+<!-- Row 5 -->
+<div class="cell light"></div>
+<div class="cell dark"></div>
+<div class="cell light"></div>
+<div class="cell dark"></div>
+<div class="cell light"></div>
+<div class="cell dark"></div>
+<div class="cell light"></div>
+<div class="cell dark"></div>
+
+<!-- Row 4 -->
+<div class="cell dark "></div>
+<div class="cell light "></div>
+<div class="cell dark "></div>
+<div class="cell light "></div>
+<div class="cell dark "></div>
+<div class="cell light "></div>
+<div class="cell dark "></div>
+<div class="cell light "></div>
+
+<!-- Row 3 -->
+<div class="cell light"></div>
+<div class="cell dark"></div>
+<div class="cell light"></div>
+<div class="cell dark"></div>
+<div class="cell light"></div>
+<div class="cell dark"></div>
+<div class="cell light"></div>
+<div class="cell dark"></div>
+
+<!-- Row 2 pawns -->
+<div class="cell dark "><img src="pieces/p1.png"></div>
+<div class="cell light "><img src="pieces/p1.png"></div>
+<div class="cell dark "><img src="pieces/p1.png"></div>
+<div class="cell light "><img src="pieces/p1.png"></div>
+<div class="cell dark "><img src="pieces/p1.png"></div>
+<div class="cell light "><img src="pieces/p1.png"></div>
+<div class="cell dark "><img src="pieces/p1.png"></div>
+<div class="cell light "><img src="pieces/p1.png"></div>
+
+<!-- White Row 1 -->
+<div class="cell light"><img src="pieces/p2.png"></div>
+<div class="cell dark"><img src="pieces/p5.png"></div>
+<div class="cell light"><img src="pieces/p6.png"></div>
+<div class="cell dark"><img src="pieces/p4.png"></div>
+<div class="cell light"><img src="pieces/p3.png"></div>
+<div class="cell dark"><img src="pieces/p6.png"></div>
+<div class="cell light"><img src="pieces/p5.png"></div>
+<div class="cell dark"><img src="pieces/p2.png"></div>
+
+</div>
+
+
+<script>
+let selectedPiece = null;
+const cells = document.getElementsByClassName("cell");
+
+// method 8
+for (const cell of cells){
+    cell.onclick = function(){
+        handleClick(cell);
+    };
+}
+
+function handleClick(element){
+
+    for (const cell of cells){
+        cell.style.border="";
+    }
+
+    if(selectedPiece!=null){
+        element.replaceChildren(selectedPiece);
+        selectedPiece=null;
+    }
+    else if(element.children.length>0){
+        selectedPiece=element.children[0];
+        element.style.border="4px solid red";
+    }
+}
+</script>
+
+</body>
+</html>

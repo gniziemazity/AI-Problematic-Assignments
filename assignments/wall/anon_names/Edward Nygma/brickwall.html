@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess Board</title>
+        <style>
+            /* styling by ID */
+            #chess-board {
+                width: 425px;                           /* TASK #1 : Move width so that all places are visible +25pixels due to the margin shift */
+                display: flex;
+                flex-wrap: wrap;
+            }
+            /* CSS class */
+            .cell {
+                height: 26px;                       /*   TASK #5: Reduce height of cell */ 
+                width: 50px;
+                /* commented styling - not in use - just an example 
+                margin: 10px;
+                padding: 5px; */
+                border: 1px solid gray;
+                border-radius: 5px; /* TASK #5: Insert border-radius + experiment*/
+                box-sizing: border-box; /* size includes padding and border */
+            }
+            .light {
+                background-color: rgb(234,71,20);
+            }
+            .dark {
+                background-color: rgb(173,44,5);
+            }
+            /*.left-offset{                         /*  TASK #1: Create a class. (Looking at Radu's example / youtube tutorial for help ) */
+              /*  margin-left:25px;*/
+            /*}                                          TASK #4: REMOVE .left-offset and replaced with new class " .half-width"*/
+            .half-width{
+                width:25px;
+            }
+            .row{
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chess Board</h1>
+
+        <div id="chess-board">              
+            <div class="row">               <!-- Task #1 : Create row classes with * 8 cells in each -->
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light half-width"></div> <!--Task #4: I inserted a half-width light cell -->
+        </div>
+                                            <!--TASK #1 shift before dark row -->
+                                            <!--THIS DOESN'T WORK!! THESE ARE CELLS AND NOT!!
+                                            !! ANNOYING!! 
+                                            ROWS---#MUST CREATE A CLASS ROW?! Then apply to it ??-->
+            <div class="row">
+                                            <!--NOTE TO SELF... this is how to comment in html ....NOT /*css*/-->
+                                            <!--NOTE TO RADU... Task #4: I removed the class left-offset from class row -->
+            <div class="cell light half-width"></div> <!--Task #4: I removed the class left-offset from class row(Task 4) Replaced with half-width light cell -->
+            <div class="cell dark"></div> 
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div></div>
+
+            <div class="row">
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light half-width"></div> <!--Task #4: I inserted a half-width light cell -->
+        </div>
+                                            <!--TASK #1 shift before dark row -->
+            <div class="row ">            <!--NOTE TO RADU... Task #4: I removed the class left-offset from class row -->                    
+            <div class="cell light half-width"></div> <!--Task #4: I removed the class left-offset from class row(Task 4) Replaced with half-width light cell -->
+            <div class="cell dark "></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div></div>
+            
+            <div class="row">
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light half-width"></div> <!--Task #4: I inserted a half-width light cell -->
+        </div>
+
+
+            <div class="row ">                               <!--TASK #1 shift before dark row -->
+            <div class="cell light half-width"></div> <!--Task #4: I removed the class left-offset from class row(Task 4) Replaced with half-width light cell -->
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div></div>
+
+            <div class="row">
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light half-width"></div> <!--Task #4: I inserted a half-width light cell -->
+        </div>
+            
+            
+            <div class="row ">                               <!--TASK #1 shift before dark row -->
+            <div class="cell light half-width"></div> <!--Task #4: I removed the class left-offset from class row(Task 4) Replaced with half-width light cell -->
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+        </div>
+        </div>
+
+        <!-- div with Inline Style (not recommended) 
+        <div style="
+            height: 50px;
+            background-color: black;
+            width: 50px;
+        "></div> -->
+
+        <a href="https://www.w3schools.com" target="_blank">
+            Visit W3Schools.com!
+        </a>
+    </body>
+</html>

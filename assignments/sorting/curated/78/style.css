@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#motorcycle {
+    /*content: "\1F3CD";*/ /* Unicode for 🏍 */
+    display: none;
+    position: absolute;
+    margin-left: -10px;
+    transform: scaleX(-1);
+    font-size: 24px;
+}
+#vis-123456 {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+.bar {
+    width: 7px;
+    height: 100%;
+    background-color: black;
+    margin: 0px 1px;
+}
+#speedslider {
+    display: flex; /* Make the text and the slider appear next to eachother */
+}
+.slider {
+    cursor: pointer; /* To make it clear that the slider is interactable */
+}

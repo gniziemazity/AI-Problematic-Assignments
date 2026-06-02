@@ -1,0 +1,132 @@
+<!Doctype html>
+<html>
+    <head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Chess Board</title>
+
+    <style>
+      .cell {
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+        border: 1px solid gray;
+        box-sizing: border-box; /* size includes padding and border */
+        float: left;
+      }
+
+      .light {
+        background-color: white;
+      }
+
+      .dark {
+        background-color: black;
+      }
+
+      .left-offset {
+        margin-left: 25px;
+      }
+
+      /* 每一行结束后清掉 float */
+      .row-end {
+        clear: both;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Chess Board</h1>
+
+    <div id="chess-board">
+      <!-- Row 1 (从 dark 开始) -->
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="row-end"></div>
+
+      <!-- Row 2 (第一格加 left-offset，且从 light 开始) -->
+      <div class="cell light left-offset"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="row-end"></div>
+
+      <!-- Row 3 -->
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="row-end"></div>
+
+      <!-- Row 4 -->
+      <div class="cell light left-offset"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="row-end"></div>
+
+      <!-- Row 5 -->
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="row-end"></div>
+
+      <!-- Row 6 -->
+      <div class="cell light left-offset"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="row-end"></div>
+
+      <!-- Row 7 -->
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="row-end"></div>
+
+      <!-- Row 8 -->
+      <div class="cell light left-offset"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="cell light"></div>
+      <div class="cell dark"></div>
+      <div class="row-end"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!--
+There is still a problem: the game lets any piece move to any square and does not enforce real chess rules such as legal moves, turns, check, or checkmate.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chess Game</title>
+        <style>
+            body {
+                margin: 0;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 18px;
+                font-family: Arial, Helvetica, sans-serif;
+                background: #e8ded0;
+                color: #2b1d13;
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 2.4rem;
+            }
+
+            #chess-board {
+                width: min(88vw, 520px);
+                height: min(88vw, 520px);
+                display: grid;
+                grid-template-rows: repeat(8, 1fr);
+                grid-template-columns: repeat(8, 1fr);
+                border: 8px solid #3d2818;
+                box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+            }
+
+            .cell {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                border: 1px solid rgba(0, 0, 0, 0.25);
+                cursor: pointer;
+            }
+
+            .light {
+                background-color: #f0d9b5;
+            }
+
+            .dark {
+                background-color: #b58863;
+            }
+
+            .cell:hover {
+                box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.35);
+            }
+
+            .selected {
+                outline: 5px solid #d62828;
+                outline-offset: -5px;
+            }
+
+            img {
+                width: 72%;
+                max-height: 72%;
+                object-fit: contain;
+                pointer-events: none;
+                filter: drop-shadow(1px 2px 1px rgba(255, 255, 255, 0.45));
+            }
+
+            .invert-color {
+                filter: invert(100%) drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.7));
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chess Game</h1>
+        <div id="chess-board"></div>
+
+        <script>
+            let selectedPiece = null;
+            let selectedCell = null;
+            const board = document.getElementById("chess-board");
+
+            const pieces = {
+                pawn: "pieces/p1.png",
+                rook: "pieces/p2.png",
+                queen: "pieces/p3.png",
+                king: "pieces/p4.png",
+                knight: "pieces/p5.png",
+                bishop: "pieces/p6.png"
+            };
+
+            const startingBoard = [
+                ["rook", "knight", "bishop", "queen", "king", "bishop", "knight", "rook"],
+                ["pawn", "pawn", "pawn", "pawn", "pawn", "pawn", "pawn", "pawn"],
+                [null, null, null, null, null, null, null, null],
+                [null, null, null, null, null, null, null, null],
+                [null, null, null, null, null, null, null, null],
+                [null, null, null, null, null, null, null, null],
+                ["pawn", "pawn", "pawn", "pawn", "pawn", "pawn", "pawn", "pawn"],
+                ["rook", "knight", "bishop", "queen", "king", "bishop", "knight", "rook"]
+            ];
+
+            // method 8
+            for (const [rowNumber, row] of startingBoard.entries()) {
+                for (const [columnNumber, pieceName] of row.entries()) {
+                    const cell = document.createElement("div");
+                    cell.className = "cell " + ((rowNumber + columnNumber) % 2 === 0 ? "light" : "dark");
+
+                    if (pieceName != null) {
+                        const piece = document.createElement("img");
+                        piece.src = pieces[pieceName];
+                        piece.alt = pieceName;
+
+                        if (rowNumber >= 6) {
+                            piece.classList.add("invert-color");
+                            piece.alt = "white " + pieceName;
+                        } else {
+                            piece.alt = "black " + pieceName;
+                        }
+
+                        cell.appendChild(piece);
+                    }
+
+                    cell.onclick = function () {
+                        handleClick(cell);
+                    };
+
+                    board.appendChild(cell);
+                }
+            }
+
+            function clearSelection() {
+                const cells = document.getElementsByClassName("cell");
+
+                for (const cell of cells) {
+                    cell.classList.remove("selected");
+                }
+            }
+
+            function handleClick(cell) {
+                clearSelection();
+
+                if (selectedPiece != null) {
+                    if (cell === selectedCell) {
+                        selectedPiece = null;
+                        selectedCell = null;
+                        return;
+                    }
+
+                    cell.replaceChildren(selectedPiece);
+                    selectedPiece = null;
+                    selectedCell = null;
+                } else if (cell.children.length > 0) {
+                    selectedPiece = cell.children[0];
+                    selectedCell = cell;
+                    cell.classList.add("selected");
+                }
+            }
+        </script>
+    </body>
+</html>

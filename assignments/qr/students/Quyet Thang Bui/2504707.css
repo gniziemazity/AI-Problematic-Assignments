@@ -1,0 +1,68 @@
+:root {
+    --theme: #280; /* CSS variable */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Arial";
+    color: var(--theme);
+}
+
+#map {
+    width: 100%;
+}
+
+#marker {
+    width: 3vw; /* 3% of the viewport width */
+    height: 3vw;
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme); /* does not affect the size */
+    border: 5px solid white; /* affects the size */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+#mapContainer {
+    position: relative;
+    display: none;
+}
+
+#camera {
+    width: 100%;
+}
+
+
+#btn{ /* ex2 */
+    padding: 14px 40px;
+    background: linear-gradient(45deg, var(--theme) 0%, violet 125%);
+    border: 1.15px solid black;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: medium;
+    box-shadow: 0px 0px 35px deeppink;
+    cursor: pointer;
+    transition: 0.7s;
+}
+/* this is where i study from https://www.w3schools.com/csS/css3_buttons.asp
+https://cssauthor.com/css-hover-effects/ 
+also watch alot of youtube video for the button animation thou this one help me the most
+https://www.youtube.com/watch?v=xnltEHWWjiM */
+
+#btn:hover{
+    background: linear-gradient(45deg, red 0%, blue 125%);
+    letter-spacing: 3.5px;
+    box-shadow: 0px 0px 35px purple;
+}
+
+#btn:active{
+    transform: scale(0.8);
+}

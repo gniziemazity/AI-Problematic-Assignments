@@ -1,0 +1,166 @@
+<!--The game works to some extent. You can click on a piece and move it to another square,
+but it does not follow real chess rules. Any piece can move to any square, even if
+another piece of the same color is already there. Because of this, it is not a fully
+functional chess game.-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chess_2504689</title>
+        <!-- CSS styles -->
+         <style> 
+            /* styling by ID */
+            .cell {    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden
+            }
+            .light { background-color: rgb(151, 151, 149);}
+            .dark { background-color: rgb(50, 49, 49);}
+
+            #chess-board {
+                width: 400px;
+                height: 400px;
+                display: grid;
+                grid-template-columns: repeat(8, 1fr); /* 1 fraction*/
+                grid-template-rows: repeat(8, 1fr);
+                border: 15px solid black;
+            }
+            img{
+                width: 50%;
+                height: 80%;
+                object-fit: contain;
+            }
+            .invert-color {
+                filter: invert(100%);
+            }
+            h1 {
+                margin-bottom: 15px;
+            }
+             /* this keeps our board in center and also change the font */
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: Arial, sans-serif;
+            }
+        
+         </style>
+    </head>
+    <body>
+        <h1>Chess Game </h1>
+         
+
+        <div id ="chess-board">
+            <!-- Row1 -->
+            <div class ="cell light"><img src="png images/haati.png"></div>
+            <div class ="cell dark"><img src="png images/ghoda.png" ></div>
+            <div class ="cell light"><img src="png images/camel.png"></div>
+            <div class ="cell dark"><img src="png images/raani.png"></div>
+            <div class ="cell light"><img src="png images/raja.png"></div>
+            <div class ="cell dark"><img src="png images/camel.png"></div>
+            <div class ="cell light"><img src="png images/ghoda.png"></div>
+            <div class ="cell dark"><img src="png images/haati.png"></div>
+            <!-- Row2 -->
+            <div class ="cell dark"><img src="png images/peuso.png"></div>
+            <div class ="cell light"><img src="png images/peuso.png"></div>
+            <div class ="cell dark"><img src="png images/peuso.png"></div>
+            <div class ="cell light"><img src="png images/peuso.png"></div>
+            <div class ="cell dark"><img src="png images/peuso.png"></div>
+            <div class ="cell light"><img src="png images/peuso.png"></div>
+            <div class ="cell dark"><img src="png images/peuso.png"></div>
+            <div class ="cell light"><img src="png images/peuso.png"></div>
+
+            <!-- Row3 -->
+             <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <!-- Row4 -->
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+
+            <!-- Row5 -->
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <!-- Row6 -->
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+            <div class ="cell dark"></div>
+            <div class ="cell light"></div>
+
+            <!-- Row7 -->
+            <div class ="cell light"><img src="png images/peuso.png"class="invert-color"></div>
+            <div class ="cell dark"><img src="png images/peuso.png"class="invert-color"></div>
+            <div class ="cell light"><img src="png images/peuso.png"class="invert-color"></div>
+            <div class ="cell dark"><img src="png images/peuso.png"class="invert-color"></div>
+            <div class ="cell light"><img src="png images/peuso.png"class="invert-color"></div>
+            <div class ="cell dark"><img src="png images/peuso.png"class="invert-color"></div>
+            <div class ="cell light"><img src="png images/peuso.png"class="invert-color"></div>
+            <div class ="cell dark"><img src="png images/peuso.png"class="invert-color"></div>
+            <!-- Row8 -->
+            <div class ="cell dark"><img src="png images/haati.png"class="invert-color"></div>
+            <div class ="cell light"><img src="png images/ghoda.png"class="invert-color"></div>
+            <div class ="cell dark"><img src="png images/camel.png"class="invert-color"></div>
+            <div class ="cell light"><img src="png images/raani.png"class="invert-color"></div>
+            <div class ="cell dark"><img src="png images/raja.png"class="invert-color"></div>
+            <div class ="cell light"><img src="png images/camel.png"class="invert-color"></div>
+            <div class ="cell dark"><img src="png images/ghoda.png"class="invert-color"></div>
+            <div class ="cell light"><img src="png images/haati.png"class="invert-color"></div>
+
+        </div>
+
+        <script>
+            //its method 5th in the video
+            let selectedPiece =null;
+            const cells = document.getElementsByClassName("cell");
+            console.log(cells);
+            for (const cell of cells) {
+                cell.onclick = function(){ //anonymous function
+                    handleClick(cell);
+                };
+               
+            
+            }
+
+            function handleClick(element) {
+                for (const cell of cells) {
+                cell.style.border = "";
+                
+                }
+                if (selectedPiece != null) {
+                    element.replaceChildren(selectedPiece);
+                    selectedPiece = null;
+                }
+                else if (element.children.length > 0) {
+                    selectedPiece = element.children[0];
+                    element.style.border = "4px solid red";
+                }
+        }
+
+        </script>
+        
+    </body>
+</html>

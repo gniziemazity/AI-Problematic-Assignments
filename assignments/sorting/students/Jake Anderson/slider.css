@@ -1,0 +1,40 @@
+.slidecontainer {
+    width: 100%; /* width of the outside container */
+}
+
+/*The slider itself */
+
+.slider {
+    /* This is wheere i will define the appearance of the slider*/
+    -webkit-appearance: none; /* Overriding the default style of css = custom? */
+    appearance: none;
+    width: 100%; 
+    height: 25px;
+    background: grey;
+    outline: none;
+    opacity: 0.7; /* Set transparency so that the mouse over effects on hove*/
+    -webkit-transition: .2s; /* 0.2 delay on hover */ 
+    transition: opacity  .2s;
+
+}
+ /* Mouse-Over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse_over */
+}
+
+/* The slider handle (use -webkit- to override default look (see notes) */
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none; /* default look to none */
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: red;
+    cursor: pointer; /* cursor on hover*/
+}
+
+.slider::-moz-range-thumb{/* used for firefox browsers*/
+    width: 25px; 
+    height: 25px;
+    background-color: red;
+    cursor:pointer;
+}

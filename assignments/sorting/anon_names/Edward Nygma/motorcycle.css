@@ -1,0 +1,13 @@
+/* A css file for a motorcycle.
+* I will need to have a size, position (starting point/ending point?)*/
+/* # = java script getElementById*/
+
+#motorcycle{ /* Using the div from html*/
+    position: relative ; /* I used fixed position to see how it looks, now i want it to move I will use relative */
+    bottom: 10px;
+    left: 1px;
+    font-size: 20px;
+    transform: scaleX(-1);
+    
+    /*!! Not height utf 8 = font/number/letters ect so font size TEST  If working */ 
+}

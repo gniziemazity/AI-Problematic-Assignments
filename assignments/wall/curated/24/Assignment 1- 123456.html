@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chess Board - Brick Wall</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+
+    #chess-board {
+      width: 425px; 
+      height: 240px; 
+      display: flex;
+      flex-direction: column;
+      border: 3px solid #333;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .cell {
+      width: 50px;
+      height: 30px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      flex: 0 0 50px;
+      box-sizing: border-box; 
+    }
+
+    .half-width {
+      width: 25px;
+      flex: 0 0 25px;
+      box-sizing: border-box;
+    }
+
+    .light {
+      background: rgb(234, 66, 13);
+    }
+
+    .dark {
+      background: rgb(173, 44, 5);
+    }
+  </style>
+</head>
+<body>
+
+<div id="chess-board">
+  <div class="row">
+    <div class="cell light half-width"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+  </div>
+
+  <div class="row">
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light half-width"></div>
+  </div>
+
+  <div class="row">
+    <div class="cell light half-width"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+  </div>
+
+  <div class="row">
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light half-width"></div>
+  </div>
+
+  <div class="row">
+    <div class="cell light half-width"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+  </div>
+
+  <div class="row">
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light half-width"></div>
+  </div>
+
+ <div class="row">
+    <div class="cell light half-width"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+  </div>
+
+<div class="row">
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light"></div>
+    <div class="cell dark"></div>
+    <div class="cell light half-width"></div>
+  </div>
+</div>
+
+</body>
+</html>

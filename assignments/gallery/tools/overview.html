@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Grades Overview</title>
+		<link rel="stylesheet" href="shared.css" />
+		<link rel="stylesheet" href="overview.css" />
+	</head>
+	<body>
+		<div id="landing">
+			<h1>Grades Dashboard</h1>
+			<button class="landing-btn-primary" id="open-btn">
+				Open Course Folder
+			</button>
+		</div>
+
+		<div id="toolbar" class="app-toolbar">
+			<button class="active" data-page="students">Students</button>
+			<button data-page="stats">Statistics</button>
+			<button data-page="progress">Progress</button>
+			<button data-page="clusters">Clusters</button>
+			<div class="sep"></div>
+			<button id="open-btn-toolbar">Open Folder…</button>
+			<div class="sep"></div>
+			<span id="nav-info"></span>
+			<div class="sep"></div>
+			<label style="font-size: 11px; color: var(--clr-label)"
+				>Anonymize:
+				<select
+					id="anon-select"
+					style="
+						font-size: 11px;
+						padding: 2px 4px;
+						border: 1px solid var(--clr-border);
+						border-radius: 3px;
+					"
+					onchange="onAnonChange(this.value)"
+				>
+					<option value="">Show All</option>
+					<option value="name" selected>Name Only</option>
+					<option value="id">ID Only</option>
+				</select>
+			</label>
+		</div>
+
+		<div id="page-students" class="page">
+			<div class="table-wrap"><table id="grades-table"></table></div>
+		</div>
+
+		<div id="page-stats" class="page">
+			<div id="stats-no-data" style="display: none">
+				Run <code>npm run grades-analyze</code> first to generate
+				statistics.
+			</div>
+			<div class="stats-body" id="stats-body"></div>
+		</div>
+
+		<div id="page-progress" class="page">
+			<div class="sort-bar">
+				<span>Sort by:</span>
+				<button class="active" data-sort="name">Name</button>
+				<button data-sort="avg-follow">Avg Follow ↓</button>
+				<button data-sort="total-follow">Total Follow ↓</button>
+				<button data-sort="avg-grade">Avg Grade ↓</button>
+				<button data-sort="total-grade">Total Grade ↓</button>
+				<button data-sort="ai-count">AI ↑</button>
+				<span class="sep" style="margin: 0 8px; color: var(--clr-label)"
+					>|</span
+				>
+				<span>Hide:</span>
+				<label style="font-size: 11px; color: var(--clr-label)">
+					<input type="checkbox" id="prog-hide-grade" />
+					Assignment grade
+				</label>
+				<label style="font-size: 11px; color: var(--clr-label)">
+					<input type="checkbox" id="prog-hide-total-follow" />
+					Total follow
+				</label>
+				<label style="font-size: 11px; color: var(--clr-label)">
+					<input type="checkbox" id="prog-hide-lang-follow" />
+					Per-language follow
+				</label>
+			</div>
+			<div class="prog-grid" id="prog-grid"></div>
+		</div>
+
+		<div id="page-clusters" class="page">
+			<div class="sort-bar">
+				<span>Mode:</span>
+				<select
+					id="cluster-mode"
+					style="
+						font-size: 11px;
+						padding: 2px 4px;
+						border: 1px solid var(--clr-border);
+						border-radius: 3px;
+					"
+				>
+					<option value="kmeans" selected>K-means</option>
+					<option value="manualA">Manual A</option>
+					<option value="manualB">Manual B</option>
+				</select>
+				<span class="sep" style="margin: 0 8px; color: var(--clr-label)"
+					>|</span
+				>
+				<span class="cluster-kmeans-only">K:</span>
+				<input
+					type="number"
+					id="cluster-k"
+					min="2"
+					max="25"
+					step="1"
+					value="4"
+					class="cluster-kmeans-only"
+					style="
+						width: 48px;
+						font-size: 11px;
+						padding: 2px 4px;
+						border: 1px solid var(--clr-border);
+						border-radius: 3px;
+					"
+				/>
+				<button id="cluster-recluster" class="cluster-kmeans-only">
+					Re-cluster
+				</button>
+				<span
+					class="sep cluster-kmeans-only"
+					style="margin: 0 8px; color: var(--clr-label)"
+					>|</span
+				>
+				<span class="cluster-kmeans-only">Features:</span>
+				<label
+					class="cluster-kmeans-only"
+					style="font-size: 11px; color: var(--clr-label)"
+				>
+					<input type="checkbox" id="cluster-feat-follow" checked />
+					Follow %
+				</label>
+				<label
+					class="cluster-kmeans-only"
+					style="font-size: 11px; color: var(--clr-label)"
+				>
+					<input type="checkbox" id="cluster-feat-grade" checked />
+					Grade
+				</label>
+				<label
+					class="cluster-kmeans-only"
+					style="font-size: 11px; color: var(--clr-label)"
+				>
+					<input type="checkbox" id="cluster-feat-lang" checked />
+					Per-language follow
+				</label>
+				<span
+					class="sep cluster-kmeans-only"
+					style="margin: 0 8px; color: var(--clr-label)"
+					>|</span
+				>
+				<span>Hide:</span>
+				<label style="font-size: 11px; color: var(--clr-label)">
+					<input type="checkbox" id="cluster-hide-grade" />
+					Assignment grade
+				</label>
+				<label style="font-size: 11px; color: var(--clr-label)">
+					<input type="checkbox" id="cluster-hide-total-follow" />
+					Total follow
+				</label>
+				<label style="font-size: 11px; color: var(--clr-label)">
+					<input type="checkbox" id="cluster-hide-lang-follow" />
+					Per-language follow
+				</label>
+				<span class="sep" style="margin: 0 8px; color: var(--clr-label)"
+					>|</span
+				>
+				<span>Sort:</span>
+				<button
+					class="cluster-sort active"
+					data-cluster-sort="total-follow"
+				>
+					Total Follow ↓
+				</button>
+				<button class="cluster-sort" data-cluster-sort="name">Name</button>
+				<button class="cluster-sort" data-cluster-sort="avg-follow">
+					Avg Follow ↓
+				</button>
+				<button class="cluster-sort" data-cluster-sort="avg-grade">
+					Avg Grade ↓
+				</button>
+				<button class="cluster-sort" data-cluster-sort="total-grade">
+					Total Grade ↓
+				</button>
+				<button class="cluster-sort" data-cluster-sort="ai-count">
+					AI ↑
+				</button>
+			</div>
+			<div
+				id="cluster-manual-panel"
+				style="
+					display: none;
+					padding: 8px 12px;
+					border-bottom: 1px solid var(--clr-border);
+				"
+			>
+				<div
+					style="
+						font-size: 11px;
+						color: var(--clr-label);
+						margin-bottom: 4px;
+					"
+				>
+					One cluster per line, IDs comma- or space-separated. Use
+					<code>rest</code> for everyone else.
+				</div>
+				<div data-manual="A">
+					<textarea
+						data-manual-text="A"
+						rows="6"
+						style="
+							width: 100%;
+							font-family: monospace;
+							font-size: 11px;
+							padding: 6px;
+							border: 1px solid var(--clr-border);
+							border-radius: 3px;
+							resize: vertical;
+						"
+					></textarea>
+				</div>
+				<div data-manual="B" style="display: none">
+					<textarea
+						data-manual-text="B"
+						rows="6"
+						style="
+							width: 100%;
+							font-family: monospace;
+							font-size: 11px;
+							padding: 6px;
+							border: 1px solid var(--clr-border);
+							border-radius: 3px;
+							resize: vertical;
+						"
+					></textarea>
+				</div>
+				<div style="margin-top: 4px">
+					<button id="cluster-manual-apply">Apply</button>
+				</div>
+			</div>
+			<div class="clusters-body" id="clusters-body"></div>
+		</div>
+
+		<div id="loading">Loading…</div>
+
+		<script src="timeline-utils.js"></script>
+		<script src="xlsx.full.min.js"></script>
+		<script src="/src/shared/charts/utils.js"></script>
+		<script src="/src/shared/charts/scatter/scatter-chart.js"></script>
+		<script src="/src/shared/charts/bar/bar-chart.js"></script>
+		<script src="/src/shared/charts/line/line-chart.js"></script>
+		<script src="/src/shared/charts/boxplot/boxplot-chart.js"></script>
+		<script src="diff-utils.js"></script>
+		<script src="overview-state.js"></script>
+		<script src="overview-data.js"></script>
+		<script src="overview-table.js"></script>
+		<script src="overview-stats.js"></script>
+		<script src="overview-clusters.js"></script>
+		<script src="overview-progress.js"></script>
+		<script src="overview.js"></script>
+	</body>
+</html>

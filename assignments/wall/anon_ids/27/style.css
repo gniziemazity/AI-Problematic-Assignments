@@ -1,0 +1,26 @@
+#chess-board {
+    width: 460px; /* to fit left-offset */
+}
+
+.row {
+    line-height: 0;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.light {
+    background-color: #ff4d4d;  /* bright red */
+}
+
+.dark {
+    background-color: #990000;  /* dark red */
+}
+
+.left-offset {
+    margin-left: 25px; /* brick wall effect still works */
+}

@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animals Grid</title>
+    <style>
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .cell {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Grid for animals -->
+    <div id="grid"></div>
+
+    <!-- SOUND FILES -->
+    <audio id="dogSound" src="dog.mp3"></audio>
+    <audio id="catSound" src="cat.mp3"></audio>
+    <!--
+Sound Sources:
+Cat sound: https://mixkit.co/free-sound-effects/cat/
+Dog sound: https://mixkit.co/free-sound-effects/dog/
+-->
+
+    <!-- Dog class-->
+    <script src="https://www.radufromfinland.com/dog.js"></script>
+
+    <!--Cat class -->
+    <script src="cat.js"></script>
+
+    <script>
+        // FETCH VARIANT 1
+        fetch("https://radufromfinland.com/animals/") // request data from API
+            .then(function(response) { // when response is received
+                return response.json(); // convert response to JSON
+            })
+            .then(function(data) { // when JSON is ready
+                console.log(data); // print data
+                generateAnimals(data); // call function
+            })
+            .catch(function(err) { // if error happens
+                console.error(err); // print error
+            });
+
+        /*
+        FETCH VARIANT 2
+        async function fetchData() { // async function
+            try {
+                const response = await fetch("https://radufromfinland.com/animals/"); // wait for response
+                const data = await response.json(); // convert to JSON
+                console.log(data); // print data
+                generateAnimals(data); // call function
+            } catch(err) {
+                console.error(err); // print error
+            }
+        }
+        fetchData(); // call function
+        */
+
+        function generateAnimals(data) {
+            const grid = document.getElementById("grid");
+
+            for (let i = 0; i < 100; i++) {
+                const cell = document.createElement("div");
+                cell.className = "cell";
+
+                let animal;
+
+                if (Math.random() > 0.5) {
+                    animal = new Dog("Dog" + i, 2, "brown", "black");
+                } else {
+                    animal = new Cat("Cat" + i, 2, "lightgray", "green");
+                    
+                }
+
+                const canvas = animal.render();
+                cell.appendChild(canvas);
+
+                // CLICK EVENT
+                cell.onmousedown = function() {
+                    animal.talk();
+
+                    if (animal instanceof Dog) {
+                        document.getElementById("dogSound").play();
+                    } else {
+                        document.getElementById("catSound").play();
+                    }
+                };
+
+                grid.appendChild(cell);
+            }
+        }
+    </script>
+
+</body>
+</html>

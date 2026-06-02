@@ -1,0 +1,208 @@
+<!Doctype html>
+<html>
+    <!-- After setting pieces on a board the cell with tall pieces, e.g. kings and queens, have turn into rectangulars from squares. This was fixed with
+     'overflow: hidden' attribute in '.cell' class (release cells from fitting content strictly inside their size).  
+     However, now some tallest pieces happened be be a little cut. This was fixed by adding 'max-height: 90%' attribute to 'img' tag CSS
+     The next problem was that the white pieces get invisible on white cells. Fixed by changing the filter property in CSS for white pieces
+     
+     As an extra enhancement the JS code to set pieces on the board was added. It is run upon load of HTML elements
+     and then can be activated through 'Set pieces' button when necessary to sort out pieces after permutations-->
+    <head>
+        <title>Chess 123456</title>
+        <style>
+            .cell {
+                border: 2px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+            .light {background-color: white;}
+            .dark {background-color: grey;}
+
+            #chess-board {
+                width: 400px;
+                height: 400px;
+                display: grid;
+                grid-template-rows: repeat(8, 1fr); /*1 fraction*/
+                grid-template-columns: repeat(8, 1fr);
+            }
+            img {
+                width: 50%;
+                max-height: 90%;
+            }
+            .invert-color {
+                filter: invert(75%);
+            }
+        </style>
+    </head>
+    <body onload="setPieces();">
+        <h1>Chess Game</h1>
+        <div id="chess-board">
+            <div class="cell light" onclick="handleClick(this);">
+                <!--<img src="pieces/p2.png"/>-->
+            </div>
+            <div class="cell dark">
+               <!-- <img src="pieces/p5.png" class="invert-color" />-->
+            </div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+                        
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+           
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+        </div>
+        <script>
+            setPieces();
+        </script>
+
+        <button onclick="setPieces()">Set pieces</button>
+
+        <script>
+            /*dictionaty with piece names as keys and paths to their images as values*/
+            const piecesPath = {
+                "pawn": "pieces/p1.png",
+                "rook": "pieces/p2.png",
+                "knight": "pieces/p5.png",
+                "bishop": "pieces/p6.png",
+                "queen": "pieces/p3.png",
+                "king": "pieces/p4.png",
+            };
+            
+            const piecesSet = []
+
+            const cells = document.getElementsByClassName("cell");
+
+            /*load pieces objects into 'piecesSet' array.
+            this is also an example of using a for ..of loop (method # 5 in the homework video)*/
+            for (const p of Object.keys(piecesPath)) {
+                let pic = document.createElement("img");
+                pic.src = piecesPath[p];
+                piecesSet.push(pic);
+            }
+            /** setPieces clears the board 
+             * and sets the pieces in their initial positions */
+            function setPieces() {
+                /*clear the board*
+                another example of using a for ..of loop (method # 5 in the homework video)*/
+                for (const cell of cells) {
+                    cell.replaceChildren();
+                }
+                /*set high-ranked pieces in their initial positions
+                mothod #3 from study video*/
+                for (let i = 1; i < 6; i++) {
+                    if (i < 4) {
+                        cells[i-1].append(piecesSet[i].cloneNode());
+                        cells[8-i].append(piecesSet[i].cloneNode());
+                        const whitePiece = piecesSet[i].cloneNode();
+                        whitePiece.classList.add("invert-color");
+                        cells[55 + i].append(whitePiece);
+                        cells[64 - i].append(whitePiece.cloneNode());
+                    } else {
+                        cells[i-1].append(piecesSet[i].cloneNode());
+                        const whitePiece = piecesSet[i].cloneNode();
+                        whitePiece.classList.add("invert-color");
+                        cells[55 + i].append(whitePiece);
+                    }             
+                }
+                /*set pawns in their initial positions*/
+                for (let i = 8; i < 16; i++) {
+                    cells[i].append(piecesSet[0].cloneNode());
+                    const whitePiece = piecesSet[0].cloneNode();
+                    whitePiece.classList.add("invert-color");
+                    cells[40 + i].append(whitePiece);
+                }
+            }
+                        
+            console.log(piecesSet);
+            console.log(cells);
+
+            let selectedPiece = null;
+            /*omne more example of using a for ..of loop (method number 5 in the homework video)*/
+                 
+            for (const cell of cells) {
+                cell.onclick = function () {
+                    handleClick(cell);
+                };
+            }
+
+            function handleClick(element) {
+                for (const cell of cells) {
+                    cell.style.border = "";
+                }
+                if (selectedPiece != null) {
+                    element.replaceChildren(selectedPiece);
+                    selectedPiece = null;
+                } else if (element.children.length > 0) {
+                    selectedPiece = element.children[0];
+                    element.style.border = "4px solid red";
+                }
+            }
+        </script>
+    </body>
+
+        
+</html>

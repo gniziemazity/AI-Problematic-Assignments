@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>Sorting Visualizer</title>
+    
+        <link rel="stylesheet" href="style.css"> <!--/*Task1: remove and insert css file*/-->
+        <link rel="stylesheet" href="slider.css"> <!-- Task3: I forgot to add the css visual-->
+        <link rel="stylesheet" href="motorcycle.css"> <!--Task4: I forgot to link to the css -->
+    </head>
+    <body>
+        <h1>Sorting Visualizer</h1>
+        <!--Task3: Inserting slidecontainer div-->
+        <!-- div containing slider values ___Need to still insert logic to link to speed-->
+        <div class="slidecontainer">
+            <input type="range"
+            min="1"
+            max="100" 
+            value="50"
+            class="slider"
+            id="myRange"
+            oninput="changeSpeed(this.value)"> <!---Task3: Inserting oninput (every time slider changes it takes the value)-->
+        </div>
+        <!--Task4: creating motorcycle div/ PASTING the motorcycle works!-->
+        <div id="motorcycle">🏍️</div>
+        <div id="vis-123456"></div>
+        <!--//Task1: Remove and insert JavaScript file // -->
+        <script src="script.js"></script>
+        <script src="slider_logic.js"></script>
+    </body>
+</html>

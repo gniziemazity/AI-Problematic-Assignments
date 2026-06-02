@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Sorting Visualizer</h1>
+
+<div class="controls">
+    <label for="speedRange">Speed:</label>
+    <input type="range" id="speedRange" min="10" max="200" value="100" onchange="updateSpeed(this.value)">
+</div>
+
+<div id="bars"></div>
+
+<div id="motorcycle">🏍️</div>
+
+<button onclick="startSort()">Start Sorting</button>
+
+<script src="script.js"></script>
+</body>
+</html>

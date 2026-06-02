@@ -1,0 +1,32 @@
+#motorcycle-container {
+    height: 30px; /* space above bars */
+    position: relative;
+    width: 100%;
+}
+
+#motorcycle {
+    position: absolute;
+    font-size: 28px;
+    transition: left 0.3s ease, top 0.3s ease;
+    transform: scaleX(-1); /* flip right-facing */
+    pointer-events: none; /* so it doesn't interfere with mouse */
+}
+   
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#vis-123456 {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 7px;
+    height: 100%;
+    background-color: black;
+    margin: 0px 1px;
+}

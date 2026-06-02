@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cats and Dogs Assignment</title>
+
+<style>
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.cell {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+     <h1>Cats & Dogs Assignment</h1>
+<div id="container"></div>
+
+<!-- Original Dog Class -->
+<script src="https://www.radufromfinland.com/dog.js"></script>
+
+<script>
+/* FETCH DATA */
+async function fetchData() {
+    try {
+        const response = await fetch("https://radufromfinland.com/animals/");
+        const data = await response.json();
+        generateAnimals(data);
+    } catch(err) {
+        console.error(err);
+    }
+}
+fetchData();
+
+/* =========================
+   CAT CLASS
+========================= */
+class Cat {
+    constructor(name, age, furr, eyes) {
+        this.name = name;
+        this.age = age;
+        this.furr = furr;
+        this.eyes = eyes;
+    }
+
+    talk() {
+        console.log(this.name + " says: Meow!" );
+    }
+
+    render() {
+        const canvas = document.createElement("canvas");
+        canvas.width = 120;
+        canvas.height = 120;
+        const ctx = canvas.getContext("2d");
+
+        // head
+        ctx.beginPath();
+        ctx.arc(60, 60, 40, 0, Math.PI * 2);
+        ctx.fillStyle = this.furr;
+        ctx.fill();
+
+        // pointy ears
+        ctx.beginPath();
+        ctx.moveTo(35, 30);
+        ctx.lineTo(50, 5);
+        ctx.lineTo(60, 30);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(60, 30);
+        ctx.lineTo(70, 5);
+        ctx.lineTo(85, 30);
+        ctx.fill();
+
+        // eyes
+        ctx.beginPath();
+        ctx.arc(45, 55, 5, 0, Math.PI * 2);
+        ctx.arc(75, 55, 5, 0, Math.PI * 2);
+        ctx.fillStyle = this.eyes;
+        ctx.fill();
+
+        // nose
+        ctx.beginPath();
+        ctx.arc(60, 70, 4, 0, Math.PI * 2);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+
+        // whiskers
+        ctx.beginPath();
+        ctx.moveTo(20, 65);
+        ctx.lineTo(50, 65);
+        ctx.moveTo(20, 75);
+        ctx.lineTo(50, 70);
+        ctx.moveTo(100, 65);
+        ctx.lineTo(70, 65);
+        ctx.moveTo(100, 75);
+        ctx.lineTo(70, 70);
+        ctx.stroke();
+
+        return canvas;
+    }
+}
+
+/* GENERATE 100 ANIMALS */
+function generateAnimals(data) {
+
+    for (let i = 0; i < 100; i++) {
+
+        const random = data[Math.floor(Math.random() * data.length)];
+        const isDog = Math.random() > 0.5;
+
+        let animal;
+        if (isDog) {
+            animal = new Dog(random.name, random.age, random.furr, random.eyes);
+        } else {
+            animal = new Cat(random.name, random.age, random.furr, random.eyes);
+        }
+
+        const div = document.createElement("div");
+        div.className = "cell";
+
+        const title = document.createElement("div");
+        title.innerHTML = `<b>${random.name}</b>`;
+        div.appendChild(title);
+
+        const drawing = animal.render();
+        div.appendChild(drawing);
+
+        /* CLICK EVENT WITH WORKING ONLINE SOUND */
+        div.onmousedown = function() {
+            animal.talk();
+
+            let sound;
+            if (isDog) {
+                // Dog sound (reliable online mp3)
+                sound = new Audio("dogAudio.mp3");
+            } else {
+                // Cat sound (reliable online mp3)
+                sound = new Audio("catAudio.mp3");
+            }
+
+            sound.play();
+        };
+
+        container.appendChild(div);
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#speedSlider {
+    width: 220px;
+}
+
+#vis-123456 {
+    width: 540px;
+    height: 260px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    border-bottom: 3px solid #333;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+#bars {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 7px;
+    height: 100%;
+    background-color: black;
+    margin: 0 1px;
+}
+
+#motorcycle {
+    position: absolute;
+    font-size: 30px;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    transform: translate(-50%, 0);
+    z-index: 10;
+}

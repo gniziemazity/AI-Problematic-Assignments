@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#vis-123456 {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+.bar {
+    width: 7px;
+    height: 100%;
+    background-color: black;
+    margin: 0px 1px;
+}
+.range-slider {
+    margin-top: 20px;
+    width: 450px;
+}
+
+.mcycle {
+    width: 15px;
+    height: 15px;
+    margin-top: -20px;
+    transform: scaleX(-1); /* Makes the emoji flipped, it's wrong direction otherwise*/
+    transition: 0.15s ease-in-out; /* 15s animation, slow-quick-slow */
+}

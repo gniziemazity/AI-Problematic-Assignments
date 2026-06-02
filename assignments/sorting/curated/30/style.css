@@ -1,0 +1,21 @@
+  /*This is a css file that contains the style for the bars */
+
+/* <link rel="stylesheet" href="style.css"> */
+/* External cc file uses- internal uses <style>*/
+body {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            #vis-123456 {
+                height: 200px;
+                display: flex;
+                align-items: flex-end;
+            }
+            .bar {
+                width: 7px;
+                height: 100%;
+                background-color: black;
+                margin: 0px 1px;
+            }
+  

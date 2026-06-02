@@ -1,0 +1,40 @@
+<canvas id ='myCanvas'
+        style= 'background-color: yellow'
+        width= '400' height='400'> </canvas>
+
+
+<script>
+
+el=document.getElementById('myCanvas');
+const ctx=el.getContext('2d'); // getting the 2d element from canvas 
+
+ctx.beginPath();     //Starting new shape add begin path
+ctx.moveTo(100,300); // Pen over paper (location )
+ctx.lineTo(300,300); // to where
+ctx.lineTo(300,100); // NEW LINE
+ctx.lineTo(200,50);
+ctx.lineTo(100,100);
+ctx.lineTo(100,300);
+ctx.stroke();        // drawing the line
+
+
+ctx.beginPath();       //starting newshape add begin path 
+ctx.arc(200,200,100,0,2*Math.PI);// method for drawing a circle. 3rd. number = radius . 4th number = starting point  Final number in sequence = part of circle (HALF = pi 3.14)
+ctx.stroke(); //<< initiating the draw ( However we didn't stop the previous line) 
+
+ctx.beginPath();
+ctx.arc(200,200,25,0,2*Math.PI);
+ctx.stroke();
+
+
+
+/* NOTE ON LOCATION:
+# 0,0 point is in the top left corner 
+# 400,400 is lower right */
+
+
+/* Pro Tip:
+Take out paper with grid and draw out the co-ordinates first */
+
+
+</script>

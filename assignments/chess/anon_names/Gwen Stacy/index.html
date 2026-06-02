@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<!-- The game works, but there was a problem:
+Cells were replacing each other's content when moving pieces, so pieces kept
+overwriting one another. After several moves only one piece remained on the board. -->
+
+<html>
+<head>
+    <title>Chess 123456</title>
+    <style>
+        .cell {
+            border: 2px solid rgb(51, 20, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        body {
+           display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+        } 
+
+        .light {
+            background: 
+            repeating-linear-gradient(
+            0deg,
+            #f4d0a8 0px,
+            #c9a97c 10px);
+        }
+        .dark {
+            background: 
+            repeating-linear-gradient(
+            90deg,
+            #b77639 0px,
+            #945d26 10px);
+        }
+
+        #chess-board {
+            width: 400px;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+        }
+
+        img {
+            width: 55%;
+            user-select: none;
+        }
+
+        .invert-color {
+            filter: invert(100%);
+        }
+
+        h1 {
+            color: #141212;
+            transition: color 0.5s ease, text-shadow 0.5s ease;
+        }
+
+        h1:hover {
+            color: #ff3700;
+            text-shadow: 5px 8px 15px black;
+        }
+        
+               
+    </style>
+</head>
+
+<body>
+    <h1>Chess Game</h1>
+
+    <div id="chess-board">
+        <div class="cell light"><img src="pieces/p2.png"></div>
+        <div class="cell dark"><img src="pieces/p5.png"></div>
+        <div class="cell light"><img src="pieces/p6.png"></div>
+        <div class="cell dark"><img src="pieces/p4.png"></div>
+        <div class="cell light"><img src="pieces/p3.png"></div>
+        <div class="cell dark"><img src="pieces/p6.png"></div>
+        <div class="cell light"><img src="pieces/p5.png"></div>
+        <div class="cell dark"><img src="pieces/p2.png"></div>
+
+        <div class="cell dark"><img src="pieces/p1.png"></div>
+        <div class="cell light"><img src="pieces/p1.png"></div>
+        <div class="cell dark"><img src="pieces/p1.png"></div>
+        <div class="cell light"><img src="pieces/p1.png"></div>
+        <div class="cell dark"><img src="pieces/p1.png"></div>
+        <div class="cell light"><img src="pieces/p1.png"></div>
+        <div class="cell dark"><img src="pieces/p1.png"></div>
+        <div class="cell light"><img src="pieces/p1.png"></div>
+
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+
+        <div class="cell light"><img src="pieces/p1.png" class="invert-color"></div>
+        <div class="cell dark"><img src="pieces/p1.png" class="invert-color"></div>
+        <div class="cell light"><img src="pieces/p1.png" class="invert-color"></div>
+        <div class="cell dark"><img src="pieces/p1.png" class="invert-color"></div>
+        <div class="cell light"><img src="pieces/p1.png" class="invert-color"></div>
+        <div class="cell dark"><img src="pieces/p1.png" class="invert-color"></div>
+        <div class="cell light"><img src="pieces/p1.png" class="invert-color"></div>
+        <div class="cell dark"><img src="pieces/p1.png" class="invert-color"></div>
+
+        <div class="cell dark"><img src="pieces/p2.png" class="invert-color"></div>
+        <div class="cell light"><img src="pieces/p5.png" class="invert-color"></div>
+        <div class="cell dark"><img src="pieces/p6.png" class="invert-color"></div>
+        <div class="cell light"><img src="pieces/p4.png" class="invert-color"></div>
+        <div class="cell dark"><img src="pieces/p3.png" class="invert-color"></div>
+        <div class="cell light"><img src="pieces/p6.png" class="invert-color"></div>
+        <div class="cell dark"><img src="pieces/p5.png" class="invert-color"></div>
+        <div class="cell light"><img src="pieces/p2.png" class="invert-color"></div>
+    </div>
+
+        <script>
+            let selectedPiece = null;
+            const cells = document.getElementsByClassName("cell");
+            console.log(cells);
+            /*Method 5*/
+            for (const cell of cells) {
+                cell.onclick = function () { // anonymous function
+                    handleClick(cell);
+                };
+            }
+
+            function handleClick(element) {
+                for (const cell of cells) {
+                    cell.style.border = "";
+                }
+                if (selectedPiece != null) {
+                    element.replaceChildren(selectedPiece);
+                    selectedPiece = null;
+                } else if (element.children.length > 0) {
+                    selectedPiece = element.children[0];
+                    element.style.border = "4px solid red";
+                }
+            }
+        </script>
+    </body>
+</html>

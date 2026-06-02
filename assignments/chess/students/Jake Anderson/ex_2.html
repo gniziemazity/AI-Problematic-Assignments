@@ -1,0 +1,241 @@
+<!DOCTYPE html> <!-- TASK 2: ANSWER
+The game works as followed at this stage of completion with the logic that it has been given. 
+There are faults with the board and the logic. Some other elements work well. 
+However as there has yet to be implemented the logic of the game certain functions are also missing. 
+
+
+*-----------------What Works:--------------------*
+* Players may:
+    + Select pieces can be selected which are then highlighted by a Red border around the selected piece)
+    + Move to other cells, eating opponents (or own pieces) located on the new position.
+*-------------------------------------*
+
+*-----------------What Doesn't Work:-------------*
+*Board:
+    - Cell overflow = The larger pieces do make the cells grow in height and the pawn cell ro, when a large piece is moved the cell height changes with the piece.
+    - White pieces are not visible on white backgrounds 
+* Game Logic:
+    - There is no turn system implemented.
+    - Game rules are not enforced. e.g all pieces can move whereever and however many places. 
+    - Players can be cannibals, it is possible to eat their own kind...savage!
+-->
+
+
+<html>
+    <head>
+        <title>Chess 123456</title>
+        <style>
+            .cell  { 
+                border: 2px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;   /* Task #1/ 4 configuring the larger pieces to fit the board -> see notes for overflow */
+            }
+            /* Task 1/4 Changing colors so as to see white and black pieces- I couldn't figure out other solution
+            I tried adding border and it didn't work */
+            .light { background-color: rgba(245, 191, 111, 0.897) ;} 
+            
+            .dark  { background-color: rgb(126, 83, 4); }
+
+            #chess-board {
+                width: 500px;
+                height: 500px;
+                display: grid;
+                grid-template-rows: repeat(8, 1fr); /* 1 fraction */
+                grid-template-columns: repeat(8, 1fr);
+            }
+
+            img {
+                width: 50%;
+                height:85%;
+         
+            }
+            .pawn { /* Task #4 creating a pawn class-> as the height of the pawn too much resembles a bishop */
+                width: 35%;
+                height: 60%;
+            }
+            .invert-color {
+                filter: invert(100%);
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chess Game</h1>
+
+        <div id="chess-board">
+            <div class="cell light">
+                <img src="pieces/p2.png" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p5.png" />
+            </div>
+            <div class="cell light">
+                <img src="pieces/p6.png" /> <!-- Task #1 : placing black pieces in each cell in each -->
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p3.png" /> <!-- Task #1 : First problem == we have to adjust the height of the cell/ or the piece as the larger pieces push the cell up  -->
+            </div>
+            <div class="cell light">
+                <img src="pieces/p4.png" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p6.png" />
+            </div>
+            <div class="cell light">
+                <img src="pieces/p5.png" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p2.png" />
+            </div>
+            
+            <div class="cell dark">
+                <img src="pieces/p1.png " class="pawn" /> <!-- Task #5 : altering height of all pawns -->
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png"  class="pawn"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class="pawn"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" class="pawn"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class="pawn"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" class="pawn"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class="pawn"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" class="pawn" />
+            </div>
+            
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            
+            <div class="cell light">
+                <img src="pieces/p1.png" class="invert-color pawn"/> <!-- Task #1 : placing white pieces in each cell  -->
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class="invert-color pawn"/>
+            </div>
+            <div class="cell light"> <!-- Task #1 : second problem == white on white cell is not visible - either change the color(NOT GOOD) or ad border to pieces  -->
+                <img src="pieces/p1.png" class="invert-color pawn" /> <!--Task #4 : Making Pawns smaller 
+                1st # NOTE THIS DIDN'T WORK
+                Maybe because there is already a class? or is the order important TEST 
+                #2ns # NOTE checked previous task 'brick wall', noticed syntax for many classes in div-->
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class="invert-color pawn"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" class="invert-color pawn"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class="invert-color pawn"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" class="invert-color pawn" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class="invert-color pawn" />
+            </div>
+            
+            <div class="cell dark">
+                <img src="pieces/p2.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p5.png" class="invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p6.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p3.png" class="invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p4.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p6.png" class="invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p5.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p2.png" class="invert-color"/>
+            </div>
+        </div>
+
+        <script>
+            let selectedPiece = null;
+            const cells = document.getElementsByClassName("cell");
+            console.log(cells);
+            for (const cell of cells) {
+                cell.onclick = function () { // anonymous function
+                    handleClick(cell);
+                };
+            }
+
+            function handleClick(element) {
+                //Task #3//
+            //=  #5th loop featured in video =
+            //  FOR of LOOP - For every number of the array we add it to the sum <----featured at 8:16 //
+            //Extra information://
+            //The for of loop looks nicer because its shorter , identifies number, if it is long//
+            //ISSUE://
+            // if index is later needed then some work must be done to obtain it making the loop longer//
+            //in for loop conditions may be added. e.g using a value 'i = 0' then incrementing i ´so as to check if i  % 2 == 0 then even number//
+
+                for (const cell of cells) {
+                    cell.style.border = "";
+                }
+                if (selectedPiece != null) {
+                    element.replaceChildren(selectedPiece);
+                    selectedPiece = null;
+                } else if (element.children.length > 0) {
+                    selectedPiece = element.children[0];
+                    element.style.border = "4px solid red";
+                }
+            }
+        </script>
+    </body>
+</html>

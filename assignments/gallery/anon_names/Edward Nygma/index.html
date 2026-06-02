@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lesson</title>
+<style>
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(4, 60px); /* 4 columns */
+            grid-auto-rows: 60px;                  /* consistent rows */
+            gap: 5px;
+            justify-content: center;               /* center grid on page */
+        }
+
+        #grid canvas {
+            border: 1px solid black;               /* 👈 cell outlines */
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+
+</head>
+<body>
+    <!--TASK 2: Creating a grid -->
+    <!--TASK 2: grid-auto = each row is onsistent
+                repeat(4, 60px) = exactly 4 columns -->
+    <div id="grid" style="
+    display: grid;
+    grid-template-columns: repeat(4, 60px); 
+    grid-auto-rows: 60px;
+    gap: 5px;
+    justify-content: center;
+"></div> 
+
+    <script src="https://www.radufromfinland.com/dog.js"></script>
+    <script src="cat.js"></script>
+    <script src="script.js"></script>   <!--TASK 2: Importing script for x100 animals  -->
+</body>
+</html>

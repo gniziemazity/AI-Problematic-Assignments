@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sorting Visualizer</h1>
+    
+    <div class="control-panel">
+        <label for="speedSlider">Animation Speed: </label>
+        <input type="range" id="speedSlider" min="10" max="500" value="100" onchange="updateSpeed(this.value)">
+    </div>
+
+    <div class="visualizer-container">
+        <div id="motorcycle-track">
+            <span id="motorcycle">🏍️</span>
+        </div>
+        <div id="vis-123456"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

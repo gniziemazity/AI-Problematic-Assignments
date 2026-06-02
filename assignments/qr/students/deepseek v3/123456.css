@@ -1,0 +1,140 @@
+:root {
+    --theme: #280;           /* CSS variable (dark green) */
+    --theme-light: #3a0;
+    --panel-bg: #f9f9f9;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: #f0f2f5;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: "Arial", system-ui;
+    color: var(--theme);
+    margin-bottom: 0.5rem;
+}
+
+/* Map container (legacy positioning feature) */
+#map {
+    width: 100%;
+}
+
+#marker {
+    width: 3vw;
+    height: 3vw;
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme);
+    border: 5px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+#mapContainer {
+    position: relative;
+    display: none;        /* hidden by default, shown only when map is needed */
+    max-width: 90vw;
+    margin-bottom: 1rem;
+}
+
+/* ========== INVENTORY PANEL ========== */
+#inventoryPanel {
+    background: var(--panel-bg);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    width: 90%;
+    max-width: 480px;
+    margin: 1rem 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+#inventoryHeader {
+    background: var(--theme);
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#inventoryInfo {
+    padding: 1.2rem;
+    min-height: 160px;
+}
+
+/* separate p tags for each inventory field */
+#inventoryInfo p {
+    margin: 0.8rem 0;
+    padding: 0.6rem 0.8rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.info-placeholder {
+    color: #666;
+    text-align: center;
+    font-style: italic;
+    background: #eee !important;
+    justify-content: center;
+}
+
+/* ========== BEAUTIFUL SCAN BUTTON ========== */
+.scan-button {
+    background-color: var(--theme);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 28px;
+    border-radius: 60px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 0.5rem 0 1rem 0;
+    width: auto;
+    min-width: 160px;
+}
+
+.scan-button:hover {
+    background-color: #3a0;          /* brighter green on hover */
+    transform: scale(1.02);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.scan-button:active {
+    transform: scale(0.98);
+}
+
+/* Camera container (hidden by default, shown when scanning) */
+#camera {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: none;
+}
+
+#camera video, #camera div {
+    width: 100%;
+    border-radius: 20px;
+}

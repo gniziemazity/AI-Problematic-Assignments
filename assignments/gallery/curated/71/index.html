@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Animals Grid</title>
+
+<style>
+#container {
+    display: grid;
+    grid-template-columns: repeat(25, 60px);
+    gap: 5px;
+}
+
+canvas {
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgb(30, 39, 158);
+}
+</style>
+</head>
+
+<body>
+
+<div id="container"></div>
+
+<!-- Sound source -->
+<!-- Authentic Dog Sounds & SFX website (MP3 files used for project) -->
+
+<audio id="dogSound" src="sounds/dog.mp3"></audio>
+<audio id="catSound" src="sounds/cat.mp3"></audio>
+
+<!-- dog class from teacher -->
+<script src="https://www.radufromfinland.com/dog.js"></script>
+
+<!-- my cat class -->
+<script src="cat.js"></script>
+
+<script>
+
+// variant 1
+fetch("https://radufromfinland.com/animals/") //get data from API
+    .then(function(response) { //wait for response
+        return response.json(); //Converts response to JSON
+    })
+    .then(function(data) { //get data
+        console.log(data); //show data in console
+    })
+    .catch(function(err) { //if error happens
+        console.error(err); //shows error
+    });
+
+// variant 2
+async function fetchData() { // async function
+    try { // start try
+        const response = await fetch("https://radufromfinland.com/animals/"); // get data
+        const data = await response.json(); // convert to JSON
+
+        generateAnimals(data); 
+
+    } catch(err) { // error
+        console.error(err); // show error
+    }
+}
+fetchData(); //Run async function
+
+//CREATE 100 ANIMALS (4 x 25 GRID)
+
+function generateAnimals(data) {
+
+    const container = document.getElementById("container");
+
+    for (let i = 0; i < 100; i++) {
+
+        //random animal from API
+        const randomIndex = Math.floor(Math.random() * data.length);
+        const item = data[randomIndex];
+
+        //create Dog or Cat
+        let animal;
+
+        if (Math.random() > 0.5) {
+            animal = new Dog(item.name, item.age, item.furr, item.eyes);
+        } else {
+            animal = new Cat(item.name, item.age, "gray", "black");
+        }
+
+        const canvas = animal.render();
+
+        //click event
+        canvas.onmousedown = function () {
+            animal.talk();
+
+            //play sound
+            if (animal instanceof Dog) {
+                sound = new Audio("dog.mp3.mp3").play();
+            } else {
+                sound = new Audio("cat.mp3.mp3").play();
+            }
+        };
+
+        container.appendChild(canvas);
+    }
+}
+
+</script>
+
+</body>
+</html>
+
+     

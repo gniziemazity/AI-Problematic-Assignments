@@ -1,0 +1,29 @@
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#vis-2504638 {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    position: relative; /* needed for motorcycle absolute positioning */
+}
+
+.bar {
+    width: 7px;
+    height: 100%;
+    background-color: black;
+    margin: 0px 1px;
+}
+
+/* Motorcycle emoji style */
+#motorcycle {
+    position: absolute;
+    top: 0; /* will adjust above bars */
+    font-size: 24px;
+    z-index: 10;
+}
+

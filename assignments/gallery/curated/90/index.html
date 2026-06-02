@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>JavaScript Lesson – Cats & Dogs Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 20px;
+            color: #1e293b;
+        }
+        .lesson-card {
+            background: white;
+            border-radius: 28px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .grid-section {
+            background: white;
+            border-radius: 32px;
+            padding: 1.5rem;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+            border: 1px solid #e2edf2;
+        }
+        .grid-title {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 1.2rem;
+        }
+        .grid-title h2 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #2d3e50, #1e2a3a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .badge {
+            background: #eef2ff;
+            padding: 0.25rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #1e40af;
+        }
+        .animal-grid {
+            display: grid;
+            grid-template-columns: repeat(25, minmax(70px, 85px));
+            gap: 12px;
+            overflow-x: auto;
+            justify-content: center;
+            padding-bottom: 12px;
+        }
+        .animal-cell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 24px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 1px solid #e9eef3;
+            padding: 10px 6px 8px 6px;
+        }
+        .animal-cell:active {
+            transform: scale(0.96);
+            background: #fef9e3;
+            border-color: #facc15;
+        }
+        .animal-cell canvas {
+            display: block;
+            margin: 0 auto;
+            border-radius: 20px;
+            background: #fffaf0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .animal-name {
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-top: 6px;
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 30px;
+            max-width: 85px;
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            color: #334155;
+        }
+        .scroll-hint {
+            font-size: 0.7rem;
+            text-align: right;
+            color: #5b6e8c;
+            margin-top: 12px;
+        }
+        footer {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #6c7a91;
+        }
+    </style>
+</head>
+<body>
+
+<div class="lesson-card">
+    <div id="container">
+        🐾 <strong>My first Emmet abbreviations:</strong>
+        <ol>
+            <li>! (HTML boilerplate)</li>
+            <li>div#container (div with id)</li>
+            <li>ol>li*3 (ordered list with 3 items)</li>
+        </ol>
+        (all followed by Tab / Enter)
+    </div>
+    <hr style="margin: 1rem 0; border-color: #e2e8f0;">
+    <div><em>✨ Extended demo: Cat class (pointy ears + whiskers) | 4×25 random animal grid | click → talk + sound</em></div>
+</div>
+
+<div class="grid-section">
+    <div class="grid-title">
+        <h2>🐕 🐈 Random Animal Shelter (4 rows × 25 columns)</h2>
+        <div class="badge">⭐ click any cell → talk() + custom sound</div>
+    </div>
+    <div id="animalGridContainer" class="animal-grid"></div>
+    <div class="scroll-hint">← → scroll horizontally | each animal drawn with its own render() method</div>
+</div>
+<footer>
+    🐱 Cat: pointy ears + whiskers | 🐶 Dog: external dog.js | Sound: Web Audio (bark / meow)
+</footer>
+
+<!-- external Dog class (provided) -->
+<script src="https://www.radufromfinland.com/dog.js"></script>
+
+<!-- our new Cat class (same folder) -->
+<script src="cat.js"></script>
+
+<script>
+    // =========================================================================
+    // 1. FETCH API with detailed comments (Variant 2 preferred)
+    // =========================================================================
+    
+    /* VARIANT 1 (commented out with multi-line comment)
+    fetch("https://radufromfinland.com/animals/")
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(data);
+        })
+        .catch(function(err) {
+            console.error(err);
+        });
+    */
+
+    // VARIANT 2 (async/await) – preferred for clarity
+    // each line explained with a single-line comment
+    async function fetchAnimalData() {               // async function returns a Promise
+        try {                                        // try block to handle errors gracefully
+            const response = await fetch("https://radufromfinland.com/animals/");   // wait for HTTP response
+            const data = await response.json();      // wait for JSON parsing of response body
+            console.log("API data:", data);          // log the fetched animal list (optional)
+        } catch(err) {                               // catch any network or parsing error
+            console.error("Fetch error:", err);      // log the error without crashing
+        }
+    }
+    fetchAnimalData();                               // call the function to demonstrate understanding
+
+    // =========================================================================
+    // 2. GENERATE 100 RANDOM ANIMALS (Dog + Cat mix)
+    // =========================================================================
+    const petNames = ["Luna","Milo","Bella","Charlie","Simba","Nala","Leo","Zoe","Oliver","Mochi",
+                      "Coco","Rocky","Loki","Chloe","Max","Lucy","Tiger","Mittens","Shadow","Cleo"];
+    const furColors = ["Golden","White","Gray","Brown","Black","Orange","Cream","Spotted","Tabby","Tuxedo"];
+    const eyeColors = ["Amber","Green","Blue","Hazel","Copper","Yellow","Brown"];
+    
+    function randomAge() { return Math.floor(Math.random() * 14) + 1; }
+    function randomItem(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+    const animalsList = [];
+    for (let i = 0; i < 100; i++) {
+        const isDog = Math.random() < 0.5;
+        const name = randomItem(petNames) + (Math.floor(Math.random() * 90) + 10);
+        const age = randomAge();
+        const fur = randomItem(furColors);
+        const eyes = randomItem(eyeColors);
+        
+        if (isDog) {
+            animalsList.push({ instance: new Dog(name, age, fur, eyes), type: "dog" });
+        } else {
+            animalsList.push({ instance: new Cat(name, age, fur, eyes), type: "cat" });
+        }
+    }
+
+    // =========================================================================
+    // 3. AUDIO (synthetic bark & meow) – no external mp3 required
+    // =========================================================================
+    let audioCtx = null;
+    function initAudio() {
+        if (audioCtx) return audioCtx;
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        return audioCtx;
+    }
+    
+    function playDogSound() {
+        try {
+            const ctx = initAudio();
+            if (ctx.state === 'suspended') ctx.resume();
+            const now = ctx.currentTime;
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.type = 'sawtooth';
+            osc.frequency.value = 180;
+            gain.gain.value = 0.35;
+            osc.start();
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.35);
+            osc.stop(now + 0.38);
+            // extra pulse
+            const osc2 = ctx.createOscillator();
+            const gain2 = ctx.createGain();
+            osc2.connect(gain2);
+            gain2.connect(ctx.destination);
+            osc2.type = 'square';
+            osc2.frequency.value = 240;
+            gain2.gain.value = 0.2;
+            osc2.start(now + 0.08);
+            gain2.gain.exponentialRampToValueAtTime(0.0001, now + 0.4);
+            osc2.stop(now + 0.42);
+        } catch(e) { console.warn("dog sound error", e); }
+    }
+    
+    function playCatSound() {
+        try {
+            const ctx = initAudio();
+            if (ctx.state === 'suspended') ctx.resume();
+            const now = ctx.currentTime;
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.type = 'sine';
+            osc.frequency.value = 720;
+            gain.gain.value = 0.28;
+            osc.frequency.exponentialRampToValueAtTime(950, now + 0.12);
+            osc.frequency.exponentialRampToValueAtTime(620, now + 0.28);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.45);
+            osc.start();
+            osc.stop(now + 0.5);
+            const osc2 = ctx.createOscillator();
+            const gain2 = ctx.createGain();
+            osc2.connect(gain2);
+            gain2.connect(ctx.destination);
+            osc2.type = 'triangle';
+            osc2.frequency.value = 1440;
+            gain2.gain.value = 0.1;
+            osc2.start(now + 0.03);
+            gain2.gain.exponentialRampToValueAtTime(0.0001, now + 0.35);
+            osc2.stop(now + 0.38);
+        } catch(e) { console.warn("cat sound error", e); }
+    }
+    
+    function playAnimalSound(type) {
+        if (type === 'dog') playDogSound();
+        else if (type === 'cat') playCatSound();
+    }
+
+    // =========================================================================
+    // 4. BUILD 4×25 GRID (100 cells)
+    // =========================================================================
+    const gridContainer = document.getElementById("animalGridContainer");
+    
+    function buildGrid() {
+        gridContainer.innerHTML = "";
+        for (let idx = 0; idx < animalsList.length; idx++) {
+            const { instance: animal, type } = animalsList[idx];
+            let canvasElem;
+            try {
+                canvasElem = animal.render();   // Dog.render() or Cat.render()
+                if (!(canvasElem instanceof HTMLCanvasElement)) throw new Error("Invalid canvas");
+            } catch(e) {
+                canvasElem = document.createElement('canvas');
+                canvasElem.width = 80;
+                canvasElem.height = 80;
+                const ctx = canvasElem.getContext('2d');
+                ctx.fillStyle = "#e2e8f0";
+                ctx.fillRect(0,0,80,80);
+                ctx.fillStyle = "#b91c1c";
+                ctx.font = "bold 20px sans-serif";
+                ctx.fillText("🐾", 28,55);
+            }
+            canvasElem.style.width = "70px";
+            canvasElem.style.height = "70px";
+            canvasElem.style.borderRadius = "18px";
+            
+            const cell = document.createElement('div');
+            cell.className = 'animal-cell';
+            const nameSpan = document.createElement('div');
+            nameSpan.className = 'animal-name';
+            const displayName = animal.name?.length > 12 ? animal.name.slice(0,10)+".." : (animal.name || "Unknown");
+            nameSpan.textContent = `${displayName} (${type === 'dog' ? '🐕' : '🐈'})`;
+            cell.appendChild(canvasElem);
+            cell.appendChild(nameSpan);
+            
+            // onmousedown (as required) + play sound + talk()
+            cell.onmousedown = (function(anim, animType, petName) {
+                return function(ev) {
+                    ev.preventDefault();
+                    if (typeof anim.talk === 'function') anim.talk();
+                    else console.log(`${petName} has no talk()?`);
+                    playAnimalSound(animType);
+                    this.style.transform = "scale(0.97)";
+                    setTimeout(() => { if(this) this.style.transform = ""; }, 120);
+                };
+            })(animal, type, animal.name);
+            
+            cell.ontouchstart = cell.onmousedown; // mobile support
+            gridContainer.appendChild(cell);
+        }
+    }
+    
+    buildGrid();
+    console.log(`✅ Grid ready: ${animalsList.filter(a => a.type === 'dog').length} dogs, ${animalsList.filter(a => a.type === 'cat').length} cats`);
+</script>
+</body>
+</html>

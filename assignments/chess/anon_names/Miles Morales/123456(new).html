@@ -1,0 +1,200 @@
+<!--ex2 the game doesnt work as intended anypiece can move anywhere on the board also 
+there is no turn base so black or white can just move like 100 time in a row with no penalty-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess 123456</title>
+        <style>
+            .cell  { /*Ex4* make the color different so we can see the white piece also make the 
+                board bigger and the img smaller so the square wouldnt get strech*/
+                border: 2px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+            }
+
+            .light { background-color: brown; }
+            .dark  { background-color: gray;  }
+
+            #chess-board {
+                width: 550px;
+                height: 550px;
+                display: grid;
+                grid-template-rows: repeat(8, 1fr); /* 1 fraction */
+                grid-template-columns: repeat(8, 1fr);
+            }
+
+            img {
+                width: 40%;
+            }
+            .invert-color {
+                filter: invert(100%);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chess Game</h1>
+        <!-- Ex1 -->
+        <div id="chess-board">
+            <div class="cell light">
+                <img src="pieces/p2.png" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p5.png"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p6.png" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p3.png" />
+            </div>
+            <div class="cell light">
+                <img src="pieces/p4.png" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p6.png" />
+            </div>
+            <div class="cell light">
+                <img src="pieces/p5.png" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p2.png" />
+            </div>
+            
+            <div class="cell dark">
+                <img src="pieces/p1.png" />
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" />
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" />
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" />
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" />
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" />
+            </div>
+            
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            
+            <div class="cell light">
+                <img src="pieces/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p1.png" class="invert-color"/>
+            </div>
+            
+            <div class="cell dark">
+                <img src="pieces/p2.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p5.png" class="invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p6.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p3.png" class="invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p4.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p6.png" class="invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="pieces/p5.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="pieces/p2.png" class="invert-color"/>
+            </div>
+        </div>
+
+        <script> // For loops is nice when you know how many element is in it  and it will make you write shorter code
+            let selectedPiece = null;
+            const cells = document.getElementsByClassName("cell");
+            console.log(cells);
+            for (const cell of cells) {
+                cell.onclick = function () { // anonymous function
+                    handleClick(cell);
+                };
+            }
+
+            function handleClick(element) {
+                for (const cell of cells) {
+                    cell.style.border = "2px solid black";
+                }
+                if (selectedPiece != null) {
+                    element.replaceChildren(selectedPiece);
+                    selectedPiece = null;
+                } else if (element.children.length > 0) {
+                    selectedPiece = element.children[0];
+                    element.style.border = "4px solid red";
+                }
+            }
+        </script>
+    </body>
+</html>

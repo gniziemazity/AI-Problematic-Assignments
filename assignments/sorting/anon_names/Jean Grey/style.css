@@ -1,0 +1,35 @@
+body {
+    display: flex;/* Using Flexbox to arrange the elements.*/ 
+    align-items: center;/* centered horizontally */
+    flex-direction: column;/* bar are stacked vertically,*/
+}
+
+#vis-123456 {
+    height: 200px;/* the highest bar*/
+    display: flex;/* arrenge near toghether*/
+    align-items: flex-end;/* the height from down to up */
+    position: relative; /* for moving motor  */
+}
+
+.bar {
+    width: 7px;
+
+    background-color: black;
+    margin: 0px 1px;/*gab bet bar*/
+}
+
+#motorcycle {
+
+     display: none; /*motor is hiden  */
+
+    transform: scaleX(-1); /* reverse motor horz */
+    position: absolute;/* container vis is run*/
+    bottom: 40px; /* motor is top of bars  */
+    left: 0px;/*first position of motor*/
+    font-size: 24px;/* size of emj*/
+
+    transition: left 0.1s linear;/* horz movment of MOtor is smooth */
+    
+}
+
+    

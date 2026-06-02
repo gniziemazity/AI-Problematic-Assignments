@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>QR Inventory System</title>
+    <link rel="stylesheet" href="123456.css" />
+</head>
+<body>
+    <h1>📦 QR Inventory System</h1>
+    
+    <!-- Map / Positioning Container (legacy feature) -->
+    <div id="mapContainer">
+        <img src="map.png" id="map" alt="store map" />
+        <div id="marker"></div>
+    </div>
+
+    <!-- INVENTORY DISPLAY PANEL: shows product details from scanned QR -->
+    <div id="inventoryPanel">
+        <div id="inventoryHeader">📋 PRODUCT DETAILS</div>
+        <div id="inventoryInfo">
+            <p class="info-placeholder">🔍 Scan a QR code to see inventory data</p>
+        </div>
+    </div>
+
+    <!-- Beautiful action button (styled with CSS var and hover transition) -->
+    <button id="btn" class="scan-button">📷 SCAN QR</button>
+
+    <!-- Camera viewport (hidden by default) -->
+    <div id="camera"></div>
+
+    <!-- HTML5 QR Code library -->
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" type="text/javascript"></script>
+    <!-- Our main application script -->
+    <script src="123456.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+:root {
+    --theme: #280; /* CSS variable */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    color: var(--theme);
+}
+
+#map {
+    width: 100%;
+}
+
+#marker {
+    width: 3vw;
+    height: 3vw;
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme);
+    border: 5px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+#mapContainer {
+    position: relative;
+    display: none;
+}
+
+/* Button styling */
+button {
+    background-color: var(--theme); /* uses CSS variable  */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Hover effect (assignment requirement) */
+button:hover {
+    background-color: black;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#camera {
+    width: 100%;
+}
+
+/* Optional: inventory styling */
+#inventory {
+    width: 90%;
+    margin-top: 20px;
+}
+
+#inventory div {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sorting Visualizer</h1>
+
+    <div id="vis-123456"></div>
+
+    <!-- Slider that controls the animation speed -->
+    <label for="speed-slider">Speed: <span id="speed-value"></span> ms</label>
+    <input type="range"
+           id="speed-slider"
+           min="10"
+           max="1000"
+           step="10"
+           value="100"
+           oninput="updateSpeed(this.value)">
+           
+    <!-- The motorcycle emoji that will animate after sorting -->
+    <div id="motorcycle" class="motorcycle hidden">🏍️</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

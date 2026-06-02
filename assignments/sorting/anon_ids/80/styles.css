@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#vis-123456{
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+.bar{
+    width: 7px;
+    height: 100%;
+    background-color: black;
+    margin: 0px 1px;
+}
+
+.bike{
+    position: relative;
+    height: 15px;
+    width: 15px;
+    top: -20px;
+    transform: scaleX(-1); /*rotates the bike by the x -axis so -1= reversed*/
+}

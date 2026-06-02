@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#vis-123456 {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 7px;
+    height: 100%;
+    background-color: black;
+    margin: 0px 1px;
+}
+
+#moto {
+    position: absolute;
+    left: -50px;
+    font-size: 25px;
+    transition: left 0.2s linear;
+}
+
+.motor {
+    transform: scaleX(-1); /*change picture direction*/
+}

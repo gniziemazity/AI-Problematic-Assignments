@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#vis-123456{
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+#motorcycle {
+    position: absolute;
+    font-size: 30px;
+    display: none;
+    transform: scaleX(-1) rotate(15deg);
+
+}
+
+.bar {
+    width: 7px;
+    background-color: black;
+    margin: 0px 1px;
+}

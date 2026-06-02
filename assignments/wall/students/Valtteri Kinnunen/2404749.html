@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess Board</title>
+        <style>
+            /*styling by id*/
+            #chess-board{
+                width: 432px;
+                /*font-size: 0px;*/
+                display: flex;
+                flex-wrap: wrap;
+            }
+            /*CSS class*/
+            .cell{
+                height: 40px;
+                width: 50px;
+                border-radius: 5px; /*creates rounded borders*/
+                /* commented styling - not in use - just an example
+                margin: 10px;
+                padding: 5px;*/
+                border: 3px solid gray;
+                /*display: inline-block;*/
+                box-sizing: border-box;  /*size includes padding and border*/
+            }
+            .light{
+                background-color: #EA420D;
+            }
+            .dark{
+                background-color: #AD2C05;
+            }
+            .left-offset{
+                margin-left: 25px; /*it incereases the left side border by 25px moving it to the right*/ 
+            }
+            .half-width{
+                width: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chess Board</h1>
+        <div id = "chess-board">
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light half-width"></div>
+   
+            <div class = "cell light half-width"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light half-width"></div>
+    
+            <div class = "cell light half-width"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light half-width"></div>
+      
+            <div class = "cell light half-width"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light half-width"></div>
+
+            <div class = "cell light half-width"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+        </div>
+        <!--div with inline style (not recomended)
+        <div style="
+            height: 50px;
+            background-color: black;
+            width: 50px;
+        "></div>-->
+
+        <a href="https://www.w3schools.com" target="_blank"> 
+            Visit W3schools.com!
+        </a>
+    </body>
+</html>

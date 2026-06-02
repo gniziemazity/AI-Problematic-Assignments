@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Animals Grid</title>
+
+<style>
+#container {
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    gap: 5px;
+}
+
+canvas {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+
+<div id="container"></div>
+
+
+<audio id="dogSound" src="https://www.sounddino.com/dog.mp3"></audio>
+<audio id="catSound" src="https://www.pixabay.com/cat.mp3"></audio>
+
+
+<script src="https://www.radufromfinland.com/dog.js"></script>
+
+
+<script src="cat.js"></script>
+
+<script>
+
+
+
+/* VARIANT 1
+fetch("https://radufromfinland.com/animals/") // request API
+    .then(function(response) { // response received
+        return response.json(); // convert to JSON
+    })
+    .then(function(data) {// JSON ready
+        console.log(data);// JSON ready
+    })
+    .catch(function(err) {// error occurs
+        console.error(err);// print error
+    });
+*/
+
+
+// VARIANT 2 (USED)
+
+async function fetchData() {// async function
+    try {
+        const response = await fetch("https://radufromfinland.com/animals/");// get data
+        const data = await response.json();// convert to JSON
+
+        generateAnimals(data); // create animals
+
+    } catch (err) { 
+        console.log(err);// error handling
+    }
+}
+
+fetchData();// Run function
+
+
+function generateAnimals(data) {
+
+    const container = document.getElementById("container");
+
+    for (let i = 0; i < 100; i++) {
+
+        
+        const randomIndex = Math.floor(Math.random() * data.length);
+        const item = data[randomIndex];
+
+        
+        let animal;
+
+        if (Math.random() > 0.5) {
+            animal = new Dog(item.name, item.age, item.furr, item.eyes);
+        } else {
+            animal = new Cat(item.name, item.age, item.furr);
+        }
+
+        const canvas = animal.render();
+
+
+        canvas.onmousedown = function () {
+            animal.talk();
+
+            if (animal instanceof Dog) {
+                sound = new Audio("dog.mp3").play();
+            } else {
+                sound = new Audio("cat.mp3").play();
+            }
+        };
+
+        container.appendChild(canvas);
+    }
+}
+
+</script>
+
+</body>
+</html>

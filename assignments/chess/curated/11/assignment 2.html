@@ -1,0 +1,210 @@
+<!--Because of background color white some of the pieces disappears so I changed
+    the background color and the main thing is game is not following the rules  
+   any pieces of both color is capturing other pieces  -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess 123456</title>
+        <style>
+            .cell { 
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+              /* I changes this .light background from white to rgba because some of the
+               white pieces were disappearing in white background color*/
+            .light { background-color: rgba(116, 121, 114, 0.648); }
+            .dark { background-color: gray; }
+
+            #chess-board {
+                width: 400px;
+                height: 400px;
+                display: grid;
+                grid-template-rows: repeat(8,1fr); /*1 fraction */
+                grid-template-columns: repeat(8,1fr);
+                border: 10px solid black; 
+            }
+
+            img {
+                width: 50%;
+                 height: 75%  /* To perfectly fit the images in the box  */
+            }
+            .invert-color{
+                filter: invert(100%);
+
+            }    
+        </style>    
+    <head>
+    <body>
+        <h1>Chess Game</h1>
+
+        <div id="chess-board">
+            <div class="cell light" onclick="handleClick(this);">
+                <img src="PIECES/p2.png" />
+            </div>
+            <div class="cell dark">
+                <img src="PIECES/p5.png" />
+            </div>
+            <div class="cell light">
+                <img src="PIECES/p6.png" />
+            </div>
+            <div class="cell dark">
+                <img src="PIECES/p3.png" />
+            </div>
+            <div class="cell light">
+                <img src="PIECES/p4.png" />
+            </div>
+            <div class="cell dark">
+                <img src="PIECES/p6.png" />
+            </div>
+            <div class="cell light">
+                <img src="PIECES/p5.png" />
+            </div>
+            <div class="cell dark">
+                <img src="PIECES/p2.png" />
+            </div>
+
+            
+            <div class="cell dark">
+                <img src="PIECES/p1.png" />
+            </div>
+            <div class="cell light">
+                <img src="PIECES/p1.png" />
+            </div>
+            <div class="cell dark">
+                <img src="PIECES/p1.png" />
+            </div>
+            <div class="cell light">
+                <img src="PIECES/p1.png" />
+            </div>
+            <div class="cell dark">
+                <img src="PIECES/p1.png" />
+            </div>
+            <div class="cell light">
+                <img src="PIECES/p1.png" />
+            </div>
+            <div class="cell dark">
+                <img src="PIECES/p1.png" />
+            </div>
+            <div class="cell light">
+                <img src="PIECES/p1.png" />
+            </div>
+
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            
+            
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            
+            
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            
+            <div class="cell light">
+                 <img src="PIECES/p1.png" class="invert-color"/>
+                </div>
+            <div class="cell dark"> 
+                <img src="PIECES/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell light"> 
+                <img src="PIECES/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell dark"> 
+                <img src="PIECES/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell light"> 
+                <img src="PIECES/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell dark"> 
+                <img src="PIECES/p1.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                 <img src="PIECES/p1.png" class="invert-color"/>
+                </div>
+            <div class="cell dark"> 
+                <img src="PIECES/p1.png" class="invert-color"/>
+            </div>
+            
+            
+            <div class="cell dark" onclick="handleClick(this);">
+                <img src="PIECES/p2.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="PIECES/p5.png" class="invert-color" />
+            </div>
+            <div class="cell dark">
+                <img src="PIECES/p6.png"class="invert-color" />
+            </div>
+            <div class="cell light">
+                <img src="PIECES/p3.png" class="invert-color" />
+            </div>
+            <div class="cell dark">
+                <img src="PIECES/p4.png" class="invert-color"/>
+            </div>
+            <div class="cell light">
+                <img src="PIECES/p6.png" class="invert-color"/>
+            </div>
+            <div class="cell dark">
+                <img src="PIECES/p5.png" class="invert-color" />
+            </div>
+            <div class="cell light">
+                <img src="PIECES/p2.png" class="invert-color"/>
+            </div>
+
+            
+        </div>
+
+        <script>
+            let selectedPiece = null;
+            const cells = document.getElementsByClassName("cell");
+            console.log(cells); 
+            // According to video it is the fith method (MET5) .
+            for (const cell of cells) {
+                cell.onclick = function () { // anonymous function
+                    handleClick(cell);
+                }
+            }
+            function handleClick(element) {
+                for (const cell of cells) {
+                    cell.style.border = "";
+                }
+                if (selectedPiece != null) {
+                    element.replaceChildren(selectedPiece);
+                    selectedPiece = null;
+                } else if (element.children.length > 0) {
+                    selectedPiece = element.children[0];
+                    element.style.border = "4px solid red";
+                }
+            }
+        </script>
+    </body>
+</html>

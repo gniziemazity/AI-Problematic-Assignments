@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lesson</title>
+</head>
+<body>
+    <div id="container">
+        My first Emmet abbreviations:
+        <ol>
+            <li>! (HTML boilerplate)</li>
+            <li>div#container (div with id)</li>
+            <li>ol>li*3 (ordered list with 3 items)</li>
+        </ol>
+        (all followed by Tab / Enter)
+    </div>
+
+    <!-- Cat class -->
+    <script src="cat.js"></script>
+
+    
+    <script src="https://www.radufromfinland.com/dog.js"></script>
+
+    <!-- Audio files -->
+    <audio id="dogSound" src="bark.mp3"></audio>
+    <audio id="catSound" src="meow.mp3"></audio>
+
+        <!--  sound source:
+         https://pixabay.com/sound-effects/search/meow/ - cat
+         https://pixabay.com/sound-effects/search/dog%20bark/ - dog --> 
+
+    <script>
+        myNumber = 25.2; // never define without const, let (or var)
+        console.log(myNumber);
+
+        const myString = "I study at Karelia";
+        console.log(myString);
+
+        let myBoolean = true;
+        var oppositeBoolean = !myBoolean; // var was "replaced" by let and const
+        console.log(myBoolean, oppositeBoolean); // accepts multiple parameters
+        myBoolean = false;
+        oppositeBoolean = !myBoolean;
+        console.log(myBoolean, oppositeBoolean);
+
+        console.log(!42, !"ABC", ![]);
+        console.log(!null, !undefined, !0); // zero is "falsy"
+
+        // arrays are like Python lists
+        const myArray = [1, 2, 3, "Karelia", true, null];
+        myArray.length = 0;
+        myArray[0] = 9;
+        myArray[1] = 8;
+        myArray[2] = 7;
+        // myArray = [1, 2, 3]; ERROR! Program would fail here!
+        try {
+            myArray = [1, 2, 3];
+        } catch(err) {
+            console.error(err);
+        }
+        myArray.push(6);
+        myArray.push(11);
+        myArray.sort(function(a, b){ return a - b; });
+        console.log(myArray);
+
+        // objects are like Python dictionaries
+        const dog = {
+            name: "Max",
+            age: 5,
+            furr: "black",
+            eyes: "brown"
+        };
+        console.log(dog);
+        console.table(dog);
+        console.log(dog.name);
+        dog.name = "Charlie";
+        console.log(dog["name"]);
+
+        const anotherDog = new Dog("Rex", 7, "brown", "black");
+        console.log(anotherDog);
+        anotherDog.talk();
+        const canvas = anotherDog.render();
+        container.appendChild(canvas); /*
+            no need for document.getElementById("container")
+            ids that are valid JS names are automatically global variables
+            invalid names:
+             * start with a number
+             * contain spaces or special characters (like -)
+        */
+
+        let a = 5;
+        let b = 2;
+        // operators
+        console.log(a + b);
+        a = "5";
+        console.log(a + b); // concatenation
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+        console.log(a % b);
+        console.log(a ** b);
+        console.log(Math.pow(a, b));
+        console.log(Math.sqrt(b));
+        console.log(Math.pow(b, 0.5));
+        console.log(b ** 0.5);
+
+        a = Number(a) + 5;
+        console.log(a);
+        a += 5;
+        a *= 2;
+        a /= 3;
+        a %= 4;
+        a **= 10;
+        console.log(a);
+
+        const s1 = "Welcome to Karelia!";
+        const s2 = 'Welcome to "Karelia"!';
+        const s3 = "Welcome to \"Karelia\"!"; // escaping with \
+        console.log(s1, s2, s3);
+
+        const age = 36;
+        console.log("I am " + age + " years old");
+        console.log(`I am ${age} years old`); // template literal
+
+        let today = new Date();
+        console.log(today);
+        let someDate = new Date("August 24, 2025");
+        console.log(someDate);
+
+        console.log(today.getDay());
+        switch (today.getDay()) {
+            case 1: console.log("Monday"); break;
+            case 2: console.log("Tuesday"); break;
+            case 3: console.log("Wednesday"); break;
+            case 4: console.log("Thursday"); break;
+            case 5: console.log("Friday"); break;
+            default: console.log("Weekend"); break;
+        }
+    </script>
+
+
+    <script>
+        // Preferred: async/await variant to fetch animals from server
+        async function fetchData() {
+            try {
+                const response = await fetch("https://radufromfinland.com/animals/"); // fetch JSON from API
+                const data = await response.json(); // parse JSON response
+                console.log(data); // log the data for debugging
+
+                generateAnimals(data); // use the fetched data to generate grid animals
+            } catch(err) {
+                console.error(err); // log any errors
+            }
+        }
+
+        fetchData(); // call the async function
+
+        /*
+        // Variant 1: Promise chaining
+        fetch("https://radufromfinland.com/animals/")
+            .then(function(response) {
+                return response.json(); // parse JSON
+            })
+            .then(function(data) {
+                console.log(data); // log data
+                generateAnimals(data); // generate animals
+            })
+            .catch(function(err) {
+                console.error(err); // handle errors
+            });
+        */
+
+        
+        const myCat = new Cat("Whiskers", 3, "orange", "green"); 
+        myCat.talk(); 
+        const catCanvas = myCat.render(70); 
+        catCanvas.onclick = () => {
+            myCat.talk(); 
+        };
+        container.appendChild(catCanvas); // append to container
+
+        // Function to generate animals from API data
+        function generateAnimals(data) {
+            const animals = []; 
+            const colors = ["orange", "gray", "pink", "purple", "brown"];
+            const eyeColors = ["black"]; 
+
+            // Generate 100 random animals using API data
+            for (let i = 0; i < 100; i++) {
+                if (Math.random() < 0.5) {
+                    animals.push(new Cat(
+                        data[i % data.length].name || "Cat" + i, // name from API or fallback
+                        Math.floor(Math.random() * 10)+1, // random age 1–10
+                        colors[Math.floor(Math.random() * colors.length)], 
+                        eyeColors[Math.floor(Math.random() * eyeColors.length)] 
+                    ));
+                } else {
+                    animals.push(new Dog(
+                        data[i % data.length].name || "Dog" + i, 
+                        Math.floor(Math.random() * 10)+1, 
+                        colors[Math.floor(Math.random() * colors.length)], 
+                        eyeColors[Math.floor(Math.random() * eyeColors.length)] 
+                    ));
+                }
+            }
+
+            // Create grid container
+            const gridContainer = document.createElement("div");
+            gridContainer.style.display = "grid"; 
+            gridContainer.style.gridTemplateColumns = "repeat(25, 50px)"; 
+            gridContainer.style.justifyContent = "center"; 
+            gridContainer.style.gap = "8px"; 
+            gridContainer.style.marginTop = "20px"; 
+
+            // Render each animal in the grid with sounds
+            animals.forEach(animal => {
+                let canvas;
+                if (animal instanceof Dog) {
+                    canvas = animal.render(200); 
+                } else {
+                    canvas = animal.render(70); // 
+                }
+
+                canvas.style.border = "2px solid black"; 
+                canvas.style.backgroundColor = "white"; 
+                canvas.style.maxWidth = "100%"; 
+                canvas.style.maxHeight = "100%"; 
+
+                // Play sound ONLY for grid animals
+                canvas.onclick = () => {
+                    animal.talk(); // log message
+                    if (animal instanceof Dog) {
+                        const dogAudio = document.getElementById("dogSound"); // dog sound element
+                        dogAudio.pause(); 
+                        dogAudio.currentTime = 0; 
+                        dogAudio.play(); 
+                    } else if (animal instanceof Cat) {
+                        const catAudio = document.getElementById("catSound"); 
+                        catAudio.pause(); 
+                        catAudio.currentTime = 0; 
+                        catAudio.play();
+                    }
+                };
+
+                gridContainer.appendChild(canvas); // add canvas to grid
+            });
+
+            container.appendChild(gridContainer); // append grid to container
+        }
+    </script>
+</body>
+</html>

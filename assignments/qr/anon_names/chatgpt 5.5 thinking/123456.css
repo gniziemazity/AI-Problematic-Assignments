@@ -1,0 +1,57 @@
+:root {
+    --theme: #280; /* CSS variable */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f7f2;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: var(--theme);
+    margin-top: 40px;
+}
+
+#inventoryCard {
+    width: min(90%, 420px);
+    padding: 24px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    border-top: 6px solid var(--theme);
+}
+
+#inventoryCard p {
+    margin: 12px 0;
+    font-size: 1.2rem;
+}
+
+#btn {
+    background-color: var(--theme);
+    color: white;
+    padding: 14px 34px;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 18px rgba(34, 136, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+#btn:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    filter: brightness(1.15);
+    box-shadow: 0 12px 24px rgba(34, 136, 0, 0.45);
+}
+
+#camera {
+    width: min(90%, 500px);
+}

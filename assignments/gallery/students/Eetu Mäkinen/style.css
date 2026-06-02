@@ -1,0 +1,13 @@
+#segments{
+    width: 1000px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: repeat(4, 4fr);
+    grid-template-columns: repeat(25, 1fr);
+ /* this is the 4 x 25 grid where the animals get put into their own enclosures
+ fractional units used instead of % to have it be functional*/
+}
+/* Reminder, # is ID and . is class*/
+.box{
+    border: 3px solid black;
+}

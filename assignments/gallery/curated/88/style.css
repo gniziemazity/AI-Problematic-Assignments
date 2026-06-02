@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    background-color: #fafafa;
+}
+
+#container {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+/* 4 columns x 25 rows = 100 cells.
+   The grid fills column by column, so 4 across naturally makes 25 rows. */
+#grid {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 6px;
+    width: max-content;
+}
+
+/* each drawn animal sits in one cell */
+.cell {
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    cursor: pointer;            /* shows the user the cell is clickable */
+    transition: transform 0.1s ease;
+}
+
+.cell:hover {
+    transform: scale(1.05);     /* small zoom so it is obvious which cell is hovered */
+    border-color: #888;
+}
+
+.cell:active {
+    transform: scale(0.97);     /* a little press-down feedback when clicked */
+}

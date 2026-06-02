@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lesson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        My first Emmet abbreviations:
+        <ol>
+            <li>! (HTML boilerplate)</li>
+            <li>div#container (div with id)</li>
+            <li>ol&gt;li*3 (ordered list with 3 items)</li>
+        </ol>
+        (all followed by Tab / Enter)
+    </div>
+
+    <h2>100 random animals (4 x 25 grid)</h2>
+    <p>Click an animal to make it talk and play a sound.</p>
+    <div id="grid"></div>
+
+    <!-- The Dog class comes from the server, the Cat class is our own file. -->
+    <!-- Both classes must load BEFORE script.js, because script.js uses them. -->
+    <script src="https://www.radufromfinland.com/dog.js"></script>
+    <script src="cat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

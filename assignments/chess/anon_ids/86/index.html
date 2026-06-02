@@ -1,0 +1,163 @@
+<!--
+The game has a problem: it only lets you pick up a piece and move it to any square.
+It does not check real chess rules, turns, check/checkmate, or whether a move is legal.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess Game</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 18px;
+                font-family: Arial, sans-serif;
+                background: #f3f0e8;
+            }
+
+            h1 {
+                margin: 0;
+                color: #2d2d2d;
+            }
+
+            #chess-board {
+                width: min(90vw, 520px);
+                height: min(90vw, 520px);
+                display: grid;
+                grid-template-rows: repeat(8, 1fr);
+                grid-template-columns: repeat(8, 1fr);
+                border: 8px solid #3b2f2f;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            }
+
+            .cell  {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid rgba(0, 0, 0, 0.25);
+            }
+
+            .light { background-color: #f0d9b5; }
+            .dark  { background-color: #b58863; }
+
+            .cell:hover {
+                outline: 4px solid rgba(255, 255, 255, 0.45);
+                outline-offset: -4px;
+                cursor: pointer;
+            }
+
+            .selected {
+                outline: 5px solid #d62828;
+                outline-offset: -5px;
+            }
+
+            img {
+                width: 78%;
+                height: 78%;
+                object-fit: contain;
+                pointer-events: none;
+            }
+
+            .black-piece {
+                filter: invert(100%);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chess Game</h1>
+
+        <div id="chess-board"></div>
+
+        <script>
+            const board = document.getElementById("chess-board");
+            let selectedPiece = null;
+            let selectedCell = null;
+
+            /*
+                Piece image numbers used in this project:
+                p1 = pawn, p2 = rook, p3 = bishop,
+                p4 = queen, p5 = knight, p6 = king
+            */
+            const pieces = {
+                pawn: "p1.png",
+                rook: "p2.png",
+                bishop: "p3.png",
+                queen: "p4.png",
+                knight: "p5.png",
+                king: "p6.png"
+            };
+
+            const startingSetup = [
+                ["black", "rook"], ["black", "knight"], ["black", "bishop"], ["black", "queen"],
+                ["black", "king"], ["black", "bishop"], ["black", "knight"], ["black", "rook"],
+
+                ["black", "pawn"], ["black", "pawn"], ["black", "pawn"], ["black", "pawn"],
+                ["black", "pawn"], ["black", "pawn"], ["black", "pawn"], ["black", "pawn"],
+
+                null, null, null, null, null, null, null, null,
+                null, null, null, null, null, null, null, null,
+                null, null, null, null, null, null, null, null,
+                null, null, null, null, null, null, null, null,
+
+                ["white", "pawn"], ["white", "pawn"], ["white", "pawn"], ["white", "pawn"],
+                ["white", "pawn"], ["white", "pawn"], ["white", "pawn"], ["white", "pawn"],
+
+                ["white", "rook"], ["white", "knight"], ["white", "bishop"], ["white", "queen"],
+                ["white", "king"], ["white", "bishop"], ["white", "knight"], ["white", "rook"]
+            ];
+
+            // method 8
+            for (const square of startingSetup) {
+                const cell = document.createElement("div");
+                const row = Math.floor(board.children.length / 8);
+                const column = board.children.length % 8;
+
+                cell.className = "cell";
+                cell.classList.add((row + column) % 2 === 0 ? "light" : "dark");
+
+                if (square !== null) {
+                    const color = square[0];
+                    const pieceName = square[1];
+                    const pieceImage = document.createElement("img");
+
+                    pieceImage.src = "pieces/" + pieces[pieceName];
+                    pieceImage.alt = color + " " + pieceName;
+                    pieceImage.title = color + " " + pieceName;
+
+                    if (color === "black") {
+                        pieceImage.classList.add("black-piece");
+                    }
+
+                    cell.appendChild(pieceImage);
+                }
+
+                cell.onclick = function () {
+                    handleClick(cell);
+                };
+
+                board.appendChild(cell);
+            }
+
+            function handleClick(cell) {
+                if (selectedPiece !== null) {
+                    cell.replaceChildren(selectedPiece);
+                    selectedCell.classList.remove("selected");
+                    selectedPiece = null;
+                    selectedCell = null;
+                } else if (cell.children.length > 0) {
+                    selectedPiece = cell.children[0];
+                    selectedCell = cell;
+                    cell.classList.add("selected");
+                }
+            }
+        </script>
+    </body>
+</html>

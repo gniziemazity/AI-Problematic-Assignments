@@ -1,0 +1,29 @@
+/* Centers page content vertically in a column layout */
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    }
+
+/* Container for visualization (200px tall, bars aligned bottom)*/    
+#vis-123456 {
+    height: 200px;
+    display: flex;
+    align-items: flex-end; 
+    position: relative;
+    } 
+
+/* Defines the thin black bars used in the visualization */
+.bar {
+    width: 7px;
+    height: 100%; /* The bar height fills 100% of its container. This is not needed*/
+    background-color: black;
+    margin: 0px 1px; /* Adds 1px horizontal space between bars*/
+    }
+
+/* Style for the motorcycle emoji */
+.motorcycle {
+    position: absolute;
+    font-size: 25px;
+    transform: translateX(-50%) scaleX(-1); /* center bike and face right */
+}

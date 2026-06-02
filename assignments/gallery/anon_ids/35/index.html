@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Animals Grid</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+}
+
+#title{
+margin-top:10px;
+font-weight:bold;
+}
+
+#grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+grid-template-rows:repeat(25,1fr);
+
+gap:8px;
+
+width:240px;
+margin:auto;
+margin-top:20px;
+
+}
+
+canvas{
+border:1px solid #ccc;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="container"></div>
+
+<div id="title">100 Random Animals</div>
+
+<div id="grid"></div>
+<!--my own sound-->
+<audio id="dogSound" src="dog.mp3"></audio>
+<audio id="catSound" src="cat.mp3"></audio>
+
+
+<script src="https://www.radufromfinland.com/dog.js"></script>
+<script src="cat.js"></script>
+
+<script>
+
+
+/*
+VARIANT 1 
+
+fetch("https://radufromfinland.com/animals/") // request data from the API
+.then(function(response) { // runs when the server responds
+return response.json(); // convert server response to JSON
+})
+.then(function(data) { // runs after JSON conversion
+console.log(data); // print the data in console
+})
+.catch(function(err) { // runs if an error occurs
+console.error(err); // print the error
+});
+*/
+
+
+// VARIANT 2 
+
+async function fetchData() { // create async function to load data
+try {
+
+const response = await fetch("https://radufromfinland.com/animals/"); // request animal data from server
+const data = await response.json(); // convert response into JSON object
+console.log(data); // display data in browser console
+
+generateAnimals(data); // call function to draw animals
+
+} catch(err) { // if an error happens
+console.error(err); // print error in console
+}
+
+}
+
+fetchData(); // run the fetch function
+
+
+function generateAnimals(data){
+
+const grid = document.getElementById("grid"); // get grid container
+
+const dogSound = document.getElementById("dogSound"); // get dog sound element
+const catSound = document.getElementById("catSound"); // get cat sound element
+
+
+for(let i=0;i<100;i++){ // loop 100 times to create 100 animals
+
+const randomIndex = Math.floor(Math.random()*data.length); // choose random animal
+const animal = data[randomIndex]; // get that animal from data list
+
+let instance; // variable for animal object
+let sound; // variable for sound
+
+
+if(Math.random()<0.5){ // randomly decide dog or cat
+
+instance = new Dog(
+animal.name,
+animal.age,
+animal.furr || animal.fur,
+animal.eyes
+); // create dog object
+
+sound = dogSound; // assign dog sound
+
+}
+
+else{
+
+instance = new Cat(
+animal.name,
+animal.age,
+animal.furr || animal.fur,
+animal.eyes
+); // create cat object
+
+sound = catSound; // assign cat sound
+
+}
+
+
+const canvas = instance.render(50); // draw small animal
+
+
+canvas.onmousedown = function(){ // run when user presses animal
+
+instance.talk(); // call talk method
+
+sound.currentTime = 0; // restart sound
+sound.play(); // play sound
+
+};
+
+
+grid.appendChild(canvas); // add animal canvas to grid
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!--  No, The game doesn't work as expeted beacause in this chess-board the child or cell are eliminating eachother 
+   which is inappropriate in  the game. The game must  work as rule and regulations. -->
+
+
+<!DOCTYPE html
+    <head>
+        <title>Chess 2504663</title>
+        <style>
+            .cell  { 
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+            }
+              /* I change the chess background color.*/
+
+            .light { background-color: rgb(205, 205, 205); }
+            .dark  { background-color: gray;  }
+
+            #chess-board {
+                width: 400px;
+                height: 400px;
+                display: grid;
+                border: 12px solid black;
+                grid-template-rows: repeat(8, 1fr); /* 1 fraction */
+                grid-template-columns: repeat(8, 1fr);
+            }
+
+            img {
+                width: 50%;
+            }
+            .invert-color {
+                filter: invert(100%);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chess Game</h1>
+
+        <div id="chess-board">
+            <!-- row1 -->
+            <div class="cell light"><img src="png images/rook.png" /></div>
+            <div class="cell dark"><img src="png images/knight.png" /></div>
+            <div class="cell light"><img src="png images/bishop.png" /></div>
+            <div class="cell dark"><img src="png images/queen.png" /></div>
+            <div class="cell light"><img src="png images/king.png" /></div>
+            <div class="cell dark"><img src="png images/bishop.png" /></div>
+            <div class="cell light"><img src="png images/knight.png" /></div>
+            <div class="cell dark"><img src="png images/rook.png" /></div>
+            <!-- row2 -->
+            <div class="cell dark"><img src="png images/pawn.png" /></div>
+            <div class="cell light"><img src="png images/pawn.png" /></div>
+            <div class="cell dark"><img src="png images/pawn.png" /></div>
+            <div class="cell light"><img src="png images/pawn.png" /></div>
+            <div class="cell dark"><img src="png images/pawn.png" /></div>
+            <div class="cell light"><img src="png images/pawn.png" /></div>
+            <div class="cell dark"><img src="png images/pawn.png" /></div>
+            <div class="cell light"><img src="png images/pawn.png"/></div>
+            <!-- row3 -->
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <!-- row4 -->
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <!-- row5 -->
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <!-- row6 -->
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <div class="cell dark"></div>
+            <div class="cell light"></div>
+            <!-- row7 -->
+            <div class="cell light"><img src="png images/pawn.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="png images/pawn.png" class="invert-color"/></div>
+            <div class="cell light"><img src="png images/pawn.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="png images/pawn.png" class="invert-color"/></div>
+            <div class="cell light"><img src="png images/pawn.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="png images/pawn.png" class="invert-color"/></div>
+            <div class="cell light"><img src="png images/pawn.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="png images/pawn.png" class="invert-color"/></div>
+            <!-- row8 -->
+            <div class="cell dark"><img src="png images/rook.png" class="invert-color"/></div>
+            <div class="cell light"><img src="png images/knight.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="png images/bishop.png" class="invert-color"/></div>
+            <div class="cell light"><img src="png images/queen.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="png images/king.png" class="invert-color"/></div>
+            <div class="cell light"><img src="png images/bishop.png" class="invert-color"/></div>
+            <div class="cell dark"><img src="png images/knight.png" class="invert-color"/></div>
+            <div class="cell light"><img src="png images/rook.png" class="invert-color"/></div>
+        </div>
+
+        <script>
+            let selectedPiece = null;
+            const cells = document.getElementsByClassName("cell");
+            console.log(cells);
+            // From the given video 5th method is used.
+            for (const cell of cells) {
+                cell.onclick = function () { // anonymous function
+                    handleClick(cell);
+                };
+            }
+
+            function handleClick(element) {
+                for (const cell of cells) {
+                    cell.style.border = "";
+                }
+                if (selectedPiece != null) {
+                    element.replaceChildren(selectedPiece);
+                    selectedPiece = null;
+                } else if (element.children.length > 0) {
+                    selectedPiece = element.children[0];
+                    element.style.border = "4px solid red";
+                }
+            }
+        </script>
+    </body>
+</html>

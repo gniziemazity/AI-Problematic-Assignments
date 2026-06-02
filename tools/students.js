@@ -55,6 +55,21 @@ lessonNameEl.addEventListener("click", () => {
 		}
 	}
 	if (!ok) ok = await _tryAutoLoad();
+	if (ok && params.ids && params.ids.length === 1) {
+		const sid = String(params.ids[0]);
+		const stu = (_students || []).find((s) => String(s.id) === sid);
+		if (stu) {
+			const rows = document.querySelectorAll("#tbody tr");
+			rows.forEach((r) => r.classList.remove("selected"));
+			for (const r of rows) {
+				if (r._student && String(r._student.id) === sid) {
+					r.classList.add("selected");
+					break;
+				}
+			}
+			selectStudentInline(stu);
+		}
+	}
 	if (!ok) {
 		const btn = document.createElement("button");
 		btn.className = "landing-btn";

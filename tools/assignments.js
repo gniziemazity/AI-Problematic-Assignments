@@ -28,8 +28,19 @@ async function _init() {
 
 	let names;
 	try {
-		const entries = await listServerDir("/assignments/");
-		names = entries.filter((e) => e.kind === "directory").map((e) => e.name);
+		const served = await detectServedDataSource();
+		const asgnGroup =
+			served && served.manifest && served.manifest.groups
+				? served.manifest.groups.assignments
+				: null;
+		if (asgnGroup) {
+			names = Object.keys(asgnGroup);
+		} else {
+			const entries = await listServerDir("/assignments/");
+			names = entries
+				.filter((e) => e.kind === "directory")
+				.map((e) => e.name);
+		}
 	} catch (e) {
 		_overlay.showError("Failed to load assignments: " + e.message);
 		return;

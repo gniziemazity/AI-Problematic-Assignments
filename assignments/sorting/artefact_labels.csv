@@ -1,5 +1,6 @@
-key,label,severity
-onchange,'onchange' is present,high
-var_speed,'var_speed' is present,high
-reversed_slider,Speed logic inversed,medium
-extra,Unexpected modifications,low
+key,label,code,severity
+start,Starter code ignored,S_s,high
+onchange,'onchange' is present,W_i,high
+var_speed,'var_speed' is present,W_a,high
+reversed_slider,Speed logic inversed,I_s,medium
+extra,Unexpected modifications,I_o,low

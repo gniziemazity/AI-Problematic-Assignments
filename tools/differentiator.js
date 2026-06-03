@@ -655,6 +655,7 @@ async function _navToStudent(idx) {
 }
 
 let _embedMode = false;
+let _previewOverride = null;
 
 window.addEventListener("DOMContentLoaded", async () => {
 	await window.LanguageProfiles.initProfiles();
@@ -662,6 +663,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 	const modeParam = params.get("mode") || null;
 	_diffMode = modeParam;
 	const toolParams = parseToolParams();
+	if (params.get("preview") === "1") _previewOverride = true;
 	_refreshLinePaddingButton();
 	_refreshSmartPaddingButton();
 	_refreshLineNumbersButton();
@@ -759,6 +761,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 		_hscrollResizeRaf = requestAnimationFrame(() => {
 			_hscrollResizeRaf = 0;
 			_updateHScrollProxies();
+			_updateTabHScrolls();
 		});
 	});
 });
@@ -1033,6 +1036,7 @@ function toggleSmartPadding() {
 }
 
 function _isPreviewMode() {
+	if (_previewOverride !== null) return _previewOverride;
 	return localStorage.getItem("diff-preview-mode") === "preview";
 }
 
@@ -1119,8 +1123,53 @@ function _updateHScrollProxies() {
 	_updateHScrollProxy("student");
 }
 
+function _updateTabHScroll(side) {
+	const tabs = document.getElementById(`tabs-${side}`);
+	const proxy = document.getElementById(`tab-hscroll-${side}`);
+	if (!tabs || !proxy) return;
+	const inner = proxy.firstElementChild;
+	const overflow = tabs.scrollWidth - tabs.clientWidth;
+	if (overflow > 1) {
+		inner.style.width = `${tabs.scrollWidth}px`;
+		proxy.classList.add("is-active");
+		proxy.scrollLeft = tabs.scrollLeft;
+		if (!proxy.dataset.wired) {
+			proxy.dataset.wired = "1";
+			let syncing = false;
+			proxy.addEventListener(
+				"scroll",
+				() => {
+					if (syncing) return;
+					syncing = true;
+					tabs.scrollLeft = proxy.scrollLeft;
+					syncing = false;
+				},
+				{ passive: true },
+			);
+			tabs.addEventListener(
+				"scroll",
+				() => {
+					if (syncing) return;
+					syncing = true;
+					proxy.scrollLeft = tabs.scrollLeft;
+					syncing = false;
+				},
+				{ passive: true },
+			);
+		}
+	} else {
+		proxy.classList.remove("is-active");
+	}
+}
+
+function _updateTabHScrolls() {
+	_updateTabHScroll("teacher");
+	_updateTabHScroll("student");
+}
+
 function togglePreview() {
 	const next = !_isPreviewMode();
+	_previewOverride = null;
 	localStorage.setItem("diff-preview-mode", next ? "preview" : "code");
 	_applyPreviewMode(next);
 	_refreshPreviewButton();

@@ -448,6 +448,13 @@ function _sortKeyOf(s, sortCol) {
 		const v = s.langPcts ? s.langPcts[k] : undefined;
 		return { type: "num", v: v == null ? NaN : v };
 	}
+	if (sortCol.startsWith("artefact:")) {
+		const idx = parseInt(sortCol.slice("artefact:".length), 10);
+		const r = (s.remarks || []).find((x) => /^obs\.?$/i.test(x.col));
+		const code = r && r.val ? String(r.val).trim() : "";
+		const fired = /^[01]+$/.test(code) && code[idx] === "1" ? 1 : 0;
+		return { type: "num", v: fired };
+	}
 	if (sortCol.startsWith("remark:")) {
 		const col = sortCol.slice(7);
 		const r = (s.remarks || []).find((x) => x.col === col);

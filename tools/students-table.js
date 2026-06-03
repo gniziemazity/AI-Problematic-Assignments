@@ -109,6 +109,14 @@ function _makeNameStar() {
 	return star;
 }
 
+function _setHeaderLabel(el, spec) {
+	if (spec.artefactIdx != null) {
+		el.innerHTML = escHtml(spec.label).replace(/_(\w+)/g, "<sub>$1</sub>");
+	} else {
+		el.textContent = spec.label;
+	}
+}
+
 function _studentDocFiles(student) {
 	if (!student || !student.id) return [];
 	const sid = String(student.id).toLowerCase();
@@ -227,7 +235,21 @@ function renderTable() {
 	if (showName)
 		specs.push({ cls: "col-name", label: "Name", sortKey: "name" });
 	if (showNum) specs.push({ cls: "col-num", label: "#", sortKey: "num" });
+	const _hasArtefactSchema = _artefactSchema && _artefactSchema.length > 0;
 	for (const col of visibleRemarkCols) {
+		if (/^obs\.?$/i.test(col) && _hasArtefactSchema) {
+			_artefactSchema.forEach((a, i) => {
+				specs.push({
+					cls: "col-remark col-obs col-artefact",
+					label: a.code || a.key || `A${i + 1}`,
+					title: a.label || "",
+					sortKey: "artefact:" + i,
+					artefactIdx: i,
+					artefactCol: col,
+				});
+			});
+			continue;
+		}
 		let cls = "col-remark";
 		if (/^grade$/i.test(col)) cls += " col-grade";
 		else if (/^comments?$/i.test(col)) cls += " col-comments";
@@ -375,7 +397,7 @@ function renderTable() {
 		if (spec.title) el.title = spec.title;
 		if (spec.sortKey) {
 			el.classList.add("sortable");
-			el.textContent = spec.label;
+			_setHeaderLabel(el, spec);
 			if (_sortCol === spec.sortKey) {
 				const arrow = document.createElement("span");
 				arrow.className = "sort-arrow";
@@ -384,7 +406,7 @@ function renderTable() {
 			}
 			el.addEventListener("click", () => _onSortHeaderClick(spec.sortKey));
 		} else {
-			el.textContent = spec.label;
+			_setHeaderLabel(el, spec);
 		}
 		trh.appendChild(el);
 	}
@@ -470,6 +492,20 @@ function renderTable() {
 		}
 		for (const rk of s.remarks) {
 			if (!_remarkVisible(rk.col)) continue;
+			if (
+				/^obs\.?$/i.test(rk.col) &&
+				_artefactSchema &&
+				_artefactSchema.length
+			) {
+				const code = rk.val === "_" || !rk.val ? "" : String(rk.val);
+				_artefactSchema.forEach((a, i) => {
+					const cell = document.createElement("td");
+					cell.className = "col-remark col-obs col-artefact";
+					_renderArtefactCell(cell, s, rk.col, i, code);
+					tr.appendChild(cell);
+				});
+				continue;
+			}
 			const el = document.createElement("td");
 			let cls = "col-remark";
 			const isObs = /^obs\.?$/i.test(rk.col);
@@ -722,6 +758,12 @@ function _appendTotalsRow(
 		if (!countSlotAssigned && (isName || (isId && !showName))) {
 			td.textContent = `${nonAiCount} students`;
 			countSlotAssigned = true;
+		} else if (spec.artefactIdx != null && obsCounts) {
+			td.dataset.artefactIdx = String(spec.artefactIdx);
+			td.innerHTML = renderArtefactTotalOne(
+				obsCounts[spec.artefactIdx] || 0,
+				_artefactSchema[spec.artefactIdx],
+			);
 		} else if (isObs && obsCounts) {
 			td.innerHTML = renderArtefactTotals(obsCounts, _artefactSchema);
 		} else if (isFollow && avgFollow != null) {
@@ -888,6 +930,81 @@ function _renderObsCell(el, val) {
 		delete el.dataset.artefactTipHtml;
 		el.style.fontWeight = v ? "bold" : "";
 		el.title = "";
+	}
+}
+
+function _snapshotOrigObs(students) {
+	_origObs.clear();
+	for (const s of students || []) {
+		if (s.id == null) continue;
+		const r = (s.remarks || []).find((x) => /^obs\.?$/i.test(x.col));
+		_origObs.set(String(s.id), r && r.val ? String(r.val) : "");
+	}
+}
+
+function _artefactChangedSince(studentId, idx, fired) {
+	const orig = _origObs.get(String(studentId)) || "";
+	const origFired = /^[01]+$/.test(orig) && orig[idx] === "1";
+	return fired !== origFired;
+}
+
+function _renderArtefactCell(el, student, colName, idx, code) {
+	const fired = /^[01]+$/.test(code) && code[idx] === "1";
+	const entry = _artefactSchema[idx];
+	el.innerHTML = renderArtefactCellSquare(fired, entry);
+	let tip = entry && entry.label ? entry.label : "";
+	if (_artefactChangedSince(student.id, idx, fired)) {
+		el.classList.add("artefact-changed");
+		tip = tip ? `${tip} · changed (unsaved)` : "changed (unsaved)";
+	}
+	if (tip) el.title = tip;
+	if (!_isReadOnly && student.id) {
+		el.classList.add("artefact-toggle");
+		el.addEventListener("mousedown", (e) => e.stopPropagation());
+		el.addEventListener("click", (e) => {
+			e.stopPropagation();
+			_toggleArtefact(student, colName, idx, el);
+		});
+	}
+}
+
+function _toggleArtefact(student, colName, idx, el) {
+	const len = _artefactSchema.length;
+	const r = (student.remarks || []).find((x) => x.col === colName);
+	const cur =
+		r && r.val && /^[01]+$/.test(String(r.val).trim())
+			? String(r.val).trim()
+			: "";
+	const arr = [];
+	for (let i = 0; i < len; i++) arr[i] = cur[i] === "1" ? "1" : "0";
+	arr[idx] = arr[idx] === "1" ? "0" : "1";
+	const newVal = arr.join("");
+	_setDirty(student.id, colName, newVal);
+	if (r) r.val = newVal;
+	else (student.remarks || (student.remarks = [])).push({ col: colName, val: newVal });
+	const baseRow =
+		_baseStudents && _baseStudents.find((x) => x.id === student.id);
+	if (baseRow) {
+		const br = (baseRow.remarks || []).find((x) => x.col === colName);
+		if (br) br.val = newVal;
+	}
+	el.innerHTML = renderArtefactCellSquare(arr[idx] === "1", _artefactSchema[idx]);
+	el.classList.toggle(
+		"artefact-changed",
+		_artefactChangedSince(student.id, idx, arr[idx] === "1"),
+	);
+	const totalTd = document.querySelector(
+		`.totals-row td.col-artefact[data-artefact-idx="${idx}"]`,
+	);
+	if (totalTd) {
+		let count = 0;
+		for (const s of _students) {
+			if (s.ai_flagged) continue;
+			const rr = (s.remarks || []).find((x) => x.col === colName);
+			const c = rr && rr.val ? String(rr.val).trim() : "";
+			if (/^[01]+$/.test(c) && c[idx] === "1") count++;
+		}
+		totalTd.innerHTML = renderArtefactTotalOne(count, _artefactSchema[idx]);
 	}
 }
 

@@ -164,6 +164,7 @@ function parseArtefactLabelsCsv(text) {
 	const { header, rows } = parseCsv(text);
 	const keyIdx = header.findIndex((h) => /^key$/i.test(h));
 	const labelIdx = header.findIndex((h) => /^label$/i.test(h));
+	const codeIdx = header.findIndex((h) => /^code$/i.test(h));
 	const sevIdx = header.findIndex((h) => /^severity$/i.test(h));
 	if (keyIdx === -1 || labelIdx === -1) return [];
 	const out = [];
@@ -173,7 +174,8 @@ function parseArtefactLabelsCsv(text) {
 		if (!key || !label) continue;
 		const severity =
 			sevIdx !== -1 ? (parts[sevIdx] || "").trim().toLowerCase() : "high";
-		out.push({ key, label, severity: severity || "high" });
+		const code = codeIdx !== -1 ? (parts[codeIdx] || "").trim() : "";
+		out.push({ key, label, code, severity: severity || "high" });
 	}
 	return out;
 }
@@ -385,10 +387,14 @@ class HttpDataSource extends DataSource {
 		this.manifest = manifest;
 		this.rootName = manifest.rootName || "dataset";
 		this.files.clear();
+		const mtimes = manifest.mtimes || {};
 		const addFile = (path) => {
 			const url = new URL(path, abs).href;
 			const name = path.split("/").pop();
-			this.files.set(path.toLowerCase(), new HttpFileLike(url, name));
+			const file = new HttpFileLike(url, name);
+			const mt = mtimes[path.toLowerCase()];
+			if (mt) file.lastModified = mt;
+			this.files.set(path.toLowerCase(), file);
 		};
 		for (const p of manifest.rootFiles || []) addFile(p);
 		const groups = manifest.groups || {};
@@ -611,7 +617,10 @@ function parseToolParams(search = location.search) {
 		stepRaw != null && stepRaw !== "" && Number.isFinite(Number(stepRaw))
 			? Number(stepRaw)
 			: null;
-	return { lesson, group, id, mode, title, ids, star, step };
+	const autoplayRaw = p.get("autoplay");
+	const autoplay = autoplayRaw === "1" || autoplayRaw === "true";
+	const ts = p.get("ts");
+	return { lesson, group, id, mode, title, ids, star, step, autoplay, ts };
 }
 
 async function resolveLessonHandle({ lesson, group } = {}) {
@@ -670,7 +679,7 @@ async function resolveLessonHandle({ lesson, group } = {}) {
 
 function buildToolUrl(
 	target,
-	{ lesson, group, id, mode, title, ids, star, step } = {},
+	{ lesson, group, id, mode, title, ids, star, step, autoplay, ts } = {},
 ) {
 	const params = new URLSearchParams();
 	if (lesson) params.set("lesson", lesson);
@@ -683,6 +692,8 @@ function buildToolUrl(
 	if (star && star.length)
 		params.set("star", Array.isArray(star) ? star.join(",") : star);
 	if (step != null && step !== "") params.set("step", step);
+	if (autoplay) params.set("autoplay", "1");
+	if (ts != null && ts !== "") params.set("ts", ts);
 	const qs = params.toString();
 	return qs ? `${target}?${qs}` : target;
 }
@@ -846,6 +857,26 @@ function renderArtefactTotals(counts, schema) {
 		);
 	}
 	return parts.join("");
+}
+
+function renderArtefactCellSquare(fired, entry) {
+	const sev = (entry && entry.severity) || "high";
+	const clr = fired ? artefactFiredColorFor(sev) : THEME.artefactOk;
+	return (
+		`<span style="display:inline-block;width:14px;height:14px;` +
+		`border-radius:2px;vertical-align:middle;background:${clr}"></span>`
+	);
+}
+
+function renderArtefactTotalOne(count, entry) {
+	const sev = (entry && entry.severity) || "high";
+	const clr = count > 0 ? artefactFiredColorFor(sev) : THEME.artefactOk;
+	return (
+		`<span style="display:inline-block;min-width:14px;height:14px;` +
+		`border-radius:2px;vertical-align:middle;background:${clr};color:white;` +
+		`font-size:10px;font-weight:bold;text-align:center;line-height:14px;` +
+		`padding:0 2px">${count}</span>`
+	);
 }
 
 function buildArtefactSummaryHtml(raw, schema) {

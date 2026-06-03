@@ -88,7 +88,7 @@ async function _instructionsSrcdoc(file) {
 	return (
 		`<!DOCTYPE html><html><head><meta charset="utf-8">${baseTag}` +
 		"<style>body{margin:14px 18px;font-family:sans-serif;font-size:14px;" +
-		"line-height:1.6;color:#222}img{max-width:100%;height:auto}</style>" +
+		"line-height:1.6;color:#222;background:#eef8ef}img{max-width:100%;height:auto}</style>" +
 		`</head><body>${html}</body></html>`
 	);
 }
@@ -97,6 +97,12 @@ async function _renderAssignment() {
 	const editor = _vEl("asgn-editor");
 	const preview = _vEl("asgn-preview");
 	if (!editor || !preview) return;
+	const labelEl = document.querySelector("#asgn-pane .sp-label");
+	if (labelEl)
+		labelEl.textContent =
+			_mode === "lesson"
+				? "Moodle Lesson Goals"
+				: "Moodle Assignment Instructions";
 	const file = _findInstructionsFile();
 	try {
 		const text = file ? await readFileText(file) : await _fetchInstructionsText();
@@ -123,13 +129,19 @@ function _loadStudentDiff(student) {
 	}
 	if (empty) empty.style.display = "none";
 	if (frame.dataset.diffId === String(student.id)) return;
+	const previewParam =
+		new URLSearchParams(location.search).get("preview") === "1"
+			? "&preview=1"
+			: "";
 	frame.src =
 		buildToolUrl("differentiator.html", {
 			lesson: _lessonName,
 			group: _groupFolder(),
 			id: student.id,
 			title: _diffTitleFor(student),
-		}) + "&embed=1";
+		}) +
+		"&embed=1" +
+		previewParam;
 	frame.dataset.diffId = String(student.id);
 }
 

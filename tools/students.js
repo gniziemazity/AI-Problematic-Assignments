@@ -18,6 +18,7 @@ lessonNameEl.addEventListener("click", () => {
 	const m = qs.get("mode") || "";
 	_modeParam = m === "lesson" || m === "assignment" ? m : null;
 	if (_paperMode) {
+		document.body.classList.add("paper-mode");
 		for (const id of ["basis-picker", "columns-picker", "assignment-toggle"]) {
 			const el = document.getElementById(id);
 			if (el) el.style.display = "none";
@@ -55,8 +56,14 @@ lessonNameEl.addEventListener("click", () => {
 		}
 	}
 	if (!ok) ok = await _tryAutoLoad();
-	if (ok && params.ids && params.ids.length === 1) {
-		const sid = String(params.ids[0]);
+	const _autoSid =
+		params.star && params.star.length === 1
+			? String(params.star[0])
+			: params.ids && params.ids.length === 1
+				? String(params.ids[0])
+				: null;
+	if (ok && _autoSid) {
+		const sid = _autoSid;
 		const stu = (_students || []).find((s) => String(s.id) === sid);
 		if (stu) {
 			const rows = document.querySelectorAll("#tbody tr");
@@ -71,6 +78,8 @@ lessonNameEl.addEventListener("click", () => {
 		}
 	}
 	if (!ok) {
+		showLoading(false);
+		landingEl.style.display = "";
 		const btn = document.createElement("button");
 		btn.className = "landing-btn";
 		btn.textContent = "🔄 Load Students";

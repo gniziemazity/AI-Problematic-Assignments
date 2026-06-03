@@ -19,6 +19,8 @@ class LogVisualizer {
 		this._lessonFile = null;
 		this._ciBaseIndent = "";
 		this._anchorFlashTimer = null;
+		this._scrollTarget = null;
+		this._scrollRafId = null;
 
 		this._logBuf = [];
 		this._microCumDelay = null;
@@ -271,6 +273,8 @@ class LogVisualizer {
 		lessonName,
 		interactions,
 		studentNameMap,
+		seekStep,
+		seekTs,
 	}) {
 		if (error) {
 			console.error("expand error:\n" + error);
@@ -315,7 +319,20 @@ class LogVisualizer {
 		this._totalDelay = this._microCumDelay[micro.length];
 		this._tsOriginCum = this._microCumDelay[tsOriginIdx] || 0;
 
-		this._seekToMs(this._totalDelay);
+		let targetMs = this._totalDelay;
+		if (seekTs != null && seekTs !== "") {
+			const ms = this._playMsForTimestamp(seekTs);
+			if (ms != null) targetMs = ms;
+		} else if (seekStep != null && Number.isFinite(Number(seekStep))) {
+			targetMs =
+				this._microCumDelay[
+					Math.max(
+						0,
+						Math.min(this.micro.length, Math.floor(Number(seekStep))),
+					)
+				];
+		}
+		this._seekToMs(targetMs);
 		this.elPlay.disabled = false;
 	}
 
@@ -326,6 +343,36 @@ class LogVisualizer {
 			Math.min(this.micro.length, Math.floor(Number(n) || 0)),
 		);
 		this._seekToMs(this._microCumDelay[idx]);
+	}
+
+	seekToTimestamp(value) {
+		const ms = this._playMsForTimestamp(value);
+		if (ms != null) this._seekToMs(ms);
+	}
+
+	_playMsForTimestamp(value) {
+		if (value == null || !this.micro.length) return null;
+		const raw = String(value).trim();
+		if (/^\d+$/.test(raw)) {
+			let epochMs = Number(raw);
+			if (epochMs >= 1_000_000_000 && epochMs < 1_000_000_000_000)
+				epochMs *= 1000;
+			if (epochMs >= 1_000_000_000_000)
+				return epochMs - this._tsOrigin + (this._tsOriginCum || 0);
+		}
+		const m = raw.match(/^(\d{1,2}):(\d{2})(?::(\d{2}))?(?:\.(\d{1,3}))?$/);
+		if (m) {
+			const want = `${m[1].padStart(2, "0")}:${m[2]}:${
+				m[3] || "00"
+			}.${((m[4] || "") + "000").slice(0, 3)}`;
+			for (let i = 0; i < this.micro.length; i++) {
+				const ts = this.micro[i][2];
+				if (!ts || ts < 1_000_000_000_000) continue;
+				if (fmtTs(ts).slice(-12) >= want) return this._microCumDelay[i];
+			}
+			return this._totalDelay;
+		}
+		return null;
 	}
 
 	togglePlay() {
@@ -874,10 +921,48 @@ class LogVisualizer {
 			this.elDevEditor.classList.remove("vis-int-mode");
 			this.elDevEditor.innerHTML = renderEditorHtml(this.dev, true, "none");
 		}
-		if (this.elAutoScroll.checked) {
-			const cur = this.elEditor.querySelector(".vis-cursor");
-			if (cur) cur.scrollIntoView({ block: "nearest" });
+		if (this.elAutoScroll.checked) this._followCursor();
+	}
+
+	_followCursor() {
+		const cur = this.elEditor.querySelector(".vis-cursor");
+		if (!cur) return;
+		const c = this.elEditor;
+		const cRect = c.getBoundingClientRect();
+		const curRect = cur.getBoundingClientRect();
+		const curCenter =
+			curRect.top - cRect.top + c.scrollTop + curRect.height / 2;
+		const maxTop = Math.max(0, c.scrollHeight - c.clientHeight);
+		const target = Math.max(
+			0,
+			Math.min(maxTop, curCenter - c.clientHeight / 2),
+		);
+		if (Math.abs(target - c.scrollTop) > c.clientHeight * 1.5) {
+			if (this._scrollRafId) {
+				cancelAnimationFrame(this._scrollRafId);
+				this._scrollRafId = null;
+			}
+			this._scrollTarget = null;
+			c.scrollTop = target;
+			return;
 		}
+		this._scrollTarget = target;
+		if (this._scrollRafId == null)
+			this._scrollRafId = requestAnimationFrame(() => this._scrollStep());
+	}
+
+	_scrollStep() {
+		this._scrollRafId = null;
+		if (this._scrollTarget == null) return;
+		const c = this.elEditor;
+		const diff = this._scrollTarget - c.scrollTop;
+		if (Math.abs(diff) < 1) {
+			c.scrollTop = this._scrollTarget;
+			this._scrollTarget = null;
+			return;
+		}
+		c.scrollTop = c.scrollTop + diff * 0.25;
+		this._scrollRafId = requestAnimationFrame(() => this._scrollStep());
 	}
 
 	_schedulePreview() {

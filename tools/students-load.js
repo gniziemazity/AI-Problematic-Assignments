@@ -74,13 +74,37 @@ async function loadXlsxFiles(files) {
 	const xlsxFiles = files.filter((f) =>
 		f.name.toLowerCase().endsWith(".xlsx"),
 	);
-	const _ts = (f) => {
-		const m = f.name.match(/_(\d{8})-(\d{6})\.xlsx$/i);
-		if (m) return Number(m[1]) * 1000000 + Number(m[2]);
-		const m2 = f.name.match(/_(\d{10,})\.xlsx$/i);
-		if (m2) return Number(m2[1]);
-		const m3 = f.name.match(/_(\d{8,})/);
-		return m3 ? Number(m3[1]) : f.lastModified || 0;
+	// Recency in epoch-ms, comparable across filename stamps and file mtime.
+	// Filename timestamps are converted to a real epoch (not a YYYYMMDD
+	// integer) so a stamped file and an unstamped freshly-written file sort
+	// correctly against each other.
+	const _recency = (f) => {
+		const name = f.name;
+		let m = name.match(/(\d{8})[-_](\d{6})(?=\D*$)/);
+		if (m) {
+			const d = m[1];
+			const t = m[2];
+			const ms = Date.UTC(
+				+d.slice(0, 4),
+				+d.slice(4, 6) - 1,
+				+d.slice(6, 8),
+				+t.slice(0, 2),
+				+t.slice(2, 4),
+				+t.slice(4, 6),
+			);
+			if (!Number.isNaN(ms)) return ms;
+		}
+		m = name.match(/_(\d{13})\b/);
+		if (m) return Number(m[1]);
+		m = name.match(/_(\d{10})\b/);
+		if (m) return Number(m[1]) * 1000;
+		m = name.match(/(\d{8})(?=\D*$)/);
+		if (m) {
+			const d = m[1];
+			const ms = Date.UTC(+d.slice(0, 4), +d.slice(4, 6) - 1, +d.slice(6, 8));
+			if (!Number.isNaN(ms)) return ms;
+		}
+		return f.lastModified || 0;
 	};
 
 	_basisFiles = new Map();
@@ -116,42 +140,59 @@ async function loadXlsxFiles(files) {
 
 	const gradesFiles = xlsxFiles
 		.filter((f) => /grades/i.test(f.name))
-		.sort((a, b) => _ts(b) - _ts(a));
+		.sort((a, b) => _recency(b) - _recency(a));
 	_basisFallbackFile = gradesFiles[0] || null;
 
 	let legacyRemarksFile = null;
 	if (!_basisFallbackFile && _basisFiles.size === 0) {
 		const remarksFiles = xlsxFiles
 			.filter((f) => /remarks/i.test(f.name))
-			.sort((a, b) => _ts(b) - _ts(a));
+			.sort((a, b) => _recency(b) - _recency(a));
 		legacyRemarksFile = remarksFiles[0] || null;
 	}
 
+	// Default = the most recently modified file among grades + every basis
+	// remarks file. Ties (e.g. served files with no mtime, or files written
+	// in the same second) fall back to the prior precedence: grades first,
+	// then DEFAULT_BASIS_ORDER, then the rest of REMARKS_BASES.
+	const _basisRank = (key) => {
+		if (key === GRADES_KEY) return -1;
+		const di = DEFAULT_BASIS_ORDER.indexOf(key);
+		if (di !== -1) return di;
+		const ri = REMARKS_BASES.findIndex((b) => b.key === key);
+		return ri === -1 ? 999 : 100 + ri;
+	};
+	const defaultCandidates = [];
+	if (_basisFallbackFile)
+		defaultCandidates.push({ key: GRADES_KEY, f: _basisFallbackFile });
+	for (const [key, f] of _basisFiles) defaultCandidates.push({ key, f });
+	defaultCandidates.sort((a, b) => {
+		const dr = _recency(b.f) - _recency(a.f);
+		if (dr !== 0) return dr;
+		return _basisRank(a.key) - _basisRank(b.key);
+	});
+
+	// Grades (when present) stays the in-memory base so the basis dropdown's
+	// Grades option and unsaved edits keep working; the newest file is the
+	// default view, overlaid on top of grades when the newest is a basis
+	// remarks file.
+	const _topCandidate = defaultCandidates[0] || null;
 	let initialFile = null;
+	let overlayFile = null;
 	if (_basisFallbackFile) {
-		_activeBasis = GRADES_KEY;
 		initialFile = _basisFallbackFile;
-	} else {
-		for (const key of DEFAULT_BASIS_ORDER) {
-			if (_basisFiles.has(key)) {
-				_activeBasis = key;
-				initialFile = _basisFiles.get(key);
-				break;
-			}
+		if (_topCandidate && _topCandidate.key !== GRADES_KEY) {
+			overlayFile = _topCandidate.f;
+			_activeBasis = _topCandidate.key;
+		} else {
+			_activeBasis = GRADES_KEY;
 		}
-		if (!initialFile) {
-			for (const { key } of REMARKS_BASES) {
-				if (_basisFiles.has(key)) {
-					_activeBasis = key;
-					initialFile = _basisFiles.get(key);
-					break;
-				}
-			}
-		}
-		if (!initialFile && legacyRemarksFile) {
-			_activeBasis = null;
-			initialFile = legacyRemarksFile;
-		}
+	} else if (_topCandidate) {
+		initialFile = _topCandidate.f;
+		_activeBasis = _topCandidate.key;
+	} else if (legacyRemarksFile) {
+		initialFile = legacyRemarksFile;
+		_activeBasis = null;
 	}
 
 	if (!initialFile) {
@@ -164,6 +205,7 @@ async function loadXlsxFiles(files) {
 
 	try {
 		await _loadRemarksFile(initialFile);
+		if (overlayFile) await _overlayBasisFollow(overlayFile);
 		_renderBasisPicker();
 	} catch (ex) {
 		showLoading(false);
@@ -204,6 +246,7 @@ async function _loadRemarksFile(file) {
 					? "assignment"
 					: "lesson");
 	_baseStudents = _students.map((s) => ({ ...s }));
+	_snapshotOrigObs(_students);
 	_activeBasisFile = file;
 	_activeBasisFileName = file.name;
 	_activeWorkbook = result.workbook;

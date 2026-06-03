@@ -289,8 +289,8 @@ body.tool-shell .tool-empty-state {
 }
 .file-tab-active[data-file-name$=".html" i],
 .file-tab-active[data-file-name$=".htm" i] {
-	background: var(--c-red-1);
-	color: #fff;
+	background: color-mix(in srgb, var(--c-red-1) 30%, var(--clr-bg));
+	color: var(--clr-text);
 	border-bottom-color: var(--c-red-1);
 }
 
@@ -299,8 +299,8 @@ body.tool-shell .tool-empty-state {
 	border-bottom: 2px solid color-mix(in srgb, var(--c-blue-1) 40%, transparent);
 }
 .file-tab-active[data-file-name$=".css" i] {
-	background: var(--c-blue-1);
-	color: #fff;
+	background: color-mix(in srgb, var(--c-blue-1) 30%, var(--clr-bg));
+	color: var(--clr-text);
 	border-bottom-color: var(--c-blue-1);
 }
 
@@ -310,8 +310,8 @@ body.tool-shell .tool-empty-state {
 		color-mix(in srgb, var(--c-orange-1) 40%, transparent);
 }
 .file-tab-active[data-file-name$=".js" i] {
-	background: var(--c-orange-1);
-	color: #fff;
+	background: color-mix(in srgb, var(--c-orange-1) 30%, var(--clr-bg));
+	color: var(--clr-text);
 	border-bottom-color: var(--c-orange-1);
 }
 
@@ -321,8 +321,8 @@ body.tool-shell .tool-empty-state {
 		color-mix(in srgb, var(--c-purple-1) 40%, transparent);
 }
 .file-tab-active[data-file-name$=".py" i] {
-	background: var(--c-purple-1);
-	color: #fff;
+	background: color-mix(in srgb, var(--c-purple-1) 30%, var(--clr-bg));
+	color: var(--clr-text);
 	border-bottom-color: var(--c-purple-1);
 }
 

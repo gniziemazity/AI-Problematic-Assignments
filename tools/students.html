@@ -131,6 +131,8 @@
 				text-transform: uppercase;
 				letter-spacing: 0.5px;
 				white-space: nowrap;
+				position: sticky;
+				top: 0;
 				z-index: 2;
 				user-select: none;
 			}
@@ -205,7 +207,7 @@
 				width: 160px;
 			}
 			.name-star {
-				color: var(--clr-orange);
+				color: var(--clr-text);
 				margin-right: 4px;
 			}
 			.col-num {
@@ -223,6 +225,25 @@
 			}
 			.col-obs {
 				width: 48px;
+			}
+			.col-artefact {
+				width: 34px;
+				text-align: center;
+				white-space: nowrap;
+				position: relative;
+			}
+			.col-artefact sub {
+				text-transform: none;
+			}
+			.col-artefact.artefact-changed::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 0;
+				height: 0;
+				border-top: 7px solid #d4a300;
+				border-left: 7px solid transparent;
 			}
 			.col-grade {
 				width: 56px;
@@ -512,6 +533,9 @@
 				border-top: 2px solid var(--clr-muted);
 				background: var(--clr-bar-track);
 				font-weight: bold;
+				position: sticky;
+				bottom: 0;
+				z-index: 2;
 			}
 			tbody tr.totals-row:hover td:not(.col-mismatch) {
 				background: var(--clr-bar-track) !important;
@@ -700,6 +724,21 @@
 				background: var(--clr-bg);
 				min-height: 0;
 			}
+			#asgn-pane .sp-head {
+				background: var(--clr-pos);
+			}
+			#asgn-pane .sp-label {
+				color: var(--clr-white);
+				max-width: none;
+			}
+			#asgn-pane .sp-collapse-btn {
+				color: var(--clr-white);
+			}
+			#asgn-body,
+			#asgn-body > pre.sp-editor,
+			#asgn-body > iframe.sp-preview {
+				background: var(--clr-tip-bg-green);
+			}
 			#side-col.asgn-collapsed #asgn-pane {
 				flex: 0 0 auto;
 			}
@@ -711,6 +750,19 @@
 			}
 			#side-col.asgn-collapsed #student-pane {
 				flex: 1 1 0 !important;
+			}
+			body.paper-mode #left-col {
+				flex: 0 0 auto;
+				max-width: 40vw;
+			}
+			body.paper-mode #table-wrap {
+				overflow: auto;
+			}
+			body.paper-mode #side-col {
+				flex: 1 1 0 !important;
+			}
+			body.paper-mode #assignment-divider {
+				display: none;
 			}
 			#assignment-toggle {
 				padding: 3px 10px;
@@ -826,6 +878,17 @@
 				</button>
 			</div>
 		</div>
+		<script>
+			(function () {
+				const qs = new URLSearchParams(location.search);
+				if (qs.get("lesson") || qs.get("autoload") === "1") {
+					const l = document.getElementById("landing");
+					const o = document.getElementById("loading");
+					if (l) l.style.display = "none";
+					if (o) o.style.display = "flex";
+				}
+			})();
+		</script>
 
 		<div id="main">
 			<div id="content-row">

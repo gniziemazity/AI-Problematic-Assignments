@@ -93,26 +93,56 @@
 				flex-direction: column;
 			}
 
+			.tab-bar-wrap {
+				position: relative;
+				flex: 1;
+				min-width: 0;
+				display: flex;
+			}
 			.tab-bar {
 				display: flex;
 				flex: 1;
 				min-width: 0;
 				overflow-x: auto;
 				overflow-y: hidden;
-				scrollbar-width: thin;
+				/* native scrollbar hidden; the .tab-hscroll proxy below is the
+				   visible slider, floating over the tabs so it never grows the
+				   header or pushes the tabs up. */
+				scrollbar-width: none;
 			}
 			.tab-bar::-webkit-scrollbar {
-				height: 6px;
-			}
-			.tab-bar::-webkit-scrollbar-thumb {
-				background: var(--clr-border-strong);
-				border-radius: 3px;
-			}
-			.tab-bar::-webkit-scrollbar-thumb:hover {
-				background: var(--clr-accent);
+				display: none;
 			}
 			.tab-bar > .file-tab {
 				flex: 0 0 auto;
+			}
+			.tab-hscroll {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 6px;
+				overflow-x: auto;
+				overflow-y: hidden;
+				scrollbar-width: thin;
+				display: none;
+				z-index: 5;
+			}
+			.tab-hscroll.is-active {
+				display: block;
+			}
+			.tab-hscroll > div {
+				height: 1px;
+			}
+			.tab-hscroll::-webkit-scrollbar {
+				height: 6px;
+			}
+			.tab-hscroll::-webkit-scrollbar-thumb {
+				background: var(--clr-border-strong);
+				border-radius: 3px;
+			}
+			.tab-hscroll::-webkit-scrollbar-thumb:hover {
+				background: var(--clr-accent);
 			}
 
 			.code-wrap {
@@ -334,6 +364,9 @@
 			body.diff-loading #diff-root,
 			body.diff-loading #bottom-bar {
 				display: none !important;
+			}
+			body.diff-loading #loading {
+				display: flex !important;
 			}
 
 			#mode-select {
@@ -1125,6 +1158,13 @@
 		</style>
 	</head>
 	<body>
+		<script>
+			(function () {
+				const qs = new URLSearchParams(location.search);
+				if (qs.get("lesson") && qs.get("id"))
+					document.body.classList.add("diff-loading");
+			})();
+		</script>
 		<div id="bottom-bar">
 			<select id="mode-select"></select>
 			<button
@@ -1166,11 +1206,21 @@
 				<div id="diff-divider"></div>
 				<div class="panel-header app-toolbar" id="header-teacher">
 					<span id="title-teacher">Teacher</span>
-					<div class="tab-bar" id="tabs-teacher"></div>
+					<div class="tab-bar-wrap">
+						<div class="tab-bar" id="tabs-teacher"></div>
+						<div class="tab-hscroll" id="tab-hscroll-teacher">
+							<div></div>
+						</div>
+					</div>
 				</div>
 				<div class="panel-header app-toolbar" id="header-student">
 					<span id="title-student">Student</span>
-					<div class="tab-bar" id="tabs-student"></div>
+					<div class="tab-bar-wrap">
+						<div class="tab-bar" id="tabs-student"></div>
+						<div class="tab-hscroll" id="tab-hscroll-student">
+							<div></div>
+						</div>
+					</div>
 					<button
 						id="nav-prev-student"
 						title="Previous student"

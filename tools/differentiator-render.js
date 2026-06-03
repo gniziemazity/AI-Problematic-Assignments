@@ -410,6 +410,7 @@ function renderPanel(side, files, marks) {
 			_curatedRefreshGhostPairs();
 		}
 		_updateHScrollProxy(side);
+		if (typeof _updateTabHScroll === "function") _updateTabHScroll(side);
 	});
 
 	if (localStorage.getItem("diff-preview-mode") === "preview") {

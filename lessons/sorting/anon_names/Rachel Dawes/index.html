@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sorting Visualizer</tittle>
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            #vis-123456 {
+                width: 200px;
+                height: 200px;
+                background-color: red
+
+            }
+            .bar {
+                width: 7px;
+                height: 100%;
+                background-color: black;
+            }
+        </style>        
+    </head>
+    <body>
+            <h1>Sorting visualizer</h1>
+            <div id="vis-123456"></div>
+            <script>
+                //global variables
+                const count = 50;
+                const arry = new Array(count);
+
+
+                for (let i = 0; i < count; i++) {
+                    array[i] = Math.random(); // numbers between 0 and 1
+                }
+
+                bubbleSort(arry);
+
+                const visualizer = documnet.getElementById("vis-123456");
+                for (let i = 0; i < array.length; i++) {
+                    const bar = document.createElement("div");
+                    visualizer.appendChild(bar);
+                    bar.classList.add("bar");
+                    bar.style.height = array[i] * 100 + "%"; /* + here is
+                    string concatenation because
+                    the second item "%" is a string */
+
+                }
+
+                bubbleSort(arry);
+                
+                function updateBars(){
+                    const bars = document.getElementByClassName("bar");
+                    for (let i = 0; i < bars.length; i++) {
+                    bars[i].style.height = array[i] * 100 + "%";
+                }
+
+            }
+
+
+               async function bubbleSort(arr) {
+                    do {
+                        var swapped = false;
+                        for (let i = 1; i < arr.length; i++){
+                            if (arr[i - 1] > arr[i]) {
+                                const aux = arr[i - 1];
+                                arr[i - 1] = arr[i];
+                                arr[i] = aux;
+                                swapped = true;
+                                updateBars();
+                                await new Promise(resolve => setTimeout(resolve, 100));
+
+                            }
+
+                        }
+
+                    } while (swapped);
+
+                }
+
+            </script>
+    </body>
+</html>

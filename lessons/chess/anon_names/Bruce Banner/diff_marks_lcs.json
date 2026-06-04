@@ -1,0 +1,162 @@
+{
+  "token_matching": "lcs",
+  "score": 99.7,
+  "teacher_files": {
+    "reconstructed.html": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 392,
+        "end": 393
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 393,
+        "end": 394
+      },
+      {
+        "token": "1",
+        "label": "comment",
+        "start": 395,
+        "end": 396
+      },
+      {
+        "token": "fraction",
+        "label": "comment",
+        "start": 397,
+        "end": 405
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 406,
+        "end": 407
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 407,
+        "end": 408
+      },
+      {
+        "token": "/",
+        "label": "missing",
+        "start": 677,
+        "end": 678,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 939
+        }
+      },
+      {
+        "token": "/",
+        "label": "missing",
+        "start": 767,
+        "end": 768,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 1057
+        }
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 3083,
+        "end": 3084
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 3084,
+        "end": 3085
+      },
+      {
+        "token": "anonymous",
+        "label": "comment",
+        "start": 3086,
+        "end": 3095
+      },
+      {
+        "token": "function",
+        "label": "comment",
+        "start": 3096,
+        "end": 3104
+      },
+      {
+        "token": ";",
+        "label": "missing",
+        "start": 3135,
+        "end": 3136,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 4078
+        }
+      }
+    ]
+  },
+  "student_files": {
+    "index.html": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 533,
+        "end": 534
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 534,
+        "end": 535
+      },
+      {
+        "token": "1",
+        "label": "comment",
+        "start": 536,
+        "end": 537
+      },
+      {
+        "token": "fraction",
+        "label": "comment",
+        "start": 538,
+        "end": 546
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 546,
+        "end": 547
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 547,
+        "end": 548
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 3988,
+        "end": 3989
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 3989,
+        "end": 3990
+      },
+      {
+        "token": "anonymous",
+        "label": "comment",
+        "start": 3990,
+        "end": 3999
+      },
+      {
+        "token": "function",
+        "label": "comment",
+        "start": 4000,
+        "end": 4008
+      }
+    ]
+  }
+}

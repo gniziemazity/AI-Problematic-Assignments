@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess 123456</title>
+        <style>
+            .cell{
+                border:2px solid black;
+                display: flex; /* This make the chess piece on the center of the square */
+                align-items:center;
+                justify-content:center;
+            }
+            .light{
+                background-color:white;
+            }
+            .dark{
+                background-color:gray;
+            }
+            #chess-board{
+                width: 400px;
+                height: 400px;
+                display: grid;
+                grid-template-rows: repeat(8,1fr); /* 1 fraction*/
+                grid-template-columns: repeat(8,1fr);
+            }
+
+            img{
+                width:50%;
+            }
+            .invert-color{
+                filter:invert(100%);
+            }
+        </style>
+    </heal>
+    <body>
+        <h1>Chess Game</h1>
+        <div id ="chess-board">
+
+            <div class = "cell light"> 
+                <img src = "pieces/p2.png" /> <!-- add the rook into the board -->
+            </div>
+
+            <div class = "cell dark">
+                <img src = "pieces/p5.png" class = "invert-color"/> <!-- turn this to a white piece -->
+            </div>
+            <div class = "cell light">
+                <img src = "pieces/p6.png" />
+            </div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div> 
+
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div> 
+
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div> 
+
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div>
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div>
+            <div class = "cell dark"></div> 
+            <div class = "cell light"></div> 
+
+            <!-- this make it so the handle Click work on chess piece which alows for us to move piece-->
+            <script>
+                const selectedPiece = null;
+                const cells = document.getElementsByClassName("cell"); /* make all of the cells able to move and not need handle click on everything*/
+                console.log(cells);
+                for(const cell of cells){
+                    /* cell.onclick = handleClick(cell); MAKE EVERYTHING RED the handle click function is call for every cell*/
+                    cell.onclick = function(){ //anonymous function call the on click when smth is click i think at least that how i understand it
+                        handleClick(cell);
+                    };
+                }
+
+                function handleClick(element){ //allows for me to move the piece and take other pieces
+                    for (const cell of cells){ 
+                        cell.style.border = "";
+                    }
+                    if (selectedPiece != null)
+                    {
+                        element.replaceChildren(selectedPiece);
+                        selectedPiece = null;
+                    }
+
+                    else if (element.children.length > 0)
+                    {
+                        selectedPiece = element.children[0];
+                        element.style.border = "4px solid red";
+                    }
+                }
+            </script>
+    </body>
+
+</html>
+<!-- The code is wrong i cant move the pieces also the image work when i use on my computer but when i click on the link i sent you the image doesnt work-->

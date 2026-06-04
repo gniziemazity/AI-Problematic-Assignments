@@ -1,0 +1,1152 @@
+{
+  "token_matching": "git",
+  "score": 98.4,
+  "teacher_files": {
+    "reconstructed.html": [
+      {
+        "token": "!",
+        "label": "missing",
+        "start": 1,
+        "end": 2,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 1
+        }
+      },
+      {
+        "token": "flex",
+        "label": "missing",
+        "start": 110,
+        "end": 114,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 141
+        }
+      },
+      {
+        "token": "-",
+        "label": "missing",
+        "start": 114,
+        "end": 115,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 141
+        }
+      },
+      {
+        "token": "direction",
+        "label": "missing",
+        "start": 115,
+        "end": 124,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 141
+        }
+      },
+      {
+        "token": ":",
+        "label": "missing",
+        "start": 124,
+        "end": 125,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 141
+        }
+      },
+      {
+        "token": "column",
+        "label": "missing",
+        "start": 126,
+        "end": 132,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 141
+        }
+      },
+      {
+        "token": ";",
+        "label": "missing",
+        "start": 132,
+        "end": 133,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 141
+        }
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 460,
+        "end": 461
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 461,
+        "end": 462
+      },
+      {
+        "token": "global",
+        "label": "comment",
+        "start": 463,
+        "end": 469
+      },
+      {
+        "token": "variables",
+        "label": "comment",
+        "start": 470,
+        "end": 479
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 607,
+        "end": 608
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 608,
+        "end": 609
+      },
+      {
+        "token": "numbers",
+        "label": "comment",
+        "start": 610,
+        "end": 617
+      },
+      {
+        "token": "between",
+        "label": "comment",
+        "start": 618,
+        "end": 625
+      },
+      {
+        "token": "0",
+        "label": "comment",
+        "start": 626,
+        "end": 627
+      },
+      {
+        "token": "and",
+        "label": "comment",
+        "start": 628,
+        "end": 631
+      },
+      {
+        "token": "1",
+        "label": "comment",
+        "start": 632,
+        "end": 633
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 904,
+        "end": 905
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 905,
+        "end": 906
+      },
+      {
+        "token": "+",
+        "label": "comment",
+        "start": 907,
+        "end": 908
+      },
+      {
+        "token": "here",
+        "label": "comment",
+        "start": 909,
+        "end": 913
+      },
+      {
+        "token": "is",
+        "label": "comment",
+        "start": 914,
+        "end": 916
+      },
+      {
+        "token": "string",
+        "label": "comment",
+        "start": 923,
+        "end": 929
+      },
+      {
+        "token": "concatenation",
+        "label": "comment",
+        "start": 930,
+        "end": 943
+      },
+      {
+        "token": "because",
+        "label": "comment",
+        "start": 944,
+        "end": 951
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 958,
+        "end": 961
+      },
+      {
+        "token": "second",
+        "label": "comment",
+        "start": 962,
+        "end": 968
+      },
+      {
+        "token": "item",
+        "label": "comment",
+        "start": 969,
+        "end": 973
+      },
+      {
+        "token": "\"",
+        "label": "comment",
+        "start": 974,
+        "end": 975
+      },
+      {
+        "token": "%",
+        "label": "comment",
+        "start": 975,
+        "end": 976
+      },
+      {
+        "token": "\"",
+        "label": "comment",
+        "start": 976,
+        "end": 977
+      },
+      {
+        "token": "is",
+        "label": "comment",
+        "start": 978,
+        "end": 980
+      },
+      {
+        "token": "a",
+        "label": "comment",
+        "start": 981,
+        "end": 982
+      },
+      {
+        "token": "string",
+        "label": "comment",
+        "start": 983,
+        "end": 989
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 990,
+        "end": 991
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 991,
+        "end": 992
+      }
+    ]
+  },
+  "student_files": {
+    "index.html": [
+      {
+        "token": "flex",
+        "label": "extra",
+        "start": 194,
+        "end": 198
+      },
+      {
+        "token": "-",
+        "label": "extra",
+        "start": 198,
+        "end": 199
+      },
+      {
+        "token": "direction",
+        "label": "extra",
+        "start": 199,
+        "end": 208
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 208,
+        "end": 209
+      },
+      {
+        "token": "column",
+        "label": "extra",
+        "start": 210,
+        "end": 216
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 216,
+        "end": 217
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 696,
+        "end": 697
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 697,
+        "end": 698
+      },
+      {
+        "token": "global",
+        "label": "comment",
+        "start": 699,
+        "end": 705
+      },
+      {
+        "token": "variables",
+        "label": "comment",
+        "start": 706,
+        "end": 715
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 879,
+        "end": 880
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 880,
+        "end": 881
+      },
+      {
+        "token": "numbers",
+        "label": "comment",
+        "start": 882,
+        "end": 889
+      },
+      {
+        "token": "between",
+        "label": "comment",
+        "start": 890,
+        "end": 897
+      },
+      {
+        "token": "0",
+        "label": "comment",
+        "start": 898,
+        "end": 899
+      },
+      {
+        "token": "and",
+        "label": "comment",
+        "start": 900,
+        "end": 903
+      },
+      {
+        "token": "1",
+        "label": "comment",
+        "start": 904,
+        "end": 905
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 1248,
+        "end": 1249
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 1249,
+        "end": 1250
+      },
+      {
+        "token": "+",
+        "label": "comment",
+        "start": 1251,
+        "end": 1252
+      },
+      {
+        "token": "here",
+        "label": "comment",
+        "start": 1253,
+        "end": 1257
+      },
+      {
+        "token": "is",
+        "label": "comment",
+        "start": 1258,
+        "end": 1260
+      },
+      {
+        "token": "string",
+        "label": "comment",
+        "start": 1261,
+        "end": 1267
+      },
+      {
+        "token": "concatenation",
+        "label": "comment",
+        "start": 1268,
+        "end": 1281
+      },
+      {
+        "token": "because",
+        "label": "comment",
+        "start": 1282,
+        "end": 1289
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 1306,
+        "end": 1309
+      },
+      {
+        "token": "second",
+        "label": "comment",
+        "start": 1310,
+        "end": 1316
+      },
+      {
+        "token": "item",
+        "label": "comment",
+        "start": 1317,
+        "end": 1321
+      },
+      {
+        "token": "\"",
+        "label": "comment",
+        "start": 1322,
+        "end": 1323
+      },
+      {
+        "token": "%",
+        "label": "comment",
+        "start": 1323,
+        "end": 1324
+      },
+      {
+        "token": "\"",
+        "label": "comment",
+        "start": 1324,
+        "end": 1325
+      },
+      {
+        "token": "is",
+        "label": "comment",
+        "start": 1326,
+        "end": 1328
+      },
+      {
+        "token": "a",
+        "label": "comment",
+        "start": 1329,
+        "end": 1330
+      },
+      {
+        "token": "string",
+        "label": "comment",
+        "start": 1331,
+        "end": 1337
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 1338,
+        "end": 1339
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 1339,
+        "end": 1340
+      }
+    ]
+  },
+  "alignments": {
+    "reconstructed.html": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        null
+      ],
+      [
+        8,
+        7
+      ],
+      [
+        null,
+        8
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        null
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        12,
+        11
+      ],
+      [
+        13,
+        12
+      ],
+      [
+        14,
+        13
+      ],
+      [
+        15,
+        14
+      ],
+      [
+        16,
+        null
+      ],
+      [
+        17,
+        15
+      ],
+      [
+        18,
+        16
+      ],
+      [
+        19,
+        17
+      ],
+      [
+        20,
+        18
+      ],
+      [
+        21,
+        19
+      ],
+      [
+        null,
+        20
+      ],
+      [
+        22,
+        21
+      ],
+      [
+        23,
+        22
+      ],
+      [
+        24,
+        23
+      ],
+      [
+        25,
+        24
+      ],
+      [
+        26,
+        25
+      ],
+      [
+        27,
+        26
+      ],
+      [
+        28,
+        27
+      ],
+      [
+        29,
+        28
+      ],
+      [
+        30,
+        29
+      ],
+      [
+        31,
+        30
+      ],
+      [
+        32,
+        31
+      ],
+      [
+        33,
+        32
+      ],
+      [
+        34,
+        33
+      ],
+      [
+        35,
+        34
+      ],
+      [
+        36,
+        35
+      ],
+      [
+        null,
+        36
+      ],
+      [
+        37,
+        37
+      ],
+      [
+        38,
+        38
+      ],
+      [
+        39,
+        39
+      ],
+      [
+        40,
+        40
+      ],
+      [
+        41,
+        41
+      ],
+      [
+        42,
+        42
+      ],
+      [
+        43,
+        43
+      ],
+      [
+        44,
+        null
+      ],
+      [
+        45,
+        44
+      ],
+      [
+        46,
+        45
+      ],
+      [
+        47,
+        46
+      ],
+      [
+        48,
+        47
+      ],
+      [
+        49,
+        48
+      ],
+      [
+        50,
+        49
+      ],
+      [
+        51,
+        50
+      ],
+      [
+        52,
+        51
+      ],
+      [
+        53,
+        52
+      ],
+      [
+        54,
+        53
+      ],
+      [
+        55,
+        54
+      ],
+      [
+        56,
+        55
+      ],
+      [
+        57,
+        56
+      ],
+      [
+        58,
+        57
+      ],
+      [
+        59,
+        58
+      ],
+      [
+        60,
+        59
+      ],
+      [
+        61,
+        60
+      ],
+      [
+        62,
+        61
+      ],
+      [
+        63,
+        62
+      ],
+      [
+        64,
+        63
+      ],
+      [
+        65,
+        null
+      ],
+      [
+        66,
+        64
+      ],
+      [
+        67,
+        65
+      ],
+      [
+        null,
+        66
+      ],
+      [
+        68,
+        67
+      ],
+      [
+        69,
+        68
+      ],
+      [
+        70,
+        69
+      ],
+      [
+        71,
+        70
+      ],
+      [
+        null,
+        71
+      ],
+      [
+        null,
+        72
+      ],
+      [
+        72,
+        73
+      ],
+      [
+        73,
+        74
+      ],
+      [
+        74,
+        75
+      ]
+    ],
+    "index.html": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        null
+      ],
+      [
+        8,
+        7
+      ],
+      [
+        null,
+        8
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        null
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        12,
+        11
+      ],
+      [
+        13,
+        12
+      ],
+      [
+        14,
+        13
+      ],
+      [
+        15,
+        14
+      ],
+      [
+        16,
+        null
+      ],
+      [
+        17,
+        15
+      ],
+      [
+        18,
+        16
+      ],
+      [
+        19,
+        17
+      ],
+      [
+        20,
+        18
+      ],
+      [
+        21,
+        19
+      ],
+      [
+        null,
+        20
+      ],
+      [
+        22,
+        21
+      ],
+      [
+        23,
+        22
+      ],
+      [
+        24,
+        23
+      ],
+      [
+        25,
+        24
+      ],
+      [
+        26,
+        25
+      ],
+      [
+        27,
+        26
+      ],
+      [
+        28,
+        27
+      ],
+      [
+        29,
+        28
+      ],
+      [
+        30,
+        29
+      ],
+      [
+        31,
+        30
+      ],
+      [
+        32,
+        31
+      ],
+      [
+        33,
+        32
+      ],
+      [
+        34,
+        33
+      ],
+      [
+        35,
+        34
+      ],
+      [
+        36,
+        35
+      ],
+      [
+        null,
+        36
+      ],
+      [
+        37,
+        37
+      ],
+      [
+        38,
+        38
+      ],
+      [
+        39,
+        39
+      ],
+      [
+        40,
+        40
+      ],
+      [
+        41,
+        41
+      ],
+      [
+        42,
+        42
+      ],
+      [
+        43,
+        43
+      ],
+      [
+        44,
+        null
+      ],
+      [
+        45,
+        44
+      ],
+      [
+        46,
+        45
+      ],
+      [
+        47,
+        46
+      ],
+      [
+        48,
+        47
+      ],
+      [
+        49,
+        48
+      ],
+      [
+        50,
+        49
+      ],
+      [
+        51,
+        50
+      ],
+      [
+        52,
+        51
+      ],
+      [
+        53,
+        52
+      ],
+      [
+        54,
+        53
+      ],
+      [
+        55,
+        54
+      ],
+      [
+        56,
+        55
+      ],
+      [
+        57,
+        56
+      ],
+      [
+        58,
+        57
+      ],
+      [
+        59,
+        58
+      ],
+      [
+        60,
+        59
+      ],
+      [
+        61,
+        60
+      ],
+      [
+        62,
+        61
+      ],
+      [
+        63,
+        62
+      ],
+      [
+        64,
+        63
+      ],
+      [
+        65,
+        null
+      ],
+      [
+        66,
+        64
+      ],
+      [
+        67,
+        65
+      ],
+      [
+        null,
+        66
+      ],
+      [
+        68,
+        67
+      ],
+      [
+        69,
+        68
+      ],
+      [
+        70,
+        69
+      ],
+      [
+        71,
+        70
+      ],
+      [
+        null,
+        71
+      ],
+      [
+        null,
+        72
+      ],
+      [
+        72,
+        73
+      ],
+      [
+        73,
+        74
+      ],
+      [
+        74,
+        75
+      ]
+    ]
+  },
+  "line_marks": {
+    "teacher_files": {
+      "reconstructed.html": [
+        {
+          "label": "missing",
+          "start": 110,
+          "end": 133
+        }
+      ]
+    },
+    "student_files": {
+      "index.html": [
+        {
+          "label": "extra",
+          "start": 194,
+          "end": 217
+        }
+      ]
+    }
+  }
+}

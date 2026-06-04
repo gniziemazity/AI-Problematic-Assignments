@@ -138,10 +138,21 @@ async function loadXlsxFiles(files) {
 		_basisFiles.set(key, arr[0].f);
 	}
 
-	const gradesFiles = xlsxFiles
-		.filter((f) => /grades/i.test(f.name))
-		.sort((a, b) => _recency(b) - _recency(a));
-	_basisFallbackFile = gradesFiles[0] || null;
+	_basisFallbackFile =
+		xlsxFiles.find((f) => f.name.toLowerCase() === "remarks.xlsx") || null;
+
+	if (!_basisFallbackFile && _lessonName) {
+		const lessonLc = String(_lessonName)
+			.toLowerCase()
+			.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+		const canonRe = new RegExp(
+			`^remarks_${lessonLc}(?:_(?:\\d{8}-\\d{6}|\\d{10,}))?\\.xlsx$`,
+		);
+		_basisFallbackFile =
+			xlsxFiles
+				.filter((f) => canonRe.test(f.name.toLowerCase()))
+				.sort((a, b) => _recency(b) - _recency(a))[0] || null;
+	}
 
 	let legacyRemarksFile = null;
 	if (!_basisFallbackFile && _basisFiles.size === 0) {
@@ -306,7 +317,7 @@ function _renderBasisPicker() {
 	if (!container) return;
 
 	const options = [];
-	if (_basisFallbackFile) options.push({ key: GRADES_KEY, label: "Grades" });
+	if (_basisFallbackFile) options.push({ key: GRADES_KEY, label: "Remarks" });
 	for (const { key, label } of REMARKS_BASES) {
 		if (_basisFiles.has(key)) options.push({ key, label });
 	}

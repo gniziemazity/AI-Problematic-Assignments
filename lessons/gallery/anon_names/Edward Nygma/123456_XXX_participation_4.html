@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lesson</title><!--1st# --Emet pre set information / Basic things . Usually use already code base so not often starting from scratch-->
+    <!-- Emet - own language Teaches -->
+    <!--2nd --we then used live share ( can sometimes not work BE AWARE)-->
+</head>
+<body>
+    <div id="container"></div>
+    My first Emmet abbreviations: <!--link to cheat sheet coming
+    -->
+    <ol>
+        <li>! (HTML boilerplate)</li>
+        <li>div#container (div with id)</li>
+        <li>ol>li*3 (orddr list with 3 items)</li>
+    </ol>
+    (all followed by tab / Enter)    
+
+    <script src=https://www.radufromfinland.com/dog.js></script>
+    <script>
+        myNumber = 25.2; // never define without const, let (or var)
+        console.log(myNumber);
+
+        const myString= "I study at Karelia";
+        console.log(myString);
+
+        let myBoolean = true;
+        var oppositeBoolean = !myBoolean; // var was "replaced" by let and const
+        console.log(myBoolean, oppositeBoolean); //accepts multiple parameters 
+        myBoolean = false;
+        oppositeBoolean = !myBoolean;
+        console.log(myBoolean, oppositeBoolean);
+
+        console.log(!42, !"ABC", ![]);
+        console.log(!null, !undefined, !0); // zero is "falsy"
+        // often creates confusion as anything can be negated
+
+
+        // arrays are like Python lists 
+        const myArray = [1,2,3, "Karelia", true, null];
+
+        myArray.length = 0;
+        myArray[0] = 9;
+        myArray[1] = 8;
+        myArray[2] = 7;
+        //myArray[1,2,3]; ERROR! Program would fail here!
+        // This crashes the application= no console log because nothing comes after 
+        try {
+            myArray = [1,2,3];
+                    } catch(err) {
+                        console.error(err);
+                    }
+        
+        myArray.push(6);
+        myArray.push(11);
+        myArray.sort(function(a,b) {return a - b});// considers everything as a string 11 is "1" "1"
+        console.log(myArray); // It is still possible to change the values of const 
+        
+        
+        // objects are like python dictionaries
+
+        const dog = {
+            name: "Max",
+            age: 5,
+            furr: "black",
+            eyes: "brown"
+
+        };
+
+        console.log(dog);
+        console.table(dog); // in the developer tool can see a nice table of the array 
+        console.log(dog.name);
+        dog.name = "Charlie";
+        console.log(dog["name"]); // different syntax both in use 
+
+        const anotherDog = new Dog("Rex", 7, "brown", "black"); 
+        console.log(anotherDog);
+
+        anotherDog.talk();
+
+        const canvas = anotherDog.render();
+        container.appendChild(canvas); //minus - can not be part of name
+        /* no  need for document.getElementById("Container")
+        ids that are valid JS names are automatically global variables
+        invalid names:
+        * start with a number
+        *contain spaces or special (like -)
+
+        */
+        let a = 5;
+        let b = 2;
+
+        // operators
+        console.log(a + b);
+        a = "5"
+        console.log(a + b); // concatination 
+        // string conversion WARNING if this occurs check values are valid in the event
+        console.log(a-b);
+        console.log(a*b);
+        console.log(a/b);
+        console.log(a%b);
+        console.log(a**b);
+        console.log(Math.pow(a,b)); // sqr route like raising to the power 0.5 
+        console.log(Math.sqrt(b)); // different people use different equations 
+        console.log(Math.pow(b, 0.5));
+
+
+        a = Number(a) + 5;
+        console.log(a);
+
+        a += 5
+        a *= 2 
+        a /= 3 
+        a %= 4 
+        a ** 10  
+
+        console.log(a) // some bug somewhere as my value is not the same should be 1024//
+
+
+        const s1 = "Welcome to Karelia";
+        const s2 ='Welcome to "Karelia"';
+        const s3 ="Welcome to \"Karelia\"!"; // escaping with \
+        console.log(s1,s2,s3);
+
+        const age = 35; 
+        console.log("I am " + age + " years old");
+        console.log(`I am ${age} years old`) // wrapping inside other variables converted to 
+
+        let today = new Date();
+        console.log(today);
+        let someDate = new Date("August 24, 2025");
+        console.log(someDate); // can see what day 
+
+        console.log(today.getDay()); 
+
+        switch (today.getDay()) {// depends on number 
+                case 1: console.log("Monday");
+                case 2: console.log("Tuesday");
+                case 3: console.log("Wednesday");
+                case 4: console.log("Thursday");
+                case 5: console.log("Friday");
+                default: console.log("Weekend");}
+
+
+
+;
+
+
+
+    </script>
+    
+</body>
+</html>

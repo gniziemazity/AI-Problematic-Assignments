@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript lesson</title>
+</head>
+<body>
+    <div Id="container">
+        my first emmet abbreviations:
+        <ol>
+            <li>! (html boilerplate)</li>
+            <li>div#container (div with id)</li>
+            <li>ol>li*3 (ordered list with 3 items)</li>
+        </ol>
+        (all followed by tab / enter)
+
+    </div>
+    <script src="https://www.radufromfinland.com/dog.js"></script>
+    <script>
+        mynumber= 25.2;
+        console.log(mynumber);
+
+        const myString="I study in karelia";
+        console.log(myString);
+
+        let myBoolean=true;
+        var oppositeBoolean=!myBoolean;
+        console.log(myBoolean, oppositeBoolean);
+        myBoolean=false;
+        oppositeBoolean=!myBoolean;
+        console.log(myBoolean,oppositeBoolean);
+
+        console.log(!42, !"ABC", ![]);
+        console.log(!null, !undefined, !0);
+
+        //arrays are like python lists
+        const myArray=[1,2,,3, "karelia", true, null];
+        myArray.length=0;
+        myArray[0]=9; 
+        myArray[1]=8; 
+        myArray[3]=7;
+        //myArray=[1,2,3,]; error 
+        try{
+            myArray=[1,2,3];
+        } catch(err) {
+            console.error(err);
+        }
+        myArray.push(6);
+        myArray.push(11);
+        myArray.sort(function(a,b) {return a-b;});
+        console.log(myArray);
+
+        //object dictionary
+        const Dog={
+            name: "max",
+            age:5,
+            furr:"black",
+            eyes: "brown",
+        };
+
+        console.log(Dog);
+        console.table(Dog);
+        console.log(Dog.name);
+        Dog.name="charlie";
+        console.log(Dog["name"]);
+
+        const anotherDog=new Dog ("rex", 7 , "brown", "black");
+        console.log(anotherDog);
+        anotherDog.talk();
+        const canvas=anotherDog.render();
+        Container.appendChild(canvas);
+
+        let a=5;
+        let b=2;
+        console.log(a+b);
+        a="5";
+        console.log(a+b);
+        console.log(a-b);
+        console.log(a*b);
+        console.log(a/b);
+        console.log(a%b);
+        console.log(a**b);
+        console.log(math.pow(a,b));
+        console.log(math.sqrt(b));
+        console.log(math.pow(b,0.5));
+        console.log(b**0.5);
+
+        a=Number(a) + 5;
+        console.log(a);
+        a +=5;
+        a +=2;
+        a/=3;
+        a%=4;
+        a**=10;
+        console.log(a);
+
+        const s1= "welcome to karelia";
+        const s2= "welcome to karelia";
+        const s3="welcome to \"karelia\"!";
+        console.log(s1,s2,s3);
+        const age= 36;
+        console.log("i am" + age+ "years old");
+        console.log('i am ${age} years old');
+
+        let today = new Date ();
+        console.log(today);
+        let someDate = new Date ("august 24, 2025");
+        cosole.log(someDate);
+
+        console.log(today.getDay());
+        switch (today.getDay()){
+            case 1:console.log("monday");break;
+            case 2:console.log("tuesday");break;
+            case 3:console.log("wendsday");break;
+            case 4:console.log("thursday");break;
+            case 5:console.log("fraiday");break;
+            default :console.log("weekend");break;
+        }
+    </script>
+</body>
+</html>
+
+

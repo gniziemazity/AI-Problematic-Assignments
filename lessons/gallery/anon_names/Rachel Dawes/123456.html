@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Viewport" content="width=device-width, intial-scale=1.0">
+    <title>JavaScript lesson</title>
+</head>
+<body>
+    <div id="container">
+        My first Emmet abbreviations:
+        <ol>
+            <li>! (HTML boilerplate)</li>
+            <li>div#container (div with id)</li>
+            <li>ol>li*3 (order list with 3 items)</li>
+        <ol>
+        (all followed by Tab / Enter)
+    </div>
+     
+    <script src="https://www.radufromfinland.com/dog.js"></script>
+    <script>
+        myNumber = 25.2; // never define without const, let (or var)
+        console.log(myNumber);
+
+
+        const myString = "I study at Karelia";
+        console.log(myString);
+
+        let myBoolean = true;
+        var oppositeBoolean = !myBoolean; // var was "replaced" by let ans const
+        console.log(myBoolean, oppositeBoolean); // accepts multiple parameters
+        myBoolean = false;
+        oppositeBoolean = !myBoolean;
+        console.log(myBoolean, oppositeBoolean);
+
+        console.log(!42, !"ABC", ![]);
+        console.log(!null, !undefined, !0); // zero is "falsy"
+
+        //arrays are like python lists
+        const myArray = [1, 2, 3, "Karelia", true, null];
+        myArray.length = 0;
+        myArray[0] = 9;
+        myArray[1] = 8;
+        myArray[2] = 7;
+        //myArray = [1, 2, 3]; ERROR! propgram would fail here!
+        try {
+            myArray = [1,2,3];
+        } catch(err) {
+            console.error(err);
+        }
+        myArray.push(6);
+        myArray.push(11);
+        myArray.sort(function(a, b){ return a - b; });
+        console.log(myArray);
+
+        //object are like phython dictionaries
+        const dog = {
+            name: "Max",
+            age: 5,
+            furr: "black",
+            eyes: "brown"
+        };
+        console.log(dog);
+        console.table(dog);
+        console.log(dog.name);
+        dog.name = "charlie";
+        console.log(dog["name"]);
+
+        const anotherDog = new Dog("Rex", 7, "brown", "black");
+        console.log(anotherDog);
+        anotherDog.talk();
+        const canvas = anotherDog.render();
+        container.appendChild(canvas); /*
+             no need for documnet.getElementById("container" ids that are vaild js name are automatically gobal varaibles
+            invalid names:
+            * Start with numbers
+            *contain spaces or special characters (like -)
+        */
+
+        let a = 5;
+        let b = 2;
+        // operators
+        console.log(a + b);
+        a = "5";
+        console.log(a + b); // concatenation
+        console.log(a - b); 
+        console.log(a * b);
+        console.log(a % b);
+        console.log(a ** b);
+        console.log(Math.pow(a, b));
+        console.log(Math.sqrt(b));
+        console.log(Math.pow(b, 0.5));
+        console.log(b ** 0.5);
+        
+        a = Numbers(a) + 5;
+        console.log(a);
+        a += 5;
+        a *= 2;
+        a /= 3;
+        a %= 4;
+        a **= 10;
+        console.log(a);
+
+        const s1 = "Welcome to Karelia!";
+        const s2 = "Welcome to Karelia! ";
+        const s3 = " Welcome to Karelia\"karelia\"!"; // escaping with\
+        console.log(s1, s2, s3);
+
+        const age = 36;
+        console.log("I am " + age + "years old");
+        cosole.log(` I am ${age} years old`); // template literal
+
+        let today = new date();
+        console.log(today);
+        let someDate = new date("Agust 24, 2025");
+        console.log(someDate);
+
+        console.log(today.getDay());
+        switch (today.getDay()) {
+            case 1: console.log("Monday"); break;
+            case 2: console.log("Tuesday"); break;
+            case 3: console.log("Wednesday"); break;
+            case 4: console.log("Thursday"); break;
+            case 5: console.log("Friday"); break;
+            default: comsole.log("Weekend"); break;
+        }
+
+
+    
+    </script>
+</body>
+</html>

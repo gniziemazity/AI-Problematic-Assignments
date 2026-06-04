@@ -1,0 +1,40 @@
+:root  {
+    --theme: #f80;
+
+}
+
+body{
+    display: flex;
+    flex-direction: cplumn;
+    align-items: center;
+    margin: 0;
+}
+
+
+h1{
+    font-family:"Arial";
+    color: var (--theme);
+}
+
+#map {
+    width: 100%;
+    
+}
+
+#marker {
+    width: 3vw;
+    height: 3vw;
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme);
+    border: 5px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+
+}
+
+#mapmarker {
+    position: relative;
+}

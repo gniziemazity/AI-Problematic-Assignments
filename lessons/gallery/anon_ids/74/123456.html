@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name= "view port" content= "width=device-width, initial-scale=1.0">
+        <title>JavaScript Lesson</title>
+    </head>
+    <body>
+     <div id="container">
+        My first Emmet abbreviations:
+        <ol>
+            <li>! (HTMl boilerplate)</li>
+            <li>div#container (div with id)</li>
+            <li>ol>li*3 (ordered list with 3 items)</li>
+        </ol>
+        (all followed by tab / Enter)
+    </div>
+<script src= "https://www.radufromfinland.com/dog.js"></script>
+    <script>
+        let myNumber = 25.2; // never define without const, let (or var)
+        console. log(myNumber);
+
+        const mystring = "I study at karelia";
+        console.log(mystring);
+
+
+        let myboolen = true;
+        var oppositeboolean = !myboolean; // var was "replaced" by let and const
+        console. log(my Boolean, oppositeBoolean); //accepts multiple parameters
+        myoolean = false
+        oppositeBoolean = !Boolean;
+        console.log(myboolean, oppositeBoolean)
+
+        console.log(!42, !"ABC", ![]);
+        console.log(null, !underfined, !0); //zero is "false"
+
+        // arrays are like python lists
+        const myArray = [1,2,3, "karelia", true, null];
+        myArray.length = 0;
+        myArray[0]= 9;
+        myArray[1]= 8;
+        myArray[2]= 7;
+        //myArray = [1,2,3,]; ERROR! program would fail here!
+        try{
+            myArray = [1, 2, 3];
+        } catch(err) {
+            console.log(err);
+        }
+        myArray.push(6);
+        myArray.push(11);
+        myArray.sort(function (a,b){return a - b});
+        console.log (myArray);
+        // object are like python dictionaries 
+        const dog =  {
+            name: "max",
+            age: 5,
+            furr: "black",
+            eyes: "browen"
+        };
+        console.log(dog);
+        console.table(dog);
+        console.log(charlie);
+        console.log (dog["name"]);
+
+        const anotherDog = new Dog("Rex",7, "brown", "black");
+        console.log(anotherDog);
+        anotherDog.talk();
+        const canvas = anotherDog.render();
+        container.appendChild(canvas);/*
+        no need for document .getElementbyId("conainer") ids are that are valid js names are valid JS names are automatically global variable
+        invalid names:
+        *start with number
+        *contai spaces or special characters (like -)
+        */
+       let a = 5;
+       let b = 2;
+       // operaters 
+       console. log(a + b); // concatenation
+       console.log(a - b);
+       console.log(a * b);
+       console.log(a / b);
+       console.log(a % b);
+       console.log(a ** b);
+       console.log(math.pow(a,b));
+       console.log(math.sqrt(b));
+       console.log(math.pow(b, 0.5));
+       console.log(b ** 0.5);
+       
+       a = number(a) + 5;
+       console.log(a);
+       a += 5;
+       a *=2;
+       a /=3;
+       a %=4
+       a **=10;
+       console.log(a);
+
+       const s1 = "Welcome to karelia!";
+       const s2 = "Welcome to karelia";
+       const s3 = "Welcome to /"karelia/"!"; //escaping with/
+       console.log(s1, s2, s3;)
+
+       const age = 36;
+       console.log("I am" + age + "years old");
+       console.log(`I am ${age} yeasrs old `); // template letral
+       
+
+       let today = new Date("August 24, 2025");
+       console.log(someDate);
+
+       console.log(today.getDay());
+       switch (today.getday()){
+        case 1: console.log("monday");break;
+        case 2: console.log("tuesday");break;
+        case 3: console.log("thursday");break;
+        case 4: console.log("friday");break;
+        case 5: console.log("saturday");break;
+       }
+
+
+        </script>
+        </body>
+    </html>
+

@@ -1,0 +1,804 @@
+{
+  "token_matching": "lcs",
+  "score": 95.5,
+  "teacher_files": {
+    "123456.css": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 24,
+        "end": 25
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "token": "CSS",
+        "label": "comment",
+        "start": 27,
+        "end": 30
+      },
+      {
+        "token": "variable",
+        "label": "comment",
+        "start": 31,
+        "end": 39
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 40,
+        "end": 41
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 41,
+        "end": 42
+      },
+      {
+        "token": "Arial",
+        "label": "missing",
+        "start": 151,
+        "end": 156,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 167
+        }
+      },
+      {
+        "token": ";",
+        "label": "missing",
+        "start": 179,
+        "end": 180,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 200
+        }
+      },
+      {
+        "token": "marker",
+        "label": "missing",
+        "start": 209,
+        "end": 215,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 231
+        }
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 231,
+        "end": 232
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 232,
+        "end": 233
+      },
+      {
+        "token": "3",
+        "label": "comment",
+        "start": 234,
+        "end": 235
+      },
+      {
+        "token": "%",
+        "label": "comment",
+        "start": 235,
+        "end": 236
+      },
+      {
+        "token": "of",
+        "label": "comment",
+        "start": 237,
+        "end": 239
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 240,
+        "end": 243
+      },
+      {
+        "token": "viewport",
+        "label": "comment",
+        "start": 244,
+        "end": 252
+      },
+      {
+        "token": "width",
+        "label": "comment",
+        "start": 253,
+        "end": 258
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 259,
+        "end": 260
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 260,
+        "end": 261
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 357,
+        "end": 358
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 358,
+        "end": 359
+      },
+      {
+        "token": "does",
+        "label": "comment",
+        "start": 360,
+        "end": 364
+      },
+      {
+        "token": "not",
+        "label": "comment",
+        "start": 365,
+        "end": 368
+      },
+      {
+        "token": "affect",
+        "label": "comment",
+        "start": 369,
+        "end": 375
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 376,
+        "end": 379
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 380,
+        "end": 384
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 385,
+        "end": 386
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 386,
+        "end": 387
+      },
+      {
+        "token": "border",
+        "label": "missing",
+        "start": 389,
+        "end": 395,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 430
+        }
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 414,
+        "end": 415
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 415,
+        "end": 416
+      },
+      {
+        "token": "affects",
+        "label": "comment",
+        "start": 417,
+        "end": 424
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 425,
+        "end": 428
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 429,
+        "end": 433
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 434,
+        "end": 435
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 435,
+        "end": 436
+      }
+    ],
+    "123456.js": [
+      {
+        "token": "btn",
+        "label": "missing",
+        "start": 157,
+        "end": 160,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 174
+        }
+      },
+      {
+        "token": ".",
+        "label": "missing",
+        "start": 160,
+        "end": 161,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 174
+        }
+      },
+      {
+        "token": "innerText",
+        "label": "missing",
+        "start": 161,
+        "end": 170,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 174
+        }
+      },
+      {
+        "token": "=",
+        "label": "missing",
+        "start": 171,
+        "end": 172,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 174
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 173,
+        "end": 174,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 174
+        }
+      },
+      {
+        "token": "CANCEL",
+        "label": "missing",
+        "start": 174,
+        "end": 180,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 174
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 180,
+        "end": 181,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 174
+        }
+      },
+      {
+        "token": ";",
+        "label": "missing",
+        "start": 181,
+        "end": 182,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 174
+        }
+      },
+      {
+        "token": ";",
+        "label": "missing",
+        "start": 247,
+        "end": 248,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 278
+        }
+      },
+      {
+        "token": "btn",
+        "label": "missing",
+        "start": 251,
+        "end": 254,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 278
+        }
+      },
+      {
+        "token": ".",
+        "label": "missing",
+        "start": 254,
+        "end": 255,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 278
+        }
+      },
+      {
+        "token": "innerText",
+        "label": "missing",
+        "start": 255,
+        "end": 264,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 278
+        }
+      },
+      {
+        "token": "=",
+        "label": "missing",
+        "start": 265,
+        "end": 266,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 278
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 267,
+        "end": 268,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 278
+        }
+      },
+      {
+        "token": "SCAN",
+        "label": "missing",
+        "start": 268,
+        "end": 272,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 278
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 272,
+        "end": 273,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 278
+        }
+      },
+      {
+        "token": "showMarkerAt",
+        "label": "missing",
+        "start": 459,
+        "end": 471,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 545
+        }
+      }
+    ],
+    "reconstructed.html": [
+      {
+        "token": "Positioning",
+        "label": "missing",
+        "start": 151,
+        "end": 162,
+        "insert_at": {
+          "file": "Index.html",
+          "pos": 157
+        }
+      },
+      {
+        "token": "SCAN",
+        "label": "missing",
+        "start": 414,
+        "end": 418,
+        "insert_at": {
+          "file": "Index.html",
+          "pos": 430
+        }
+      },
+      {
+        "token": "https",
+        "label": "missing",
+        "start": 475,
+        "end": 480,
+        "insert_at": {
+          "file": "Index.html",
+          "pos": 491
+        }
+      },
+      {
+        "token": "script",
+        "label": "missing",
+        "start": 543,
+        "end": 549,
+        "insert_at": {
+          "file": "Index.html",
+          "pos": 561
+        }
+      }
+    ]
+  },
+  "student_files": {
+    "123456.css": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 27,
+        "end": 28
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "token": "Css",
+        "label": "comment",
+        "start": 30,
+        "end": 33
+      },
+      {
+        "token": "Variable",
+        "label": "comment",
+        "start": 34,
+        "end": 42
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 42,
+        "end": 43
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 43,
+        "end": 44
+      },
+      {
+        "token": "Artial",
+        "label": "extra",
+        "start": 167,
+        "end": 173
+      },
+      {
+        "token": "market",
+        "label": "extra",
+        "start": 231,
+        "end": 237
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 256,
+        "end": 257
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 257,
+        "end": 258
+      },
+      {
+        "token": "3",
+        "label": "comment",
+        "start": 259,
+        "end": 260
+      },
+      {
+        "token": "%",
+        "label": "comment",
+        "start": 260,
+        "end": 261
+      },
+      {
+        "token": "of",
+        "label": "comment",
+        "start": 262,
+        "end": 264
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 265,
+        "end": 268
+      },
+      {
+        "token": "view",
+        "label": "comment",
+        "start": 269,
+        "end": 273
+      },
+      {
+        "token": "point",
+        "label": "comment",
+        "start": 274,
+        "end": 279
+      },
+      {
+        "token": "width",
+        "label": "comment",
+        "start": 280,
+        "end": 285
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 285,
+        "end": 286
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 286,
+        "end": 287
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 395,
+        "end": 396
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 396,
+        "end": 397
+      },
+      {
+        "token": "does",
+        "label": "comment",
+        "start": 398,
+        "end": 402
+      },
+      {
+        "token": "not",
+        "label": "comment",
+        "start": 403,
+        "end": 406
+      },
+      {
+        "token": "affect",
+        "label": "comment",
+        "start": 407,
+        "end": 413
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 414,
+        "end": 417
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 418,
+        "end": 422
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 423,
+        "end": 424
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 424,
+        "end": 425
+      },
+      {
+        "token": "Border",
+        "label": "extra",
+        "start": 430,
+        "end": 436
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 455,
+        "end": 456
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 456,
+        "end": 457
+      },
+      {
+        "token": "affect",
+        "label": "comment",
+        "start": 457,
+        "end": 463
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 464,
+        "end": 467
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 468,
+        "end": 472
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 472,
+        "end": 473
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 473,
+        "end": 474
+      }
+    ],
+    "123456.js": [
+      {
+        "token": "btn",
+        "label": "extra",
+        "start": 218,
+        "end": 221
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 221,
+        "end": 222
+      },
+      {
+        "token": "innerText",
+        "label": "extra",
+        "start": 222,
+        "end": 231
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 232,
+        "end": 233
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 234,
+        "end": 235
+      },
+      {
+        "token": "CANCEL",
+        "label": "extra",
+        "start": 235,
+        "end": 241
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 241,
+        "end": 242
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 242,
+        "end": 243
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 322,
+        "end": 323
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 323,
+        "end": 324
+      },
+      {
+        "token": "btn",
+        "label": "extra",
+        "start": 333,
+        "end": 336
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 336,
+        "end": 337
+      },
+      {
+        "token": "innerText",
+        "label": "extra",
+        "start": 337,
+        "end": 346
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 347,
+        "end": 348
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 349,
+        "end": 350
+      },
+      {
+        "token": "SCAN",
+        "label": "extra",
+        "start": 350,
+        "end": 354
+      },
+      {
+        "token": "showMarketAt",
+        "label": "extra",
+        "start": 545,
+        "end": 557
+      }
+    ],
+    "Index.html": [
+      {
+        "token": "positioning",
+        "label": "extra",
+        "start": 157,
+        "end": 168
+      },
+      {
+        "token": "SCAn",
+        "label": "extra",
+        "start": 430,
+        "end": 434
+      },
+      {
+        "token": "http",
+        "label": "extra",
+        "start": 491,
+        "end": 495
+      },
+      {
+        "token": "srcipt",
+        "label": "extra",
+        "start": 561,
+        "end": 567
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin: 0;
+}
+
+:root {
+    --theme: #280;
+}
+
+h1{
+    font-family: "Arial";
+    color: var(--theme)
+}
+
+#map {
+    width: 100%;
+}
+
+#marker {
+    width: 3vw; /*3% of the viewpoint width */
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme);
+    border: 5px solid white;
+    position: absolute;
+    top: 59%; /*coordinate syste here lol*/
+    left: 56%;
+    transform: translate(-50%, -50%)
+}
+
+#mapContainer {
+    position: relative;
+    display: none;
+}
+
+#camera {
+    width: 100%;
+}

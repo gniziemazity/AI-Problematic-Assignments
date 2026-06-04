@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorting Visualizer</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+        #vis-123456 {
+           /*width:200px;*/
+           display:flex;
+            height:200px;
+            align-items:flex-end;
+            background: red;
+        }
+        /*I want to style bar elementsjavasc*/
+        .bar{
+            width:7px;
+            height:100%;
+            background-color:black;
+            margin: 0 1px;
+        }
+
+
+    </style>    
+</head>
+<body>
+    <h1>Sorting Visualizer</h1>
+    <div id="vis-123456"></div>
+    <script>
+        //global variable 
+        const count=50;
+        const array=new Array(count);
+
+        for(let i=0;i<count;i++){
+            array[i] =Math.random();//Math with Capitai is func, generate random numbers bet 0-1
+        }
+
+        const visualizer=document.getElementById("vis-123456");
+        for (let i =0; i<array.length;i++){
+            const bar=document.createElement("div");
+            visualizer.appendChild(bar);
+            bar.classList.add("bar");
+            bar.style.height= array[i]*100+"%";/*+here is string concatenation because second item "%"
+is string */
+        }
+        function updataBars(){
+            const bars=visualizer.querySelectorAll(".bar");
+            for(let i=0;i<array.length;i++){
+                bars[i].style.height=array[i]*100+"%";
+            }
+        }
+
+/*do cahnge var /let it not work-for wait add async */
+    async function bubblesort(arr){
+        do{
+            var swapped=false;
+            for(let i=0;i<arr.length-1;i++){
+                if(arr[i]>arr[i+1]){
+                   const aux= arr[i-1];
+                   arr[i]=arr[i+1];
+                      arr[i+1]=aux;
+                      swapped=true ;
+                      updataBars();
+                      await new Promise(resolve => setTimeout(resolve, 10));/*this is to create a delay of 100ms before the next iteration of the loop starts, allowing us to see the changes in the visualizer */
+                }
+            }
+        }while(swapped);
+    }
+
+</script>
+</body>
+</html>
+
+  

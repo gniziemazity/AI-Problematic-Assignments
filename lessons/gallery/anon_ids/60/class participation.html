@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script lesson</title>
+</head>
+<body>
+    <div id="container">
+        My First Emmet abbreviations:
+        <ol>
+            <li>(HTML boilerplate)</li>
+            <li>div#container(div with id)</li>
+            <li>ol>li*3 (Ordered list with 3 items) </li>
+        </ol>
+        (all followed by tab / Enter)
+        </div> 
+
+        <script src="https://www.radufromfinland.com/dog.js"></script>
+
+        <script>
+            mynumber = 25.2; //never define without const, let ( or var 
+            consloe.log(mynumber);
+
+            connstmyString = "I study at karelia";
+            console.log(myString);
+
+            let myBoolean = true;
+            var oppositeBoolean = !myBoolean;// var was "replaced" by let and cost 
+            console.log(myBoolean, oppositeBoolean);// accepts multiple parameters 
+            myBoolean = false;
+            oppositeBoolean = !myBoolean;
+            console.log(myBoolean,oppositeBoolean);
+            
+            console.log(142, !"ABC", ![]);
+            Console.log(!null, !undefined, !0);//zero is "falsly"
+            //arays are like python lists
+            const myArray= [1,2,3 ,"karelia", true, null];
+            myArray.length= 0;
+            myArray[0]= 9;
+            myArray[1]= 8;
+            myArray[2]= 7;
+            //MYArray =[1,2,3]; Error! program would fail here ´!
+            try {
+                myArray =[1,2,3];
+            } catch(err){
+                console.error(err);
+            }
+            myArray.push(6);
+            myArray.push(11);
+            myArray.sort(function(a, b){ return a - b; });
+            console.log(myArray);
+
+            // objects are like python dictionaries
+            const dog = {
+                name: "max",
+                age: 5,
+                furr: "black",
+                eyes: "brown"
+            };
+            console.log(dog);
+            console.table(dog);
+            console.log(dog.name);
+            dog.name = "Charlie";
+            console.log(dog["name"]);
+
+            const anotherDog = new Dog("Rex",7, "brown", "black");
+            console.log(anotherDog);
+            anotherDog.talk();
+            const canvas = anotherDog.render();
+            container.appendchild(canvas);
+
+            let a = 5;
+            let b = 2;
+            console.log(a + b);
+            console.log(a - b);
+            console.log(a * b);
+            console.log(a / b);
+            console.log(a % b);
+            console.log(a **b);
+            console.log( Math.pow(a , b));
+            console.log(Math.sqrt(b));
+            console.log(Math.pow(a,b));
+            console.log(Math.pow(b, 0.5));
+            console.log(b ** 0.5);
+
+            a = Number(a)+ 5;
+            console.log(a);
+            a += 5;
+            a *= 2;
+            a /= 3;
+            a %= 4;
+            a **= 10;
+            console.log(a);
+
+            const s1 = "Welcome to Karelia!";
+            const s2 ="Welcome to "karelia"!";
+            const s3 = "Welcome to \"karelia\"!";
+            console.log(s1,s2,s3);
+
+            const age = 36;
+            console.log(" I am " + age + "years old");
+            console.log(` I am ${age}year old`);
+
+            let today = new Date ();
+            console.log(today);
+            let someDate = new Date("August 24, 2025");
+            console.log(someDate);
+
+            console.log(today.getDay());
+            switch(today.getDay());
+        
+
+
+        </script>
+</body>
+</html>

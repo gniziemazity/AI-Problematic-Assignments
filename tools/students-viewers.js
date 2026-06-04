@@ -119,16 +119,7 @@ async function _renderAssignment() {
 	}
 }
 
-function _loadStudentDiff(student) {
-	const frame = _vEl("student-diff-frame");
-	const empty = _vEl("student-empty");
-	if (!frame) return;
-	if (!student || !student.id || !_lessonName) {
-		if (empty) empty.style.display = "flex";
-		return;
-	}
-	if (empty) empty.style.display = "none";
-	if (frame.dataset.diffId === String(student.id)) return;
+function _reloadStudentDiff(frame, student) {
 	const previewParam =
 		new URLSearchParams(location.search).get("preview") === "1"
 			? "&preview=1"
@@ -142,7 +133,45 @@ function _loadStudentDiff(student) {
 		}) +
 		"&embed=1" +
 		previewParam;
+}
+
+function _loadStudentDiff(student) {
+	const frame = _vEl("student-diff-frame");
+	const empty = _vEl("student-empty");
+	if (!frame) return;
+	if (!student || !student.id || !_lessonName) {
+		if (empty) empty.style.display = "flex";
+		return;
+	}
+	if (empty) empty.style.display = "none";
+	if (frame.dataset.diffId === String(student.id)) return;
 	frame.dataset.diffId = String(student.id);
+	const targetId = String(student.id);
+
+	let navFn = null;
+	try {
+		const win = frame.contentWindow;
+		if (win && typeof win.diffNavToStudentId === "function") {
+			navFn = win.diffNavToStudentId;
+		}
+	} catch (_e) {
+		navFn = null;
+	}
+	if (!navFn) {
+		_reloadStudentDiff(frame, student);
+		return;
+	}
+	Promise.resolve(navFn(student.id, _diffTitleFor(student)))
+		.then((ok) => {
+			if (!ok && frame.dataset.diffId === targetId) {
+				_reloadStudentDiff(frame, student);
+			}
+		})
+		.catch(() => {
+			if (frame.dataset.diffId === targetId) {
+				_reloadStudentDiff(frame, student);
+			}
+		});
 }
 
 function _syncAsgnButtons() {

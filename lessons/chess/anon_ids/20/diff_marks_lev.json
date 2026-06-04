@@ -1,0 +1,642 @@
+{
+  "token_matching": "lev",
+  "score": 99.5,
+  "teacher_files": {
+    "reconstructed.html": [
+      {
+        "token": "DOCTYPE",
+        "label": "missing",
+        "start": 2,
+        "end": 9,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 2
+        }
+      },
+      {
+        "token": "align",
+        "label": "missing",
+        "start": 137,
+        "end": 142,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 194
+        }
+      },
+      {
+        "token": "items",
+        "label": "missing",
+        "start": 143,
+        "end": 148,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 202
+        }
+      },
+      {
+        "token": "justify",
+        "label": "missing",
+        "start": 162,
+        "end": 169,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 235
+        }
+      },
+      {
+        "token": "content",
+        "label": "missing",
+        "start": 170,
+        "end": 177,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 241
+        }
+      },
+      {
+        "token": "gray",
+        "label": "missing",
+        "start": 265,
+        "end": 269,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 353
+        }
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 392,
+        "end": 393
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 393,
+        "end": 394
+      },
+      {
+        "token": "1",
+        "label": "comment",
+        "start": 395,
+        "end": 396
+      },
+      {
+        "token": "fraction",
+        "label": "comment",
+        "start": 397,
+        "end": 405
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 406,
+        "end": 407
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 407,
+        "end": 408
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 3083,
+        "end": 3084
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 3084,
+        "end": 3085
+      },
+      {
+        "token": "anonymous",
+        "label": "comment",
+        "start": 3086,
+        "end": 3095
+      },
+      {
+        "token": "function",
+        "label": "comment",
+        "start": 3096,
+        "end": 3104
+      }
+    ]
+  },
+  "student_files": {
+    "index.html": [
+      {
+        "token": "Doctype",
+        "label": "extra",
+        "start": 2,
+        "end": 9
+      },
+      {
+        "token": "justify",
+        "label": "extra",
+        "start": 194,
+        "end": 201
+      },
+      {
+        "token": "content",
+        "label": "extra",
+        "start": 202,
+        "end": 209
+      },
+      {
+        "token": "align",
+        "label": "extra",
+        "start": 235,
+        "end": 240
+      },
+      {
+        "token": "items",
+        "label": "extra",
+        "start": 241,
+        "end": 246
+      },
+      {
+        "token": "grey",
+        "label": "extra",
+        "start": 353,
+        "end": 357
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 532,
+        "end": 533
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 533,
+        "end": 534
+      },
+      {
+        "token": "1",
+        "label": "comment",
+        "start": 534,
+        "end": 535
+      },
+      {
+        "token": "fraction",
+        "label": "comment",
+        "start": 536,
+        "end": 544
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 544,
+        "end": 545
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 545,
+        "end": 546
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 889,
+        "end": 890
+      },
+      {
+        "token": "onclick",
+        "label": "extra",
+        "start": 891,
+        "end": 898
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 898,
+        "end": 899
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 899,
+        "end": 900
+      },
+      {
+        "token": "handleClick",
+        "label": "extra",
+        "start": 900,
+        "end": 911
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 911,
+        "end": 912
+      },
+      {
+        "token": "this",
+        "label": "extra",
+        "start": 912,
+        "end": 916
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 916,
+        "end": 917
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 917,
+        "end": 918
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 2329,
+        "end": 2330
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 2330,
+        "end": 2331
+      },
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 2331,
+        "end": 2332
+      },
+      {
+        "token": "/",
+        "label": "extra",
+        "start": 2332,
+        "end": 2333
+      },
+      {
+        "token": "div",
+        "label": "extra",
+        "start": 2333,
+        "end": 2336
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 2336,
+        "end": 2337
+      },
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 2350,
+        "end": 2351
+      },
+      {
+        "token": "div",
+        "label": "extra",
+        "start": 2351,
+        "end": 2354
+      },
+      {
+        "token": "class",
+        "label": "extra",
+        "start": 2355,
+        "end": 2360
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 2360,
+        "end": 2361
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 2361,
+        "end": 2362
+      },
+      {
+        "token": "cell",
+        "label": "extra",
+        "start": 2362,
+        "end": 2366
+      },
+      {
+        "token": "light",
+        "label": "extra",
+        "start": 2367,
+        "end": 2372
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 2416,
+        "end": 2417
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 2417,
+        "end": 2418
+      },
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 2418,
+        "end": 2419
+      },
+      {
+        "token": "/",
+        "label": "extra",
+        "start": 2419,
+        "end": 2420
+      },
+      {
+        "token": "div",
+        "label": "extra",
+        "start": 2420,
+        "end": 2423
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 2423,
+        "end": 2424
+      },
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 2437,
+        "end": 2438
+      },
+      {
+        "token": "div",
+        "label": "extra",
+        "start": 2438,
+        "end": 2441
+      },
+      {
+        "token": "class",
+        "label": "extra",
+        "start": 2442,
+        "end": 2447
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 2447,
+        "end": 2448
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 2448,
+        "end": 2449
+      },
+      {
+        "token": "cell",
+        "label": "extra",
+        "start": 2449,
+        "end": 2453
+      },
+      {
+        "token": "dark",
+        "label": "extra",
+        "start": 2454,
+        "end": 2458
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 2671,
+        "end": 2672
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 2672,
+        "end": 2673
+      },
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 2673,
+        "end": 2674
+      },
+      {
+        "token": "/",
+        "label": "extra",
+        "start": 2674,
+        "end": 2675
+      },
+      {
+        "token": "div",
+        "label": "extra",
+        "start": 2675,
+        "end": 2678
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 2678,
+        "end": 2679
+      },
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 2692,
+        "end": 2693
+      },
+      {
+        "token": "div",
+        "label": "extra",
+        "start": 2693,
+        "end": 2696
+      },
+      {
+        "token": "class",
+        "label": "extra",
+        "start": 2697,
+        "end": 2702
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 2702,
+        "end": 2703
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 2703,
+        "end": 2704
+      },
+      {
+        "token": "cell",
+        "label": "extra",
+        "start": 2704,
+        "end": 2708
+      },
+      {
+        "token": "dark",
+        "label": "extra",
+        "start": 2709,
+        "end": 2713
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 2840,
+        "end": 2841
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 2841,
+        "end": 2842
+      },
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 2842,
+        "end": 2843
+      },
+      {
+        "token": "/",
+        "label": "extra",
+        "start": 2843,
+        "end": 2844
+      },
+      {
+        "token": "div",
+        "label": "extra",
+        "start": 2844,
+        "end": 2847
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 2847,
+        "end": 2848
+      },
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 2861,
+        "end": 2862
+      },
+      {
+        "token": "div",
+        "label": "extra",
+        "start": 2862,
+        "end": 2865
+      },
+      {
+        "token": "class",
+        "label": "extra",
+        "start": 2866,
+        "end": 2871
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 2871,
+        "end": 2872
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 2872,
+        "end": 2873
+      },
+      {
+        "token": "cell",
+        "label": "extra",
+        "start": 2873,
+        "end": 2877
+      },
+      {
+        "token": "light",
+        "label": "extra",
+        "start": 2878,
+        "end": 2883
+      },
+      {
+        "token": "element",
+        "label": "extra",
+        "start": 4749,
+        "end": 4756
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 4756,
+        "end": 4757
+      },
+      {
+        "token": "style",
+        "label": "extra",
+        "start": 4757,
+        "end": 4762
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 4762,
+        "end": 4763
+      },
+      {
+        "token": "border",
+        "label": "extra",
+        "start": 4763,
+        "end": 4769
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 4770,
+        "end": 4771
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 4772,
+        "end": 4773
+      },
+      {
+        "token": "4px",
+        "label": "extra",
+        "start": 4773,
+        "end": 4776
+      },
+      {
+        "token": "solid",
+        "label": "extra",
+        "start": 4777,
+        "end": 4782
+      },
+      {
+        "token": "red",
+        "label": "extra",
+        "start": 4783,
+        "end": 4786
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 4786,
+        "end": 4787
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 4787,
+        "end": 4788
+      }
+    ]
+  }
+}

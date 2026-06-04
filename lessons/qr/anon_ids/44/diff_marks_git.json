@@ -1,0 +1,1390 @@
+{
+  "token_matching": "git",
+  "score": 95.2,
+  "teacher_files": {
+    "123456.css": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 24,
+        "end": 25
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "token": "CSS",
+        "label": "comment",
+        "start": 27,
+        "end": 30
+      },
+      {
+        "token": "variable",
+        "label": "comment",
+        "start": 31,
+        "end": 39
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 40,
+        "end": 41
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 41,
+        "end": 42
+      },
+      {
+        "token": "}",
+        "label": "missing",
+        "start": 205,
+        "end": 206,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 227
+        }
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 231,
+        "end": 232
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 232,
+        "end": 233
+      },
+      {
+        "token": "3",
+        "label": "comment",
+        "start": 234,
+        "end": 235
+      },
+      {
+        "token": "%",
+        "label": "comment",
+        "start": 235,
+        "end": 236
+      },
+      {
+        "token": "of",
+        "label": "comment",
+        "start": 237,
+        "end": 239
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 240,
+        "end": 243
+      },
+      {
+        "token": "viewport",
+        "label": "comment",
+        "start": 244,
+        "end": 252
+      },
+      {
+        "token": "width",
+        "label": "comment",
+        "start": 253,
+        "end": 258
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 259,
+        "end": 260
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 260,
+        "end": 261
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 357,
+        "end": 358
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 358,
+        "end": 359
+      },
+      {
+        "token": "does",
+        "label": "comment",
+        "start": 360,
+        "end": 364
+      },
+      {
+        "token": "not",
+        "label": "comment",
+        "start": 365,
+        "end": 368
+      },
+      {
+        "token": "affect",
+        "label": "comment",
+        "start": 369,
+        "end": 375
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 376,
+        "end": 379
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 380,
+        "end": 384
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 385,
+        "end": 386
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 386,
+        "end": 387
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 414,
+        "end": 415
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 415,
+        "end": 416
+      },
+      {
+        "token": "affects",
+        "label": "comment",
+        "start": 417,
+        "end": 424
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 425,
+        "end": 428
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 429,
+        "end": 433
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 434,
+        "end": 435
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 435,
+        "end": 436
+      },
+      {
+        "token": "display",
+        "label": "missing",
+        "start": 553,
+        "end": 560,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 607
+        }
+      },
+      {
+        "token": ":",
+        "label": "missing",
+        "start": 560,
+        "end": 561,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 607
+        }
+      },
+      {
+        "token": "none",
+        "label": "missing",
+        "start": 562,
+        "end": 566,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 607
+        }
+      },
+      {
+        "token": ";",
+        "label": "missing",
+        "start": 566,
+        "end": 567,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 607
+        }
+      },
+      {
+        "token": ";",
+        "label": "missing",
+        "start": 593,
+        "end": 594,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 636
+        }
+      }
+    ],
+    "123456.js": [
+      {
+        "token": "mapContainer",
+        "label": "missing",
+        "start": 185,
+        "end": 197,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 246
+        }
+      },
+      {
+        "token": ".",
+        "label": "missing",
+        "start": 197,
+        "end": 198,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 246
+        }
+      },
+      {
+        "token": "style",
+        "label": "missing",
+        "start": 198,
+        "end": 203,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 246
+        }
+      },
+      {
+        "token": ".",
+        "label": "missing",
+        "start": 203,
+        "end": 204,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 246
+        }
+      },
+      {
+        "token": "display",
+        "label": "missing",
+        "start": 204,
+        "end": 211,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 246
+        }
+      },
+      {
+        "token": "=",
+        "label": "missing",
+        "start": 212,
+        "end": 213,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 246
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 214,
+        "end": 215,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 246
+        }
+      },
+      {
+        "token": "none",
+        "label": "missing",
+        "start": 215,
+        "end": 219,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 246
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 219,
+        "end": 220,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 246
+        }
+      },
+      {
+        "token": ";",
+        "label": "missing",
+        "start": 220,
+        "end": 221,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 246
+        }
+      },
+      {
+        "token": "mapContainer",
+        "label": "missing",
+        "start": 277,
+        "end": 289,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 360
+        }
+      },
+      {
+        "token": ".",
+        "label": "missing",
+        "start": 289,
+        "end": 290,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 360
+        }
+      },
+      {
+        "token": "style",
+        "label": "missing",
+        "start": 290,
+        "end": 295,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 360
+        }
+      },
+      {
+        "token": ".",
+        "label": "missing",
+        "start": 295,
+        "end": 296,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 360
+        }
+      },
+      {
+        "token": "display",
+        "label": "missing",
+        "start": 296,
+        "end": 303,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 360
+        }
+      },
+      {
+        "token": "=",
+        "label": "missing",
+        "start": 304,
+        "end": 305,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 360
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 306,
+        "end": 307,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 360
+        }
+      },
+      {
+        "token": "block",
+        "label": "missing",
+        "start": 307,
+        "end": 312,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 360
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 312,
+        "end": 313,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 360
+        }
+      },
+      {
+        "token": ";",
+        "label": "missing",
+        "start": 313,
+        "end": 314,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 360
+        }
+      },
+      {
+        "token": "environment",
+        "label": "missing",
+        "start": 379,
+        "end": 390,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 435
+        }
+      }
+    ]
+  },
+  "student_files": {
+    "123456.css": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 27,
+        "end": 28
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "token": "css",
+        "label": "comment",
+        "start": 30,
+        "end": 33
+      },
+      {
+        "token": "variable",
+        "label": "comment",
+        "start": 34,
+        "end": 42
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 42,
+        "end": 43
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 43,
+        "end": 44
+      },
+      {
+        "token": "}",
+        "label": "extra",
+        "start": 232,
+        "end": 233
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 260,
+        "end": 261
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 261,
+        "end": 262
+      },
+      {
+        "token": "3",
+        "label": "comment",
+        "start": 263,
+        "end": 264
+      },
+      {
+        "token": "%",
+        "label": "comment",
+        "start": 264,
+        "end": 265
+      },
+      {
+        "token": "of",
+        "label": "comment",
+        "start": 266,
+        "end": 268
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 269,
+        "end": 272
+      },
+      {
+        "token": "viewport",
+        "label": "comment",
+        "start": 273,
+        "end": 281
+      },
+      {
+        "token": "width",
+        "label": "comment",
+        "start": 282,
+        "end": 287
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 287,
+        "end": 288
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 288,
+        "end": 289
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 397,
+        "end": 398
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 398,
+        "end": 399
+      },
+      {
+        "token": "does",
+        "label": "comment",
+        "start": 400,
+        "end": 404
+      },
+      {
+        "token": "not",
+        "label": "comment",
+        "start": 405,
+        "end": 408
+      },
+      {
+        "token": "affect",
+        "label": "comment",
+        "start": 409,
+        "end": 415
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 416,
+        "end": 419
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 420,
+        "end": 424
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 424,
+        "end": 425
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 425,
+        "end": 426
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 456,
+        "end": 457
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 457,
+        "end": 458
+      },
+      {
+        "token": "affect",
+        "label": "comment",
+        "start": 459,
+        "end": 465
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 466,
+        "end": 469
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 470,
+        "end": 474
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 474,
+        "end": 475
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 475,
+        "end": 476
+      }
+    ],
+    "123456.js": [
+      {
+        "token": "mapContainner",
+        "label": "extra",
+        "start": 174,
+        "end": 187
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 187,
+        "end": 188
+      },
+      {
+        "token": "style",
+        "label": "extra",
+        "start": 188,
+        "end": 193
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 193,
+        "end": 194
+      },
+      {
+        "token": "display",
+        "label": "extra",
+        "start": 194,
+        "end": 201
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 202,
+        "end": 203
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 204,
+        "end": 205
+      },
+      {
+        "token": "none",
+        "label": "extra",
+        "start": 205,
+        "end": 209
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 209,
+        "end": 210
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 210,
+        "end": 211
+      },
+      {
+        "token": "mapContainner",
+        "label": "extra",
+        "start": 289,
+        "end": 302
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 302,
+        "end": 303
+      },
+      {
+        "token": "style",
+        "label": "extra",
+        "start": 303,
+        "end": 308
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 308,
+        "end": 309
+      },
+      {
+        "token": "display",
+        "label": "extra",
+        "start": 309,
+        "end": 316
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 317,
+        "end": 318
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 319,
+        "end": 320
+      },
+      {
+        "token": "block",
+        "label": "extra",
+        "start": 320,
+        "end": 325
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 325,
+        "end": 326
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 326,
+        "end": 327
+      },
+      {
+        "token": "envitonment",
+        "label": "extra",
+        "start": 435,
+        "end": 446
+      }
+    ],
+    "index.html": [
+      {
+        "token": "/",
+        "label": "extra",
+        "start": 596,
+        "end": 597
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 597,
+        "end": 598
+      }
+    ]
+  },
+  "alignments": {
+    "123456.css": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        null,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        null
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        14,
+        14
+      ],
+      [
+        15,
+        null
+      ],
+      [
+        16,
+        15
+      ],
+      [
+        17,
+        16
+      ],
+      [
+        18,
+        null
+      ],
+      [
+        19,
+        17
+      ],
+      [
+        null,
+        18
+      ],
+      [
+        20,
+        19
+      ],
+      [
+        21,
+        20
+      ],
+      [
+        22,
+        21
+      ],
+      [
+        23,
+        22
+      ],
+      [
+        24,
+        23
+      ],
+      [
+        25,
+        24
+      ],
+      [
+        26,
+        25
+      ],
+      [
+        27,
+        26
+      ],
+      [
+        28,
+        27
+      ],
+      [
+        29,
+        28
+      ],
+      [
+        30,
+        29
+      ],
+      [
+        31,
+        30
+      ],
+      [
+        32,
+        31
+      ],
+      [
+        33,
+        32
+      ],
+      [
+        34,
+        33
+      ],
+      [
+        35,
+        34
+      ],
+      [
+        36,
+        35
+      ],
+      [
+        37,
+        36
+      ],
+      [
+        38,
+        37
+      ],
+      [
+        39,
+        38
+      ],
+      [
+        40,
+        39
+      ]
+    ],
+    "123456.js": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        null
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        null,
+        7
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        null
+      ],
+      [
+        10,
+        9
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        null,
+        11
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        13,
+        null
+      ],
+      [
+        14,
+        13
+      ],
+      [
+        15,
+        14
+      ],
+      [
+        16,
+        15
+      ],
+      [
+        17,
+        16
+      ],
+      [
+        18,
+        17
+      ],
+      [
+        19,
+        18
+      ],
+      [
+        20,
+        19
+      ],
+      [
+        21,
+        20
+      ],
+      [
+        22,
+        21
+      ],
+      [
+        23,
+        22
+      ],
+      [
+        24,
+        23
+      ],
+      [
+        25,
+        24
+      ],
+      [
+        26,
+        25
+      ],
+      [
+        27,
+        26
+      ],
+      [
+        28,
+        27
+      ],
+      [
+        29,
+        28
+      ],
+      [
+        30,
+        29
+      ],
+      [
+        31,
+        30
+      ],
+      [
+        32,
+        31
+      ],
+      [
+        33,
+        32
+      ],
+      [
+        34,
+        33
+      ],
+      [
+        35,
+        34
+      ],
+      [
+        36,
+        35
+      ],
+      [
+        37,
+        36
+      ],
+      [
+        38,
+        37
+      ]
+    ],
+    "reconstructed.html": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        14,
+        null
+      ],
+      [
+        15,
+        14
+      ],
+      [
+        16,
+        null
+      ],
+      [
+        17,
+        15
+      ],
+      [
+        18,
+        null
+      ],
+      [
+        19,
+        16
+      ],
+      [
+        20,
+        17
+      ],
+      [
+        21,
+        18
+      ],
+      [
+        22,
+        19
+      ]
+    ],
+    "index.html": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        14,
+        null
+      ],
+      [
+        15,
+        14
+      ],
+      [
+        16,
+        null
+      ],
+      [
+        17,
+        15
+      ],
+      [
+        18,
+        null
+      ],
+      [
+        19,
+        16
+      ],
+      [
+        20,
+        17
+      ],
+      [
+        21,
+        18
+      ],
+      [
+        22,
+        19
+      ]
+    ]
+  },
+  "line_marks": {
+    "teacher_files": {
+      "123456.css": [
+        {
+          "label": "missing",
+          "start": 205,
+          "end": 206
+        }
+      ],
+      "123456.js": [
+        {
+          "label": "missing",
+          "start": 185,
+          "end": 221
+        },
+        {
+          "label": "missing",
+          "start": 277,
+          "end": 314
+        }
+      ]
+    },
+    "student_files": {
+      "123456.css": [
+        {
+          "label": "extra",
+          "start": 232,
+          "end": 233
+        }
+      ],
+      "123456.js": [
+        {
+          "label": "extra",
+          "start": 174,
+          "end": 211
+        },
+        {
+          "label": "extra",
+          "start": 289,
+          "end": 327
+        }
+      ]
+    }
+  }
+}

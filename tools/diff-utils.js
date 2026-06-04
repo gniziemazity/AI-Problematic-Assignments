@@ -1114,12 +1114,24 @@ async function buildDiffPayloadData(fileMap, studentDir) {
 	for (const [, f] of studentEntries)
 		studentFiles[f.name] = await readFileText(f);
 
+	const studentBase = _studentDirBaseUrl(fileMap, studentDir);
 	const allMarks = {};
 	for (const [mode, fname] of Object.entries(DIFF_MARKS_FILES)) {
 		const entry = fileMap.get(studentDir + fname);
+		let text = null;
 		if (entry) {
 			try {
-				allMarks[mode] = JSON.parse(await readFileText(entry));
+				text = await readFileText(entry);
+			} catch {}
+		} else if (studentBase) {
+			try {
+				const r = await fetch(studentBase + fname);
+				if (r.ok) text = await r.text();
+			} catch {}
+		}
+		if (text != null) {
+			try {
+				allMarks[mode] = JSON.parse(text);
 			} catch {}
 		}
 	}
@@ -1167,6 +1179,17 @@ async function buildDiffPayloadData(fileMap, studentDir) {
 
 function _deriveHttpBaseUrl(entries) {
 	for (const [, f] of entries) {
+		if (f && typeof f.url === "string" && /^https?:/i.test(f.url)) {
+			return f.url.replace(/[^/]*$/, "");
+		}
+	}
+	return null;
+}
+
+function _studentDirBaseUrl(fileMap, studentDir) {
+	for (const [p, f] of fileMap) {
+		if (!p.startsWith(studentDir)) continue;
+		if (p.slice(studentDir.length).includes("/")) continue;
 		if (f && typeof f.url === "string" && /^https?:/i.test(f.url)) {
 			return f.url.replace(/[^/]*$/, "");
 		}

@@ -1,0 +1,218 @@
+{
+  "token_matching": "lcs",
+  "score": 99.8,
+  "teacher_files": {
+    "reconstructed.html": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 392,
+        "end": 393
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 393,
+        "end": 394
+      },
+      {
+        "token": "1",
+        "label": "comment",
+        "start": 395,
+        "end": 396
+      },
+      {
+        "token": "fraction",
+        "label": "comment",
+        "start": 397,
+        "end": 405
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 406,
+        "end": 407
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 407,
+        "end": 408
+      },
+      {
+        "token": "let",
+        "label": "missing",
+        "start": 2908,
+        "end": 2911,
+        "insert_at": {
+          "file": "123456 XXX.html",
+          "pos": 3813
+        }
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 3083,
+        "end": 3084
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 3084,
+        "end": 3085
+      },
+      {
+        "token": "anonymous",
+        "label": "comment",
+        "start": 3086,
+        "end": 3095
+      },
+      {
+        "token": "function",
+        "label": "comment",
+        "start": 3096,
+        "end": 3104
+      },
+      {
+        "token": "cells",
+        "label": "missing",
+        "start": 3204,
+        "end": 3209,
+        "insert_at": {
+          "file": "123456 XXX.html",
+          "pos": 4211
+        }
+      }
+    ]
+  },
+  "student_files": {
+    "123456 XXX.html": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 530,
+        "end": 531
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 531,
+        "end": 532
+      },
+      {
+        "token": "fraction",
+        "label": "comment",
+        "start": 532,
+        "end": 540
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 540,
+        "end": 541
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 541,
+        "end": 542
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 894,
+        "end": 895
+      },
+      {
+        "token": "onclick",
+        "label": "extra",
+        "start": 896,
+        "end": 903
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 903,
+        "end": 904
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 904,
+        "end": 905
+      },
+      {
+        "token": "handleClick",
+        "label": "extra",
+        "start": 905,
+        "end": 916
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 916,
+        "end": 917
+      },
+      {
+        "token": "this",
+        "label": "extra",
+        "start": 917,
+        "end": 921
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 921,
+        "end": 922
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 922,
+        "end": 923
+      },
+      {
+        "token": "const",
+        "label": "extra",
+        "start": 3813,
+        "end": 3818
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 4025,
+        "end": 4026
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 4026,
+        "end": 4027
+      },
+      {
+        "token": "anonymous",
+        "label": "comment",
+        "start": 4027,
+        "end": 4036
+      },
+      {
+        "token": "function",
+        "label": "comment",
+        "start": 4037,
+        "end": 4045
+      },
+      {
+        "token": "cell",
+        "label": "extra",
+        "start": 4211,
+        "end": 4215
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 4620,
+        "end": 4621
+      }
+    ]
+  }
+}

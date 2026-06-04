@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lesson</title>
+</head>
+<body>
+    <div id="container">
+        My first Emmet abbreviations:
+        <ol>
+            <li>!(HTML boilerplate)</li>
+            <li>div#container (div with id)</li>
+            <li>ol>li*3 (ordered list with 3 items)</li>
+        </ol>
+        (all followed by tab / Enter)
+    </div>
+    <script src="https://www.radufromfinland.com/dog.js"></script>
+
+
+    <script>
+        const myNumber = 25.2;
+        console.log(myNumber);
+
+        const myString = "I study at karelia";
+        console.log(myString);
+
+        let myBoolean = true;
+        var oppositeBoolean = !myBoolean;
+        console.log(myBoolean, oppositeBoolean);
+        myBoolean = false;
+        oppositeBoolean = !myBoolean;
+        console.log(myBoolean, oppositeBoolean);
+
+        console.log(!42, !"ABC", ![]);
+        console.log(!null, !undefined, !0);
+
+        //arrays are like python lists
+        const myArray =[1, 2, 3, "karelia", true, null];
+        myArray.length = 0;
+        myArray[0] = 9;
+        myArray[1] = 8;
+        myArray[2] = 7;
+        //myArray = [1, 2, 3]; Error! program would fail here!
+        try{
+            myArray = [1,2,3];
+        }catch(err) {
+            console.error(err);
+        }
+        myArray.push(6);
+        myArray.push(11);
+        myArray.sort(function(a,b){return a - b; });
+        console.log(myArray);
+
+        const dog = {
+            name: "Max",
+            age: 5,
+            furr: "black",
+            eyes: "brown"
+        };
+        console.log(dog);
+        console.table(dog);
+        console.log(dog.name);
+        dog.name = "charlie";
+        console.log(dog["name"]);
+
+        const anotherdog = new Dog("Rex", 7, "brown", "black");
+        console.log(anotherDog);
+        anotherDog.talk();
+        const canvas = anotherDog.render();
+        container.appendChild(canvas);
+
+        let a = 5;
+        let b = 2;
+
+        console.log(a+b);
+        a = "5"
+        console.log (a+b);
+        console.log(a-b);
+        console.log(a / b);
+        console.log(a % b);
+        console.log(a ** b);
+        console.log(Math.pow(b));
+        console.log(Math.sqrt(b));
+        console.log(Math.pow(b, 0.5));
+        console.log(b ** 0.5);
+
+
+        a= Number(a) + 5;
+        console.log(a);
+        a += 5;
+        a *= 2;
+        a /= 3;
+        a %= 4;
+        a **= 10;
+        coneole.log(a);
+
+        const s1 = "Wwlcome to KArelia";
+        const s2 = "Welcome to karelia!";
+        const s3 = "Welcome to \"karelia\"!";
+        console.log(s1, s2, s3);
+
+        const age = 22;
+        console("I am" + age + "years pold");
+        console.log("I am ${age years old}");
+
+        let today = new Date();
+        console.log(today)
+        let someDate = new Date("Agust 24, 2025");
+        console.log(someDate);
+
+        console.log(today.getDay());
+        switch (today.getDay()) {
+            case 1: console.log("Monday"); braeak;
+            case 2: console.log("Tuesday"); break;
+            case 3: console.log("wednesday"); break;
+            case 4: console.log("Thursday"); break;
+            case 5: console.log("friday"); break;
+
+        }
+
+        
+
+    </script>
+</body>
+</html>

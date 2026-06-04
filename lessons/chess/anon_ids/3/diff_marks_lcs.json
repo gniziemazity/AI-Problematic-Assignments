@@ -1,0 +1,434 @@
+{
+  "token_matching": "lcs",
+  "score": 99.1,
+  "teacher_files": {
+    "reconstructed.html": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 392,
+        "end": 393
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 393,
+        "end": 394
+      },
+      {
+        "token": "1",
+        "label": "comment",
+        "start": 395,
+        "end": 396
+      },
+      {
+        "token": "fraction",
+        "label": "comment",
+        "start": 397,
+        "end": 405
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 406,
+        "end": 407
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 407,
+        "end": 408
+      },
+      {
+        "token": "/",
+        "label": "missing",
+        "start": 558,
+        "end": 559,
+        "insert_at": {
+          "file": "lesson2.html",
+          "pos": 817
+        }
+      },
+      {
+        "token": "let",
+        "label": "missing",
+        "start": 2908,
+        "end": 2911,
+        "insert_at": {
+          "file": "lesson2.html",
+          "pos": 3956
+        }
+      },
+      {
+        "token": "selectedPiece",
+        "label": "missing",
+        "start": 2912,
+        "end": 2925,
+        "insert_at": {
+          "file": "lesson2.html",
+          "pos": 3956
+        }
+      },
+      {
+        "token": "document",
+        "label": "missing",
+        "start": 2951,
+        "end": 2959,
+        "insert_at": {
+          "file": "lesson2.html",
+          "pos": 4010
+        }
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 3083,
+        "end": 3084
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 3084,
+        "end": 3085
+      },
+      {
+        "token": "anonymous",
+        "label": "comment",
+        "start": 3086,
+        "end": 3095
+      },
+      {
+        "token": "function",
+        "label": "comment",
+        "start": 3096,
+        "end": 3104
+      },
+      {
+        "token": "border",
+        "label": "missing",
+        "start": 3229,
+        "end": 3235,
+        "insert_at": {
+          "file": "lesson2.html",
+          "pos": 4400
+        }
+      },
+      {
+        "token": "selectedPiece",
+        "label": "missing",
+        "start": 3256,
+        "end": 3269,
+        "insert_at": {
+          "file": "lesson2.html",
+          "pos": 4451
+        }
+      },
+      {
+        "token": "replaceChildren",
+        "label": "missing",
+        "start": 3294,
+        "end": 3309,
+        "insert_at": {
+          "file": "lesson2.html",
+          "pos": 4503
+        }
+      },
+      {
+        "token": "selectedPiece",
+        "label": "missing",
+        "start": 3310,
+        "end": 3323,
+        "insert_at": {
+          "file": "lesson2.html",
+          "pos": 4520
+        }
+      },
+      {
+        "token": "selectedPiece",
+        "label": "missing",
+        "start": 3331,
+        "end": 3344,
+        "insert_at": {
+          "file": "lesson2.html",
+          "pos": 4556
+        }
+      },
+      {
+        "token": "selectedPiece",
+        "label": "missing",
+        "start": 3404,
+        "end": 3417,
+        "insert_at": {
+          "file": "lesson2.html",
+          "pos": 4688
+        }
+      },
+      {
+        "token": "border",
+        "label": "missing",
+        "start": 3460,
+        "end": 3466,
+        "insert_at": {
+          "file": "lesson2.html",
+          "pos": 4759
+        }
+      }
+    ]
+  },
+  "student_files": {
+    "lesson2.html": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 537,
+        "end": 538
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 538,
+        "end": 539
+      },
+      {
+        "token": "1",
+        "label": "comment",
+        "start": 539,
+        "end": 540
+      },
+      {
+        "token": "fraction",
+        "label": "comment",
+        "start": 541,
+        "end": 549
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 550,
+        "end": 551
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 551,
+        "end": 552
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 928,
+        "end": 929
+      },
+      {
+        "token": "onclick",
+        "label": "extra",
+        "start": 930,
+        "end": 937
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 937,
+        "end": 938
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 938,
+        "end": 939
+      },
+      {
+        "token": "handleClick",
+        "label": "extra",
+        "start": 939,
+        "end": 950
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 950,
+        "end": 951
+      },
+      {
+        "token": "this",
+        "label": "extra",
+        "start": 951,
+        "end": 955
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 955,
+        "end": 956
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 956,
+        "end": 957
+      },
+      {
+        "token": "const",
+        "label": "extra",
+        "start": 3956,
+        "end": 3961
+      },
+      {
+        "token": "selectedpiece",
+        "label": "extra",
+        "start": 3962,
+        "end": 3975
+      },
+      {
+        "token": "documnet",
+        "label": "extra",
+        "start": 4010,
+        "end": 4018
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 4166,
+        "end": 4167
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 4167,
+        "end": 4168
+      },
+      {
+        "token": "anonymous",
+        "label": "comment",
+        "start": 4168,
+        "end": 4177
+      },
+      {
+        "token": "function",
+        "label": "comment",
+        "start": 4178,
+        "end": 4186
+      },
+      {
+        "token": "broder",
+        "label": "extra",
+        "start": 4400,
+        "end": 4406
+      },
+      {
+        "token": "selectedpiece",
+        "label": "extra",
+        "start": 4451,
+        "end": 4464
+      },
+      {
+        "token": "replace",
+        "label": "extra",
+        "start": 4503,
+        "end": 4510
+      },
+      {
+        "token": "Children",
+        "label": "extra",
+        "start": 4511,
+        "end": 4519
+      },
+      {
+        "token": "selectedpisce",
+        "label": "extra",
+        "start": 4520,
+        "end": 4533
+      },
+      {
+        "token": "selectedpiece",
+        "label": "extra",
+        "start": 4556,
+        "end": 4569
+      },
+      {
+        "token": "selectedpiece",
+        "label": "extra",
+        "start": 4688,
+        "end": 4701
+      },
+      {
+        "token": "broder",
+        "label": "extra",
+        "start": 4759,
+        "end": 4765
+      },
+      {
+        "token": "element",
+        "label": "extra",
+        "start": 4843,
+        "end": 4850
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 4850,
+        "end": 4851
+      },
+      {
+        "token": "style",
+        "label": "extra",
+        "start": 4851,
+        "end": 4856
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 4856,
+        "end": 4857
+      },
+      {
+        "token": "broder",
+        "label": "extra",
+        "start": 4857,
+        "end": 4863
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 4864,
+        "end": 4865
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 4866,
+        "end": 4867
+      },
+      {
+        "token": "4px",
+        "label": "extra",
+        "start": 4867,
+        "end": 4870
+      },
+      {
+        "token": "solid",
+        "label": "extra",
+        "start": 4871,
+        "end": 4876
+      },
+      {
+        "token": "red",
+        "label": "extra",
+        "start": 4877,
+        "end": 4880
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 4880,
+        "end": 4881
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 4881,
+        "end": 4882
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sorting Visualizer</title>
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                flex-direction: column; 
+            }
+            #vis-123456 {
+    
+                height: 200px;
+                /* width -> remove as it was there just to see -background-color:red;*/
+                display: flex;
+                align-items: flex-end;
+            }
+            .bar{
+                width: 7px;
+                height: 100%; /*then we do not have to work in pixels*/
+                /* My bar did not appear at this point - de-bug? is it the class?
+                 issue was with the width ?? */
+                background-color: black;
+                margin: 0px 1px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sorting Visualizer</h1>
+        <div id="vis-123456"></div>
+        <script>
+            // Here we insert java script 
+            // global variables
+            const count = 50;               
+            const array = new Array(count);
+
+            for(let i = 0; i < count; i++) { // iterate by 1 stop at 50
+                array[i] = Math.random(); // numbers between 0 and 1 // Random variables
+
+                //we then checked console to de bug-
+                // typing into console the array so as to see the properties of the array 
+            }
+
+             // after we sorted 
+            // var was very present in old cold . thus we need to know "var" as "let" and "const" did not
+
+            const visualizer = document.getElementById("vis-123456"); // contains element in which we are going to create bars 
+            for (let i = 0; i < array.length; i++) {
+                const bar = document.createElement("div"); // @ this stage it is just in memory > put it in page still 
+                visualizer.appendChild(bar);
+                bar.classList.add("bar");  //is possible to add many classes 
+                bar.style.height = array[i] * 100 + "%";/* doesn't mean add numbers .. 
+                it here is string concatenation because
+                the second item "%"" is a strin */
+                
+            }
+
+            bubbleSort(array);
+
+            function updateBars() {
+                const bars = document.getElementsByClassName("bar");
+                for (let i = 0; i < bars.length; i++){
+                    bars[i].style.height = array[i] * 100 + "%";
+                    } 
+                }
+            async function bubbleSort(arr) {// here we define the loop 
+                do {
+                    var swapped = false; // if it was "let"it only exists inside block,
+                    //  meaning error while swapped would occure 
+                    // do while rare in java these days 
+                    // if we use await we need async
+
+                    for (let i = 0; i < arr.length; i++) {
+                        if ( arr[i-1] > arr[i]) {
+                            const aux = arr[i -1];
+                            arr[i -1] = arr[i];
+                            arr[i] = aux;
+                            swapped = true;
+                            updateBars();
+                            await new Promise(resolve => setTimeout(resolve, 100));
+
+                        }
+                    }
+                } while (swapped);
+            }
+        </script>
+    </body>
+</html>

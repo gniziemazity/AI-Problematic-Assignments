@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess 123456</title>
+    <style>
+        .cell { border: 2px solid black; width: 50px; height: 50px; }
+        .light { background-color: white; }
+        .dark { background-color: gray; }
+        #chess-board {
+            display: grid;
+            grid-template-rows: repeat(8, 50px);
+            grid-template-columns: repeat(8, 50px);
+        }
+        img { width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+    <h1>Chess Game</h1>
+    <div id="chess-board">
+        <div class="cell light">
+            <img src="c:\pieces\pieces\rook.png.png" />
+        </div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+    
+    </div>
+
+    <script>
+        const cells = document.getElementsByClassName("cell");
+        console.log(cells);
+    
+        let selectedPiece=null;
+        const cells=document.getElementByClassName("cell");
+
+        for (const cell of cells){
+            cell.onclick = function(){
+                handleClick(cell);
+            };
+        }
+        if (selectedPiece!=null){
+           element.replaceChildren(selectdPiece);
+           selectedPiece=null;
+        }
+        else if (element.children.length>0){
+        selectedPeiece=null;
+        element.style.border=4px solid red";
+ 
+        }
+        function handleClick(element) {
+            for(const cell of cells){
+                cell.style.border = ""; // reset all borders
+            }
+            element.style.border = "4px solid red";
+        }
+    </script>
+</body>
+</html>

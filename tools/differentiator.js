@@ -612,7 +612,7 @@ function _formatStudentTitle(folder, folderToId) {
 	return id ? `${id}. ${folder}` : folder;
 }
 
-async function _navToStudent(idx) {
+async function _navToStudent(idx, title) {
 	if (!_navState.dataSource) return;
 	if (idx < 0 || idx >= _navState.folders.length) return;
 	const folder = _navState.folders[idx];
@@ -632,7 +632,7 @@ async function _navToStudent(idx) {
 			);
 			return;
 		}
-		data.title = _formatStudentTitle(folder, _navState.folderToId);
+		data.title = title || _formatStudentTitle(folder, _navState.folderToId);
 		if (typeof _curatedResetForNewStudent === "function") {
 			_curatedResetForNewStudent();
 		}
@@ -653,6 +653,25 @@ async function _navToStudent(idx) {
 		_showLoading(false);
 	}
 }
+
+async function _navToStudentId(id, title) {
+	if (!_navState.dataSource || !_navState.folders.length) return false;
+	const folders = _navState.folders;
+	const lower = String(id).toLowerCase();
+	let idx = -1;
+	for (const cand of [_navState.idToFolder[lower], String(id)]) {
+		if (!cand) continue;
+		idx = folders.findIndex(
+			(f) => f.toLowerCase() === String(cand).toLowerCase(),
+		);
+		if (idx >= 0) break;
+	}
+	if (idx < 0) return false;
+	if (idx !== _navState.currentIdx) await _navToStudent(idx, title);
+	return true;
+}
+
+window.diffNavToStudentId = _navToStudentId;
 
 let _embedMode = false;
 let _previewOverride = null;

@@ -1,1 +1,0 @@
-window.__LAST_PROJECT__ = "C:\\UNIVERSITY\\2026 - 2027\\WebResearch\\assignments\\js";

@@ -1,0 +1,42 @@
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: Arial, sans-serif;
+}
+
+.control-panel {
+	margin-bottom: 20px;
+}
+
+/* Container to handle the absolute positioning of the motorcycle over the visualizer */
+#vis-container {
+	position: relative;
+	height: 200px;
+	width: 450px; /* 50 bars * 8px (7px width + 1px margin left/right) */
+}
+
+#vis-123456 {
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	width: 100%;
+}
+
+.bar {
+	width: 7px;
+	height: 100%;
+	background-color: black;
+	margin: 0px 1px;
+}
+
+/* Motorcycle Styling & Initial Position */
+#motorcycle {
+	position: absolute;
+	bottom: 0;
+	left: -30px; /* Starts just off-screen to the left */
+	font-size: 24px;
+	transition: left 0.1s linear, bottom 0.1s linear; /* Smooth movement transitions */
+	display: none; /* Hidden until sorting finishes */
+	pointer-events: none;
+}

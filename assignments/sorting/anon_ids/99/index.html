@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer | Bubble Sort with Motorcycle Ride</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🏍️ Sorting Visualizer · Bubble Sort</h1>
+    
+    <div class="controls">
+        <div class="speed-control">
+            <label for="speedSlider">⏩ Animation speed:</label>
+            <input type="range" id="speedSlider" min="0" max="200" value="80" step="5">
+            <span id="speedValue">80</span> ms
+        </div>
+        <button id="resetBtn" class="reset-button">🔄 New random array</button>
+    </div>
+
+    <div id="vis-container">
+        <div id="vis-123456" class="bars-container"></div>
+        <div id="motorcycleZone" class="motorcycle-zone" style="display: none;">
+            <div class="motorcycle-run">🏍️</div>
+        </div>
+    </div>
+
+    <div class="info">
+        <p>✅ Sorting completed → 🏍️ motorcycle races across the bars from left to right!</p>
+        <p>⚡ Speed slider adjusts delay between comparisons (lower = faster).</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

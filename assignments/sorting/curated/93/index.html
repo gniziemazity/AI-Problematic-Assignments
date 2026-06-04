@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sorting Visualizer</h1>
+
+    <label for="speed-slider">
+        Animation speed: <span id="speed-value">100</span> ms
+    </label>
+    <input
+        id="speed-slider"
+        type="range"
+        min="10"
+        max="300"
+        value="100"
+        step="10"
+        oninput="changeSpeed(this.value)"
+    >
+
+    <div id="vis-123456"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,2787 @@
+{
+  "token_matching": "git",
+  "score": 96.8,
+  "teacher_files": {
+    "123456.css": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 24,
+        "end": 25
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "token": "CSS",
+        "label": "comment",
+        "start": 27,
+        "end": 30
+      },
+      {
+        "token": "variable",
+        "label": "comment",
+        "start": 31,
+        "end": 39
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 40,
+        "end": 41
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 41,
+        "end": 42
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 150,
+        "end": 151,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 165
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 156,
+        "end": 157,
+        "insert_at": {
+          "file": "123456.css",
+          "pos": 170
+        }
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 231,
+        "end": 232
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 232,
+        "end": 233
+      },
+      {
+        "token": "3",
+        "label": "comment",
+        "start": 234,
+        "end": 235
+      },
+      {
+        "token": "%",
+        "label": "comment",
+        "start": 235,
+        "end": 236
+      },
+      {
+        "token": "of",
+        "label": "comment",
+        "start": 237,
+        "end": 239
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 240,
+        "end": 243
+      },
+      {
+        "token": "viewport",
+        "label": "comment",
+        "start": 244,
+        "end": 252
+      },
+      {
+        "token": "width",
+        "label": "comment",
+        "start": 253,
+        "end": 258
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 259,
+        "end": 260
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 260,
+        "end": 261
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 357,
+        "end": 358
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 358,
+        "end": 359
+      },
+      {
+        "token": "does",
+        "label": "comment",
+        "start": 360,
+        "end": 364
+      },
+      {
+        "token": "not",
+        "label": "comment",
+        "start": 365,
+        "end": 368
+      },
+      {
+        "token": "affect",
+        "label": "comment",
+        "start": 369,
+        "end": 375
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 376,
+        "end": 379
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 380,
+        "end": 384
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 385,
+        "end": 386
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 386,
+        "end": 387
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 414,
+        "end": 415
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 415,
+        "end": 416
+      },
+      {
+        "token": "affects",
+        "label": "comment",
+        "start": 417,
+        "end": 424
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 425,
+        "end": 428
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 429,
+        "end": 433
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 434,
+        "end": 435
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 435,
+        "end": 436
+      }
+    ],
+    "123456.js": [
+      {
+        "token": "btn",
+        "label": "missing",
+        "start": 157,
+        "end": 160,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 163
+        }
+      },
+      {
+        "token": ".",
+        "label": "missing",
+        "start": 160,
+        "end": 161,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 163
+        }
+      },
+      {
+        "token": "innerText",
+        "label": "missing",
+        "start": 161,
+        "end": 170,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 163
+        }
+      },
+      {
+        "token": "=",
+        "label": "missing",
+        "start": 171,
+        "end": 172,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 163
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 173,
+        "end": 174,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 163
+        }
+      },
+      {
+        "token": "CANCEL",
+        "label": "missing",
+        "start": 174,
+        "end": 180,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 163
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 180,
+        "end": 181,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 163
+        }
+      },
+      {
+        "token": ";",
+        "label": "missing",
+        "start": 181,
+        "end": 182,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 163
+        }
+      },
+      {
+        "token": "btn",
+        "label": "missing",
+        "start": 251,
+        "end": 254,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 277
+        }
+      },
+      {
+        "token": ".",
+        "label": "missing",
+        "start": 254,
+        "end": 255,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 277
+        }
+      },
+      {
+        "token": "innerText",
+        "label": "missing",
+        "start": 255,
+        "end": 264,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 277
+        }
+      },
+      {
+        "token": "=",
+        "label": "missing",
+        "start": 265,
+        "end": 266,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 277
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 267,
+        "end": 268,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 277
+        }
+      },
+      {
+        "token": "SCAN",
+        "label": "missing",
+        "start": 268,
+        "end": 272,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 277
+        }
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 272,
+        "end": 273,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 277
+        }
+      },
+      {
+        "token": ";",
+        "label": "missing",
+        "start": 273,
+        "end": 274,
+        "insert_at": {
+          "file": "123456.js",
+          "pos": 277
+        }
+      }
+    ]
+  },
+  "student_files": {
+    "index.html": [
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 478,
+        "end": 479
+      },
+      {
+        "token": "div",
+        "label": "extra",
+        "start": 479,
+        "end": 482
+      },
+      {
+        "token": "id",
+        "label": "extra",
+        "start": 483,
+        "end": 485
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 485,
+        "end": 486
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 486,
+        "end": 487
+      },
+      {
+        "token": "pContainer",
+        "label": "extra",
+        "start": 487,
+        "end": 497
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 497,
+        "end": 498
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 498,
+        "end": 499
+      },
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 499,
+        "end": 500
+      },
+      {
+        "token": "/",
+        "label": "extra",
+        "start": 500,
+        "end": 501
+      },
+      {
+        "token": "div",
+        "label": "extra",
+        "start": 501,
+        "end": 504
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 504,
+        "end": 505
+      }
+    ],
+    "123456.css": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 28,
+        "end": 29
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 29,
+        "end": 30
+      },
+      {
+        "token": "CSS",
+        "label": "comment",
+        "start": 30,
+        "end": 33
+      },
+      {
+        "token": "variable",
+        "label": "comment",
+        "start": 34,
+        "end": 42
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 42,
+        "end": 43
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 43,
+        "end": 44
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 255,
+        "end": 256
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 256,
+        "end": 257
+      },
+      {
+        "token": "3",
+        "label": "comment",
+        "start": 257,
+        "end": 258
+      },
+      {
+        "token": "%",
+        "label": "comment",
+        "start": 258,
+        "end": 259
+      },
+      {
+        "token": "of",
+        "label": "comment",
+        "start": 260,
+        "end": 262
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 263,
+        "end": 266
+      },
+      {
+        "token": "viewport",
+        "label": "comment",
+        "start": 267,
+        "end": 275
+      },
+      {
+        "token": "width",
+        "label": "comment",
+        "start": 276,
+        "end": 281
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 281,
+        "end": 282
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 282,
+        "end": 283
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 392,
+        "end": 393
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 393,
+        "end": 394
+      },
+      {
+        "token": "does",
+        "label": "comment",
+        "start": 394,
+        "end": 398
+      },
+      {
+        "token": "not",
+        "label": "comment",
+        "start": 399,
+        "end": 402
+      },
+      {
+        "token": "effect",
+        "label": "comment",
+        "start": 403,
+        "end": 409
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 410,
+        "end": 414
+      },
+      {
+        "token": "of",
+        "label": "comment",
+        "start": 415,
+        "end": 417
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 418,
+        "end": 421
+      },
+      {
+        "token": "element",
+        "label": "comment",
+        "start": 422,
+        "end": 429
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 429,
+        "end": 430
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 430,
+        "end": 431
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 461,
+        "end": 462
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 462,
+        "end": 463
+      },
+      {
+        "token": "affects",
+        "label": "comment",
+        "start": 463,
+        "end": 470
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 471,
+        "end": 474
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 475,
+        "end": 479
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 479,
+        "end": 480
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 480,
+        "end": 481
+      },
+      {
+        "token": "#",
+        "label": "extra",
+        "start": 663,
+        "end": 664
+      },
+      {
+        "token": "btn",
+        "label": "extra",
+        "start": 664,
+        "end": 667
+      },
+      {
+        "token": "{",
+        "label": "extra",
+        "start": 667,
+        "end": 668
+      },
+      {
+        "token": "background",
+        "label": "extra",
+        "start": 673,
+        "end": 683
+      },
+      {
+        "token": "-",
+        "label": "extra",
+        "start": 683,
+        "end": 684
+      },
+      {
+        "token": "color",
+        "label": "extra",
+        "start": 684,
+        "end": 689
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 689,
+        "end": 690
+      },
+      {
+        "token": "var",
+        "label": "extra",
+        "start": 691,
+        "end": 694
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 694,
+        "end": 695
+      },
+      {
+        "token": "-",
+        "label": "extra",
+        "start": 695,
+        "end": 696
+      },
+      {
+        "token": "-",
+        "label": "extra",
+        "start": 696,
+        "end": 697
+      },
+      {
+        "token": "theme",
+        "label": "extra",
+        "start": 697,
+        "end": 702
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 702,
+        "end": 703
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 703,
+        "end": 704
+      },
+      {
+        "token": "border",
+        "label": "extra",
+        "start": 709,
+        "end": 715
+      },
+      {
+        "token": "-",
+        "label": "extra",
+        "start": 715,
+        "end": 716
+      },
+      {
+        "token": "radius",
+        "label": "extra",
+        "start": 716,
+        "end": 722
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 722,
+        "end": 723
+      },
+      {
+        "token": "5px",
+        "label": "extra",
+        "start": 724,
+        "end": 727
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 727,
+        "end": 728
+      },
+      {
+        "token": "transition",
+        "label": "extra",
+        "start": 733,
+        "end": 743
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 743,
+        "end": 744
+      },
+      {
+        "token": "2s",
+        "label": "extra",
+        "start": 745,
+        "end": 747
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 747,
+        "end": 748
+      },
+      {
+        "token": "cursor",
+        "label": "extra",
+        "start": 753,
+        "end": 759
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 759,
+        "end": 760
+      },
+      {
+        "token": "pointer",
+        "label": "extra",
+        "start": 761,
+        "end": 768
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 768,
+        "end": 769
+      },
+      {
+        "token": "}",
+        "label": "extra",
+        "start": 770,
+        "end": 771
+      },
+      {
+        "token": "#",
+        "label": "extra",
+        "start": 773,
+        "end": 774
+      },
+      {
+        "token": "btn",
+        "label": "extra",
+        "start": 774,
+        "end": 777
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 777,
+        "end": 778
+      },
+      {
+        "token": "hover",
+        "label": "extra",
+        "start": 778,
+        "end": 783
+      },
+      {
+        "token": "{",
+        "label": "extra",
+        "start": 783,
+        "end": 784
+      },
+      {
+        "token": "background",
+        "label": "extra",
+        "start": 789,
+        "end": 799
+      },
+      {
+        "token": "-",
+        "label": "extra",
+        "start": 799,
+        "end": 800
+      },
+      {
+        "token": "color",
+        "label": "extra",
+        "start": 800,
+        "end": 805
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 805,
+        "end": 806
+      },
+      {
+        "token": "white",
+        "label": "extra",
+        "start": 807,
+        "end": 812
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 812,
+        "end": 813
+      },
+      {
+        "token": "}",
+        "label": "extra",
+        "start": 814,
+        "end": 815
+      },
+      {
+        "token": "p",
+        "label": "extra",
+        "start": 817,
+        "end": 818
+      },
+      {
+        "token": "{",
+        "label": "extra",
+        "start": 818,
+        "end": 819
+      },
+      {
+        "token": "border",
+        "label": "extra",
+        "start": 824,
+        "end": 830
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 830,
+        "end": 831
+      },
+      {
+        "token": "2px",
+        "label": "extra",
+        "start": 832,
+        "end": 835
+      },
+      {
+        "token": "solid",
+        "label": "extra",
+        "start": 836,
+        "end": 841
+      },
+      {
+        "token": "black",
+        "label": "extra",
+        "start": 842,
+        "end": 847
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 847,
+        "end": 848
+      },
+      {
+        "token": "margin",
+        "label": "extra",
+        "start": 853,
+        "end": 859
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 859,
+        "end": 860
+      },
+      {
+        "token": "0px",
+        "label": "extra",
+        "start": 861,
+        "end": 864
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 864,
+        "end": 865
+      },
+      {
+        "token": "}",
+        "label": "extra",
+        "start": 866,
+        "end": 867
+      }
+    ],
+    "123456.js": [
+      {
+        "token": "btn",
+        "label": "extra",
+        "start": 216,
+        "end": 219
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 219,
+        "end": 220
+      },
+      {
+        "token": "innerText",
+        "label": "extra",
+        "start": 220,
+        "end": 229
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 230,
+        "end": 231
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 232,
+        "end": 233
+      },
+      {
+        "token": "CANCEL",
+        "label": "extra",
+        "start": 233,
+        "end": 239
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 239,
+        "end": 240
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 240,
+        "end": 241
+      },
+      {
+        "token": "btn",
+        "label": "extra",
+        "start": 331,
+        "end": 334
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 334,
+        "end": 335
+      },
+      {
+        "token": "innerText",
+        "label": "extra",
+        "start": 335,
+        "end": 344
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 345,
+        "end": 346
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 347,
+        "end": 348
+      },
+      {
+        "token": "SCAN",
+        "label": "extra",
+        "start": 348,
+        "end": 352
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 352,
+        "end": 353
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 353,
+        "end": 354
+      },
+      {
+        "token": "showInventory",
+        "label": "extra",
+        "start": 616,
+        "end": 629
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 629,
+        "end": 630
+      },
+      {
+        "token": "place",
+        "label": "extra",
+        "start": 630,
+        "end": 635
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 635,
+        "end": 636
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 636,
+        "end": 637
+      },
+      {
+        "token": "function",
+        "label": "extra",
+        "start": 855,
+        "end": 863
+      },
+      {
+        "token": "showInventory",
+        "label": "extra",
+        "start": 864,
+        "end": 877
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 877,
+        "end": 878
+      },
+      {
+        "token": "place",
+        "label": "extra",
+        "start": 878,
+        "end": 883
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 883,
+        "end": 884
+      },
+      {
+        "token": "{",
+        "label": "extra",
+        "start": 884,
+        "end": 885
+      },
+      {
+        "token": "let",
+        "label": "extra",
+        "start": 890,
+        "end": 893
+      },
+      {
+        "token": "stockN",
+        "label": "extra",
+        "start": 894,
+        "end": 900
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 901,
+        "end": 902
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 903,
+        "end": 904
+      },
+      {
+        "token": "No",
+        "label": "extra",
+        "start": 904,
+        "end": 906
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 906,
+        "end": 907
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 907,
+        "end": 908
+      },
+      {
+        "token": "const",
+        "label": "extra",
+        "start": 913,
+        "end": 918
+      },
+      {
+        "token": "container",
+        "label": "extra",
+        "start": 919,
+        "end": 928
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 929,
+        "end": 930
+      },
+      {
+        "token": "document",
+        "label": "extra",
+        "start": 931,
+        "end": 939
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 939,
+        "end": 940
+      },
+      {
+        "token": "getElementById",
+        "label": "extra",
+        "start": 940,
+        "end": 954
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 954,
+        "end": 955
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 955,
+        "end": 956
+      },
+      {
+        "token": "pContainer",
+        "label": "extra",
+        "start": 956,
+        "end": 966
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 966,
+        "end": 967
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 967,
+        "end": 968
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 968,
+        "end": 969
+      },
+      {
+        "token": "const",
+        "label": "extra",
+        "start": 974,
+        "end": 979
+      },
+      {
+        "token": "name",
+        "label": "extra",
+        "start": 980,
+        "end": 984
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 985,
+        "end": 986
+      },
+      {
+        "token": "document",
+        "label": "extra",
+        "start": 987,
+        "end": 995
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 995,
+        "end": 996
+      },
+      {
+        "token": "createElement",
+        "label": "extra",
+        "start": 996,
+        "end": 1009
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 1009,
+        "end": 1010
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1010,
+        "end": 1011
+      },
+      {
+        "token": "p",
+        "label": "extra",
+        "start": 1011,
+        "end": 1012
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1012,
+        "end": 1013
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 1013,
+        "end": 1014
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 1014,
+        "end": 1015
+      },
+      {
+        "token": "const",
+        "label": "extra",
+        "start": 1020,
+        "end": 1025
+      },
+      {
+        "token": "stock",
+        "label": "extra",
+        "start": 1026,
+        "end": 1031
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 1032,
+        "end": 1033
+      },
+      {
+        "token": "document",
+        "label": "extra",
+        "start": 1034,
+        "end": 1042
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 1042,
+        "end": 1043
+      },
+      {
+        "token": "createElement",
+        "label": "extra",
+        "start": 1043,
+        "end": 1056
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 1056,
+        "end": 1057
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1057,
+        "end": 1058
+      },
+      {
+        "token": "p",
+        "label": "extra",
+        "start": 1058,
+        "end": 1059
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1059,
+        "end": 1060
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 1060,
+        "end": 1061
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 1061,
+        "end": 1062
+      },
+      {
+        "token": "const",
+        "label": "extra",
+        "start": 1067,
+        "end": 1072
+      },
+      {
+        "token": "price",
+        "label": "extra",
+        "start": 1073,
+        "end": 1078
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 1079,
+        "end": 1080
+      },
+      {
+        "token": "document",
+        "label": "extra",
+        "start": 1081,
+        "end": 1089
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 1089,
+        "end": 1090
+      },
+      {
+        "token": "createElement",
+        "label": "extra",
+        "start": 1090,
+        "end": 1103
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 1103,
+        "end": 1104
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1104,
+        "end": 1105
+      },
+      {
+        "token": "p",
+        "label": "extra",
+        "start": 1105,
+        "end": 1106
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1106,
+        "end": 1107
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 1107,
+        "end": 1108
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 1108,
+        "end": 1109
+      },
+      {
+        "token": "name",
+        "label": "extra",
+        "start": 1114,
+        "end": 1118
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 1118,
+        "end": 1119
+      },
+      {
+        "token": "textContent",
+        "label": "extra",
+        "start": 1119,
+        "end": 1130
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 1131,
+        "end": 1132
+      },
+      {
+        "token": "String",
+        "label": "extra",
+        "start": 1133,
+        "end": 1139
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 1139,
+        "end": 1140
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1140,
+        "end": 1141
+      },
+      {
+        "token": "Item",
+        "label": "extra",
+        "start": 1141,
+        "end": 1145
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 1145,
+        "end": 1146
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1147,
+        "end": 1148
+      },
+      {
+        "token": "+",
+        "label": "extra",
+        "start": 1149,
+        "end": 1150
+      },
+      {
+        "token": "place",
+        "label": "extra",
+        "start": 1151,
+        "end": 1156
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 1156,
+        "end": 1157
+      },
+      {
+        "token": "name",
+        "label": "extra",
+        "start": 1157,
+        "end": 1161
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 1161,
+        "end": 1162
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 1162,
+        "end": 1163
+      },
+      {
+        "token": "if",
+        "label": "extra",
+        "start": 1168,
+        "end": 1170
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 1171,
+        "end": 1172
+      },
+      {
+        "token": "place",
+        "label": "extra",
+        "start": 1172,
+        "end": 1177
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 1177,
+        "end": 1178
+      },
+      {
+        "token": "inStock",
+        "label": "extra",
+        "start": 1178,
+        "end": 1185
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 1186,
+        "end": 1187
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 1187,
+        "end": 1188
+      },
+      {
+        "token": "true",
+        "label": "extra",
+        "start": 1189,
+        "end": 1193
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 1193,
+        "end": 1194
+      },
+      {
+        "token": "{",
+        "label": "extra",
+        "start": 1194,
+        "end": 1195
+      },
+      {
+        "token": "stockN",
+        "label": "extra",
+        "start": 1204,
+        "end": 1210
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 1211,
+        "end": 1212
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1213,
+        "end": 1214
+      },
+      {
+        "token": "yes",
+        "label": "extra",
+        "start": 1214,
+        "end": 1217
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1217,
+        "end": 1218
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 1218,
+        "end": 1219
+      },
+      {
+        "token": "}",
+        "label": "extra",
+        "start": 1224,
+        "end": 1225
+      },
+      {
+        "token": "stock",
+        "label": "extra",
+        "start": 1230,
+        "end": 1235
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 1235,
+        "end": 1236
+      },
+      {
+        "token": "textContent",
+        "label": "extra",
+        "start": 1236,
+        "end": 1247
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 1248,
+        "end": 1249
+      },
+      {
+        "token": "String",
+        "label": "extra",
+        "start": 1250,
+        "end": 1256
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 1256,
+        "end": 1257
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1257,
+        "end": 1258
+      },
+      {
+        "token": "In",
+        "label": "extra",
+        "start": 1258,
+        "end": 1260
+      },
+      {
+        "token": "store",
+        "label": "extra",
+        "start": 1261,
+        "end": 1266
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 1266,
+        "end": 1267
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1268,
+        "end": 1269
+      },
+      {
+        "token": "+",
+        "label": "extra",
+        "start": 1270,
+        "end": 1271
+      },
+      {
+        "token": "stockN",
+        "label": "extra",
+        "start": 1272,
+        "end": 1278
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 1278,
+        "end": 1279
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 1279,
+        "end": 1280
+      },
+      {
+        "token": "price",
+        "label": "extra",
+        "start": 1285,
+        "end": 1290
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 1290,
+        "end": 1291
+      },
+      {
+        "token": "textContent",
+        "label": "extra",
+        "start": 1291,
+        "end": 1302
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 1303,
+        "end": 1304
+      },
+      {
+        "token": "String",
+        "label": "extra",
+        "start": 1305,
+        "end": 1311
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 1311,
+        "end": 1312
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1312,
+        "end": 1313
+      },
+      {
+        "token": "Price",
+        "label": "extra",
+        "start": 1313,
+        "end": 1318
+      },
+      {
+        "token": ":",
+        "label": "extra",
+        "start": 1318,
+        "end": 1319
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1320,
+        "end": 1321
+      },
+      {
+        "token": "+",
+        "label": "extra",
+        "start": 1322,
+        "end": 1323
+      },
+      {
+        "token": "place",
+        "label": "extra",
+        "start": 1324,
+        "end": 1329
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 1329,
+        "end": 1330
+      },
+      {
+        "token": "price",
+        "label": "extra",
+        "start": 1330,
+        "end": 1335
+      },
+      {
+        "token": "+",
+        "label": "extra",
+        "start": 1336,
+        "end": 1337
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1338,
+        "end": 1339
+      },
+      {
+        "token": "€",
+        "label": "extra",
+        "start": 1339,
+        "end": 1340
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 1340,
+        "end": 1341
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 1341,
+        "end": 1342
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 1342,
+        "end": 1343
+      },
+      {
+        "token": "container",
+        "label": "extra",
+        "start": 1348,
+        "end": 1357
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 1357,
+        "end": 1358
+      },
+      {
+        "token": "appendChild",
+        "label": "extra",
+        "start": 1358,
+        "end": 1369
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 1369,
+        "end": 1370
+      },
+      {
+        "token": "name",
+        "label": "extra",
+        "start": 1370,
+        "end": 1374
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 1374,
+        "end": 1375
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 1375,
+        "end": 1376
+      },
+      {
+        "token": "container",
+        "label": "extra",
+        "start": 1381,
+        "end": 1390
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 1390,
+        "end": 1391
+      },
+      {
+        "token": "appendChild",
+        "label": "extra",
+        "start": 1391,
+        "end": 1402
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 1402,
+        "end": 1403
+      },
+      {
+        "token": "stock",
+        "label": "extra",
+        "start": 1403,
+        "end": 1408
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 1408,
+        "end": 1409
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 1409,
+        "end": 1410
+      },
+      {
+        "token": "container",
+        "label": "extra",
+        "start": 1415,
+        "end": 1424
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 1424,
+        "end": 1425
+      },
+      {
+        "token": "appendChild",
+        "label": "extra",
+        "start": 1425,
+        "end": 1436
+      },
+      {
+        "token": "(",
+        "label": "extra",
+        "start": 1436,
+        "end": 1437
+      },
+      {
+        "token": "price",
+        "label": "extra",
+        "start": 1437,
+        "end": 1442
+      },
+      {
+        "token": ")",
+        "label": "extra",
+        "start": 1442,
+        "end": 1443
+      },
+      {
+        "token": ";",
+        "label": "extra",
+        "start": 1443,
+        "end": 1444
+      },
+      {
+        "token": "}",
+        "label": "extra",
+        "start": 1445,
+        "end": 1446
+      }
+    ]
+  },
+  "alignments": {
+    "index.html": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        14,
+        null
+      ],
+      [
+        15,
+        14
+      ],
+      [
+        16,
+        null
+      ],
+      [
+        17,
+        15
+      ],
+      [
+        null,
+        16
+      ],
+      [
+        18,
+        17
+      ],
+      [
+        19,
+        18
+      ],
+      [
+        20,
+        19
+      ],
+      [
+        21,
+        20
+      ],
+      [
+        22,
+        21
+      ]
+    ],
+    "123456.css": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        14,
+        14
+      ],
+      [
+        15,
+        15
+      ],
+      [
+        16,
+        16
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        18,
+        18
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        20,
+        20
+      ],
+      [
+        21,
+        21
+      ],
+      [
+        22,
+        22
+      ],
+      [
+        23,
+        23
+      ],
+      [
+        24,
+        24
+      ],
+      [
+        25,
+        25
+      ],
+      [
+        26,
+        26
+      ],
+      [
+        27,
+        27
+      ],
+      [
+        28,
+        28
+      ],
+      [
+        29,
+        29
+      ],
+      [
+        30,
+        30
+      ],
+      [
+        31,
+        31
+      ],
+      [
+        32,
+        32
+      ],
+      [
+        33,
+        33
+      ],
+      [
+        34,
+        34
+      ],
+      [
+        35,
+        35
+      ],
+      [
+        36,
+        36
+      ],
+      [
+        37,
+        37
+      ],
+      [
+        null,
+        38
+      ],
+      [
+        38,
+        39
+      ],
+      [
+        39,
+        40
+      ],
+      [
+        40,
+        41
+      ],
+      [
+        null,
+        42
+      ],
+      [
+        null,
+        43
+      ],
+      [
+        null,
+        44
+      ],
+      [
+        null,
+        45
+      ],
+      [
+        null,
+        46
+      ],
+      [
+        null,
+        47
+      ],
+      [
+        null,
+        48
+      ],
+      [
+        null,
+        49
+      ],
+      [
+        null,
+        50
+      ],
+      [
+        null,
+        51
+      ],
+      [
+        null,
+        52
+      ],
+      [
+        null,
+        53
+      ],
+      [
+        null,
+        54
+      ],
+      [
+        null,
+        55
+      ],
+      [
+        null,
+        56
+      ],
+      [
+        null,
+        57
+      ]
+    ],
+    "123456.js": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        null
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        8,
+        null
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        null,
+        8
+      ],
+      [
+        10,
+        9
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        12,
+        null
+      ],
+      [
+        13,
+        11
+      ],
+      [
+        null,
+        12
+      ],
+      [
+        14,
+        13
+      ],
+      [
+        null,
+        14
+      ],
+      [
+        15,
+        15
+      ],
+      [
+        16,
+        16
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        18,
+        18
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        20,
+        20
+      ],
+      [
+        21,
+        21
+      ],
+      [
+        22,
+        22
+      ],
+      [
+        23,
+        23
+      ],
+      [
+        24,
+        24
+      ],
+      [
+        null,
+        25
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        26,
+        27
+      ],
+      [
+        27,
+        28
+      ],
+      [
+        28,
+        29
+      ],
+      [
+        29,
+        30
+      ],
+      [
+        30,
+        31
+      ],
+      [
+        31,
+        32
+      ],
+      [
+        32,
+        33
+      ],
+      [
+        33,
+        34
+      ],
+      [
+        34,
+        35
+      ],
+      [
+        35,
+        36
+      ],
+      [
+        36,
+        37
+      ],
+      [
+        37,
+        38
+      ],
+      [
+        38,
+        39
+      ],
+      [
+        null,
+        40
+      ],
+      [
+        null,
+        41
+      ],
+      [
+        null,
+        42
+      ],
+      [
+        null,
+        43
+      ],
+      [
+        null,
+        44
+      ],
+      [
+        null,
+        45
+      ],
+      [
+        null,
+        46
+      ],
+      [
+        null,
+        47
+      ],
+      [
+        null,
+        48
+      ],
+      [
+        null,
+        49
+      ],
+      [
+        null,
+        50
+      ],
+      [
+        null,
+        51
+      ],
+      [
+        null,
+        52
+      ],
+      [
+        null,
+        53
+      ],
+      [
+        null,
+        54
+      ],
+      [
+        null,
+        55
+      ],
+      [
+        null,
+        56
+      ]
+    ]
+  },
+  "line_marks": {
+    "teacher_files": {
+      "123456.js": [
+        {
+          "label": "missing",
+          "start": 157,
+          "end": 182
+        },
+        {
+          "label": "missing",
+          "start": 251,
+          "end": 274
+        }
+      ]
+    },
+    "student_files": {
+      "index.html": [
+        {
+          "label": "extra",
+          "start": 478,
+          "end": 505
+        }
+      ],
+      "123456.css": [
+        {
+          "label": "extra",
+          "start": 663,
+          "end": 668
+        },
+        {
+          "label": "extra",
+          "start": 673,
+          "end": 704
+        },
+        {
+          "label": "extra",
+          "start": 709,
+          "end": 728
+        },
+        {
+          "label": "extra",
+          "start": 733,
+          "end": 748
+        },
+        {
+          "label": "extra",
+          "start": 753,
+          "end": 769
+        },
+        {
+          "label": "extra",
+          "start": 770,
+          "end": 771
+        },
+        {
+          "label": "extra",
+          "start": 773,
+          "end": 784
+        },
+        {
+          "label": "extra",
+          "start": 789,
+          "end": 813
+        },
+        {
+          "label": "extra",
+          "start": 814,
+          "end": 815
+        },
+        {
+          "label": "extra",
+          "start": 817,
+          "end": 819
+        },
+        {
+          "label": "extra",
+          "start": 824,
+          "end": 848
+        },
+        {
+          "label": "extra",
+          "start": 853,
+          "end": 865
+        },
+        {
+          "label": "extra",
+          "start": 866,
+          "end": 867
+        }
+      ],
+      "123456.js": [
+        {
+          "label": "extra",
+          "start": 216,
+          "end": 241
+        },
+        {
+          "label": "extra",
+          "start": 331,
+          "end": 354
+        },
+        {
+          "label": "extra",
+          "start": 616,
+          "end": 637
+        },
+        {
+          "label": "extra",
+          "start": 855,
+          "end": 885
+        },
+        {
+          "label": "extra",
+          "start": 890,
+          "end": 908
+        },
+        {
+          "label": "extra",
+          "start": 913,
+          "end": 969
+        },
+        {
+          "label": "extra",
+          "start": 974,
+          "end": 1015
+        },
+        {
+          "label": "extra",
+          "start": 1020,
+          "end": 1062
+        },
+        {
+          "label": "extra",
+          "start": 1067,
+          "end": 1109
+        },
+        {
+          "label": "extra",
+          "start": 1114,
+          "end": 1163
+        },
+        {
+          "label": "extra",
+          "start": 1168,
+          "end": 1195
+        },
+        {
+          "label": "extra",
+          "start": 1204,
+          "end": 1219
+        },
+        {
+          "label": "extra",
+          "start": 1224,
+          "end": 1225
+        },
+        {
+          "label": "extra",
+          "start": 1230,
+          "end": 1280
+        },
+        {
+          "label": "extra",
+          "start": 1285,
+          "end": 1343
+        },
+        {
+          "label": "extra",
+          "start": 1348,
+          "end": 1376
+        },
+        {
+          "label": "extra",
+          "start": 1381,
+          "end": 1410
+        },
+        {
+          "label": "extra",
+          "start": 1415,
+          "end": 1444
+        },
+        {
+          "label": "extra",
+          "start": 1445,
+          "end": 1446
+        }
+      ]
+    }
+  }
+}

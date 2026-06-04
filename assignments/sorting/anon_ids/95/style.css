@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.controls {
+    margin: 10px 0;
+}
+
+#vis-123456 {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    position: relative; /* so the motorcycle can be positioned inside it */
+}
+
+.bar {
+    width: 7px;
+    height: 100%;
+    background-color: black;
+    margin: 0px 1px;
+}
+
+.motorcycle {
+    position: absolute;
+    font-size: 20px;
+    /* nudge upward a little so it sits on top of the bar, not inside it */
+    transform: translateY(-4px);
+}

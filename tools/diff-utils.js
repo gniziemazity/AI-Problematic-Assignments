@@ -698,7 +698,19 @@ async function resolveLessonHandle({ lesson, group } = {}) {
 
 function buildToolUrl(
 	target,
-	{ lesson, group, id, mode, title, ids, star, step, autoplay, ts, speed } = {},
+	{
+		lesson,
+		group,
+		id,
+		mode,
+		title,
+		ids,
+		star,
+		step,
+		autoplay,
+		ts,
+		speed,
+	} = {},
 ) {
 	const params = new URLSearchParams();
 	if (lesson) params.set("lesson", lesson);
@@ -784,6 +796,8 @@ const DIFF_MARKS_FILES = {
 	ideal: "diff_marks_ideal.json",
 	required: "diff_marks_required.json",
 };
+
+const DIFF_MARKS_PRIORITY = ["ideal", "required", "", "leo"];
 
 const CURATED_MODES = new Set(["ideal", "required"]);
 
@@ -1169,8 +1183,8 @@ async function buildDiffPayloadData(fileMap, studentDir) {
 		studentFiles[f.name] = await readFileText(f);
 
 	const studentBase = _studentDirBaseUrl(fileMap, studentDir);
-	const allMarks = {};
-	for (const [mode, fname] of Object.entries(DIFF_MARKS_FILES)) {
+	const fetchMark = async (mode) => {
+		const fname = DIFF_MARKS_FILES[mode];
 		const entry = fileMap.get(studentDir + fname);
 		let text = null;
 		if (entry) {
@@ -1183,12 +1197,32 @@ async function buildDiffPayloadData(fileMap, studentDir) {
 				if (r.ok) text = await r.text();
 			} catch {}
 		}
-		if (text != null) {
-			try {
-				allMarks[mode] = JSON.parse(text);
-			} catch {}
+		if (text == null) return null;
+		try {
+			return JSON.parse(text);
+		} catch {
+			return null;
 		}
-	}
+	};
+
+	const priorityModes = DIFF_MARKS_PRIORITY.filter((m) => m in DIFF_MARKS_FILES);
+	const restModes = Object.keys(DIFF_MARKS_FILES).filter(
+		(m) => !priorityModes.includes(m),
+	);
+	const allMarks = {};
+	await Promise.all(
+		priorityModes.map(async (mode) => {
+			const json = await fetchMark(mode);
+			if (json) allMarks[mode] = json;
+		}),
+	);
+	const pendingMarks = Promise.all(
+		restModes.map(async (mode) => [mode, await fetchMark(mode)]),
+	).then((pairs) => {
+		const out = {};
+		for (const [mode, json] of pairs) if (json) out[mode] = json;
+		return out;
+	});
 
 	const imageUris = {};
 	for (const [p, f] of entries) {
@@ -1224,6 +1258,7 @@ async function buildDiffPayloadData(fileMap, studentDir) {
 		teacherFiles,
 		studentFiles,
 		allMarks,
+		pendingMarks,
 		imageUris,
 		docUris,
 		teacherBaseUrl,
@@ -1266,6 +1301,7 @@ function _buildDiffPayload(data) {
 		imageUris: data.imageUris ?? {},
 		docUris: data.docUris ?? {},
 		allMarks,
+		pendingMarks: data.pendingMarks ?? null,
 		mode: defaultMode,
 		teacherMarks: defaultMarks?.teacher_files ?? null,
 		studentMarks: defaultMarks?.student_files ?? null,

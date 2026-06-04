@@ -391,7 +391,12 @@ class LogVisualizer {
 		const speed = this.speed !== 8 ? this.speed : null;
 		const text = lesson
 			? new URL(
-					buildToolUrl("simulator.html", { lesson, group, ts: tsStr, speed }),
+					buildToolUrl("simulator.html", {
+						lesson,
+						group,
+						ts: tsStr,
+						speed,
+					}),
 					location.href,
 				).href
 			: tsStr;

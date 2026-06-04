@@ -6,6 +6,7 @@ let _studentFiles = null;
 let _teacherMarks = null;
 let _studentMarks = null;
 let _allMarks = {};
+let _marksLoadGen = 0;
 let _currentMarksEntry = null;
 let _titleBase = null;
 let _imageUris = {};
@@ -414,6 +415,7 @@ function _computeSmartAlignments() {
 }
 
 function _applyIncomingData(data) {
+	const myGen = ++_marksLoadGen;
 	_teacherFiles = data.teacherFiles || {};
 	_studentFiles = data.studentFiles || {};
 	_imageUris = data.imageUris || {};
@@ -429,6 +431,23 @@ function _applyIncomingData(data) {
 		_diffMode = defaultDiffModeKey(_allMarks, _diffMode);
 		_refreshModeSelect();
 		_applyCurrentMarks();
+		if (data.pendingMarks) {
+			data.pendingMarks.then((rest) => {
+				if (myGen !== _marksLoadGen) return;
+				let added = false;
+				for (const [mode, json] of Object.entries(rest || {})) {
+					if (json && !_allMarks[mode]) {
+						_allMarks[mode] = json;
+						added = true;
+					}
+				}
+				if (added) {
+					const hadNoMarks = _diffMode == null || !_allMarks[_diffMode];
+					_refreshModeSelect();
+					if (hadNoMarks) _applyCurrentMarks();
+				}
+			});
+		}
 	} else {
 		_currentMarksEntry =
 			data.teacherMarks || data.studentMarks
@@ -452,7 +471,7 @@ function _applyIncomingData(data) {
 	renderPanel("teacher", _teacherFiles, _teacherMarks);
 	renderPanel("student", _studentFiles, _studentMarks);
 	_updateTitleScore();
-	if (typeof _curatedEnable === "function") _curatedEnable();
+	if (!_embedMode && typeof _curatedEnable === "function") _curatedEnable();
 	if (_embedMode) _applyPreviewMode(_isPreviewMode());
 }
 
@@ -708,7 +727,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 				CURATED_MODES.has(_diffMode),
 			);
 			_applyCurrentMarks();
-			if (typeof _curatedEnable === "function") {
+			if (!_embedMode && typeof _curatedEnable === "function") {
 				_curatedEnable();
 			} else {
 				const savedTeacher = _saveState("teacher");
@@ -821,7 +840,8 @@ function loadFilesFromInput(files, side) {
 					side === "teacher" ? _teacherMarks : _studentMarks,
 				);
 				_updateTitleScore();
-				if (typeof _curatedEnable === "function") _curatedEnable();
+				if (!_embedMode && typeof _curatedEnable === "function")
+					_curatedEnable();
 				_refreshDocxButton();
 			}
 		});

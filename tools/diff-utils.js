@@ -1205,7 +1205,9 @@ async function buildDiffPayloadData(fileMap, studentDir) {
 		}
 	};
 
-	const priorityModes = DIFF_MARKS_PRIORITY.filter((m) => m in DIFF_MARKS_FILES);
+	const priorityModes = DIFF_MARKS_PRIORITY.filter(
+		(m) => m in DIFF_MARKS_FILES,
+	);
 	const restModes = Object.keys(DIFF_MARKS_FILES).filter(
 		(m) => !priorityModes.includes(m),
 	);

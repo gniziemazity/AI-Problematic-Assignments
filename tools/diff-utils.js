@@ -622,7 +622,24 @@ function parseToolParams(search = location.search) {
 	const autoplayRaw = p.get("autoplay");
 	const autoplay = autoplayRaw === "1" || autoplayRaw === "true";
 	const ts = p.get("ts");
-	return { lesson, group, id, mode, title, ids, star, step, autoplay, ts };
+	const speedRaw = p.get("speed");
+	const speed =
+		speedRaw != null && speedRaw !== "" && Number(speedRaw) > 0
+			? Number(speedRaw)
+			: null;
+	return {
+		lesson,
+		group,
+		id,
+		mode,
+		title,
+		ids,
+		star,
+		step,
+		autoplay,
+		ts,
+		speed,
+	};
 }
 
 async function resolveLessonHandle({ lesson, group } = {}) {
@@ -681,7 +698,7 @@ async function resolveLessonHandle({ lesson, group } = {}) {
 
 function buildToolUrl(
 	target,
-	{ lesson, group, id, mode, title, ids, star, step, autoplay, ts } = {},
+	{ lesson, group, id, mode, title, ids, star, step, autoplay, ts, speed } = {},
 ) {
 	const params = new URLSearchParams();
 	if (lesson) params.set("lesson", lesson);
@@ -696,6 +713,7 @@ function buildToolUrl(
 	if (step != null && step !== "") params.set("step", step);
 	if (autoplay) params.set("autoplay", "1");
 	if (ts != null && ts !== "") params.set("ts", ts);
+	if (speed != null && speed !== "") params.set("speed", speed);
 	const qs = params.toString();
 	return qs ? `${target}?${qs}` : target;
 }
@@ -1018,6 +1036,40 @@ async function readDirHandle(handle, prefix, pathMap, files, opts = {}) {
 const TOKEN_RE_SRC = "[a-zA-Z0-9]+|[^\\s]";
 function newTokenRegex() {
 	return new RegExp(TOKEN_RE_SRC, "gu");
+}
+
+const OBS_COL_RE = /^obs\.?$/i;
+const ARTEFACT_CODE_RE = /^[01]+$/;
+
+function round1(x) {
+	return Math.round(x * 10) / 10;
+}
+
+function lsGet(key, fallback = null) {
+	try {
+		const v = localStorage.getItem(key);
+		return v === null ? fallback : v;
+	} catch (e) {
+		return fallback;
+	}
+}
+function lsSet(key, value) {
+	try {
+		localStorage.setItem(key, value);
+	} catch (e) {}
+}
+function lsGetJson(key, fallback = null) {
+	try {
+		const v = localStorage.getItem(key);
+		return v === null ? fallback : JSON.parse(v);
+	} catch (e) {
+		return fallback;
+	}
+}
+function lsSetJson(key, value) {
+	try {
+		localStorage.setItem(key, JSON.stringify(value));
+	} catch (e) {}
 }
 
 function _hmsToSeconds(hms, sessionDate) {

@@ -186,7 +186,9 @@ async function pickFolder() {
 	}
 }
 
-function _pickLatestOverviewFile(files) {
+function _pickOverviewFile(files) {
+	const canon = files.get("overview.xlsx") || files.get("overviewplus.xlsx");
+	if (canon) return canon;
 	let latest = null;
 	let latestStamp = "";
 	for (const path of files.keys()) {
@@ -197,8 +199,7 @@ function _pickLatestOverviewFile(files) {
 			latestStamp = m[1];
 		}
 	}
-	if (latest) return latest;
-	return files.get("overviewplus.xlsx") || files.get("overview.xlsx") || null;
+	return latest;
 }
 
 async function loadCourse(ds) {
@@ -209,7 +210,7 @@ async function loadCourse(ds) {
 
 	console.log("[overview] loadCourse rootName =", ds.rootName);
 
-	const gradesFile = _pickLatestOverviewFile(ds.files);
+	const gradesFile = _pickOverviewFile(ds.files);
 	const pyStatsFile = ds.files.get("grades_stats.json") || null;
 	if (!gradesFile) {
 		alert("No Overview.xlsx or OverviewPlus.xlsx found.");
@@ -410,25 +411,6 @@ function parseStudentCsv(text) {
 	return map;
 }
 
-const _LLM_NAME_TOKENS = [
-	"chatgpt",
-	"gpt-",
-	"gpt ",
-	"sonnet",
-	"opus",
-	"claude",
-	"gemini",
-	"deepseek",
-	"ollama",
-	"llama",
-	"mistral",
-];
-function _looksLikeLlmName(name) {
-	const n = (name || "").trim().toLowerCase();
-	if (!n) return false;
-	return _LLM_NAME_TOKENS.some((t) => n.includes(t));
-}
-
 function parseStudent(r) {
 	const str = (c) => (c != null && r[c] != null ? String(r[c]).trim() : "");
 	const num = (c) => {
@@ -441,8 +423,7 @@ function parseStudent(r) {
 
 	const _excVal = str(COL.excluded).toUpperCase();
 	const _nameStr = str(COL.name);
-	const _isLlm =
-		_excVal === "LLM" || _excVal === "AI" || _looksLikeLlmName(_nameStr);
+	const _isLlm = _excVal === "LLM" || _excVal === "AI";
 	const s = {
 		id: str(COL.id),
 		name: _nameStr,

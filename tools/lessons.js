@@ -12,8 +12,19 @@ async function _init() {
 	});
 	let names;
 	try {
-		const entries = await listServerDir("/lessons/");
-		names = entries.filter((e) => e.kind === "directory").map((e) => e.name);
+		const served = await detectServedDataSource();
+		const lessonGroup =
+			served && served.manifest && served.manifest.groups
+				? served.manifest.groups.lessons
+				: null;
+		if (lessonGroup) {
+			names = Object.keys(lessonGroup);
+		} else {
+			const entries = await listServerDir("/lessons/");
+			names = entries
+				.filter((e) => e.kind === "directory")
+				.map((e) => e.name);
+		}
 	} catch (e) {
 		_overlay.showError("Failed to load lessons: " + e.message);
 		return;
@@ -33,10 +44,17 @@ async function _init() {
 	const toSelect =
 		names.find((n) => n.toLowerCase() === (preselect || "").toLowerCase()) ||
 		names[0];
-	if (toSelect) _select(toSelect);
+	if (toSelect) {
+		const { ts, step, autoplay, speed } = parseToolParams();
+		const seek =
+			toSelect.toLowerCase() === (preselect || "").toLowerCase()
+				? { ts, step, autoplay, speed }
+				: null;
+		_select(toSelect, seek);
+	}
 }
 
-function _select(name) {
+function _select(name, seek) {
 	_current = name;
 
 	document.querySelectorAll("#lesson-tabs button").forEach((btn) => {
@@ -50,6 +68,7 @@ function _select(name) {
 	iframe.src = buildToolUrl("simulator.html", {
 		lesson: name,
 		group: "lessons",
+		...(seek || {}),
 	});
 	_overlay.showContent("preview");
 }

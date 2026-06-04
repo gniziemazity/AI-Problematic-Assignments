@@ -182,6 +182,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	}
 
 	try {
+		if (params.speed != null) vis.setSpeed(params.speed);
 		if (!urlAutoloaded && vis.micro.length) {
 			if (params.ts != null) vis.seekToTimestamp(params.ts);
 			else if (params.step != null) vis.seekToStep(params.step);

@@ -928,7 +928,7 @@ function _getTeacherNonCommentTokenTotal() {
 function _computeFollowScore(marksEntry) {
 	if (!marksEntry) return null;
 	if (typeof marksEntry.score === "number") {
-		return Math.round(marksEntry.score * 10) / 10;
+		return round1(marksEntry.score);
 	}
 	const total = _getTeacherNonCommentTokenTotal();
 	if (total === 0) return null;
@@ -954,7 +954,7 @@ function _computeFollowScore(marksEntry) {
 	const nFound = total - (nMissing - nPhantomMissing);
 	const raw =
 		Math.max(0, (nFound - nGhostExtra - nExtraUnpaired) / teacherTotal) * 100;
-	return Math.round(raw * 10) / 10;
+	return round1(raw);
 }
 
 function _updateTitleScore() {

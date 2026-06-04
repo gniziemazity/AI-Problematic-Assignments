@@ -31,32 +31,6 @@ function parseStudentRows(remarksBuf) {
 	const iInteractions = findCol(hdrR, /^interactions?$/i);
 	let iExcluded = hdrR.indexOf("Category");
 	if (iExcluded === -1) iExcluded = hdrR.indexOf("Excluded");
-	const iDiverge = hdrR.indexOf("Diverge");
-	const iChange = hdrR.indexOf("Change");
-	const langDivIdx = {};
-	const langChgIdx = {};
-	for (const def of LANG_COL_DEFS) {
-		const full = def.header || "";
-		const stem = full.replace(/\s+\(E\)$/i, "").trim();
-		const tryHeaders = [`${full} Div`, `${stem} Div`];
-		for (const h of tryHeaders) {
-			if (!h) continue;
-			const i = hdrR.indexOf(h);
-			if (i !== -1) {
-				langDivIdx[def.key] = i;
-				break;
-			}
-		}
-		const tryHeadersChg = [`${full} Chg`, `${stem} Chg`];
-		for (const h of tryHeadersChg) {
-			if (!h) continue;
-			const i = hdrR.indexOf(h);
-			if (i !== -1) {
-				langChgIdx[def.key] = i;
-				break;
-			}
-		}
-	}
 	const langIdx = {};
 	const langDescIdx = {};
 	for (const def of LANG_COL_DEFS) {
@@ -74,12 +48,8 @@ function parseStudentRows(remarksBuf) {
 			iFollowDesc,
 			iRemarksDesc,
 			iInteractions,
-			iDiverge,
-			iChange,
 			...Object.values(langIdx),
 			...Object.values(langDescIdx),
-			...Object.values(langDivIdx),
-			...Object.values(langChgIdx),
 		].filter((i) => i !== -1),
 	);
 
@@ -199,20 +169,6 @@ function parseStudentRows(remarksBuf) {
 		const commentEvents = commentDescText
 			? commentParser(commentDescText)
 			: [];
-		const divergeVal = iDiverge !== -1 ? parseFloat(row[iDiverge]) : NaN;
-		const changeVal = iChange !== -1 ? parseFloat(row[iChange]) : NaN;
-		const langDiv = {};
-		const langChg = {};
-		for (const def of LANG_COL_DEFS) {
-			if (langDivIdx[def.key] != null) {
-				const v = parseFloat(row[langDivIdx[def.key]]);
-				if (!isNaN(v)) langDiv[def.key] = v;
-			}
-			if (langChgIdx[def.key] != null) {
-				const v = parseFloat(row[langChgIdx[def.key]]);
-				if (!isNaN(v)) langChg[def.key] = v;
-			}
-		}
 		students.push({
 			name,
 			id: iId !== -1 ? String(row[iId] ?? "").trim() : "",
@@ -226,10 +182,6 @@ function parseStudentRows(remarksBuf) {
 			langPcts,
 			langEvents,
 			commentEvents,
-			divergence: isNaN(divergeVal) ? null : divergeVal,
-			change: isNaN(changeVal) ? null : changeVal,
-			langDiv,
-			langChg,
 			_rowIndex: i,
 		});
 	}
@@ -419,10 +371,6 @@ function _sortKeyOf(s, sortCol) {
 	if (sortCol === "name") return { type: "str", v: s.name || "" };
 	if (sortCol === "num") return { type: "str", v: s.num || "" };
 	if (sortCol === "follow") return { type: "num", v: s.followPct };
-	if (sortCol === "diverge")
-		return { type: "num", v: s.divergence == null ? NaN : s.divergence };
-	if (sortCol === "change")
-		return { type: "num", v: s.change == null ? NaN : s.change };
 	if (sortCol === "int") return { type: "str", v: s.interactions || "" };
 	if (sortCol === "fingerprint1") return { type: "str", v: s._fpMask };
 	if (sortCol === "fingerprint2") return { type: "num", v: s._fp2Count };
@@ -434,9 +382,9 @@ function _sortKeyOf(s, sortCol) {
 	}
 	if (sortCol.startsWith("artefact:")) {
 		const idx = parseInt(sortCol.slice("artefact:".length), 10);
-		const r = (s.remarks || []).find((x) => /^obs\.?$/i.test(x.col));
+		const r = (s.remarks || []).find((x) => OBS_COL_RE.test(x.col));
 		const code = r && r.val ? String(r.val).trim() : "";
-		const fired = /^[01]+$/.test(code) && code[idx] === "1" ? 1 : 0;
+		const fired = ARTEFACT_CODE_RE.test(code) && code[idx] === "1" ? 1 : 0;
 		return { type: "num", v: fired };
 	}
 	if (sortCol.startsWith("remark:")) {

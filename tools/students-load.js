@@ -74,10 +74,6 @@ async function loadXlsxFiles(files) {
 	const xlsxFiles = files.filter((f) =>
 		f.name.toLowerCase().endsWith(".xlsx"),
 	);
-	// Recency in epoch-ms, comparable across filename stamps and file mtime.
-	// Filename timestamps are converted to a real epoch (not a YYYYMMDD
-	// integer) so a stamped file and an unstamped freshly-written file sort
-	// correctly against each other.
 	const _recency = (f) => {
 		const name = f.name;
 		let m = name.match(/(\d{8})[-_](\d{6})(?=\D*$)/);
@@ -101,7 +97,11 @@ async function loadXlsxFiles(files) {
 		m = name.match(/(\d{8})(?=\D*$)/);
 		if (m) {
 			const d = m[1];
-			const ms = Date.UTC(+d.slice(0, 4), +d.slice(4, 6) - 1, +d.slice(6, 8));
+			const ms = Date.UTC(
+				+d.slice(0, 4),
+				+d.slice(4, 6) - 1,
+				+d.slice(6, 8),
+			);
 			if (!Number.isNaN(ms)) return ms;
 		}
 		return f.lastModified || 0;
@@ -162,10 +162,6 @@ async function loadXlsxFiles(files) {
 		legacyRemarksFile = remarksFiles[0] || null;
 	}
 
-	// Default = the most recently modified file among grades + every basis
-	// remarks file. Ties (e.g. served files with no mtime, or files written
-	// in the same second) fall back to the prior precedence: grades first,
-	// then DEFAULT_BASIS_ORDER, then the rest of REMARKS_BASES.
 	const _basisRank = (key) => {
 		if (key === GRADES_KEY) return -1;
 		const di = DEFAULT_BASIS_ORDER.indexOf(key);
@@ -183,10 +179,6 @@ async function loadXlsxFiles(files) {
 		return _basisRank(a.key) - _basisRank(b.key);
 	});
 
-	// Grades (when present) stays the in-memory base so the basis dropdown's
-	// Grades option and unsaved edits keep working; the newest file is the
-	// default view, overlaid on top of grades when the newest is a basis
-	// remarks file.
 	const _topCandidate = defaultCandidates[0] || null;
 	let initialFile = null;
 	let overlayFile = null;

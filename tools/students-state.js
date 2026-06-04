@@ -32,8 +32,6 @@ let _activeSheetName = "";
 let _activeHeaderRow = null;
 let _activeRemarkColIdx = {};
 const _dirtyEdits = new Map();
-// id -> OBS binary string as loaded from disk; lets the table flag which
-// individual artefact values changed since load/save (npm run students).
 const _origObs = new Map();
 const EDITABLE_COL_RE = /^(obs\.?|grade|comments?)$/i;
 

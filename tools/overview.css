@@ -371,9 +371,6 @@ td.asn-sep {
 	background: var(--clr-muted);
 }
 
-/* Heavier top border between assignment groups inside the Artefact Hit
- * Rate per Assignment table, so visual grouping survives without an
- * "Any artefact fired" summary row. */
 .artefact-rate-tbl tr.assn-sep td {
 	border-top: 1.5px solid var(--clr-border-mid);
 }

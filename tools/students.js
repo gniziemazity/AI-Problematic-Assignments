@@ -14,12 +14,19 @@ lessonNameEl.addEventListener("click", () => {
 
 (function () {
 	const qs = new URLSearchParams(location.search);
-	_paperMode = qs.get("paper") === "1";
+	const params = parseToolParams();
+	_paperMode =
+		(params.ids && params.ids.length > 0) ||
+		(params.star && params.star.length > 0);
 	const m = qs.get("mode") || "";
 	_modeParam = m === "lesson" || m === "assignment" ? m : null;
 	if (_paperMode) {
 		document.body.classList.add("paper-mode");
-		for (const id of ["basis-picker", "columns-picker", "assignment-toggle"]) {
+		for (const id of [
+			"basis-picker",
+			"columns-picker",
+			"assignment-toggle",
+		]) {
 			const el = document.getElementById(id);
 			if (el) el.style.display = "none";
 		}

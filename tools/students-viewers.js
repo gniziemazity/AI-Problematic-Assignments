@@ -105,8 +105,14 @@ async function _renderAssignment() {
 				: "Moodle Assignment Instructions";
 	const file = _findInstructionsFile();
 	try {
-		const text = file ? await readFileText(file) : await _fetchInstructionsText();
-		editor.innerHTML = fvRenderStaticEditor(text, "html", "instructions.html");
+		const text = file
+			? await readFileText(file)
+			: await _fetchInstructionsText();
+		editor.innerHTML = fvRenderStaticEditor(
+			text,
+			"html",
+			"instructions.html",
+		);
 	} catch {
 		editor.innerHTML = _msgEditorHtml("No instructions found.");
 	}
@@ -206,7 +212,9 @@ function _ensureViewers() {
 	_asgnView =
 		_vRestore("students.asgnView", "preview") === "code" ? "code" : "preview";
 
-	_vEl("asgn-view-preview").addEventListener("click", () => _setAsgnView("preview"));
+	_vEl("asgn-view-preview").addEventListener("click", () =>
+		_setAsgnView("preview"),
+	);
 	_vEl("asgn-view-code").addEventListener("click", () => _setAsgnView("code"));
 	_vEl("asgn-collapse").addEventListener("click", () => {
 		const col = _vEl("side-col");

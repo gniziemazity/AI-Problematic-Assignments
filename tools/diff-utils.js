@@ -509,8 +509,10 @@ class GradesDataSource extends DataSource {
 			if (e.kind === "directory") {
 				await this._crawl(base, `${childRel}/`, fileMap);
 			} else {
-				const url = new URL(`/grades-data/${base}${childRel}`, location.href)
-					.href;
+				const url = new URL(
+					`/grades-data/${base}${childRel}`,
+					location.href,
+				).href;
 				fileMap.set(childRel.toLowerCase(), new HttpFileLike(url, e.name));
 			}
 		}

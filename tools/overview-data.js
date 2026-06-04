@@ -4,7 +4,13 @@ const _COL_ALIASES = {
 	id: ["ID"],
 	name: ["Name"],
 	number: ["Number"],
-	pre_typing: ["Pre Typing", "Pre KPM", "Pre-typing", "Pre K/min", "Pre K/Min"],
+	pre_typing: [
+		"Pre Typing",
+		"Pre KPM",
+		"Pre-typing",
+		"Pre K/min",
+		"Pre K/Min",
+	],
 	post_typing: [
 		"Post Typing",
 		"Post KPM",
@@ -24,10 +30,6 @@ const _COL_ALIASES = {
 	excluded: ["Category", "Excluded"],
 };
 
-// Header-name patterns that fall back to "first KPM-like column before
-// the first lesson grade = pre_typing; first KPM-like column after the
-// last lesson grade = post_typing". Keep these lowercase for the
-// case-insensitive comparison in ``_populateColumnsFromHeader``.
 const _KPM_FALLBACK_NAMES = ["k/min", "kpm", "kpm avg", "k/min avg"];
 
 function _buildHeaderMap(headerRow) {
@@ -117,9 +119,6 @@ function _populateColumnsFromHeader(headerRow) {
 			}
 			return out;
 		};
-		// Accept several KPM header spellings as fallbacks (`K/min`,
-		// `KPM`, etc.). The first hit before/after the lesson-grade
-		// block wins.
 		let km = [];
 		for (const lower of _KPM_FALLBACK_NAMES) {
 			km = km.concat(findAllByName(lower));
@@ -133,9 +132,6 @@ function _populateColumnsFromHeader(headerRow) {
 			const after = km.find((i) => i > lastGrade);
 			if (after != null) COL.post_typing = after;
 		}
-		// Diagnostic: log what we picked so a missing KPM column
-		// can be debugged from the browser console without extra
-		// instrumentation.
 		console.log(
 			"[overview] KPM columns detected: pre =",
 			COL.pre_typing,
@@ -414,11 +410,6 @@ function parseStudentCsv(text) {
 	return map;
 }
 
-// LLM probe rows are typically listed under synthesised IDs and don't
-// carry a Category='LLM' marker (or legacy Excluded='LLM'/'AI'). Detect
-// them by name as well so they are kept out of cohort statistics (the
-// denominator on Students Passing was 52 = 38 students + 14 LLM rows
-// before this fix).
 const _LLM_NAME_TOKENS = [
 	"chatgpt",
 	"gpt-",

@@ -368,7 +368,8 @@ function renderTable() {
 	}
 	const hasAnyFp3 = fp3MaxBytes > 0;
 	_computeFingerprintMask(_students);
-	const showFp1 = !_paperMode && showFingerprint && !_hiddenCols.has("fingerprint1");
+	const showFp1 =
+		!_paperMode && showFingerprint && !_hiddenCols.has("fingerprint1");
 	const showFp2 = !_paperMode && hasAnyFp2 && !_hiddenCols.has("fingerprint2");
 	const showFp3 = !_paperMode && hasAnyFp3 && !_hiddenCols.has("fingerprint3");
 	if (showFp1)
@@ -981,14 +982,21 @@ function _toggleArtefact(student, colName, idx, el) {
 	const newVal = arr.join("");
 	_setDirty(student.id, colName, newVal);
 	if (r) r.val = newVal;
-	else (student.remarks || (student.remarks = [])).push({ col: colName, val: newVal });
+	else
+		(student.remarks || (student.remarks = [])).push({
+			col: colName,
+			val: newVal,
+		});
 	const baseRow =
 		_baseStudents && _baseStudents.find((x) => x.id === student.id);
 	if (baseRow) {
 		const br = (baseRow.remarks || []).find((x) => x.col === colName);
 		if (br) br.val = newVal;
 	}
-	el.innerHTML = renderArtefactCellSquare(arr[idx] === "1", _artefactSchema[idx]);
+	el.innerHTML = renderArtefactCellSquare(
+		arr[idx] === "1",
+		_artefactSchema[idx],
+	);
 	el.classList.toggle(
 		"artefact-changed",
 		_artefactChangedSince(student.id, idx, arr[idx] === "1"),

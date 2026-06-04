@@ -284,10 +284,16 @@ function _appendOverviewTotalsRow(tbody, rows) {
 	const fmtAvg = (v, dec = 1) => (v == null ? null : v.toFixed(dec));
 
 	tr.appendChild(addCell(null, "col-id sticky-l"));
-	tr.appendChild(addCell(`${nonAiCount} students`, "name-cell col-name sticky-l"));
+	tr.appendChild(
+		addCell(`${nonAiCount} students`, "name-cell col-name sticky-l"),
+	);
 	tr.appendChild(addCell(null, "col-num sticky-l"));
-	tr.appendChild(addCell(fmtAvg(mean(cohort.map((s) => s.pre_typing)), 0), "num"));
-	tr.appendChild(addCell(fmtAvg(mean(cohort.map((s) => s.self_eval)), 0), "num"));
+	tr.appendChild(
+		addCell(fmtAvg(mean(cohort.map((s) => s.pre_typing)), 0), "num"),
+	);
+	tr.appendChild(
+		addCell(fmtAvg(mean(cohort.map((s) => s.self_eval)), 0), "num"),
+	);
 
 	for (const a of ASSIGNMENTS) {
 		const hasFollow = a.follow != null;
@@ -326,9 +332,15 @@ function _appendOverviewTotalsRow(tbody, rows) {
 		);
 	}
 
-	tr.appendChild(addCell(fmtAvg(mean(cohort.map((s) => s.quiz_stii)), 0), "num asn-sep"));
-	tr.appendChild(addCell(fmtAvg(mean(cohort.map((s) => s.post_typing)), 0), "num"));
-	tr.appendChild(addCell(fmtAvg(mean(cohort.map((s) => s.avg_assignments)), 1), "num"));
+	tr.appendChild(
+		addCell(fmtAvg(mean(cohort.map((s) => s.quiz_stii)), 0), "num asn-sep"),
+	);
+	tr.appendChild(
+		addCell(fmtAvg(mean(cohort.map((s) => s.post_typing)), 0), "num"),
+	);
+	tr.appendChild(
+		addCell(fmtAvg(mean(cohort.map((s) => s.avg_assignments)), 1), "num"),
+	);
 
 	const partAvg = mean(cohort.map((s) => s.participation));
 	const pc = addCell(fmtPct(partAvg), "num");
@@ -341,7 +353,9 @@ function _appendOverviewTotalsRow(tbody, rows) {
 	tr.appendChild(addCell(fmtAvg(sum(cohort.map((s) => s.total_a)), 0), "num"));
 	tr.appendChild(addCell(fmtAvg(sum(cohort.map((s) => s.total_q)), 0), "num"));
 	tr.appendChild(addCell(fmtAvg(sum(cohort.map((s) => s.total_h)), 0), "num"));
-	tr.appendChild(addCell(fmtAvg(sum(cohort.map((s) => s.total_cdiff)), 0), "num"));
+	tr.appendChild(
+		addCell(fmtAvg(sum(cohort.map((s) => s.total_cdiff)), 0), "num"),
+	);
 
 	tbody.appendChild(tr);
 }

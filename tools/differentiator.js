@@ -1335,8 +1335,6 @@ async function toggleDocxViewer() {
 		}
 		body.innerHTML = sections.join("");
 	} catch (e) {
-		body.textContent = `Failed to render document: ${
-			(e && e.message) || e
-		}`;
+		body.textContent = `Failed to render document: ${(e && e.message) || e}`;
 	}
 }

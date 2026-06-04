@@ -31,27 +31,14 @@ function parseStudentRows(remarksBuf) {
 	const iInteractions = findCol(hdrR, /^interactions?$/i);
 	let iExcluded = hdrR.indexOf("Category");
 	if (iExcluded === -1) iExcluded = hdrR.indexOf("Excluded");
-	// Divergence / Change relative to the in-class starter. Optional —
-	// only present when the grading pipeline wrote them (basis files
-	// after the 2026-05 token_log_mixin extension). Per-language pairs
-	// follow the LANG_COL_DEFS extension naming convention.
 	const iDiverge = hdrR.indexOf("Diverge");
 	const iChange = hdrR.indexOf("Change");
-	// Per-language divergence headers are written as
-	// "HTML (E) Div" / "HTML (E) Chg" (the Excel writer keeps the
-	// "(E)" suffix to stay parallel with the existing follow / sim
-	// column block). Older versions used "HTML Div" / "HTML Chg";
-	// we accept both shapes so a regenerated remarks file from
-	// either version parses cleanly.
 	const langDivIdx = {};
 	const langChgIdx = {};
 	for (const def of LANG_COL_DEFS) {
 		const full = def.header || "";
 		const stem = full.replace(/\s+\(E\)$/i, "").trim();
-		const tryHeaders = [
-			`${full} Div`,
-			`${stem} Div`,
-		];
+		const tryHeaders = [`${full} Div`, `${stem} Div`];
 		for (const h of tryHeaders) {
 			if (!h) continue;
 			const i = hdrR.indexOf(h);
@@ -60,10 +47,7 @@ function parseStudentRows(remarksBuf) {
 				break;
 			}
 		}
-		const tryHeadersChg = [
-			`${full} Chg`,
-			`${stem} Chg`,
-		];
+		const tryHeadersChg = [`${full} Chg`, `${stem} Chg`];
 		for (const h of tryHeadersChg) {
 			if (!h) continue;
 			const i = hdrR.indexOf(h);
@@ -216,7 +200,7 @@ function parseStudentRows(remarksBuf) {
 			? commentParser(commentDescText)
 			: [];
 		const divergeVal = iDiverge !== -1 ? parseFloat(row[iDiverge]) : NaN;
-		const changeVal  = iChange  !== -1 ? parseFloat(row[iChange])  : NaN;
+		const changeVal = iChange !== -1 ? parseFloat(row[iChange]) : NaN;
 		const langDiv = {};
 		const langChg = {};
 		for (const def of LANG_COL_DEFS) {
@@ -243,7 +227,7 @@ function parseStudentRows(remarksBuf) {
 			langEvents,
 			commentEvents,
 			divergence: isNaN(divergeVal) ? null : divergeVal,
-			change:     isNaN(changeVal)  ? null : changeVal,
+			change: isNaN(changeVal) ? null : changeVal,
 			langDiv,
 			langChg,
 			_rowIndex: i,

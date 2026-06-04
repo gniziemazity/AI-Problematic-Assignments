@@ -43,13 +43,15 @@ function renderStats() {
 		const asgNames = ASSIGNMENTS.map((a) => a.name);
 		const passCounts = ASSIGNMENTS.map(
 			(a) =>
-				_students.filter((s) => !s.excluded && PASSING.has(s.lessons[a.n - 1].status))
-					.length,
+				_students.filter(
+					(s) => !s.excluded && PASSING.has(s.lessons[a.n - 1].status),
+				).length,
 		);
 		const participCounts = ASSIGNMENTS.map(
 			(a) =>
 				_students.filter(
-					(s) => !s.excluded && (s.lessons[a.n - 1].obs ?? "").trim() !== "",
+					(s) =>
+						!s.excluded && (s.lessons[a.n - 1].obs ?? "").trim() !== "",
 				).length,
 		);
 		const participMax = Math.max(...participCounts, 1) + 1;
@@ -62,8 +64,6 @@ function renderStats() {
 			participMax,
 		);
 
-		// Follow Scores (Lessons) intentionally rendered BEFORE AI Use
-		// (Assignments) so the engagement metric leads the AI question.
 		if (names5.length)
 			addBarCard(
 				body,
@@ -79,9 +79,6 @@ function renderStats() {
 
 		const submittedAssn = py.assignments.map((a) => a.n_submitted ?? 0);
 		const names6 = py.assignments.map((a) => a.name);
-		// AI counts now come from the high-severity-only firing flag
-		// (n_ai_high) when present, falling back to the legacy n_ai
-		// counter for older grades_stats.json files.
 		const aiAssn = py.assignments.map((a) => a.n_ai_high ?? a.n_ai ?? 0);
 		addStackedShareCard(
 			body,
@@ -95,12 +92,6 @@ function renderStats() {
 
 	if (py.assignments?.some((a) => a.artefacts?.length)) {
 		const card = mkCard(body, "Artefact Hit Rate per Assignment", "wide");
-		// Side-by-side layout: hit-rate (with student + LLM columns)
-		// on the left, fired-vs-trouble on the right. The two tables
-		// share one row per (assignment × artefact) so visual scanning
-		// across them lines up; the "Any artefact fired" summary row was
-		// removed in favour of bolding the maximum-hit-rate row per
-		// assignment.
 		const sideBySide = el("div", "artefact-rate-grid");
 		sideBySide.style.cssText =
 			"display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start";
@@ -204,12 +195,12 @@ function renderStats() {
 			],
 			// Extra engagement correlations added 2026-05.
 			...[
-				["Self-evaluation",    t.self_eval_corr],
-				["Questions asked",    t.questions_corr],
-				["Answers given",      t.answers_corr],
-				["Help received",      t.help_corr],
-				["Kahoot",             t.kahoot_corr],
-				["Final quiz (Știi)",  t.quiz_stii_corr],
+				["Self-evaluation", t.self_eval_corr],
+				["Questions asked", t.questions_corr],
+				["Answers given", t.answers_corr],
+				["Help received", t.help_corr],
+				["Kahoot", t.kahoot_corr],
+				["Final quiz (Știi)", t.quiz_stii_corr],
 			]
 				.filter(([, corr]) => corr)
 				.map(([lbl, corr]) => [
@@ -222,10 +213,6 @@ function renderStats() {
 		card.insertAdjacentHTML("beforeend", html);
 	}
 
-	// Per-artefact engagement correlations (added 2026-05). One row per
-	// (assignment × artefact) showing Spearman ρ against participation,
-	// self-eval, and Q/A activity. Surfaces artefacts that
-	// disproportionately fire on disengaged students.
 	if (py.artefact_summary?.per_artefact_engagement?.length) {
 		const card = mkCard(
 			body,
@@ -252,7 +239,9 @@ function renderStats() {
 		let lastAssn = "";
 		py.artefact_summary.per_artefact_engagement.forEach((p) => {
 			const assnCell =
-				p.assignment !== lastAssn ? escHtml(p.assn_name || p.assignment) : "";
+				p.assignment !== lastAssn
+					? escHtml(p.assn_name || p.assignment)
+					: "";
 			const trAttr =
 				p.assignment !== lastAssn && lastAssn !== ""
 					? ' class="assn-sep"'
@@ -382,21 +371,10 @@ function renderStats() {
 		card.insertAdjacentHTML("beforeend", html + "</table>");
 	}
 
-	// New cards added by the artefact-assignments-paper proposals:
-	// - Per-assignment divergence/change from in-class starter
-	// - Co-firing matrix (lift, clickable cells)
-	// - Curated-moment counters
-	// The earlier "Per-Artefact Rate: Students vs LLM Probes" card was
-	// removed; LLM hit rates now appear inline in the Artefact Hit Rate
-	// per Assignment card.
 	renderDivergenceCards(body);
 	renderCofiringMatrix(body);
 	renderCuratedMoments(body);
 
-	// End-of-page section: per-user-request these cards stay at the
-	// bottom of the Stats view so the engagement / divergence cards
-	// above them are read first. Scatter plots come last, separated
-	// by a horizontal divider so they read as a distinct block.
 	_renderEndOfPageCards(body, py, fmtP, fmtPct, fmtR, ACCENT);
 }
 
@@ -487,9 +465,6 @@ function _renderEndOfPageCards(body, py, fmtP, fmtPct, fmtR, ACCENT) {
 		card.insertAdjacentHTML("beforeend", html);
 	}
 
-	// Cohort-only filter: EXCLUDED course students and LLM probe rows
-	// stay off the follow-vs-grade scatter so they don't distort the
-	// visible trend.
 	const cohort = _students.filter((s) => !s.excluded);
 	const scatterAssns = ASSIGNMENTS.filter((a) => a.follow != null);
 	const nonEmpty = scatterAssns.filter((a) =>
@@ -582,9 +557,6 @@ function renderDivergenceCards(body) {
 		);
 		return;
 	}
-	// LLM payloads come from the parallel ``llm_assignments`` block in
-	// grades_stats.json; index by lower-case assignment name so the
-	// student/LLM rows align even if the LLM side is missing entries.
 	const llmByLower = new Map();
 	for (const a of _pyStats.llm_assignments || []) {
 		if (a?.lower && a?.divergence?.teacher_total > 0) {
@@ -620,7 +592,7 @@ function renderDivergenceCards(body) {
 	html += "</tr>";
 
 	const pctOf = (mean, tt) =>
-		mean == null || !tt ? "—" : (100 * mean / tt).toFixed(1) + "%";
+		mean == null || !tt ? "—" : ((100 * mean) / tt).toFixed(1) + "%";
 
 	assignments.forEach((a) => {
 		const d = a.divergence;
@@ -656,10 +628,6 @@ function renderDivergenceCards(body) {
 	card.insertAdjacentHTML("beforeend", html + "</table>");
 }
 
-// renderStudentVsLlmCards was removed in 2026-05. LLM hit rates now
-// appear inline in the "Artefact Hit Rate per Assignment" card so the
-// reader can compare student vs LLM in one place.
-
 function renderCofiringMatrix(body) {
 	const pairs = _pyStats?.cofiring;
 	if (!pairs?.length) return;
@@ -693,14 +661,18 @@ function renderCofiringMatrix(body) {
 	const byAssn = new Map();
 	filtered.forEach((p) => {
 		if (!byAssn.has(p.assignment))
-			byAssn.set(p.assignment, { name: p.assn_name || p.assignment, groups: new Map() });
+			byAssn.set(p.assignment, {
+				name: p.assn_name || p.assignment,
+				groups: new Map(),
+			});
 		const a = byAssn.get(p.assignment);
 		if (!a.groups.has(p.x_key)) a.groups.set(p.x_key, []);
 		a.groups.get(p.x_key).push(p);
 	});
 	const sevHtml = (sev) => {
 		if (!sev) return "";
-		const cls = sev === "high" ? "sev-high" : sev === "low" ? "sev-low" : "sev-med";
+		const cls =
+			sev === "high" ? "sev-high" : sev === "low" ? "sev-low" : "sev-med";
 		return ` <span class="sev-pill ${cls}">${sev[0].toUpperCase()}</span>`;
 	};
 	let html =
@@ -709,7 +681,7 @@ function renderCofiringMatrix(body) {
 		"<th>n_xy / n_x</th><th>Joint firers</th></tr>";
 	let firstAssnSeen = false;
 	byAssn.forEach((aGroup, assnLower) => {
-		const assnSep = firstAssnSeen ? " class=\"assn-sep\"" : "";
+		const assnSep = firstAssnSeen ? ' class="assn-sep"' : "";
 		firstAssnSeen = true;
 		let firstRowOfAssn = true;
 		aGroup.groups.forEach((rows, xKey) => {
@@ -723,7 +695,9 @@ function renderCofiringMatrix(body) {
 				const bo = isMax ? "<b>" : "";
 				const bc = isMax ? "</b>" : "";
 				const pyx =
-					p.p_y_given_x != null ? (p.p_y_given_x * 100).toFixed(0) + "%" : "—";
+					p.p_y_given_x != null
+						? (p.p_y_given_x * 100).toFixed(0) + "%"
+						: "—";
 				const py = p.p_y != null ? (p.p_y * 100).toFixed(0) + "%" : "—";
 				const liftStr = p.lift != null ? p.lift.toFixed(2) + "×" : "—";
 				const chips = _idChips(p.joint_ids, 8, p.assignment);
@@ -750,7 +724,11 @@ function renderCofiringMatrix(body) {
 function renderCuratedMoments(body) {
 	const groups = _pyStats?.curated_moments;
 	if (!groups?.length) return;
-	const card = mkCard(body, "Curated Learning Moments — Reached vs Missed", "wide");
+	const card = mkCard(
+		body,
+		"Curated Learning Moments — Reached vs Missed",
+		"wide",
+	);
 	card.insertAdjacentHTML(
 		"beforeend",
 		'<div style="font-size:11px;color:var(--clr-muted);margin-bottom:6px">' +
@@ -766,7 +744,8 @@ function renderCuratedMoments(body) {
 		"<th>Reached</th><th>Missed by</th></tr>";
 	groups.forEach((g) => {
 		g.moments.forEach((m, i) => {
-			const reached = `${m.n_reached}/${m.n_valid}` +
+			const reached =
+				`${m.n_reached}/${m.n_valid}` +
 				` <span style='color:var(--clr-muted)'>` +
 				`(${m.n_valid ? ((m.n_reached / m.n_valid) * 100).toFixed(0) + "%" : "—"})</span>`;
 			const chips = _idChips(m.missed_ids, 12, g.assignment);
@@ -846,12 +825,6 @@ function renderLessonStats(body) {
 		_barCharts.push(chart);
 	}
 
-	// Tokens per Lesson now shows the three coding-tokens stacks
-	// (HTML, CSS, JS) only. Py is rarely populated for the web
-	// course, and Comment / Dev confused the headline by adding
-	// non-code tokens to the stack. Drop them; if Py is wanted back
-	// for a future Python course, add it back here and update the
-	// stack arrays.
 	const tHtml = numFor("tokens_html");
 	const tCss = numFor("tokens_css");
 	const tJs = numFor("tokens_js");

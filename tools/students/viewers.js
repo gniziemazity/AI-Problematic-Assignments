@@ -393,7 +393,7 @@ function selectStudentInline(student) {
 	_ensureViewers();
 	_selectedStudent = student;
 	const tb = _vEl("asgn-view-toggle");
-	if (tb) tb.hidden = false;
+	if (tb) tb.hidden = _paperMode;
 	const col = _vEl("side-col");
 	if (col && col.hidden) {
 		_setSideCol(true);

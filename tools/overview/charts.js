@@ -92,7 +92,7 @@ function addAiUseCard(parent, title, labels, strong, medium, none, totals) {
 			{
 				data: medium,
 				color: artefactFiredColorFor("medium"),
-				label: "medium artefacts",
+				label: "reliable artefacts",
 			},
 			{ data: none, color: THEME.artefactOk, label: "clean" },
 		],
@@ -105,7 +105,7 @@ function addAiUseCard(parent, title, labels, strong, medium, none, totals) {
 				) + 1,
 			tooltipCallback: (_l, _v, si, gi) => {
 				if (si === 0) return [`Watermarks: ${strong[gi]}`];
-				if (si === 1) return [`Medium artefacts: ${medium[gi]}`];
+				if (si === 1) return [`Reliable artefacts: ${medium[gi]}`];
 				return [`Clean: ${none[gi]}`];
 			},
 			barLabel: (gi, si) => {
@@ -136,6 +136,7 @@ function addBarCard(
 	const chart = new BarChart(box, {
 		yMin: 0,
 		yMax,
+		yTickSuffix: tooltipFmt === "pct" ? "%" : "",
 		tooltipCallback:
 			tooltipFn ??
 			((_label, val) => [
@@ -209,6 +210,7 @@ function _addDurationBoxCard(
 			max: yMax,
 			ticks: opts.ticks || _autoTicks(yMax, 5),
 			color: THEME.label,
+			suffix: opts.tickSuffix || "",
 		},
 	});
 	chart.setData([

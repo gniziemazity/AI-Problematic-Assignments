@@ -562,11 +562,12 @@ function isArtefactPattern(raw) {
 }
 
 function formatInteractionCounts(a, q, h) {
-	const parts = [];
-	if (+a > 0) parts.push(`${Math.round(+a)}🙋`);
-	if (+q > 0) parts.push(`${Math.round(+q)}❓`);
-	if (+h > 0) parts.push(`${Math.round(+h)}🤝`);
-	return parts.join(" ");
+	const fmt = (n, emoji) => {
+		const c = Math.round(+n);
+		if (!(c > 0)) return null;
+		return c === 1 ? emoji : `${emoji}×${c}`;
+	};
+	return [fmt(a, "🙋"), fmt(q, "❓"), fmt(h, "🤝")].filter(Boolean).join(" ");
 }
 
 function renderArtefactBadges(raw, schema) {

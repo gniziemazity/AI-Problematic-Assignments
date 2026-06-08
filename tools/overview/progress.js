@@ -108,6 +108,7 @@ function _addProgressFollowBoxplot(body, students) {
 			max: 100,
 			ticks: [0, 20, 40, 60, 80, 100],
 			color: THEME.label,
+			suffix: "%",
 		},
 	});
 	chart.setData(datasets);
@@ -145,6 +146,7 @@ function _buildStudentProgressCard(s, labels) {
 		max: 104,
 		ticks: [0, 20, 40, 60, 80, 100],
 		color: THEME.label,
+		suffix: "%",
 	};
 	const gradeAxis = {
 		min: -0.25,

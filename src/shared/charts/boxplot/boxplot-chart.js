@@ -77,8 +77,9 @@ class BoxPlotChart {
 			ctx.font = "9px sans-serif";
 			ctx.textAlign = "right";
 			ctx.textBaseline = "middle";
+			const _ysfx = leftAxis.suffix || "";
 			for (const v of leftAxis.ticks) {
-				ctx.fillText(v, left - 5, this._axisY(v, "left"));
+				ctx.fillText(v + _ysfx, left - 5, this._axisY(v, "left"));
 			}
 		}
 

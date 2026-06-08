@@ -291,8 +291,27 @@ function _ensureCodeFV() {
 	return _codeFV;
 }
 
-function _studentHtmlUrl(name) {
-	return `/${_groupFolder()}/${encodeURIComponent(_lessonName)}/anon_ids/${encodeURIComponent(_selectedStudent.id)}/${encodeURIComponent(name)}`;
+async function _studentPreviewSrcdoc(htmlName) {
+	if (!_selectedStudent || !_allFiles) return "";
+	const dir = `anon_ids/${_selectedStudent.id}/`;
+	let html = "";
+	const filesMap = {};
+	for (const [p, f] of _allFiles) {
+		if (!p.startsWith(dir)) continue;
+		const base = f.name;
+		try {
+			if (base === htmlName) {
+				html = await readFileText(f);
+			} else if (/\.(css|js)$/i.test(base)) {
+				filesMap[base] = await readFileText(f);
+			} else if (typeof IMAGE_EXT !== "undefined" && IMAGE_EXT.test(base)) {
+				filesMap[base] = await readFileDataUri(f);
+			}
+		} catch {}
+	}
+	return typeof inlineFilesInHtml === "function"
+		? inlineFilesInHtml(html, filesMap) || html
+		: html;
 }
 
 function _studentCodeFiles() {
@@ -321,7 +340,7 @@ async function _renderCodeFile(name) {
 	}
 	if (/\.html?$/i.test(name) && _selectedStudent) {
 		_codeFV.showPreview();
-		_codeFV.setPreviewSrc(_studentHtmlUrl(name));
+		_codeFV.setPreviewSrcdoc(await _studentPreviewSrcdoc(name));
 	}
 }
 
@@ -336,7 +355,7 @@ async function _populateCodeView() {
 	const htmlName = names.find((n) => /\.html?$/i.test(n));
 	if (htmlName) {
 		fv.showPreview();
-		fv.setPreviewSrc(_studentHtmlUrl(htmlName));
+		fv.setPreviewSrcdoc(await _studentPreviewSrcdoc(htmlName));
 	} else {
 		fv.hidePreview();
 	}

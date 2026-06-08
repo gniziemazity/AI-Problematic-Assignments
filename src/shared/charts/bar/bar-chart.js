@@ -135,7 +135,12 @@ class BarChart {
 			ctx.font = "9px sans-serif";
 			ctx.textAlign = "right";
 			ctx.textBaseline = "middle";
-			ctx.fillText(v % 1 === 0 ? v : v.toFixed(1), left - 5, py);
+			ctx.fillText(
+				(v % 1 === 0 ? v : v.toFixed(1)) +
+					(this._options.yTickSuffix || ""),
+				left - 5,
+				py,
+			);
 		}
 
 		const stackTops = [];

@@ -142,6 +142,7 @@ function renderStats() {
 				{
 					yMax: 100,
 					ticks: [0, 20, 40, 60, 80, 100],
+					tickSuffix: "%",
 					subLabels: followDists.map((d) => `n=${d.length}`),
 				},
 			);

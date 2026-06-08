@@ -295,22 +295,32 @@ async function _studentPreviewSrcdoc(htmlName) {
 	if (!_selectedStudent || !_allFiles) return "";
 	const dir = `anon_ids/${_selectedStudent.id}/`;
 	let html = "";
+	let baseUrl = "";
 	const filesMap = {};
+	const mediaUris = {};
 	for (const [p, f] of _allFiles) {
-		if (!p.startsWith(dir)) continue;
 		const base = f.name;
+		const inStudent = p.startsWith(dir);
 		try {
-			if (base === htmlName) {
+			if (inStudent && base === htmlName) {
 				html = await readFileText(f);
-			} else if (/\.(css|js)$/i.test(base)) {
+				if (typeof f.url === "string") {
+					baseUrl = f.url.replace(/[^/]*$/, "");
+				}
+			} else if (inStudent && /\.(css|js)$/i.test(base)) {
 				filesMap[base] = await readFileText(f);
-			} else if (typeof IMAGE_EXT !== "undefined" && IMAGE_EXT.test(base)) {
-				filesMap[base] = await readFileDataUri(f);
+			} else if (
+				typeof MEDIA_EXT !== "undefined" &&
+				MEDIA_EXT.test(p) &&
+				!(base in mediaUris) &&
+				(inStudent || /^correct\//i.test(p) || /^start\//i.test(p))
+			) {
+				mediaUris[base] = fileToUrl(f);
 			}
 		} catch {}
 	}
-	return typeof inlineFilesInHtml === "function"
-		? inlineFilesInHtml(html, filesMap) || html
+	return typeof buildPreviewSrcdoc === "function"
+		? buildPreviewSrcdoc(html, filesMap, mediaUris, baseUrl)
 		: html;
 }
 

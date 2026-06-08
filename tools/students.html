@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Students</title>
-		<link rel="stylesheet" href="shared.css" />
+		<link rel="stylesheet" href="shared/shared.css" />
 		<style>
 			body {
 				display: flex;
@@ -33,6 +33,7 @@
 			}
 
 			#lesson-name {
+				display: none;
 				font-weight: bold;
 				color: var(--clr-text);
 				margin-right: 8px;
@@ -172,6 +173,11 @@
 			tbody tr.row-emphasis td:first-child {
 				box-shadow: inset 3px 0 0 var(--clr-accent);
 			}
+			tbody tr.row-nofiles td.col-id,
+			tbody tr.row-nofiles td.col-name,
+			tbody tr.row-nofiles td.col-num {
+				color: var(--clr-fail-fade);
+			}
 
 			tbody tr:hover {
 				background: var(--clr-row-hover);
@@ -227,9 +233,16 @@
 				width: 48px;
 			}
 			.col-artefact {
-				width: 34px;
+				width: 24px;
 				text-align: center;
 				white-space: nowrap;
+				padding-left: 4px;
+				padding-right: 4px;
+			}
+			.col-artefact:has(+ .col-artefact) {
+				border-right: none;
+			}
+			td.col-artefact {
 				position: relative;
 			}
 			.col-artefact sub {
@@ -461,9 +474,6 @@
 			.col-fingerprint .fp-mark.lang-py {
 				background: var(--clr-purple);
 			}
-			.col-fingerprint .fp-mark.lang-comment {
-				background: var(--clr-green);
-			}
 			.col-fingerprint .fp-mark.lang-unk {
 				background: var(--clr-gray);
 			}
@@ -606,6 +616,12 @@
 				border-bottom: 1px solid var(--clr-border);
 				flex-shrink: 0;
 			}
+			#asgn-timeline {
+				margin-left: auto;
+			}
+			body.paper-mode #toolbar {
+				display: none;
+			}
 			.sp-label {
 				font-size: 11px;
 				font-weight: bold;
@@ -635,6 +651,9 @@
 				background: var(--clr-accent);
 				color: #fff;
 			}
+			#asgn-view-toggle {
+				margin-left: 12px;
+			}
 			.sp-collapse-btn {
 				border: none;
 				background: none;
@@ -648,7 +667,6 @@
 				color: var(--clr-accent);
 			}
 			.sp-diff-btn {
-				margin-left: auto;
 				padding: 2px 8px;
 				font-size: 11px;
 				border: 1px solid var(--clr-diff-btn-border);
@@ -710,6 +728,21 @@
 				width: 100%;
 				border: 0;
 				background: var(--clr-bg);
+				min-height: 0;
+			}
+			#student-code-view {
+				flex: 1 1 0;
+				min-width: 0;
+				min-height: 0;
+				display: flex;
+				flex-direction: column;
+			}
+			#student-code-view[hidden] {
+				display: none;
+			}
+			#student-code-fv {
+				flex: 1 1 0;
+				min-width: 0;
 				min-height: 0;
 			}
 			#asgn-pane .sp-head {
@@ -938,6 +971,50 @@
 								</button>
 								<button id="asgn-view-code" type="button">Code</button>
 							</div>
+							<div
+								class="sp-toggle"
+								id="asgn-view-toggle"
+								hidden
+								title="Toggle the panel between the differentiator and the student's code + preview"
+							>
+								<button
+									id="asgn-view-diff"
+									type="button"
+									class="active"
+								>
+									Diff
+								</button>
+								<button id="asgn-view-stu-code" type="button">
+									Code
+								</button>
+							</div>
+							<button
+								id="asgn-timeline"
+								class="sp-diff-btn"
+								type="button"
+								hidden
+								title="Open timeline for this lesson"
+							>
+								Timeline
+							</button>
+							<button
+								id="asgn-simulator"
+								class="sp-diff-btn"
+								type="button"
+								hidden
+								title="Open simulator for this lesson"
+							>
+								Simulator
+							</button>
+							<button
+								id="asgn-download-plan"
+								class="sp-diff-btn"
+								type="button"
+								hidden
+								title="Download lesson plan (zip)"
+							>
+								Download Plan
+							</button>
 						</div>
 						<div class="sp-body" id="asgn-body" data-view="preview">
 							<pre class="sp-editor" id="asgn-editor"></pre>
@@ -945,7 +1022,7 @@
 								class="sp-preview"
 								id="asgn-preview"
 								title="Assignment"
-								sandbox="allow-scripts allow-same-origin"
+								sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
 							></iframe>
 						</div>
 					</div>
@@ -959,6 +1036,9 @@
 							></iframe>
 							<div class="sp-empty" id="student-empty">
 								Select a student row to load the differentiator
+							</div>
+							<div id="student-code-view" hidden>
+								<div id="student-code-fv"></div>
 							</div>
 						</div>
 					</div>
@@ -976,20 +1056,26 @@
 			<div id="doc-viewer-body"></div>
 		</div>
 
-		<script src="diff-utils.js"></script>
-		<script src="drag-divider.js"></script>
+		<script src="shared/diff-utils.js"></script>
+		<script src="shared/data-source.js"></script>
+		<script src="shared/drag-divider.js"></script>
 		<script src="languages/profiles.js"></script>
-		<script src="simulator-highlight.js"></script>
-		<script src="file-viewer.js"></script>
-		<script src="mammoth.browser.min.js"></script>
-		<script src="students-state.js"></script>
-		<script src="students-load.js"></script>
-		<script src="students-parse.js"></script>
-		<script src="students-table.js"></script>
-		<script src="students-viewers.js"></script>
-		<script src="mini-zip.js"></script>
-		<script src="students-save.js"></script>
-		<script src="students.js"></script>
-		<script src="xlsx.full.min.js"></script>
+		<script src="shared/simulator-highlight.js"></script>
+		<script src="shared/file-viewer.js"></script>
+		<script src="shared/mammoth.browser.min.js"></script>
+		<script src="students/state.js"></script>
+		<script src="students/load.js"></script>
+		<script src="students/parse.js"></script>
+		<script src="students/unicode.js"></script>
+		<script src="students/sort.js"></script>
+		<script src="students/fingerprint.js"></script>
+		<script src="students/docs.js"></script>
+		<script src="students/tooltip.js"></script>
+		<script src="students/table.js"></script>
+		<script src="students/viewers.js"></script>
+		<script src="shared/mini-zip.js"></script>
+		<script src="students/save.js"></script>
+		<script src="students/index.js"></script>
+		<script src="shared/xlsx.full.min.js"></script>
 	</body>
 </html>

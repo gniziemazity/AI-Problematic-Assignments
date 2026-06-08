@@ -1,59 +1,5 @@
 "use strict";
 
-function _buildByteFingerprint(events, { trackLangs = false } = {}) {
-	const bytes = [];
-	const langs = trackLangs ? [] : null;
-	let cur = 0;
-	let count = 0;
-	for (const ev of events) {
-		const tok = ev.token || ev.label || "";
-		const bit = tok.length % 2;
-		cur = (cur << 1) | bit;
-		if (langs) langs.push(ev.lang || null);
-		count++;
-		if (count === 8) {
-			bytes.push(cur);
-			cur = 0;
-			count = 0;
-		}
-	}
-	if (count > 0) {
-		cur = cur << (8 - count);
-		bytes.push(cur);
-	}
-	return { bytes, langs };
-}
-
-function _renderByteFingerprint(
-	wrap,
-	bytes,
-	{ langs, classPrefix, bytesPerCol = 2 } = {},
-) {
-	const bar = document.createElement("div");
-	bar.className = `${classPrefix}-bar`;
-	for (let i = 0; i < bytes.length; i += bytesPerCol) {
-		const col = document.createElement("div");
-		col.className = `${classPrefix}-byte`;
-		for (let j = 0; j < bytesPerCol; j++) {
-			const byteIdx = i + j;
-			const b = byteIdx < bytes.length ? bytes[byteIdx] : 0;
-			for (let k = 7; k >= 0; k--) {
-				const bit = (b >> k) & 1;
-				const px = document.createElement("div");
-				px.className = `${classPrefix}-bit` + (bit ? " on" : "");
-				if (bit && langs) {
-					const lang = langs[byteIdx * 8 + (7 - k)];
-					const lc = lang ? langColorFor(lang) : null;
-					if (lc) px.style.background = lc;
-				}
-				col.appendChild(px);
-			}
-		}
-		bar.appendChild(col);
-	}
-	wrap.appendChild(bar);
-}
-
 function _updateHighlightChip() {
 	const toolbar = document.getElementById("toolbar");
 	if (!toolbar) return;
@@ -114,87 +60,6 @@ function _setHeaderLabel(el, spec) {
 		el.innerHTML = escHtml(spec.label).replace(/_(\w+)/g, "<sub>$1</sub>");
 	} else {
 		el.textContent = spec.label;
-	}
-}
-
-function _studentDocFiles(student) {
-	if (!student || !student.id) return [];
-	const sid = String(student.id).toLowerCase();
-	const out = [];
-	for (const [key, file] of _allFiles) {
-		const m = key.match(/(?:^|\/)anon_ids\/([^/]+)\/(.+\.(docx|pdf))$/i);
-		if (m && m[1] === sid) {
-			out.push({
-				name: m[2].split("/").pop(),
-				file,
-				ext: m[3].toLowerCase(),
-			});
-		}
-	}
-	return out;
-}
-
-function _appendDocLinks(el, student) {
-	for (const d of _studentDocFiles(student)) {
-		const a = document.createElement("span");
-		a.className = "doc-link";
-		a.textContent = d.ext === "pdf" ? "📕" : "📄";
-		a.title = "Open " + d.name;
-		a.addEventListener("click", (e) => {
-			e.stopPropagation();
-			_openStudentDoc(d);
-		});
-		el.appendChild(a);
-	}
-}
-
-let _docViewerWired = false;
-function _wireDocViewer() {
-	if (_docViewerWired) return;
-	const win = document.getElementById("doc-viewer");
-	if (!win) return;
-	_docViewerWired = true;
-	const head = document.getElementById("doc-viewer-head");
-	if (head && typeof makeDraggable === "function") makeDraggable(head, win);
-	const close = document.getElementById("doc-viewer-close");
-	if (close)
-		close.addEventListener("click", () => win.classList.remove("is-open"));
-}
-
-async function _openStudentDoc(d) {
-	_wireDocViewer();
-	const win = document.getElementById("doc-viewer");
-	const body = document.getElementById("doc-viewer-body");
-	if (!win || !body) return;
-	document.getElementById("doc-viewer-title").textContent = d.name;
-	win.classList.add("is-open");
-	body.style.padding = "";
-	body.textContent = "Loading…";
-	try {
-		if (d.ext === "pdf") {
-			let url = d.file.url;
-			if (!url) {
-				const buf = await readFileArray(d.file);
-				url = URL.createObjectURL(
-					new Blob([buf], { type: "application/pdf" }),
-				);
-			}
-			body.style.padding = "0";
-			body.innerHTML = "";
-			const frame = document.createElement("iframe");
-			frame.src = url;
-			body.appendChild(frame);
-		} else {
-			if (typeof window.mammoth === "undefined") {
-				body.textContent = "Word viewer (mammoth.js) failed to load.";
-				return;
-			}
-			const buf = await readFileArray(d.file);
-			const res = await window.mammoth.convertToHtml({ arrayBuffer: buf });
-			body.innerHTML = res.value || "(empty document)";
-		}
-	} catch (e) {
-		body.textContent = "Failed to open document: " + ((e && e.message) || e);
 	}
 }
 
@@ -272,77 +137,8 @@ function renderTable() {
 			sortKey: "lang:" + def.key,
 		});
 
-	const _hasFpTs = (ev) =>
-		ev.kind && ev.kind !== "normal" && ev.ts != null && ev.ts > 0;
-	const _isFpEvent = (ev) => ev.kind && ev.kind !== "normal";
-	let fpMinTs = Infinity;
-	let fpMaxTs = -Infinity;
-	for (const s of _students) {
-		for (const ev of s.langEvents || []) {
-			if (!_hasFpTs(ev)) continue;
-			if (ev.ts < fpMinTs) fpMinTs = ev.ts;
-			if (ev.ts > fpMaxTs) fpMaxTs = ev.ts;
-		}
-	}
-	const fpRange = fpMaxTs - fpMinTs;
-	const useFpTs = isFinite(fpMinTs) && isFinite(fpMaxTs) && fpRange > 0;
-	const hasAnyFpEvents = _students.some((s) =>
-		(s.langEvents || []).some(_isFpEvent),
-	);
-	const showFingerprint = useFpTs || hasAnyFpEvents;
-	for (const s of _students) {
-		s._fpPositions = [];
-		if (!showFingerprint) continue;
-		const mistakes = (s.langEvents || [])
-			.filter(useFpTs ? _hasFpTs : _isFpEvent)
-			.map((ev) => ({ ev, lang: ev.lang || "unk" }));
-		if (!mistakes.length) continue;
-		const positions = useFpTs
-			? mistakes.map(({ ev }) => (ev.ts - fpMinTs) / fpRange)
-			: mistakes.map((_, i) =>
-					mistakes.length > 1 ? i / (mistakes.length - 1) : 0.5,
-				);
-		s._fpPositions = mistakes.map(({ lang }, i) => ({
-			pos: positions[i],
-			lang,
-		}));
-	}
-	let fp2MaxBytes = 0;
-	for (const s of _students) {
-		const extras = (s.langEvents || []).filter(
-			(ev) => ev.kind === "extra" || ev.kind === "extra-star",
-		);
-		const { bytes, langs } = _buildByteFingerprint(extras, {
-			trackLangs: true,
-		});
-		s._fp2Bytes = bytes;
-		s._fp2Langs = langs;
-		s._fp2Hash = "";
-		s._fp2Count = extras.length;
-		if (bytes.length > fp2MaxBytes) fp2MaxBytes = bytes.length;
-	}
-	if (fp2MaxBytes % 2) fp2MaxBytes++;
-	for (const s of _students) {
-		while (s._fp2Bytes.length < fp2MaxBytes) s._fp2Bytes.push(0);
-		s._fp2Hash = s._fp2Bytes.map((b) => String(b).padStart(3, "0")).join("-");
-	}
-	const hasAnyFp2 = fp2MaxBytes > 0;
-	let fp3MaxBytes = 0;
-	for (const s of _students) {
-		const evs = (s.commentEvents || []).filter((ev) => ev.kind === "extra");
-		const { bytes } = _buildByteFingerprint(evs);
-		s._fp3Bytes = bytes;
-		s._fp3Hash = "";
-		s._fp3Count = evs.length;
-		if (bytes.length > fp3MaxBytes) fp3MaxBytes = bytes.length;
-	}
-	if (fp3MaxBytes % 2) fp3MaxBytes++;
-	for (const s of _students) {
-		while (s._fp3Bytes.length < fp3MaxBytes) s._fp3Bytes.push(0);
-		s._fp3Hash = s._fp3Bytes.map((b) => String(b).padStart(3, "0")).join("-");
-	}
-	const hasAnyFp3 = fp3MaxBytes > 0;
-	_computeFingerprintMask(_students);
+	const { showFingerprint, hasAnyFp2, hasAnyFp3 } =
+		computeFingerprints(_students);
 	const showFp1 =
 		!_paperMode && showFingerprint && !_hiddenCols.has("fingerprint1");
 	const showFp2 = !_paperMode && hasAnyFp2 && !_hiddenCols.has("fingerprint2");
@@ -420,6 +216,7 @@ function renderTable() {
 			tr.classList.add(_isHi ? "row-emphasis" : "row-dim");
 		}
 		const hasFiles = _studentHasFiles(s);
+		if (!hasFiles) tr.classList.add("row-nofiles");
 
 		const openOnClick = (el) => {
 			if (!hasFiles) {
@@ -1007,48 +804,6 @@ function _makeCellEditable(el, student, colName) {
 			if (br) br.val = newText;
 		}
 	});
-}
-
-const tipEl = document.getElementById("tip");
-
-function setupTip(el, text, noWrap = false) {
-	el.addEventListener("mouseenter", (e) => showTip(e, text, noWrap));
-	el.addEventListener("mousemove", (e) => moveTip(e));
-	el.addEventListener("mouseleave", () => hideTip());
-}
-
-function setupTipHtml(el, html) {
-	el.addEventListener("mouseenter", (e) => showTipHtml(e, html));
-	el.addEventListener("mousemove", (e) => moveTip(e));
-	el.addEventListener("mouseleave", () => hideTip());
-}
-
-function showTip(e, text, noWrap = false) {
-	tipEl.textContent = text;
-	tipEl.style.whiteSpace = noWrap ? "pre" : "pre-wrap";
-	tipEl.style.display = "block";
-	moveTip(e);
-}
-
-function showTipHtml(e, html) {
-	tipEl.innerHTML = html;
-	tipEl.style.whiteSpace = "pre-wrap";
-	tipEl.style.display = "block";
-	moveTip(e);
-}
-function moveTip(e) {
-	const tw = tipEl.offsetWidth,
-		th = tipEl.offsetHeight;
-	let tx = e.clientX + 14,
-		ty = e.clientY - 8;
-	if (tx + tw > window.innerWidth - 8) tx = e.clientX - tw - 14;
-	if (ty + th > window.innerHeight - 8) ty = e.clientY - th - 8;
-	tipEl.style.left = tx + "px";
-	tipEl.style.top = ty + "px";
-}
-
-function hideTip() {
-	tipEl.style.display = "none";
 }
 
 function _diffTitleFor(student) {

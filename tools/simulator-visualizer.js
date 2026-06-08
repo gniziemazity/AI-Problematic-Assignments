@@ -1,5 +1,19 @@
 "use strict";
 
+const PAUSE_CAP_MS = 3000;
+
+function computeSkipRegions(cumDelay, cap) {
+	const regions = [];
+	if (!cumDelay) return regions;
+	for (let i = 1; i < cumDelay.length; i++) {
+		const gap = cumDelay[i] - cumDelay[i - 1];
+		if (gap > cap) {
+			regions.push({ start: cumDelay[i - 1] + cap, end: cumDelay[i] });
+		}
+	}
+	return regions;
+}
+
 class LogVisualizer {
 	constructor() {
 		this.micro = [];
@@ -17,7 +31,6 @@ class LogVisualizer {
 		this._activeFilename = "MAIN";
 		this._activeEditor = "main";
 		this._lessonFile = null;
-		this._ciBaseIndent = "";
 		this._anchorFlashTimer = null;
 		this._scrollTarget = null;
 		this._scrollRafId = null;
@@ -25,6 +38,7 @@ class LogVisualizer {
 		this._logBuf = [];
 		this._microCumDelay = null;
 		this._totalDelay = 0;
+		this._skipRegions = [];
 
 		this._seeking = false;
 		this._seekWasPlaying = false;
@@ -37,7 +51,6 @@ class LogVisualizer {
 		this._currentInt = null;
 		this._nextIntIdx = 0;
 
-		this.vscode = new VSCodeSettings();
 		this._selAnchorMain = null;
 
 		this._previewDirty = false;
@@ -60,6 +73,7 @@ class LogVisualizer {
             <span id="speed-label">8×</span>
             <div class="sep"></div>
             <label><input id="chk-autoscroll" type="checkbox" checked> Auto-scroll</label>
+            <label><input id="chk-skip-pauses" type="checkbox" checked> Skip pauses</label>
             <span id="ts-label" style="margin-left:auto;color:${CLR.accent};font-family:Consolas,monospace;font-size:11px;line-height:1"></span>
             <button id="btn-copy-ts" title="Copy link to this moment" style="margin-left:6px" disabled>🔗</button>
             <span id="prog-label" style="margin-left:12px;color:${CLR.muted};font-family:Consolas,monospace;font-size:11px;line-height:1">No file loaded</span>
@@ -93,6 +107,7 @@ class LogVisualizer {
 		this.elSpeed = document.getElementById("speed-slider");
 		this.elSpeedLbl = document.getElementById("speed-label");
 		this.elAutoScroll = document.getElementById("chk-autoscroll");
+		this.elSkipPauses = document.getElementById("chk-skip-pauses");
 		this.elTsLbl = document.getElementById("ts-label");
 		this.elCopyTs = document.getElementById("btn-copy-ts");
 		this.elProgLbl = document.getElementById("prog-label");
@@ -140,6 +155,11 @@ class LogVisualizer {
 			this.speed = parseFloat(this.elSpeed.value);
 			this.elSpeedLbl.textContent = `${this.speed.toFixed(0)}×`;
 		});
+
+		if (this.elSkipPauses)
+			this.elSkipPauses.addEventListener("change", () =>
+				this._renderSkipSegments(),
+			);
 
 		this.elSeekbar.addEventListener("pointerdown", (e) => {
 			this.elSeekbar.setPointerCapture(e.pointerId);
@@ -284,7 +304,6 @@ class LogVisualizer {
 			return;
 		}
 
-		this.vscode = new VSCodeSettings();
 		this._imageUris = imageUris || {};
 		this._lessonFile = lessonFile || null;
 		this._studentNameMap = studentNameMap || {};
@@ -321,6 +340,8 @@ class LogVisualizer {
 		}
 		this._totalDelay = this._microCumDelay[micro.length];
 		this._tsOriginCum = this._microCumDelay[tsOriginIdx] || 0;
+		this._skipRegions = computeSkipRegions(this._microCumDelay, PAUSE_CAP_MS);
+		this._renderSkipSegments();
 
 		let targetMs = this._totalDelay;
 		if (seekTs != null && seekTs !== "") {
@@ -471,10 +492,11 @@ class LogVisualizer {
 		const now = performance.now();
 		const dtSec = (now - this._lastWall) / 1000;
 		this._lastWall = now;
-		const newPlayMs = Math.min(
+		let newPlayMs = Math.min(
 			this._totalDelay,
 			this._playMs + dtSec * 1000 * Math.max(0.1, this.speed),
 		);
+		newPlayMs = this._snapPastSkips(newPlayMs);
 		let eventsFired = false;
 		while (
 			this.microIdx < this.micro.length &&
@@ -489,6 +511,8 @@ class LogVisualizer {
 		if (eventsFired) {
 			this._renderEditors();
 			this._schedulePreview();
+		} else if (this.elAutoScroll.checked) {
+			this._followCursor();
 		}
 		if (
 			this.microIdx >= this.micro.length &&
@@ -673,7 +697,6 @@ class LogVisualizer {
 
 		if (editor === "main") this._autoDedent(ch, ts);
 		st.insert(ch, ts);
-		if (editor === "main") this._applyVscodeAuto(ch, ts);
 
 		this._log(ts, `⌨  ${JSON.stringify(ch)}`, CLR.dim);
 		return delay;
@@ -682,8 +705,6 @@ class LogVisualizer {
 	_handleCodeInsertAtomic(act) {
 		const [, code, ts, delay, editor] = act;
 		this._log(ts, "⬇  Code Insert", CLR.orange);
-
-		this._ciBaseIndent = currentLineIndent(this.main.text, this.main.cursor);
 
 		const segments = _splitCodeWithAnchors(code);
 		for (const [segKind, segVal] of segments) {
@@ -696,20 +717,10 @@ class LogVisualizer {
 						Object.prototype.hasOwnProperty.call(CURSOR_MOVES, ch)
 					) {
 						st.moveCursor(CURSOR_MOVES[ch]);
-						if (editor === "main") {
-							this._ciBaseIndent = currentLineIndent(
-								this.main.text,
-								this.main.cursor,
-							);
-						}
 					} else if (ch === "↩" || ch === "\n") {
 						st.insert("\n", ts);
 						if (editor === "main") {
 							this._autoIndent(ts);
-							this._ciBaseIndent = currentLineIndent(
-								this.main.text,
-								this.main.cursor,
-							);
 						}
 					} else if (ch === "―" || ch === "\t") {
 						st.insert("\t", ts);
@@ -727,48 +738,7 @@ class LogVisualizer {
 			}
 		}
 
-		this._ciBaseIndent = "";
 		return delay;
-	}
-
-	_applyVscodeAuto(ch, ts) {
-		const textBefore = this.main.text.slice(0, this.main.cursor);
-		const textAfter = this.main.text.slice(this.main.cursor);
-		const lineEnd = textAfter.indexOf("\n");
-		const afterLine =
-			lineEnd === -1 ? textAfter : textAfter.slice(0, lineEnd);
-
-		let auto = this.vscode.autoCreateQuotes(ch, textBefore.slice(0, -1));
-		if (auto) {
-			for (const c of auto) this.main.insert(c, ts);
-			this.main.cursor -= auto.length;
-			this._log(ts, `  ↳ Auto-Quotes: ${JSON.stringify(auto)}`, CLR.green);
-			return;
-		}
-
-		auto = this.vscode.autoCloseHtmlTag(ch, textBefore.slice(0, -1));
-		if (auto) {
-			for (const c of auto) this.main.insert(c, ts);
-			this.main.cursor -= auto.length;
-			this._log(ts, `  ↳ Auto-Tag: ${JSON.stringify(auto)}`, CLR.green);
-			return;
-		}
-
-		auto = this.vscode.autoCloseBracket(ch, afterLine);
-		if (auto) {
-			for (const c of auto) this.main.insert(c, ts);
-			this.main.cursor -= auto.length;
-			this._log(ts, `  ↳ Auto-Bracket: ${JSON.stringify(auto)}`, CLR.green);
-			return;
-		}
-
-		auto = this.vscode.autoCloseQuote(ch, textBefore, afterLine);
-		if (auto) {
-			for (const c of auto) this.main.insert(c, ts);
-			this.main.cursor -= auto.length;
-			this._log(ts, `  ↳ Auto-Quote: ${JSON.stringify(auto)}`, CLR.green);
-			return;
-		}
 	}
 
 	_activeProfile() {
@@ -780,10 +750,6 @@ class LogVisualizer {
 		const lessonExt = LP.lessonFileExtension(this._lessonFile);
 		if (lessonExt) return LP.getProfile(lessonExt);
 		return LP.getProfile(".html");
-	}
-
-	_dedentOne(indent) {
-		return dedentOneStep(indent);
 	}
 
 	_autoIndent(ts) {
@@ -945,10 +911,6 @@ class LogVisualizer {
 		}, 500);
 	}
 
-	_prevLineOpensTag(st, ls) {
-		return prevLineOpensTag(st, ls);
-	}
-
 	_backspaceIsIgnored(st) {
 		return backspaceIsIgnored(st);
 	}
@@ -1103,6 +1065,32 @@ class LogVisualizer {
 		this.elEventLog.innerHTML = "";
 	}
 
+	_snapPastSkips(playMs) {
+		if (!this.elSkipPauses || !this.elSkipPauses.checked) return playMs;
+		for (const r of this._skipRegions) {
+			if (playMs > r.start && playMs < r.end)
+				return Math.min(r.end + 0.5, this._totalDelay);
+		}
+		return playMs;
+	}
+
+	_renderSkipSegments() {
+		if (!this.elSeekbar) return;
+		for (const el of this.elSeekbar.querySelectorAll(".seek-skip"))
+			el.remove();
+		if (!this.elSkipPauses || !this.elSkipPauses.checked || !this._totalDelay)
+			return;
+		const frag = document.createDocumentFragment();
+		for (const r of this._skipRegions) {
+			const seg = document.createElement("div");
+			seg.className = "seek-skip";
+			seg.style.left = `${(r.start / this._totalDelay) * 100}%`;
+			seg.style.width = `${((r.end - r.start) / this._totalDelay) * 100}%`;
+			frag.appendChild(seg);
+		}
+		this.elSeekbar.appendChild(frag);
+	}
+
 	_drawSeekbar(frac) {
 		this.elSeekFill.style.width = `${Math.max(0, Math.min(1, frac)) * 100}%`;
 	}
@@ -1157,13 +1145,14 @@ class LogVisualizer {
 
 	_seekToMs(playMs) {
 		if (!this.micro.length) return;
-		this._playMs = Math.max(0, Math.min(this._totalDelay, playMs));
+		this._playMs = this._snapPastSkips(
+			Math.max(0, Math.min(this._totalDelay, playMs)),
+		);
 
 		this._silent = true;
 		this.microIdx = 0;
 		this._resetAllFiles();
 		this.dev.reset();
-		this._ciBaseIndent = "";
 		this._activeEditor = "main";
 		this._selAnchorMain = null;
 		this._logBuf = [];
@@ -1215,4 +1204,8 @@ class LogVisualizer {
 		this._updatePreview(true);
 		this._paintHud();
 	}
+}
+
+if (typeof module !== "undefined" && module.exports) {
+	module.exports = { computeSkipRegions, PAUSE_CAP_MS };
 }

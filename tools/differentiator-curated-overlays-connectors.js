@@ -31,28 +31,6 @@ function _curatedFindPartnerEl(side, mark) {
 	);
 }
 
-function _curatedFindGhostElement(ghostRef) {
-	const wrap = document.getElementById("code-teacher");
-	if (!wrap || !ghostRef) return null;
-	const candidates = wrap.querySelectorAll(
-		`.code-pane.active .leo-mark[data-leo-side="teacher"][data-leo-ghost-offset]`,
-	);
-	for (const el of candidates) {
-		const pane = el.closest(".code-pane");
-		if (!pane || pane.dataset.paneFile !== ghostRef.file) continue;
-		const blobPos = parseInt(el.dataset.leoPos, 10);
-		const offset = parseInt(el.dataset.leoGhostOffset, 10);
-		if (!Number.isFinite(blobPos) || !Number.isFinite(offset)) continue;
-		if (
-			blobPos + offset === ghostRef.start &&
-			el.dataset.leoToken === ghostRef.token
-		) {
-			return el;
-		}
-	}
-	return null;
-}
-
 function _curatedFindMoveAnchorEl(extraMark, sourceFile) {
 	if (!extraMark || !extraMark.move_to) return null;
 	const wrap = document.getElementById(`code-student`);
@@ -346,7 +324,7 @@ function _curatedRefreshPairConnectors() {
 
 	for (const item of _curatedPairConnectorItems) {
 		if (item.kind === "ghost-pair" || item.kind === "ghost-pair-group") {
-			const teacherEl = _curatedFindGhostElement(item.ghost);
+			const teacherEl = _curatedFindGhostEl(item.ghost, { activeOnly: true });
 			const studentEl = _curatedFindLeoMarkEl(
 				"student",
 				item.studentMark.start,

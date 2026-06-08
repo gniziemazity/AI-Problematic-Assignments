@@ -144,25 +144,6 @@ function _curatedGhostIsPaired(ghost) {
 	return false;
 }
 
-function _curatedFindGhostElByPos(file, start, token) {
-	const wrap = document.getElementById("code-teacher");
-	if (!wrap) return null;
-	const candidates = wrap.querySelectorAll(
-		`.leo-mark[data-leo-side="teacher"][data-leo-ghost-offset]`,
-	);
-	for (const el of candidates) {
-		const pane = el.closest(".code-pane");
-		if (!pane || pane.dataset.paneFile !== file) continue;
-		const blobPos = parseInt(el.dataset.leoPos, 10);
-		const offset = parseInt(el.dataset.leoGhostOffset, 10);
-		if (!Number.isFinite(blobPos) || !Number.isFinite(offset)) continue;
-		if (blobPos + offset === start && el.dataset.leoToken === token) {
-			return el;
-		}
-	}
-	return null;
-}
-
 function _curatedFindLeoMarkEl(side, pos, token, file) {
 	const wrap = document.getElementById(`code-${side}`);
 	if (!wrap) return null;
@@ -443,7 +424,7 @@ function _curatedOnPairMouseMove(ev) {
 			_curatedHidePairTokenHover();
 			_curatedHidePairArrow();
 			const els = consecutive
-				.map((g) => _curatedFindGhostElByPos(g.file, g.start, g.token))
+				.map((g) => _curatedFindGhostEl(g))
 				.filter(Boolean);
 			_curatedSetPairHoverEls(els);
 			return;

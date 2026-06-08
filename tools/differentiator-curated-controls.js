@@ -128,7 +128,6 @@ function _curatedShowControls(sel, x, y, opts) {
 		nonCommentExisting.length > 0 &&
 		nonCommentExisting.every((m) => m.label === "ghost_extra");
 	const single = nonCommentExisting.length === 1;
-	const singleHasPair = single && !!nonCommentExisting[0].paired_with;
 	const allUnpaired =
 		(allMissing || allExtra || allGhostExtra) &&
 		nonCommentExisting.every((m) => !m.paired_with);
@@ -237,8 +236,8 @@ function _curatedShowControls(sel, x, y, opts) {
 
 function _curatedPositionGhostControls(el, ghost) {
 	const ghostEl =
-		typeof _curatedFindGhostElByPos === "function"
-			? _curatedFindGhostElByPos(ghost.file, ghost.start, ghost.token)
+		typeof _curatedFindGhostEl === "function"
+			? _curatedFindGhostEl(ghost)
 			: ghost.el || null;
 	if (!ghostEl) {
 		el.style.display = "none";

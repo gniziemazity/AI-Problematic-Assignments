@@ -1,129 +1,36 @@
 {
-  "generated": "2026-06-04T11:21:57.807082",
-  "n_students": 84,
+  "generated": "2026-06-08T13:29:35.089233",
+  "n_students": 38,
   "n_llm": 15,
-  "n_passed": 35,
-  "n_failed": 49,
+  "n_passed": 0,
+  "n_failed": 38,
   "assignments": [
     {
       "name": "Wall",
       "difficulty": "easy",
-      "n_submitted": 38,
-      "n_total": 84,
-      "n_trouble": 3,
+      "n_submitted": 0,
+      "n_total": 38,
+      "n_trouble": 0,
       "n_lesson_trouble": 0,
       "n_ai": 30,
-      "avg_grade": 3.473684,
-      "pass_rate": 0.416667,
-      "trouble_rate": 0.078947,
-      "ai_rate": 0.789474,
-      "follow_avg": 56.642105,
-      "odds_ratio": 0.5,
-      "fisher_p": 0.518729,
+      "n_ai_strong": 0,
+      "n_ai_upper": 17,
+      "n_artefact": 38,
+      "avg_grade": null,
+      "pass_rate": 0.0,
+      "trouble_rate": null,
+      "ai_rate": null,
+      "follow_avg": 56.631579,
+      "odds_ratio": null,
+      "fisher_p": null,
       "n_followed": 18,
-      "scatter": [
-        {
-          "x": 92.7,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 0.0,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 16.2,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 79.8,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 96.3,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 81.1,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 1.7,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 3.5,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 95.6,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 90.9,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 3.1,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 57.3,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 15.5,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 15.5,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 48.3,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 99.3,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 97.4,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 96.8,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 85.2,
-          "y": 4.0,
-          "ai": true
-        }
-      ],
-      "ai_trouble": 2,
-      "ai_pass": 28,
-      "no_ai_trouble": 1,
-      "no_ai_pass": 7,
-      "ai_avg_grade": 3.3,
-      "no_ai_avg_grade": 4.125,
+      "scatter": [],
+      "ai_trouble": 0,
+      "ai_pass": 0,
+      "no_ai_trouble": 0,
+      "no_ai_pass": 0,
+      "ai_avg_grade": null,
+      "no_ai_avg_grade": null,
       "lower": "wall",
       "n_artefact_valid": 38,
       "any_artefact_fired": 30,
@@ -138,14 +45,14 @@
           "n_answered": 38,
           "n_fired": 8,
           "hit_rate": 0.210526,
-          "fired_trouble": 2,
-          "fired_ok": 6,
-          "ok_trouble": 1,
-          "safe_ok": 29,
-          "odds_ratio": 9.666667,
-          "fisher_p": 0.106211,
-          "fired_avg_grade": 2.25,
-          "ok_avg_grade": 3.8,
+          "fired_trouble": 0,
+          "fired_ok": 8,
+          "ok_trouble": 0,
+          "safe_ok": 30,
+          "odds_ratio": null,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "27",
             "35",
@@ -167,14 +74,14 @@
           "n_answered": 38,
           "n_fired": 9,
           "hit_rate": 0.236842,
-          "fired_trouble": 1,
-          "fired_ok": 8,
-          "ok_trouble": 2,
-          "safe_ok": 27,
-          "odds_ratio": 1.6875,
+          "fired_trouble": 0,
+          "fired_ok": 9,
+          "ok_trouble": 0,
+          "safe_ok": 29,
+          "odds_ratio": null,
           "fisher_p": 1.0,
-          "fired_avg_grade": 2.666667,
-          "ok_avg_grade": 3.724138,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "3",
             "11",
@@ -197,14 +104,14 @@
           "n_answered": 38,
           "n_fired": 8,
           "hit_rate": 0.210526,
-          "fired_trouble": 2,
-          "fired_ok": 6,
-          "ok_trouble": 1,
-          "safe_ok": 29,
-          "odds_ratio": 9.666667,
-          "fisher_p": 0.106211,
-          "fired_avg_grade": 3.375,
-          "ok_avg_grade": 3.5,
+          "fired_trouble": 0,
+          "fired_ok": 8,
+          "ok_trouble": 0,
+          "safe_ok": 30,
+          "odds_ratio": null,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "24",
             "27",
@@ -226,14 +133,14 @@
           "n_answered": 38,
           "n_fired": 19,
           "hit_rate": 0.5,
-          "fired_trouble": 2,
-          "fired_ok": 17,
-          "ok_trouble": 1,
-          "safe_ok": 18,
-          "odds_ratio": 2.117647,
+          "fired_trouble": 0,
+          "fired_ok": 19,
+          "ok_trouble": 0,
+          "safe_ok": 19,
+          "odds_ratio": null,
           "fisher_p": 1.0,
-          "fired_avg_grade": 3.0,
-          "ok_avg_grade": 3.947368,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "3",
             "8",
@@ -266,14 +173,14 @@
           "n_answered": 38,
           "n_fired": 26,
           "hit_rate": 0.684211,
-          "fired_trouble": 2,
-          "fired_ok": 24,
-          "ok_trouble": 1,
-          "safe_ok": 11,
-          "odds_ratio": 0.916667,
+          "fired_trouble": 0,
+          "fired_ok": 26,
+          "ok_trouble": 0,
+          "safe_ok": 12,
+          "odds_ratio": null,
           "fisher_p": 1.0,
-          "fired_avg_grade": 3.076923,
-          "ok_avg_grade": 4.333333,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "3",
             "8",
@@ -306,480 +213,34 @@
           "llm_n_fired": 7,
           "llm_n_answered": 7
         }
-      ],
-      "divergence": {
-        "teacher_total": 994,
-        "teacher_total_by_lang": {
-          "html": 994
-        },
-        "divergence": {
-          "count": 32,
-          "mean": 202.84375,
-          "min": 56.0,
-          "q1": 156.0,
-          "median": 177.5,
-          "q3": 260.5,
-          "max": 406.0
-        },
-        "change": {
-          "count": 32,
-          "mean": 25.84375,
-          "min": 3.0,
-          "q1": 5.0,
-          "median": 9.0,
-          "q3": 41.75,
-          "max": 113.0
-        },
-        "by_lang": {
-          "html": {
-            "divergence": {
-              "count": 32,
-              "mean": 199.3125,
-              "min": 56.0,
-              "q1": 156.0,
-              "median": 177.5,
-              "q3": 254.0,
-              "max": 406.0
-            },
-            "change": {
-              "count": 32,
-              "mean": 25.84375,
-              "min": 3.0,
-              "q1": 5.0,
-              "median": 9.0,
-              "q3": 41.75,
-              "max": 113.0
-            }
-          },
-          "css": {
-            "divergence": {
-              "count": 2,
-              "mean": 56.5,
-              "min": 35.0,
-              "q1": 45.75,
-              "median": 56.5,
-              "q3": 67.25,
-              "max": 78.0
-            },
-            "change": {
-              "count": 2,
-              "mean": 0.0,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 0.0,
-              "q3": 0.0,
-              "max": 0.0
-            }
-          }
-        },
-        "basis": "ideal",
-        "per_student": [
-          {
-            "id": "3",
-            "divergence": 82,
-            "change": 9,
-            "divergence_pct": 8.25,
-            "change_pct": 0.91
-          },
-          {
-            "id": "4",
-            "divergence": 156,
-            "change": 5,
-            "divergence_pct": 15.69,
-            "change_pct": 0.5
-          },
-          {
-            "id": "8",
-            "divergence": 196,
-            "change": 40,
-            "divergence_pct": 19.72,
-            "change_pct": 4.02
-          },
-          {
-            "id": "11",
-            "divergence": 82,
-            "change": 9,
-            "divergence_pct": 8.25,
-            "change_pct": 0.91
-          },
-          {
-            "id": "18",
-            "divergence": 172,
-            "change": 13,
-            "divergence_pct": 17.3,
-            "change_pct": 1.31
-          },
-          {
-            "id": "20",
-            "divergence": 265,
-            "change": 38,
-            "divergence_pct": 26.66,
-            "change_pct": 3.82
-          },
-          {
-            "id": "23",
-            "divergence": 156,
-            "change": 5,
-            "divergence_pct": 15.69,
-            "change_pct": 0.5
-          },
-          {
-            "id": "24",
-            "divergence": 406,
-            "change": 55,
-            "divergence_pct": 40.85,
-            "change_pct": 5.53
-          },
-          {
-            "id": "27",
-            "divergence": 317,
-            "change": 113,
-            "divergence_pct": 31.89,
-            "change_pct": 11.37
-          },
-          {
-            "id": "29",
-            "divergence": 262,
-            "change": 6,
-            "divergence_pct": 26.36,
-            "change_pct": 0.6
-          },
-          {
-            "id": "30",
-            "divergence": 270,
-            "change": 4,
-            "divergence_pct": 27.16,
-            "change_pct": 0.4
-          },
-          {
-            "id": "35",
-            "divergence": 97,
-            "change": 49,
-            "divergence_pct": 9.76,
-            "change_pct": 4.93
-          },
-          {
-            "id": "40",
-            "divergence": 164,
-            "change": 5,
-            "divergence_pct": 16.5,
-            "change_pct": 0.5
-          },
-          {
-            "id": "41",
-            "divergence": 260,
-            "change": 51,
-            "divergence_pct": 26.16,
-            "change_pct": 5.13
-          },
-          {
-            "id": "44",
-            "divergence": 170,
-            "change": 12,
-            "divergence_pct": 17.1,
-            "change_pct": 1.21
-          },
-          {
-            "id": "45",
-            "divergence": 156,
-            "change": 5,
-            "divergence_pct": 15.69,
-            "change_pct": 0.5
-          },
-          {
-            "id": "46",
-            "divergence": 220,
-            "change": 36,
-            "divergence_pct": 22.13,
-            "change_pct": 3.62
-          },
-          {
-            "id": "50",
-            "divergence": 264,
-            "change": 109,
-            "divergence_pct": 26.56,
-            "change_pct": 10.97
-          },
-          {
-            "id": "55",
-            "divergence": 217,
-            "change": 5,
-            "divergence_pct": 21.83,
-            "change_pct": 0.5
-          },
-          {
-            "id": "58",
-            "divergence": 328,
-            "change": 47,
-            "divergence_pct": 33.0,
-            "change_pct": 4.73
-          },
-          {
-            "id": "61",
-            "divergence": 168,
-            "change": 5,
-            "divergence_pct": 16.9,
-            "change_pct": 0.5
-          },
-          {
-            "id": "65",
-            "divergence": 56,
-            "change": 7,
-            "divergence_pct": 5.63,
-            "change_pct": 0.7
-          },
-          {
-            "id": "67",
-            "divergence": 244,
-            "change": 64,
-            "divergence_pct": 24.55,
-            "change_pct": 6.44
-          },
-          {
-            "id": "69",
-            "divergence": 156,
-            "change": 5,
-            "divergence_pct": 15.69,
-            "change_pct": 0.5
-          },
-          {
-            "id": "70",
-            "divergence": 163,
-            "change": 9,
-            "divergence_pct": 16.4,
-            "change_pct": 0.91
-          },
-          {
-            "id": "72",
-            "divergence": 346,
-            "change": 53,
-            "divergence_pct": 34.81,
-            "change_pct": 5.33
-          },
-          {
-            "id": "74",
-            "divergence": 156,
-            "change": 5,
-            "divergence_pct": 15.69,
-            "change_pct": 0.5
-          },
-          {
-            "id": "77",
-            "divergence": 252,
-            "change": 3,
-            "divergence_pct": 25.35,
-            "change_pct": 0.3
-          },
-          {
-            "id": "78",
-            "divergence": 162,
-            "change": 5,
-            "divergence_pct": 16.3,
-            "change_pct": 0.5
-          },
-          {
-            "id": "80",
-            "divergence": 170,
-            "change": 6,
-            "divergence_pct": 17.1,
-            "change_pct": 0.6
-          },
-          {
-            "id": "81",
-            "divergence": 183,
-            "change": 9,
-            "divergence_pct": 18.41,
-            "change_pct": 0.91
-          },
-          {
-            "id": "82",
-            "divergence": 195,
-            "change": 40,
-            "divergence_pct": 19.62,
-            "change_pct": 4.02
-          }
-        ]
-      }
+      ]
     },
     {
       "name": "Chess",
       "difficulty": "easy",
-      "n_submitted": 38,
-      "n_total": 84,
-      "n_trouble": 4,
+      "n_submitted": 0,
+      "n_total": 38,
+      "n_trouble": 0,
       "n_lesson_trouble": 7,
       "n_ai": 32,
-      "avg_grade": 3.868421,
-      "pass_rate": 0.404762,
-      "trouble_rate": 0.105263,
-      "ai_rate": 0.842105,
+      "n_ai_strong": 4,
+      "n_ai_upper": 18,
+      "n_artefact": 38,
+      "avg_grade": null,
+      "pass_rate": 0.0,
+      "trouble_rate": null,
+      "ai_rate": null,
       "follow_avg": 88.403226,
       "odds_ratio": null,
-      "fisher_p": 1.0,
+      "fisher_p": null,
       "n_followed": 31,
-      "scatter": [
-        {
-          "x": 97.0,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 98.6,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 25.9,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 99.1,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 98.1,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 93.6,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 99.7,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 79.4,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 98.1,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 93.6,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 52.4,
-          "y": 2.0,
-          "ai": true
-        },
-        {
-          "x": 98.9,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 85.1,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 92.9,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 67.2,
-          "y": 1.0,
-          "ai": true
-        },
-        {
-          "x": 99.2,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 98.3,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 70.4,
-          "y": 4.0,
-          "ai": false
-        },
-        {
-          "x": 99.7,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 96.0,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 85.0,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 56.5,
-          "y": 1.0,
-          "ai": true
-        },
-        {
-          "x": 98.7,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 94.4,
-          "y": 1.0,
-          "ai": true
-        },
-        {
-          "x": 92.9,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 88.4,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 97.5,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 100.0,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 92.6,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 92.7,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 98.6,
-          "y": 2.0,
-          "ai": false
-        }
-      ],
-      "ai_trouble": 4,
-      "ai_pass": 28,
+      "scatter": [],
+      "ai_trouble": 0,
+      "ai_pass": 0,
       "no_ai_trouble": 0,
-      "no_ai_pass": 6,
-      "ai_avg_grade": 3.78125,
-      "no_ai_avg_grade": 4.333333,
+      "no_ai_pass": 0,
+      "ai_avg_grade": null,
+      "no_ai_avg_grade": null,
       "lower": "chess",
       "n_artefact_valid": 38,
       "any_artefact_fired": 32,
@@ -794,14 +255,14 @@
           "n_answered": 38,
           "n_fired": 1,
           "hit_rate": 0.026316,
-          "fired_trouble": 1,
-          "fired_ok": 0,
-          "ok_trouble": 3,
-          "safe_ok": 34,
+          "fired_trouble": 0,
+          "fired_ok": 1,
+          "ok_trouble": 0,
+          "safe_ok": 37,
           "odds_ratio": null,
-          "fisher_p": 0.105263,
-          "fired_avg_grade": 1.0,
-          "ok_avg_grade": 3.945946,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "27"
           ],
@@ -816,14 +277,14 @@
           "n_answered": 38,
           "n_fired": 4,
           "hit_rate": 0.105263,
-          "fired_trouble": 2,
-          "fired_ok": 2,
-          "ok_trouble": 2,
-          "safe_ok": 32,
-          "odds_ratio": 16.0,
-          "fisher_p": 0.047456,
-          "fired_avg_grade": 1.25,
-          "ok_avg_grade": 4.176471,
+          "fired_trouble": 0,
+          "fired_ok": 4,
+          "ok_trouble": 0,
+          "safe_ok": 34,
+          "odds_ratio": null,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "5",
             "27",
@@ -841,14 +302,14 @@
           "n_answered": 38,
           "n_fired": 17,
           "hit_rate": 0.447368,
-          "fired_trouble": 2,
-          "fired_ok": 15,
-          "ok_trouble": 2,
-          "safe_ok": 19,
-          "odds_ratio": 1.266667,
+          "fired_trouble": 0,
+          "fired_ok": 17,
+          "ok_trouble": 0,
+          "safe_ok": 21,
+          "odds_ratio": null,
           "fisher_p": 1.0,
-          "fired_avg_grade": 3.117647,
-          "ok_avg_grade": 4.47619,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "5",
             "8",
@@ -879,14 +340,14 @@
           "n_answered": 38,
           "n_fired": 8,
           "hit_rate": 0.210526,
-          "fired_trouble": 1,
-          "fired_ok": 7,
-          "ok_trouble": 3,
-          "safe_ok": 27,
-          "odds_ratio": 1.285714,
+          "fired_trouble": 0,
+          "fired_ok": 8,
+          "ok_trouble": 0,
+          "safe_ok": 30,
+          "odds_ratio": null,
           "fisher_p": 1.0,
-          "fired_avg_grade": 3.0,
-          "ok_avg_grade": 4.1,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "5",
             "24",
@@ -908,14 +369,14 @@
           "n_answered": 38,
           "n_fired": 8,
           "hit_rate": 0.210526,
-          "fired_trouble": 1,
-          "fired_ok": 7,
-          "ok_trouble": 3,
-          "safe_ok": 27,
-          "odds_ratio": 1.285714,
+          "fired_trouble": 0,
+          "fired_ok": 8,
+          "ok_trouble": 0,
+          "safe_ok": 30,
+          "odds_ratio": null,
           "fisher_p": 1.0,
-          "fired_avg_grade": 2.75,
-          "ok_avg_grade": 4.166667,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "20",
             "24",
@@ -937,14 +398,14 @@
           "n_answered": 38,
           "n_fired": 27,
           "hit_rate": 0.710526,
-          "fired_trouble": 4,
-          "fired_ok": 23,
+          "fired_trouble": 0,
+          "fired_ok": 27,
           "ok_trouble": 0,
           "safe_ok": 11,
           "odds_ratio": null,
-          "fisher_p": 0.302581,
-          "fired_avg_grade": 3.777778,
-          "ok_avg_grade": 4.090909,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "3",
             "4",
@@ -978,507 +439,34 @@
           "llm_n_fired": 12,
           "llm_n_answered": 14
         }
-      ],
-      "divergence": {
-        "teacher_total": 1176,
-        "teacher_total_by_lang": {
-          "html": 1176
-        },
-        "divergence": {
-          "count": 38,
-          "mean": 596.1578947368421,
-          "min": 346.0,
-          "q1": 513.0,
-          "median": 528.0,
-          "q3": 594.75,
-          "max": 1451.0
-        },
-        "change": {
-          "count": 38,
-          "mean": 72.26315789473684,
-          "min": 3.0,
-          "q1": 9.0,
-          "median": 11.0,
-          "q3": 16.75,
-          "max": 1046.0
-        },
-        "by_lang": {
-          "html": {
-            "divergence": {
-              "count": 38,
-              "mean": 596.1578947368421,
-              "min": 346.0,
-              "q1": 513.0,
-              "median": 528.0,
-              "q3": 594.75,
-              "max": 1451.0
-            },
-            "change": {
-              "count": 38,
-              "mean": 72.26315789473684,
-              "min": 3.0,
-              "q1": 9.0,
-              "median": 11.0,
-              "q3": 16.75,
-              "max": 1046.0
-            }
-          }
-        },
-        "basis": "ideal",
-        "per_student": [
-          {
-            "id": "3",
-            "divergence": 527,
-            "change": 10,
-            "divergence_pct": 44.81,
-            "change_pct": 0.85
-          },
-          {
-            "id": "4",
-            "divergence": 526,
-            "change": 10,
-            "divergence_pct": 44.73,
-            "change_pct": 0.85
-          },
-          {
-            "id": "5",
-            "divergence": 627,
-            "change": 75,
-            "divergence_pct": 53.32,
-            "change_pct": 6.38
-          },
-          {
-            "id": "8",
-            "divergence": 537,
-            "change": 4,
-            "divergence_pct": 45.66,
-            "change_pct": 0.34
-          },
-          {
-            "id": "11",
-            "divergence": 551,
-            "change": 16,
-            "divergence_pct": 46.85,
-            "change_pct": 1.36
-          },
-          {
-            "id": "13",
-            "divergence": 531,
-            "change": 12,
-            "divergence_pct": 45.15,
-            "change_pct": 1.02
-          },
-          {
-            "id": "18",
-            "divergence": 529,
-            "change": 10,
-            "divergence_pct": 44.98,
-            "change_pct": 0.85
-          },
-          {
-            "id": "20",
-            "divergence": 493,
-            "change": 36,
-            "divergence_pct": 41.92,
-            "change_pct": 3.06
-          },
-          {
-            "id": "23",
-            "divergence": 518,
-            "change": 13,
-            "divergence_pct": 44.05,
-            "change_pct": 1.11
-          },
-          {
-            "id": "24",
-            "divergence": 608,
-            "change": 14,
-            "divergence_pct": 51.7,
-            "change_pct": 1.19
-          },
-          {
-            "id": "27",
-            "divergence": 1451,
-            "change": 1046,
-            "divergence_pct": 123.38,
-            "change_pct": 88.95
-          },
-          {
-            "id": "29",
-            "divergence": 513,
-            "change": 7,
-            "divergence_pct": 43.62,
-            "change_pct": 0.6
-          },
-          {
-            "id": "30",
-            "divergence": 606,
-            "change": 11,
-            "divergence_pct": 51.53,
-            "change_pct": 0.94
-          },
-          {
-            "id": "35",
-            "divergence": 657,
-            "change": 9,
-            "divergence_pct": 55.87,
-            "change_pct": 0.77
-          },
-          {
-            "id": "40",
-            "divergence": 873,
-            "change": 15,
-            "divergence_pct": 74.23,
-            "change_pct": 1.28
-          },
-          {
-            "id": "41",
-            "divergence": 595,
-            "change": 11,
-            "divergence_pct": 50.6,
-            "change_pct": 0.94
-          },
-          {
-            "id": "44",
-            "divergence": 513,
-            "change": 9,
-            "divergence_pct": 43.62,
-            "change_pct": 0.77
-          },
-          {
-            "id": "45",
-            "divergence": 518,
-            "change": 8,
-            "divergence_pct": 44.05,
-            "change_pct": 0.68
-          },
-          {
-            "id": "46",
-            "divergence": 1311,
-            "change": 886,
-            "divergence_pct": 111.48,
-            "change_pct": 75.34
-          },
-          {
-            "id": "47",
-            "divergence": 500,
-            "change": 33,
-            "divergence_pct": 42.52,
-            "change_pct": 2.81
-          },
-          {
-            "id": "49",
-            "divergence": 774,
-            "change": 315,
-            "divergence_pct": 65.82,
-            "change_pct": 26.79
-          },
-          {
-            "id": "50",
-            "divergence": 549,
-            "change": 9,
-            "divergence_pct": 46.68,
-            "change_pct": 0.77
-          },
-          {
-            "id": "55",
-            "divergence": 520,
-            "change": 11,
-            "divergence_pct": 44.22,
-            "change_pct": 0.94
-          },
-          {
-            "id": "58",
-            "divergence": 513,
-            "change": 9,
-            "divergence_pct": 43.62,
-            "change_pct": 0.77
-          },
-          {
-            "id": "60",
-            "divergence": 499,
-            "change": 12,
-            "divergence_pct": 42.43,
-            "change_pct": 1.02
-          },
-          {
-            "id": "61",
-            "divergence": 507,
-            "change": 9,
-            "divergence_pct": 43.11,
-            "change_pct": 0.77
-          },
-          {
-            "id": "65",
-            "divergence": 518,
-            "change": 19,
-            "divergence_pct": 44.05,
-            "change_pct": 1.62
-          },
-          {
-            "id": "67",
-            "divergence": 380,
-            "change": 20,
-            "divergence_pct": 32.31,
-            "change_pct": 1.7
-          },
-          {
-            "id": "69",
-            "divergence": 554,
-            "change": 17,
-            "divergence_pct": 47.11,
-            "change_pct": 1.45
-          },
-          {
-            "id": "70",
-            "divergence": 515,
-            "change": 10,
-            "divergence_pct": 43.79,
-            "change_pct": 0.85
-          },
-          {
-            "id": "71",
-            "divergence": 346,
-            "change": 21,
-            "divergence_pct": 29.42,
-            "change_pct": 1.79
-          },
-          {
-            "id": "72",
-            "divergence": 501,
-            "change": 3,
-            "divergence_pct": 42.6,
-            "change_pct": 0.26
-          },
-          {
-            "id": "74",
-            "divergence": 512,
-            "change": 10,
-            "divergence_pct": 43.54,
-            "change_pct": 0.85
-          },
-          {
-            "id": "77",
-            "divergence": 754,
-            "change": 9,
-            "divergence_pct": 64.12,
-            "change_pct": 0.77
-          },
-          {
-            "id": "78",
-            "divergence": 594,
-            "change": 8,
-            "divergence_pct": 50.51,
-            "change_pct": 0.68
-          },
-          {
-            "id": "80",
-            "divergence": 511,
-            "change": 8,
-            "divergence_pct": 43.45,
-            "change_pct": 0.68
-          },
-          {
-            "id": "81",
-            "divergence": 530,
-            "change": 8,
-            "divergence_pct": 45.07,
-            "change_pct": 0.68
-          },
-          {
-            "id": "82",
-            "divergence": 593,
-            "change": 13,
-            "divergence_pct": 50.43,
-            "change_pct": 1.11
-          }
-        ]
-      }
+      ]
     },
     {
       "name": "Sorting",
       "difficulty": "hard",
-      "n_submitted": 38,
-      "n_total": 84,
-      "n_trouble": 5,
-      "n_lesson_trouble": 3,
+      "n_submitted": 0,
+      "n_total": 38,
+      "n_trouble": 0,
+      "n_lesson_trouble": 2,
       "n_ai": 34,
-      "avg_grade": 3.394737,
-      "pass_rate": 0.392857,
-      "trouble_rate": 0.131579,
-      "ai_rate": 0.894737,
+      "n_ai_strong": 21,
+      "n_ai_upper": 33,
+      "n_artefact": 38,
+      "avg_grade": null,
+      "pass_rate": 0.0,
+      "trouble_rate": null,
+      "ai_rate": null,
       "follow_avg": 96.446875,
       "odds_ratio": null,
-      "fisher_p": 1.0,
+      "fisher_p": null,
       "n_followed": 32,
-      "scatter": [
-        {
-          "x": 80.9,
-          "y": 2.0,
-          "ai": true
-        },
-        {
-          "x": 98.4,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 95.3,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 98.8,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 98.6,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 98.6,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 99.8,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 96.3,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 100.0,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 99.5,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 93.9,
-          "y": 2.0,
-          "ai": true
-        },
-        {
-          "x": 88.3,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 99.8,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 96.7,
-          "y": 1.0,
-          "ai": true
-        },
-        {
-          "x": 91.4,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 97.7,
-          "y": 1.0,
-          "ai": true
-        },
-        {
-          "x": 100.0,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 97.9,
-          "y": 2.0,
-          "ai": true
-        },
-        {
-          "x": 98.1,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 100.0,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 96.3,
-          "y": 1.0,
-          "ai": true
-        },
-        {
-          "x": 92.8,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 94.4,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 99.8,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 90.7,
-          "y": 1.0,
-          "ai": true
-        },
-        {
-          "x": 99.8,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 86.0,
-          "y": 2.0,
-          "ai": true
-        },
-        {
-          "x": 99.5,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 99.3,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 99.3,
-          "y": 4.0,
-          "ai": false
-        },
-        {
-          "x": 100.0,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 98.4,
-          "y": 3.0,
-          "ai": true
-        }
-      ],
-      "ai_trouble": 5,
-      "ai_pass": 29,
+      "scatter": [],
+      "ai_trouble": 0,
+      "ai_pass": 0,
       "no_ai_trouble": 0,
-      "no_ai_pass": 4,
-      "ai_avg_grade": 3.235294,
-      "no_ai_avg_grade": 4.75,
+      "no_ai_pass": 0,
+      "ai_avg_grade": null,
+      "no_ai_avg_grade": null,
       "lower": "sorting",
       "n_artefact_valid": 38,
       "any_artefact_fired": 34,
@@ -1493,14 +481,14 @@
           "n_answered": 38,
           "n_fired": 3,
           "hit_rate": 0.078947,
-          "fired_trouble": 2,
-          "fired_ok": 1,
-          "ok_trouble": 3,
-          "safe_ok": 32,
-          "odds_ratio": 21.333333,
-          "fisher_p": 0.040303,
-          "fired_avg_grade": 2.0,
-          "ok_avg_grade": 3.514286,
+          "fired_trouble": 0,
+          "fired_ok": 3,
+          "ok_trouble": 0,
+          "safe_ok": 35,
+          "odds_ratio": null,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "27",
             "71",
@@ -1517,14 +505,14 @@
           "n_answered": 38,
           "n_fired": 11,
           "hit_rate": 0.289474,
-          "fired_trouble": 4,
-          "fired_ok": 7,
-          "ok_trouble": 1,
-          "safe_ok": 26,
-          "odds_ratio": 14.857143,
-          "fisher_p": 0.018671,
-          "fired_avg_grade": 1.818182,
-          "ok_avg_grade": 4.037037,
+          "fired_trouble": 0,
+          "fired_ok": 11,
+          "ok_trouble": 0,
+          "safe_ok": 27,
+          "odds_ratio": null,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "3",
             "5",
@@ -1549,14 +537,14 @@
           "n_answered": 38,
           "n_fired": 21,
           "hit_rate": 0.552632,
-          "fired_trouble": 5,
-          "fired_ok": 16,
+          "fired_trouble": 0,
+          "fired_ok": 21,
           "ok_trouble": 0,
           "safe_ok": 17,
           "odds_ratio": null,
-          "fisher_p": 0.052869,
-          "fired_avg_grade": 2.619048,
-          "ok_avg_grade": 4.352941,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "3",
             "5",
@@ -1591,14 +579,14 @@
           "n_answered": 38,
           "n_fired": 26,
           "hit_rate": 0.684211,
-          "fired_trouble": 3,
-          "fired_ok": 23,
-          "ok_trouble": 2,
-          "safe_ok": 10,
-          "odds_ratio": 0.652174,
-          "fisher_p": 0.642588,
-          "fired_avg_grade": 3.269231,
-          "ok_avg_grade": 3.666667,
+          "fired_trouble": 0,
+          "fired_ok": 26,
+          "ok_trouble": 0,
+          "safe_ok": 12,
+          "odds_ratio": null,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "4",
             "5",
@@ -1638,14 +626,14 @@
           "n_answered": 38,
           "n_fired": 5,
           "hit_rate": 0.131579,
-          "fired_trouble": 1,
-          "fired_ok": 4,
-          "ok_trouble": 4,
-          "safe_ok": 29,
-          "odds_ratio": 1.8125,
-          "fisher_p": 0.527164,
-          "fired_avg_grade": 3.4,
-          "ok_avg_grade": 3.393939,
+          "fired_trouble": 0,
+          "fired_ok": 5,
+          "ok_trouble": 0,
+          "safe_ok": 33,
+          "odds_ratio": null,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "20",
             "27",
@@ -1657,552 +645,34 @@
           "llm_n_fired": 10,
           "llm_n_answered": 12
         }
-      ],
-      "divergence": {
-        "teacher_total": 429,
-        "teacher_total_by_lang": {
-          "html": 429
-        },
-        "divergence": {
-          "count": 38,
-          "mean": 353.63157894736844,
-          "min": 109.0,
-          "q1": 250.5,
-          "median": 291.5,
-          "q3": 371.25,
-          "max": 966.0
-        },
-        "change": {
-          "count": 38,
-          "mean": 34.31578947368421,
-          "min": 0.0,
-          "q1": 1.0,
-          "median": 6.0,
-          "q3": 11.0,
-          "max": 336.0
-        },
-        "by_lang": {
-          "html": {
-            "divergence": {
-              "count": 38,
-              "mean": 117.89473684210526,
-              "min": 48.0,
-              "q1": 61.5,
-              "median": 69.5,
-              "q3": 80.75,
-              "max": 470.0
-            },
-            "change": {
-              "count": 38,
-              "mean": 34.31578947368421,
-              "min": 0.0,
-              "q1": 1.0,
-              "median": 6.0,
-              "q3": 11.0,
-              "max": 336.0
-            }
-          },
-          "css": {
-            "divergence": {
-              "count": 37,
-              "mean": 46.4054054054054,
-              "min": 4.0,
-              "q1": 29.0,
-              "median": 39.0,
-              "q3": 54.0,
-              "max": 170.0
-            },
-            "change": {
-              "count": 37,
-              "mean": 0.0,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 0.0,
-              "q3": 0.0,
-              "max": 0.0
-            }
-          },
-          "js": {
-            "divergence": {
-              "count": 37,
-              "mean": 195.7027027027027,
-              "min": 47.0,
-              "q1": 140.0,
-              "median": 167.0,
-              "q3": 235.0,
-              "max": 461.0
-            },
-            "change": {
-              "count": 37,
-              "mean": 0.0,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 0.0,
-              "q3": 0.0,
-              "max": 0.0
-            }
-          }
-        },
-        "basis": "ideal",
-        "per_student": [
-          {
-            "id": "3",
-            "divergence": 242,
-            "change": 9,
-            "divergence_pct": 56.41,
-            "change_pct": 2.1
-          },
-          {
-            "id": "4",
-            "divergence": 205,
-            "change": 1,
-            "divergence_pct": 47.79,
-            "change_pct": 0.23
-          },
-          {
-            "id": "5",
-            "divergence": 262,
-            "change": 10,
-            "divergence_pct": 61.07,
-            "change_pct": 2.33
-          },
-          {
-            "id": "8",
-            "divergence": 291,
-            "change": 7,
-            "divergence_pct": 67.83,
-            "change_pct": 1.63
-          },
-          {
-            "id": "11",
-            "divergence": 279,
-            "change": 7,
-            "divergence_pct": 65.03,
-            "change_pct": 1.63
-          },
-          {
-            "id": "13",
-            "divergence": 173,
-            "change": 1,
-            "divergence_pct": 40.33,
-            "change_pct": 0.23
-          },
-          {
-            "id": "18",
-            "divergence": 252,
-            "change": 8,
-            "divergence_pct": 58.74,
-            "change_pct": 1.86
-          },
-          {
-            "id": "20",
-            "divergence": 477,
-            "change": 8,
-            "divergence_pct": 111.19,
-            "change_pct": 1.86
-          },
-          {
-            "id": "23",
-            "divergence": 354,
-            "change": 1,
-            "divergence_pct": 82.52,
-            "change_pct": 0.23
-          },
-          {
-            "id": "24",
-            "divergence": 254,
-            "change": 1,
-            "divergence_pct": 59.21,
-            "change_pct": 0.23
-          },
-          {
-            "id": "27",
-            "divergence": 966,
-            "change": 336,
-            "divergence_pct": 225.17,
-            "change_pct": 78.32
-          },
-          {
-            "id": "29",
-            "divergence": 161,
-            "change": 1,
-            "divergence_pct": 37.53,
-            "change_pct": 0.23
-          },
-          {
-            "id": "30",
-            "divergence": 334,
-            "change": 2,
-            "divergence_pct": 77.86,
-            "change_pct": 0.47
-          },
-          {
-            "id": "35",
-            "divergence": 228,
-            "change": 11,
-            "divergence_pct": 53.15,
-            "change_pct": 2.56
-          },
-          {
-            "id": "40",
-            "divergence": 664,
-            "change": 107,
-            "divergence_pct": 154.78,
-            "change_pct": 24.94
-          },
-          {
-            "id": "41",
-            "divergence": 345,
-            "change": 3,
-            "divergence_pct": 80.42,
-            "change_pct": 0.7
-          },
-          {
-            "id": "44",
-            "divergence": 250,
-            "change": 11,
-            "divergence_pct": 58.28,
-            "change_pct": 2.56
-          },
-          {
-            "id": "45",
-            "divergence": 635,
-            "change": 1,
-            "divergence_pct": 148.02,
-            "change_pct": 0.23
-          },
-          {
-            "id": "46",
-            "divergence": 156,
-            "change": 1,
-            "divergence_pct": 36.36,
-            "change_pct": 0.23
-          },
-          {
-            "id": "47",
-            "divergence": 292,
-            "change": 35,
-            "divergence_pct": 68.07,
-            "change_pct": 8.16
-          },
-          {
-            "id": "49",
-            "divergence": 470,
-            "change": 0,
-            "divergence_pct": 109.56,
-            "change_pct": 0.0
-          },
-          {
-            "id": "50",
-            "divergence": 228,
-            "change": 6,
-            "divergence_pct": 53.15,
-            "change_pct": 1.4
-          },
-          {
-            "id": "55",
-            "divergence": 311,
-            "change": 2,
-            "divergence_pct": 72.49,
-            "change_pct": 0.47
-          },
-          {
-            "id": "58",
-            "divergence": 215,
-            "change": 1,
-            "divergence_pct": 50.12,
-            "change_pct": 0.23
-          },
-          {
-            "id": "60",
-            "divergence": 275,
-            "change": 29,
-            "divergence_pct": 64.1,
-            "change_pct": 6.76
-          },
-          {
-            "id": "61",
-            "divergence": 306,
-            "change": 1,
-            "divergence_pct": 71.33,
-            "change_pct": 0.23
-          },
-          {
-            "id": "65",
-            "divergence": 109,
-            "change": 2,
-            "divergence_pct": 25.41,
-            "change_pct": 0.47
-          },
-          {
-            "id": "67",
-            "divergence": 377,
-            "change": 12,
-            "divergence_pct": 87.88,
-            "change_pct": 2.8
-          },
-          {
-            "id": "69",
-            "divergence": 667,
-            "change": 11,
-            "divergence_pct": 155.48,
-            "change_pct": 2.56
-          },
-          {
-            "id": "70",
-            "divergence": 289,
-            "change": 6,
-            "divergence_pct": 67.37,
-            "change_pct": 1.4
-          },
-          {
-            "id": "71",
-            "divergence": 529,
-            "change": 308,
-            "divergence_pct": 123.31,
-            "change_pct": 71.79
-          },
-          {
-            "id": "72",
-            "divergence": 937,
-            "change": 324,
-            "divergence_pct": 218.41,
-            "change_pct": 75.52
-          },
-          {
-            "id": "74",
-            "divergence": 286,
-            "change": 2,
-            "divergence_pct": 66.67,
-            "change_pct": 0.47
-          },
-          {
-            "id": "77",
-            "divergence": 301,
-            "change": 9,
-            "divergence_pct": 70.16,
-            "change_pct": 2.1
-          },
-          {
-            "id": "78",
-            "divergence": 317,
-            "change": 1,
-            "divergence_pct": 73.89,
-            "change_pct": 0.23
-          },
-          {
-            "id": "80",
-            "divergence": 387,
-            "change": 1,
-            "divergence_pct": 90.21,
-            "change_pct": 0.23
-          },
-          {
-            "id": "81",
-            "divergence": 352,
-            "change": 1,
-            "divergence_pct": 82.05,
-            "change_pct": 0.23
-          },
-          {
-            "id": "82",
-            "divergence": 262,
-            "change": 27,
-            "divergence_pct": 61.07,
-            "change_pct": 6.29
-          }
-        ]
-      }
+      ]
     },
     {
       "name": "Gallery",
       "difficulty": "",
-      "n_submitted": 36,
-      "n_total": 84,
-      "n_trouble": 4,
+      "n_submitted": 0,
+      "n_total": 38,
+      "n_trouble": 0,
       "n_lesson_trouble": 0,
       "n_ai": 31,
-      "avg_grade": 3.472222,
-      "pass_rate": 0.380952,
-      "trouble_rate": 0.111111,
-      "ai_rate": 0.861111,
+      "n_ai_strong": 19,
+      "n_ai_upper": 30,
+      "n_artefact": 36,
+      "avg_grade": null,
+      "pass_rate": 0.0,
+      "trouble_rate": null,
+      "ai_rate": null,
       "follow_avg": 94.809091,
       "odds_ratio": null,
-      "fisher_p": 1.0,
+      "fisher_p": null,
       "n_followed": 33,
-      "scatter": [
-        {
-          "x": 94.3,
-          "y": 2.0,
-          "ai": true
-        },
-        {
-          "x": 98.9,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 97.1,
-          "y": 1.0,
-          "ai": true
-        },
-        {
-          "x": 96.9,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 84.5,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 96.1,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 94.0,
-          "y": 2.0,
-          "ai": true
-        },
-        {
-          "x": 99.5,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 95.0,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 93.3,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 55.5,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 97.4,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 97.5,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 97.5,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 97.1,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 97.8,
-          "y": 1.0,
-          "ai": true
-        },
-        {
-          "x": 99.1,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 94.4,
-          "y": 2.0,
-          "ai": true
-        },
-        {
-          "x": 98.5,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 84.7,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 98.9,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 97.7,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 89.2,
-          "y": 2.0,
-          "ai": true
-        },
-        {
-          "x": 96.3,
-          "y": 2.0,
-          "ai": true
-        },
-        {
-          "x": 99.9,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 96.4,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 99.6,
-          "y": 1.0,
-          "ai": true
-        },
-        {
-          "x": 88.4,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 98.6,
-          "y": 2.0,
-          "ai": true
-        },
-        {
-          "x": 98.2,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 99.0,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 98.4,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 99.0,
-          "y": 3.0,
-          "ai": true
-        }
-      ],
-      "ai_trouble": 4,
-      "ai_pass": 27,
+      "scatter": [],
+      "ai_trouble": 0,
+      "ai_pass": 0,
       "no_ai_trouble": 0,
-      "no_ai_pass": 5,
-      "ai_avg_grade": 3.225806,
-      "no_ai_avg_grade": 5.0,
+      "no_ai_pass": 0,
+      "ai_avg_grade": null,
+      "no_ai_avg_grade": null,
       "lower": "gallery",
       "n_artefact_valid": 36,
       "any_artefact_fired": 30,
@@ -2217,14 +687,14 @@
           "n_answered": 36,
           "n_fired": 19,
           "hit_rate": 0.527778,
-          "fired_trouble": 3,
-          "fired_ok": 16,
-          "ok_trouble": 1,
-          "safe_ok": 16,
-          "odds_ratio": 3.0,
-          "fisher_p": 0.605195,
-          "fired_avg_grade": 3.0,
-          "ok_avg_grade": 4.0,
+          "fired_trouble": 0,
+          "fired_ok": 19,
+          "ok_trouble": 0,
+          "safe_ok": 17,
+          "odds_ratio": null,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "3",
             "8",
@@ -2257,14 +727,14 @@
           "n_answered": 36,
           "n_fired": 10,
           "hit_rate": 0.277778,
-          "fired_trouble": 1,
-          "fired_ok": 9,
-          "ok_trouble": 3,
-          "safe_ok": 23,
-          "odds_ratio": 0.851852,
+          "fired_trouble": 0,
+          "fired_ok": 10,
+          "ok_trouble": 0,
+          "safe_ok": 26,
+          "odds_ratio": null,
           "fisher_p": 1.0,
-          "fired_avg_grade": 2.0,
-          "ok_avg_grade": 4.038462,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "3",
             "8",
@@ -2288,14 +758,14 @@
           "n_answered": 36,
           "n_fired": 27,
           "hit_rate": 0.75,
-          "fired_trouble": 4,
-          "fired_ok": 23,
+          "fired_trouble": 0,
+          "fired_ok": 27,
           "ok_trouble": 0,
           "safe_ok": 9,
           "odds_ratio": null,
-          "fisher_p": 0.553094,
-          "fired_avg_grade": 3.222222,
-          "ok_avg_grade": 4.222222,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "3",
             "4",
@@ -2329,528 +799,34 @@
           "llm_n_fired": 7,
           "llm_n_answered": 7
         }
-      ],
-      "divergence": {
-        "teacher_total": 923,
-        "teacher_total_by_lang": {
-          "html": 923
-        },
-        "divergence": {
-          "count": 36,
-          "mean": 1954.5,
-          "min": 481.0,
-          "q1": 1323.25,
-          "median": 1780.0,
-          "q3": 2461.25,
-          "max": 5847.0
-        },
-        "change": {
-          "count": 36,
-          "mean": 470.19444444444446,
-          "min": 0.0,
-          "q1": 2.5,
-          "median": 810.5,
-          "q3": 835.0,
-          "max": 890.0
-        },
-        "by_lang": {
-          "html": {
-            "divergence": {
-              "count": 36,
-              "mean": 877.0277777777778,
-              "min": 85.0,
-              "q1": 523.75,
-              "median": 920.0,
-              "q3": 1145.75,
-              "max": 1976.0
-            },
-            "change": {
-              "count": 36,
-              "mean": 470.19444444444446,
-              "min": 0.0,
-              "q1": 2.5,
-              "median": 810.5,
-              "q3": 835.0,
-              "max": 890.0
-            }
-          },
-          "css": {
-            "divergence": {
-              "count": 8,
-              "mean": 59.0,
-              "min": 24.0,
-              "q1": 47.0,
-              "median": 51.0,
-              "q3": 53.5,
-              "max": 144.0
-            },
-            "change": {
-              "count": 8,
-              "mean": 0.0,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 0.0,
-              "q3": 0.0,
-              "max": 0.0
-            }
-          },
-          "js": {
-            "divergence": {
-              "count": 35,
-              "mean": 1094.7714285714285,
-              "min": 107.0,
-              "q1": 572.0,
-              "median": 939.0,
-              "q3": 1449.5,
-              "max": 4453.0
-            },
-            "change": {
-              "count": 35,
-              "mean": 0.0,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 0.0,
-              "q3": 0.0,
-              "max": 0.0
-            }
-          }
-        },
-        "basis": "ideal",
-        "per_student": [
-          {
-            "id": "3",
-            "divergence": 1976,
-            "change": 850,
-            "divergence_pct": 214.08,
-            "change_pct": 92.09
-          },
-          {
-            "id": "4",
-            "divergence": 884,
-            "change": 0,
-            "divergence_pct": 95.77,
-            "change_pct": 0.0
-          },
-          {
-            "id": "8",
-            "divergence": 1770,
-            "change": 844,
-            "divergence_pct": 191.77,
-            "change_pct": 91.44
-          },
-          {
-            "id": "11",
-            "divergence": 2414,
-            "change": 875,
-            "divergence_pct": 261.54,
-            "change_pct": 94.8
-          },
-          {
-            "id": "13",
-            "divergence": 1918,
-            "change": 850,
-            "divergence_pct": 207.8,
-            "change_pct": 92.09
-          },
-          {
-            "id": "18",
-            "divergence": 1235,
-            "change": 3,
-            "divergence_pct": 133.8,
-            "change_pct": 0.33
-          },
-          {
-            "id": "20",
-            "divergence": 2719,
-            "change": 850,
-            "divergence_pct": 294.58,
-            "change_pct": 92.09
-          },
-          {
-            "id": "23",
-            "divergence": 2510,
-            "change": 819,
-            "divergence_pct": 271.94,
-            "change_pct": 88.73
-          },
-          {
-            "id": "24",
-            "divergence": 1036,
-            "change": 0,
-            "divergence_pct": 112.24,
-            "change_pct": 0.0
-          },
-          {
-            "id": "29",
-            "divergence": 2129,
-            "change": 0,
-            "divergence_pct": 230.66,
-            "change_pct": 0.0
-          },
-          {
-            "id": "30",
-            "divergence": 3378,
-            "change": 824,
-            "divergence_pct": 365.98,
-            "change_pct": 89.27
-          },
-          {
-            "id": "35",
-            "divergence": 1790,
-            "change": 832,
-            "divergence_pct": 193.93,
-            "change_pct": 90.14
-          },
-          {
-            "id": "40",
-            "divergence": 2447,
-            "change": 0,
-            "divergence_pct": 265.11,
-            "change_pct": 0.0
-          },
-          {
-            "id": "41",
-            "divergence": 1287,
-            "change": 0,
-            "divergence_pct": 139.44,
-            "change_pct": 0.0
-          },
-          {
-            "id": "44",
-            "divergence": 879,
-            "change": 1,
-            "divergence_pct": 95.23,
-            "change_pct": 0.11
-          },
-          {
-            "id": "45",
-            "divergence": 1655,
-            "change": 16,
-            "divergence_pct": 179.31,
-            "change_pct": 1.73
-          },
-          {
-            "id": "46",
-            "divergence": 1625,
-            "change": 807,
-            "divergence_pct": 176.06,
-            "change_pct": 87.43
-          },
-          {
-            "id": "47",
-            "divergence": 1321,
-            "change": 832,
-            "divergence_pct": 143.12,
-            "change_pct": 90.14
-          },
-          {
-            "id": "49",
-            "divergence": 2504,
-            "change": 850,
-            "divergence_pct": 271.29,
-            "change_pct": 92.09
-          },
-          {
-            "id": "50",
-            "divergence": 1442,
-            "change": 4,
-            "divergence_pct": 156.23,
-            "change_pct": 0.43
-          },
-          {
-            "id": "55",
-            "divergence": 3292,
-            "change": 698,
-            "divergence_pct": 356.66,
-            "change_pct": 75.62
-          },
-          {
-            "id": "58",
-            "divergence": 1245,
-            "change": 0,
-            "divergence_pct": 134.89,
-            "change_pct": 0.0
-          },
-          {
-            "id": "60",
-            "divergence": 2654,
-            "change": 161,
-            "divergence_pct": 287.54,
-            "change_pct": 17.44
-          },
-          {
-            "id": "61",
-            "divergence": 1517,
-            "change": 23,
-            "divergence_pct": 164.36,
-            "change_pct": 2.49
-          },
-          {
-            "id": "65",
-            "divergence": 1324,
-            "change": 0,
-            "divergence_pct": 143.45,
-            "change_pct": 0.0
-          },
-          {
-            "id": "67",
-            "divergence": 2642,
-            "change": 875,
-            "divergence_pct": 286.24,
-            "change_pct": 94.8
-          },
-          {
-            "id": "69",
-            "divergence": 1806,
-            "change": 814,
-            "divergence_pct": 195.67,
-            "change_pct": 88.19
-          },
-          {
-            "id": "70",
-            "divergence": 1712,
-            "change": 814,
-            "divergence_pct": 185.48,
-            "change_pct": 88.19
-          },
-          {
-            "id": "71",
-            "divergence": 1586,
-            "change": 832,
-            "divergence_pct": 171.83,
-            "change_pct": 90.14
-          },
-          {
-            "id": "72",
-            "divergence": 5847,
-            "change": 890,
-            "divergence_pct": 633.48,
-            "change_pct": 96.42
-          },
-          {
-            "id": "74",
-            "divergence": 481,
-            "change": 0,
-            "divergence_pct": 52.11,
-            "change_pct": 0.0
-          },
-          {
-            "id": "77",
-            "divergence": 1830,
-            "change": 863,
-            "divergence_pct": 198.27,
-            "change_pct": 93.5
-          },
-          {
-            "id": "78",
-            "divergence": 1694,
-            "change": 5,
-            "divergence_pct": 183.53,
-            "change_pct": 0.54
-          },
-          {
-            "id": "80",
-            "divergence": 2358,
-            "change": 814,
-            "divergence_pct": 255.47,
-            "change_pct": 88.19
-          },
-          {
-            "id": "81",
-            "divergence": 2544,
-            "change": 814,
-            "divergence_pct": 275.62,
-            "change_pct": 88.19
-          },
-          {
-            "id": "82",
-            "divergence": 911,
-            "change": 67,
-            "divergence_pct": 98.7,
-            "change_pct": 7.26
-          }
-        ]
-      }
+      ]
     },
     {
       "name": "Qr",
       "difficulty": "hard",
-      "n_submitted": 37,
-      "n_total": 84,
-      "n_trouble": 1,
-      "n_lesson_trouble": 1,
+      "n_submitted": 0,
+      "n_total": 38,
+      "n_trouble": 0,
+      "n_lesson_trouble": 0,
       "n_ai": 21,
-      "avg_grade": 4.054054,
-      "pass_rate": 0.428571,
-      "trouble_rate": 0.027027,
-      "ai_rate": 0.567568,
+      "n_ai_strong": 19,
+      "n_ai_upper": 21,
+      "n_artefact": 37,
+      "avg_grade": null,
+      "pass_rate": 0.0,
+      "trouble_rate": null,
+      "ai_rate": null,
       "follow_avg": 92.319355,
       "odds_ratio": null,
-      "fisher_p": 1.0,
+      "fisher_p": null,
       "n_followed": 31,
-      "scatter": [
-        {
-          "x": 61.0,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 99.1,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 81.9,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 89.6,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 98.0,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 96.2,
-          "y": 4.0,
-          "ai": false
-        },
-        {
-          "x": 84.6,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 99.8,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 89.4,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 95.5,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 68.3,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 98.4,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 98.2,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 95.3,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 93.2,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 74.4,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 98.6,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 99.6,
-          "y": 4.0,
-          "ai": false
-        },
-        {
-          "x": 93.0,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 75.8,
-          "y": 3.0,
-          "ai": true
-        },
-        {
-          "x": 99.8,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 89.4,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 96.1,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 100.0,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 96.1,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 98.9,
-          "y": 4.0,
-          "ai": true
-        },
-        {
-          "x": 98.9,
-          "y": 5.0,
-          "ai": true
-        },
-        {
-          "x": 99.8,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 99.6,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 99.1,
-          "y": 5.0,
-          "ai": false
-        },
-        {
-          "x": 94.3,
-          "y": 2.0,
-          "ai": false
-        }
-      ],
-      "ai_trouble": 1,
-      "ai_pass": 20,
+      "scatter": [],
+      "ai_trouble": 0,
+      "ai_pass": 0,
       "no_ai_trouble": 0,
-      "no_ai_pass": 16,
-      "ai_avg_grade": 3.571429,
-      "no_ai_avg_grade": 4.6875,
+      "no_ai_pass": 0,
+      "ai_avg_grade": null,
+      "no_ai_avg_grade": null,
       "lower": "qr",
       "n_artefact_valid": 37,
       "any_artefact_fired": 21,
@@ -2865,14 +841,14 @@
           "n_answered": 37,
           "n_fired": 1,
           "hit_rate": 0.027027,
-          "fired_trouble": 1,
-          "fired_ok": 0,
+          "fired_trouble": 0,
+          "fired_ok": 1,
           "ok_trouble": 0,
           "safe_ok": 36,
           "odds_ratio": null,
-          "fisher_p": 0.027027,
-          "fired_avg_grade": 1.0,
-          "ok_avg_grade": 4.138889,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "27"
           ],
@@ -2887,14 +863,14 @@
           "n_answered": 37,
           "n_fired": 19,
           "hit_rate": 0.513514,
-          "fired_trouble": 1,
-          "fired_ok": 18,
+          "fired_trouble": 0,
+          "fired_ok": 19,
           "ok_trouble": 0,
           "safe_ok": 18,
           "odds_ratio": null,
           "fisher_p": 1.0,
-          "fired_avg_grade": 3.473684,
-          "ok_avg_grade": 4.666667,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "3",
             "4",
@@ -2927,14 +903,14 @@
           "n_answered": 37,
           "n_fired": 9,
           "hit_rate": 0.243243,
-          "fired_trouble": 1,
-          "fired_ok": 8,
+          "fired_trouble": 0,
+          "fired_ok": 9,
           "ok_trouble": 0,
           "safe_ok": 28,
           "odds_ratio": null,
-          "fisher_p": 0.243243,
-          "fired_avg_grade": 3.777778,
-          "ok_avg_grade": 4.142857,
+          "fisher_p": 1.0,
+          "fired_avg_grade": null,
+          "ok_avg_grade": null,
           "fired_ids": [
             "27",
             "35",
@@ -2950,357 +926,7 @@
           "llm_n_fired": 6,
           "llm_n_answered": 12
         }
-      ],
-      "divergence": {
-        "teacher_total": 559,
-        "teacher_total_by_lang": {
-          "css": 151,
-          "js": 188,
-          "html": 220
-        },
-        "divergence": {
-          "count": 37,
-          "mean": 367.3783783783784,
-          "min": 173.0,
-          "q1": 219.0,
-          "median": 281.0,
-          "q3": 395.0,
-          "max": 1561.0
-        },
-        "change": {
-          "count": 37,
-          "mean": 30.08108108108108,
-          "min": 0.0,
-          "q1": 0.0,
-          "median": 3.0,
-          "q3": 5.0,
-          "max": 407.0
-        },
-        "by_lang": {
-          "html": {
-            "divergence": {
-              "count": 37,
-              "mean": 59.91891891891892,
-              "min": 12.0,
-              "q1": 36.0,
-              "median": 48.0,
-              "q3": 54.0,
-              "max": 291.0
-            },
-            "change": {
-              "count": 37,
-              "mean": 5.351351351351352,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 0.0,
-              "q3": 1.0,
-              "max": 75.0
-            }
-          },
-          "css": {
-            "divergence": {
-              "count": 37,
-              "mean": 137.05405405405406,
-              "min": 51.0,
-              "q1": 77.0,
-              "median": 100.0,
-              "q3": 152.0,
-              "max": 560.0
-            },
-            "change": {
-              "count": 37,
-              "mean": 8.18918918918919,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 0.0,
-              "q3": 0.0,
-              "max": 144.0
-            }
-          },
-          "js": {
-            "divergence": {
-              "count": 36,
-              "mean": 175.13888888888889,
-              "min": 60.0,
-              "q1": 88.0,
-              "median": 135.0,
-              "q3": 178.75,
-              "max": 726.0
-            },
-            "change": {
-              "count": 36,
-              "mean": 17.0,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 2.5,
-              "q3": 3.25,
-              "max": 188.0
-            }
-          }
-        },
-        "basis": "ideal",
-        "per_student": [
-          {
-            "id": "3",
-            "divergence": 354,
-            "change": 0,
-            "divergence_pct": 63.33,
-            "change_pct": 0.0
-          },
-          {
-            "id": "4",
-            "divergence": 193,
-            "change": 0,
-            "divergence_pct": 34.53,
-            "change_pct": 0.0
-          },
-          {
-            "id": "8",
-            "divergence": 288,
-            "change": 3,
-            "divergence_pct": 51.52,
-            "change_pct": 0.54
-          },
-          {
-            "id": "11",
-            "divergence": 201,
-            "change": 12,
-            "divergence_pct": 35.96,
-            "change_pct": 2.15
-          },
-          {
-            "id": "13",
-            "divergence": 330,
-            "change": 0,
-            "divergence_pct": 59.03,
-            "change_pct": 0.0
-          },
-          {
-            "id": "18",
-            "divergence": 173,
-            "change": 0,
-            "divergence_pct": 30.95,
-            "change_pct": 0.0
-          },
-          {
-            "id": "20",
-            "divergence": 347,
-            "change": 3,
-            "divergence_pct": 62.08,
-            "change_pct": 0.54
-          },
-          {
-            "id": "23",
-            "divergence": 264,
-            "change": 11,
-            "divergence_pct": 47.23,
-            "change_pct": 1.97
-          },
-          {
-            "id": "24",
-            "divergence": 227,
-            "change": 3,
-            "divergence_pct": 40.61,
-            "change_pct": 0.54
-          },
-          {
-            "id": "27",
-            "divergence": 907,
-            "change": 407,
-            "divergence_pct": 162.25,
-            "change_pct": 72.81
-          },
-          {
-            "id": "29",
-            "divergence": 281,
-            "change": 0,
-            "divergence_pct": 50.27,
-            "change_pct": 0.0
-          },
-          {
-            "id": "30",
-            "divergence": 372,
-            "change": 2,
-            "divergence_pct": 66.55,
-            "change_pct": 0.36
-          },
-          {
-            "id": "35",
-            "divergence": 415,
-            "change": 16,
-            "divergence_pct": 74.24,
-            "change_pct": 2.86
-          },
-          {
-            "id": "40",
-            "divergence": 416,
-            "change": 0,
-            "divergence_pct": 74.42,
-            "change_pct": 0.0
-          },
-          {
-            "id": "41",
-            "divergence": 726,
-            "change": 298,
-            "divergence_pct": 129.87,
-            "change_pct": 53.31
-          },
-          {
-            "id": "44",
-            "divergence": 219,
-            "change": 3,
-            "divergence_pct": 39.18,
-            "change_pct": 0.54
-          },
-          {
-            "id": "45",
-            "divergence": 453,
-            "change": 2,
-            "divergence_pct": 81.04,
-            "change_pct": 0.36
-          },
-          {
-            "id": "46",
-            "divergence": 178,
-            "change": 0,
-            "divergence_pct": 31.84,
-            "change_pct": 0.0
-          },
-          {
-            "id": "47",
-            "divergence": 206,
-            "change": 5,
-            "divergence_pct": 36.85,
-            "change_pct": 0.89
-          },
-          {
-            "id": "49",
-            "divergence": 556,
-            "change": 5,
-            "divergence_pct": 99.46,
-            "change_pct": 0.89
-          },
-          {
-            "id": "50",
-            "divergence": 243,
-            "change": 4,
-            "divergence_pct": 43.47,
-            "change_pct": 0.72
-          },
-          {
-            "id": "55",
-            "divergence": 249,
-            "change": 1,
-            "divergence_pct": 44.54,
-            "change_pct": 0.18
-          },
-          {
-            "id": "58",
-            "divergence": 192,
-            "change": 0,
-            "divergence_pct": 34.35,
-            "change_pct": 0.0
-          },
-          {
-            "id": "60",
-            "divergence": 199,
-            "change": 3,
-            "divergence_pct": 35.6,
-            "change_pct": 0.54
-          },
-          {
-            "id": "61",
-            "divergence": 299,
-            "change": 1,
-            "divergence_pct": 53.49,
-            "change_pct": 0.18
-          },
-          {
-            "id": "65",
-            "divergence": 266,
-            "change": 3,
-            "divergence_pct": 47.58,
-            "change_pct": 0.54
-          },
-          {
-            "id": "67",
-            "divergence": 1561,
-            "change": 4,
-            "divergence_pct": 279.25,
-            "change_pct": 0.72
-          },
-          {
-            "id": "69",
-            "divergence": 208,
-            "change": 3,
-            "divergence_pct": 37.21,
-            "change_pct": 0.54
-          },
-          {
-            "id": "70",
-            "divergence": 262,
-            "change": 0,
-            "divergence_pct": 46.87,
-            "change_pct": 0.0
-          },
-          {
-            "id": "71",
-            "divergence": 206,
-            "change": 5,
-            "divergence_pct": 36.85,
-            "change_pct": 0.89
-          },
-          {
-            "id": "72",
-            "divergence": 393,
-            "change": 93,
-            "divergence_pct": 70.3,
-            "change_pct": 16.64
-          },
-          {
-            "id": "74",
-            "divergence": 744,
-            "change": 188,
-            "divergence_pct": 133.09,
-            "change_pct": 33.63
-          },
-          {
-            "id": "77",
-            "divergence": 437,
-            "change": 32,
-            "divergence_pct": 78.18,
-            "change_pct": 5.72
-          },
-          {
-            "id": "78",
-            "divergence": 395,
-            "change": 0,
-            "divergence_pct": 70.66,
-            "change_pct": 0.0
-          },
-          {
-            "id": "80",
-            "divergence": 222,
-            "change": 0,
-            "divergence_pct": 39.71,
-            "change_pct": 0.0
-          },
-          {
-            "id": "81",
-            "divergence": 347,
-            "change": 1,
-            "divergence_pct": 62.08,
-            "change_pct": 0.18
-          },
-          {
-            "id": "82",
-            "divergence": 264,
-            "change": 5,
-            "divergence_pct": 47.23,
-            "change_pct": 0.89
-          }
-        ]
-      }
+      ]
     }
   ],
   "llm_assignments": [
@@ -3381,105 +1007,7 @@
       ],
       "n_artefact_valid": 7,
       "any_artefact_fired": 7,
-      "any_artefact_rate": 1.0,
-      "divergence": {
-        "teacher_total": 994,
-        "teacher_total_by_lang": {
-          "html": 994
-        },
-        "divergence": {
-          "count": 7,
-          "mean": 485.85714285714283,
-          "min": 105.0,
-          "q1": 133.5,
-          "median": 156.0,
-          "q3": 186.5,
-          "max": 2500.0
-        },
-        "change": {
-          "count": 7,
-          "mean": 128.42857142857142,
-          "min": 5.0,
-          "q1": 5.0,
-          "median": 5.0,
-          "q3": 23.0,
-          "max": 833.0
-        },
-        "by_lang": {
-          "html": {
-            "divergence": {
-              "count": 7,
-              "mean": 485.85714285714283,
-              "min": 105.0,
-              "q1": 133.5,
-              "median": 156.0,
-              "q3": 186.5,
-              "max": 2500.0
-            },
-            "change": {
-              "count": 7,
-              "mean": 128.42857142857142,
-              "min": 5.0,
-              "q1": 5.0,
-              "median": 5.0,
-              "q3": 23.0,
-              "max": 833.0
-            }
-          }
-        },
-        "basis": "ideal",
-        "per_student": [
-          {
-            "id": "85",
-            "divergence": 195,
-            "change": 39,
-            "divergence_pct": 19.62,
-            "change_pct": 3.92
-          },
-          {
-            "id": "86",
-            "divergence": 154,
-            "change": 5,
-            "divergence_pct": 15.49,
-            "change_pct": 0.5
-          },
-          {
-            "id": "87",
-            "divergence": 178,
-            "change": 5,
-            "divergence_pct": 17.91,
-            "change_pct": 0.5
-          },
-          {
-            "id": "88",
-            "divergence": 156,
-            "change": 5,
-            "divergence_pct": 15.69,
-            "change_pct": 0.5
-          },
-          {
-            "id": "89",
-            "divergence": 113,
-            "change": 7,
-            "divergence_pct": 11.37,
-            "change_pct": 0.7
-          },
-          {
-            "id": "90",
-            "divergence": 2500,
-            "change": 833,
-            "divergence_pct": 251.51,
-            "change_pct": 83.8
-          },
-          {
-            "id": "91",
-            "divergence": 105,
-            "change": 5,
-            "divergence_pct": 10.56,
-            "change_pct": 0.5
-          }
-        ]
-      }
+      "any_artefact_rate": 1.0
     },
     {
       "name": "Chess",
@@ -3600,154 +1128,7 @@
       ],
       "n_artefact_valid": 14,
       "any_artefact_fired": 14,
-      "any_artefact_rate": 1.0,
-      "divergence": {
-        "teacher_total": 1176,
-        "teacher_total_by_lang": {
-          "html": 1176
-        },
-        "divergence": {
-          "count": 14,
-          "mean": 1583.0714285714287,
-          "min": 509.0,
-          "q1": 546.25,
-          "median": 1264.5,
-          "q3": 1864.5,
-          "max": 5612.0
-        },
-        "change": {
-          "count": 14,
-          "mean": 440.07142857142856,
-          "min": 5.0,
-          "q1": 11.0,
-          "median": 110.5,
-          "q3": 968.75,
-          "max": 1101.0
-        },
-        "by_lang": {
-          "html": {
-            "divergence": {
-              "count": 14,
-              "mean": 1583.0714285714287,
-              "min": 509.0,
-              "q1": 546.25,
-              "median": 1264.5,
-              "q3": 1864.5,
-              "max": 5612.0
-            },
-            "change": {
-              "count": 14,
-              "mean": 440.07142857142856,
-              "min": 5.0,
-              "q1": 11.0,
-              "median": 110.5,
-              "q3": 968.75,
-              "max": 1101.0
-            }
-          }
-        },
-        "basis": "ideal",
-        "per_student": [
-          {
-            "id": "85",
-            "divergence": 1427,
-            "change": 879,
-            "divergence_pct": 121.34,
-            "change_pct": 74.74
-          },
-          {
-            "id": "86",
-            "divergence": 1865,
-            "change": 953,
-            "divergence_pct": 158.59,
-            "change_pct": 81.04
-          },
-          {
-            "id": "87",
-            "divergence": 1102,
-            "change": 97,
-            "divergence_pct": 93.71,
-            "change_pct": 8.25
-          },
-          {
-            "id": "88",
-            "divergence": 553,
-            "change": 11,
-            "divergence_pct": 47.02,
-            "change_pct": 0.94
-          },
-          {
-            "id": "89",
-            "divergence": 546,
-            "change": 5,
-            "divergence_pct": 46.43,
-            "change_pct": 0.43
-          },
-          {
-            "id": "90",
-            "divergence": 5612,
-            "change": 1006,
-            "divergence_pct": 477.21,
-            "change_pct": 85.54
-          },
-          {
-            "id": "91",
-            "divergence": 529,
-            "change": 11,
-            "divergence_pct": 44.98,
-            "change_pct": 0.94
-          },
-          {
-            "id": "92",
-            "divergence": 1766,
-            "change": 976,
-            "divergence_pct": 150.17,
-            "change_pct": 82.99
-          },
-          {
-            "id": "93",
-            "divergence": 1863,
-            "change": 974,
-            "divergence_pct": 158.42,
-            "change_pct": 82.82
-          },
-          {
-            "id": "94",
-            "divergence": 2428,
-            "change": 124,
-            "divergence_pct": 206.46,
-            "change_pct": 10.54
-          },
-          {
-            "id": "95",
-            "divergence": 547,
-            "change": 12,
-            "divergence_pct": 46.51,
-            "change_pct": 1.02
-          },
-          {
-            "id": "96",
-            "divergence": 520,
-            "change": 5,
-            "divergence_pct": 44.22,
-            "change_pct": 0.43
-          },
-          {
-            "id": "97",
-            "divergence": 2896,
-            "change": 1101,
-            "divergence_pct": 246.26,
-            "change_pct": 93.62
-          },
-          {
-            "id": "98",
-            "divergence": 509,
-            "change": 7,
-            "divergence_pct": 43.28,
-            "change_pct": 0.6
-          }
-        ]
-      }
+      "any_artefact_rate": 1.0
     },
     {
       "name": "Sorting",
@@ -3846,180 +1227,7 @@
       ],
       "n_artefact_valid": 12,
       "any_artefact_fired": 12,
-      "any_artefact_rate": 1.0,
-      "divergence": {
-        "teacher_total": 429,
-        "teacher_total_by_lang": {
-          "html": 429
-        },
-        "divergence": {
-          "count": 12,
-          "mean": 1005.5833333333334,
-          "min": 262.0,
-          "q1": 444.5,
-          "median": 496.5,
-          "q3": 1206.0,
-          "max": 3104.0
-        },
-        "change": {
-          "count": 12,
-          "mean": 85.16666666666667,
-          "min": 1.0,
-          "q1": 1.75,
-          "median": 15.5,
-          "q3": 78.0,
-          "max": 352.0
-        },
-        "by_lang": {
-          "html": {
-            "divergence": {
-              "count": 12,
-              "mean": 230.08333333333334,
-              "min": 75.0,
-              "q1": 109.5,
-              "median": 131.0,
-              "q3": 246.75,
-              "max": 645.0
-            },
-            "change": {
-              "count": 12,
-              "mean": 85.16666666666667,
-              "min": 1.0,
-              "q1": 1.75,
-              "median": 15.5,
-              "q3": 78.0,
-              "max": 352.0
-            }
-          },
-          "css": {
-            "divergence": {
-              "count": 12,
-              "mean": 282.0833333333333,
-              "min": 29.0,
-              "q1": 81.5,
-              "median": 128.0,
-              "q3": 374.25,
-              "max": 1081.0
-            },
-            "change": {
-              "count": 12,
-              "mean": 0.0,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 0.0,
-              "q3": 0.0,
-              "max": 0.0
-            }
-          },
-          "js": {
-            "divergence": {
-              "count": 12,
-              "mean": 493.4166666666667,
-              "min": 155.0,
-              "q1": 222.75,
-              "median": 281.0,
-              "q3": 588.0,
-              "max": 1378.0
-            },
-            "change": {
-              "count": 12,
-              "mean": 0.0,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 0.0,
-              "q3": 0.0,
-              "max": 0.0
-            }
-          }
-        },
-        "basis": "ideal",
-        "per_student": [
-          {
-            "id": "85",
-            "divergence": 1992,
-            "change": 345,
-            "divergence_pct": 464.34,
-            "change_pct": 80.42
-          },
-          {
-            "id": "86",
-            "divergence": 702,
-            "change": 16,
-            "divergence_pct": 163.64,
-            "change_pct": 3.73
-          },
-          {
-            "id": "87",
-            "divergence": 944,
-            "change": 16,
-            "divergence_pct": 220.05,
-            "change_pct": 3.73
-          },
-          {
-            "id": "89",
-            "divergence": 461,
-            "change": 1,
-            "divergence_pct": 107.46,
-            "change_pct": 0.23
-          },
-          {
-            "id": "90",
-            "divergence": 3104,
-            "change": 352,
-            "divergence_pct": 723.54,
-            "change_pct": 82.05
-          },
-          {
-            "id": "91",
-            "divergence": 262,
-            "change": 27,
-            "divergence_pct": 61.07,
-            "change_pct": 6.29
-          },
-          {
-            "id": "92",
-            "divergence": 482,
-            "change": 15,
-            "divergence_pct": 112.35,
-            "change_pct": 3.5
-          },
-          {
-            "id": "93",
-            "divergence": 511,
-            "change": 15,
-            "divergence_pct": 119.11,
-            "change_pct": 3.5
-          },
-          {
-            "id": "94",
-            "divergence": 480,
-            "change": 1,
-            "divergence_pct": 111.89,
-            "change_pct": 0.23
-          },
-          {
-            "id": "95",
-            "divergence": 335,
-            "change": 1,
-            "divergence_pct": 78.09,
-            "change_pct": 0.23
-          },
-          {
-            "id": "96",
-            "divergence": 395,
-            "change": 2,
-            "divergence_pct": 92.07,
-            "change_pct": 0.47
-          },
-          {
-            "id": "99",
-            "divergence": 2399,
-            "change": 231,
-            "divergence_pct": 559.21,
-            "change_pct": 53.85
-          }
-        ]
-      }
+      "any_artefact_rate": 1.0
     },
     {
       "name": "Gallery",
@@ -4074,145 +1282,7 @@
       ],
       "n_artefact_valid": 7,
       "any_artefact_fired": 7,
-      "any_artefact_rate": 1.0,
-      "divergence": {
-        "teacher_total": 923,
-        "teacher_total_by_lang": {
-          "html": 923
-        },
-        "divergence": {
-          "count": 7,
-          "mean": 2343.8571428571427,
-          "min": 1211.0,
-          "q1": 1681.5,
-          "median": 1959.0,
-          "q3": 2762.5,
-          "max": 4349.0
-        },
-        "change": {
-          "count": 7,
-          "mean": 287.85714285714283,
-          "min": 0.0,
-          "q1": 0.5,
-          "median": 24.0,
-          "q3": 573.5,
-          "max": 843.0
-        },
-        "by_lang": {
-          "html": {
-            "divergence": {
-              "count": 7,
-              "mean": 1160.7142857142858,
-              "min": 80.0,
-              "q1": 670.5,
-              "median": 876.0,
-              "q3": 1304.0,
-              "max": 3220.0
-            },
-            "change": {
-              "count": 7,
-              "mean": 287.85714285714283,
-              "min": 0.0,
-              "q1": 0.5,
-              "median": 24.0,
-              "q3": 573.5,
-              "max": 843.0
-            }
-          },
-          "css": {
-            "divergence": {
-              "count": 2,
-              "mean": 179.5,
-              "min": 143.0,
-              "q1": 161.25,
-              "median": 179.5,
-              "q3": 197.75,
-              "max": 216.0
-            },
-            "change": {
-              "count": 2,
-              "mean": 0.0,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 0.0,
-              "q3": 0.0,
-              "max": 0.0
-            }
-          },
-          "js": {
-            "divergence": {
-              "count": 7,
-              "mean": 1131.857142857143,
-              "min": 530.0,
-              "q1": 847.5,
-              "median": 1242.0,
-              "q3": 1360.0,
-              "max": 1736.0
-            },
-            "change": {
-              "count": 7,
-              "mean": 0.0,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 0.0,
-              "q3": 0.0,
-              "max": 0.0
-            }
-          }
-        },
-        "basis": "ideal",
-        "per_student": [
-          {
-            "id": "85",
-            "divergence": 1938,
-            "change": 24,
-            "divergence_pct": 209.97,
-            "change_pct": 2.6
-          },
-          {
-            "id": "86",
-            "divergence": 3320,
-            "change": 843,
-            "divergence_pct": 359.7,
-            "change_pct": 91.33
-          },
-          {
-            "id": "87",
-            "divergence": 2205,
-            "change": 0,
-            "divergence_pct": 238.89,
-            "change_pct": 0.0
-          },
-          {
-            "id": "88",
-            "divergence": 1959,
-            "change": 1,
-            "divergence_pct": 212.24,
-            "change_pct": 0.11
-          },
-          {
-            "id": "89",
-            "divergence": 1211,
-            "change": 0,
-            "divergence_pct": 131.2,
-            "change_pct": 0.0
-          },
-          {
-            "id": "90",
-            "divergence": 4349,
-            "change": 739,
-            "divergence_pct": 471.18,
-            "change_pct": 80.07
-          },
-          {
-            "id": "91",
-            "divergence": 1425,
-            "change": 408,
-            "divergence_pct": 154.39,
-            "change_pct": 44.2
-          }
-        ]
-      }
+      "any_artefact_rate": 1.0
     },
     {
       "name": "Qr",
@@ -4262,288 +1332,113 @@
       ],
       "n_artefact_valid": 12,
       "any_artefact_fired": 10,
-      "any_artefact_rate": 0.833333,
-      "divergence": {
-        "teacher_total": 559,
-        "teacher_total_by_lang": {
-          "css": 151,
-          "js": 188,
-          "html": 220
-        },
-        "divergence": {
-          "count": 12,
-          "mean": 676.8333333333334,
-          "min": 312.0,
-          "q1": 476.5,
-          "median": 575.0,
-          "q3": 626.5,
-          "max": 2153.0
-        },
-        "change": {
-          "count": 12,
-          "mean": 124.5,
-          "min": 0.0,
-          "q1": 0.0,
-          "median": 169.5,
-          "q3": 200.5,
-          "max": 203.0
-        },
-        "by_lang": {
-          "html": {
-            "divergence": {
-              "count": 11,
-              "mean": 81.81818181818181,
-              "min": 12.0,
-              "q1": 63.0,
-              "median": 101.0,
-              "q3": 110.5,
-              "max": 114.0
-            },
-            "change": {
-              "count": 11,
-              "mean": 22.90909090909091,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 9.0,
-              "q3": 49.0,
-              "max": 49.0
-            }
-          },
-          "css": {
-            "divergence": {
-              "count": 12,
-              "mean": 315.4166666666667,
-              "min": 138.0,
-              "q1": 272.75,
-              "median": 320.5,
-              "q3": 351.5,
-              "max": 559.0
-            },
-            "change": {
-              "count": 12,
-              "mean": 64.58333333333333,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 92.0,
-              "q3": 96.25,
-              "max": 151.0
-            }
-          },
-          "js": {
-            "divergence": {
-              "count": 12,
-              "mean": 286.4166666666667,
-              "min": 108.0,
-              "q1": 137.0,
-              "median": 152.0,
-              "q3": 227.5,
-              "max": 1488.0
-            },
-            "change": {
-              "count": 12,
-              "mean": 38.916666666666664,
-              "min": 0.0,
-              "q1": 0.0,
-              "median": 25.5,
-              "q3": 57.0,
-              "max": 188.0
-            }
-          }
-        },
-        "basis": "ideal",
-        "per_student": [
-          {
-            "id": "85",
-            "divergence": 579,
-            "change": 200,
-            "divergence_pct": 103.58,
-            "change_pct": 35.78
-          },
-          {
-            "id": "86",
-            "divergence": 624,
-            "change": 203,
-            "divergence_pct": 111.63,
-            "change_pct": 36.31
-          },
-          {
-            "id": "87",
-            "divergence": 563,
-            "change": 0,
-            "divergence_pct": 100.72,
-            "change_pct": 0.0
-          },
-          {
-            "id": "88",
-            "divergence": 481,
-            "change": 176,
-            "divergence_pct": 86.05,
-            "change_pct": 31.48
-          },
-          {
-            "id": "89",
-            "divergence": 631,
-            "change": 151,
-            "divergence_pct": 112.88,
-            "change_pct": 27.01
-          },
-          {
-            "id": "90",
-            "divergence": 2153,
-            "change": 197,
-            "divergence_pct": 385.15,
-            "change_pct": 35.24
-          },
-          {
-            "id": "91",
-            "divergence": 381,
-            "change": 0,
-            "divergence_pct": 68.16,
-            "change_pct": 0.0
-          },
-          {
-            "id": "92",
-            "divergence": 571,
-            "change": 202,
-            "divergence_pct": 102.15,
-            "change_pct": 36.14
-          },
-          {
-            "id": "93",
-            "divergence": 625,
-            "change": 202,
-            "divergence_pct": 111.81,
-            "change_pct": 36.14
-          },
-          {
-            "id": "94",
-            "divergence": 463,
-            "change": 0,
-            "divergence_pct": 82.83,
-            "change_pct": 0.0
-          },
-          {
-            "id": "95",
-            "divergence": 312,
-            "change": 0,
-            "divergence_pct": 55.81,
-            "change_pct": 0.0
-          },
-          {
-            "id": "96",
-            "divergence": 739,
-            "change": 163,
-            "divergence_pct": 132.2,
-            "change_pct": 29.16
-          }
-        ]
-      }
+      "any_artefact_rate": 0.833333
     }
   ],
   "correlations": [
     {
       "label": "Pre-typing KPM \u2192 Final grade",
-      "r": 0.370364,
-      "p_r": 0.04394,
-      "rho": 0.370016,
-      "p_rho": 0.044155,
-      "n": 30
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     {
       "label": "Post-typing KPM \u2192 Final grade",
-      "r": 0.527375,
-      "p_r": 0.004702,
-      "rho": 0.54185,
-      "p_rho": 0.003508,
-      "n": 27
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     {
       "label": "Self-evaluation \u2192 Final grade",
-      "r": 0.464939,
-      "p_r": 0.005597,
-      "rho": 0.44549,
-      "p_rho": 0.008282,
-      "n": 34
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     {
       "label": "Participation \u2192 Assign. avg (BX)",
-      "r": 0.154243,
-      "p_r": 0.376327,
-      "rho": 0.250396,
-      "p_rho": 0.146838,
-      "n": 35
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     {
       "label": "Participation \u2192 Avg submitted only",
-      "r": 0.154243,
-      "p_r": 0.376327,
-      "rho": 0.250396,
-      "p_rho": 0.146838,
-      "n": 35
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     {
       "label": "Participation \u2192 Pre-typing speed",
-      "r": 0.080685,
-      "p_r": 0.67736,
+      "r": 0.080192,
+      "p_r": 0.679227,
       "rho": 0.080808,
       "p_rho": 0.676894,
       "n": 29
     },
     {
       "label": "Participation \u2192 Typing improvement",
-      "r": 0.109381,
-      "p_r": 0.627993,
+      "r": 0.109509,
+      "p_r": 0.627587,
       "rho": 0.194805,
       "p_rho": 0.384985,
       "n": 22
     },
     {
       "label": "Participation \u2192 Final quiz",
-      "r": 0.3342,
-      "p_r": 0.082181,
+      "r": 0.334235,
+      "p_r": 0.082147,
       "rho": 0.37931,
       "p_rho": 0.046512,
       "n": 28
     },
     {
       "label": "Answers given \u2192 Final grade",
-      "r": 0.464029,
-      "p_r": 0.003341,
-      "rho": 0.519235,
-      "p_rho": 0.000837,
-      "n": 38
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     {
       "label": "Questions asked \u2192 Final grade",
-      "r": 0.283724,
-      "p_r": 0.084304,
-      "rho": 0.386484,
-      "p_rho": 0.016538,
-      "n": 38
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     {
       "label": "Help received \u2192 Final grade",
-      "r": 0.138835,
-      "p_r": 0.405814,
-      "rho": 0.183547,
-      "p_rho": 0.269999,
-      "n": 38
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     {
       "label": "Kahoot score \u2192 Final grade",
-      "r": 0.234184,
-      "p_r": 0.514904,
-      "rho": 0.497209,
-      "p_rho": 0.143703,
-      "n": 10
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     {
       "label": "Final quiz \u2192 Final grade",
-      "r": 0.321036,
-      "p_r": 0.095766,
-      "rho": 0.315824,
-      "p_rho": 0.101587,
-      "n": 28
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     {
       "label": "Pre-typing KPM \u2192 AI flags",
@@ -4563,16 +1458,16 @@
     },
     {
       "label": "Total AI flags \u2192 Final grade",
-      "r": -0.433421,
-      "p_r": 0.006562,
-      "rho": -0.445623,
-      "p_rho": 0.00505,
-      "n": 38
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     {
       "label": "Self-evaluation \u2192 Participation",
-      "r": 0.050836,
-      "p_r": 0.778746,
+      "r": 0.050524,
+      "p_r": 0.780074,
       "rho": 0.052861,
       "p_rho": 0.770163,
       "n": 33
@@ -4583,39 +1478,38 @@
     "post_avg": 94.945677,
     "improvement_avg": 21.383172,
     "n_with_both": 22,
-    "passed_pre_avg": 82.163324,
-    "failed_pre_avg": 56.097587,
-    "pass_fail_mannwhitney_p": 0.532827,
+    "passed_pre_avg": null,
+    "failed_pre_avg": 80.425608,
     "corr_pre_grade": {
-      "r": 0.370364,
-      "rho": 0.370016,
-      "p_rho": 0.044155,
-      "n": 30
+      "r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     "corr_post_grade": {
-      "r": 0.527375,
-      "rho": 0.54185,
-      "p_rho": 0.003508,
-      "n": 27
+      "r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     "corr_improvement_grade": {
-      "r": 0.090644,
-      "rho": 0.140417,
-      "p_rho": 0.533108,
-      "n": 22
+      "r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     }
   },
   "ai_overall": {
-    "ai_trouble": 16,
-    "ai_pass": 132,
-    "no_ai_trouble": 1,
-    "no_ai_pass": 38,
-    "trouble_rate_ai": 0.108108,
-    "trouble_rate_no_ai": 0.025641,
-    "odds_ratio": 4.606061,
-    "fisher_p": 0.205478,
-    "chi2": 1.640138,
-    "chi2_p": 0.200307
+    "ai_trouble": 0,
+    "ai_pass": 0,
+    "no_ai_trouble": 0,
+    "no_ai_pass": 0,
+    "trouble_rate_ai": null,
+    "trouble_rate_no_ai": null,
+    "odds_ratio": null,
+    "fisher_p": 1.0,
+    "chi2": null,
+    "chi2_p": null
   },
   "artefact_schema": {
     "wall": [
@@ -4801,1578 +1695,194 @@
       "name": "deepseek v3 images"
     }
   ],
-  "cofiring": [
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "color",
-      "x_label": "Color codes not from video",
-      "x_severity": "medium",
-      "y_key": "report",
-      "y_label": "Report is AI-like",
-      "y_severity": "medium",
-      "n_x": 8,
-      "n_xy": 3,
-      "p_y": 0.236842,
-      "p_y_given_x": 0.375,
-      "lift": 1.5833,
-      "joint_ids": [
-        "35",
-        "46",
-        "58"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "color",
-      "x_label": "Color codes not from video",
-      "x_severity": "medium",
-      "y_key": "extra",
-      "y_label": "Unexpected row structure",
-      "y_severity": "medium",
-      "n_x": 8,
-      "n_xy": 3,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.375,
-      "lift": 1.7812,
-      "joint_ids": [
-        "27",
-        "58",
-        "77"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "color",
-      "x_label": "Color codes not from video",
-      "x_severity": "medium",
-      "y_key": "pattern",
-      "y_label": "Incorrect brick pattern",
-      "y_severity": "low",
-      "n_x": 8,
-      "n_xy": 6,
-      "p_y": 0.5,
-      "p_y_given_x": 0.75,
-      "lift": 1.5,
-      "joint_ids": [
-        "27",
-        "35",
-        "41",
-        "46",
-        "58",
-        "77"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "color",
-      "x_label": "Color codes not from video",
-      "x_severity": "medium",
-      "y_key": "illusion",
-      "y_label": "Illusion not mentioned",
-      "y_severity": "low",
-      "n_x": 8,
-      "n_xy": 8,
-      "p_y": 0.684211,
-      "p_y_given_x": 1.0,
-      "lift": 1.4615,
-      "joint_ids": [
-        "27",
-        "35",
-        "40",
-        "41",
-        "46",
-        "58",
-        "77",
-        "82"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "report",
-      "x_label": "Report is AI-like",
-      "x_severity": "medium",
-      "y_key": "color",
-      "y_label": "Color codes not from video",
-      "y_severity": "medium",
-      "n_x": 9,
-      "n_xy": 3,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.333333,
-      "lift": 1.5833,
-      "joint_ids": [
-        "35",
-        "46",
-        "58"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "report",
-      "x_label": "Report is AI-like",
-      "x_severity": "medium",
-      "y_key": "extra",
-      "y_label": "Unexpected row structure",
-      "y_severity": "medium",
-      "n_x": 9,
-      "n_xy": 3,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.333333,
-      "lift": 1.5833,
-      "joint_ids": [
-        "24",
-        "58",
-        "72"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "report",
-      "x_label": "Report is AI-like",
-      "x_severity": "medium",
-      "y_key": "pattern",
-      "y_label": "Incorrect brick pattern",
-      "y_severity": "low",
-      "n_x": 9,
-      "n_xy": 7,
-      "p_y": 0.5,
-      "p_y_given_x": 0.777778,
-      "lift": 1.5556,
-      "joint_ids": [
-        "3",
-        "11",
-        "13",
-        "24",
-        "35",
-        "46",
-        "58"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "report",
-      "x_label": "Report is AI-like",
-      "x_severity": "medium",
-      "y_key": "illusion",
-      "y_label": "Illusion not mentioned",
-      "y_severity": "low",
-      "n_x": 9,
-      "n_xy": 9,
-      "p_y": 0.684211,
-      "p_y_given_x": 1.0,
-      "lift": 1.4615,
-      "joint_ids": [
-        "3",
-        "11",
-        "13",
-        "24",
-        "35",
-        "46",
-        "47",
-        "58",
-        "72"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "extra",
-      "x_label": "Unexpected row structure",
-      "x_severity": "medium",
-      "y_key": "color",
-      "y_label": "Color codes not from video",
-      "y_severity": "medium",
-      "n_x": 8,
-      "n_xy": 3,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.375,
-      "lift": 1.7812,
-      "joint_ids": [
-        "27",
-        "58",
-        "77"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "extra",
-      "x_label": "Unexpected row structure",
-      "x_severity": "medium",
-      "y_key": "report",
-      "y_label": "Report is AI-like",
-      "y_severity": "medium",
-      "n_x": 8,
-      "n_xy": 3,
-      "p_y": 0.236842,
-      "p_y_given_x": 0.375,
-      "lift": 1.5833,
-      "joint_ids": [
-        "24",
-        "58",
-        "72"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "extra",
-      "x_label": "Unexpected row structure",
-      "x_severity": "medium",
-      "y_key": "pattern",
-      "y_label": "Incorrect brick pattern",
-      "y_severity": "low",
-      "n_x": 8,
-      "n_xy": 5,
-      "p_y": 0.5,
-      "p_y_given_x": 0.625,
-      "lift": 1.25,
-      "joint_ids": [
-        "24",
-        "27",
-        "58",
-        "67",
-        "77"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "extra",
-      "x_label": "Unexpected row structure",
-      "x_severity": "medium",
-      "y_key": "illusion",
-      "y_label": "Illusion not mentioned",
-      "y_severity": "low",
-      "n_x": 8,
-      "n_xy": 7,
-      "p_y": 0.684211,
-      "p_y_given_x": 0.875,
-      "lift": 1.2788,
-      "joint_ids": [
-        "24",
-        "27",
-        "29",
-        "58",
-        "67",
-        "72",
-        "77"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "pattern",
-      "x_label": "Incorrect brick pattern",
-      "x_severity": "low",
-      "y_key": "color",
-      "y_label": "Color codes not from video",
-      "y_severity": "medium",
-      "n_x": 19,
-      "n_xy": 6,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.315789,
-      "lift": 1.5,
-      "joint_ids": [
-        "27",
-        "35",
-        "41",
-        "46",
-        "58",
-        "77"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "pattern",
-      "x_label": "Incorrect brick pattern",
-      "x_severity": "low",
-      "y_key": "report",
-      "y_label": "Report is AI-like",
-      "y_severity": "medium",
-      "n_x": 19,
-      "n_xy": 7,
-      "p_y": 0.236842,
-      "p_y_given_x": 0.368421,
-      "lift": 1.5556,
-      "joint_ids": [
-        "3",
-        "11",
-        "13",
-        "24",
-        "35",
-        "46",
-        "58"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "pattern",
-      "x_label": "Incorrect brick pattern",
-      "x_severity": "low",
-      "y_key": "extra",
-      "y_label": "Unexpected row structure",
-      "y_severity": "medium",
-      "n_x": 19,
-      "n_xy": 5,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.263158,
-      "lift": 1.25,
-      "joint_ids": [
-        "24",
-        "27",
-        "58",
-        "67",
-        "77"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "pattern",
-      "x_label": "Incorrect brick pattern",
-      "x_severity": "low",
-      "y_key": "illusion",
-      "y_label": "Illusion not mentioned",
-      "y_severity": "low",
-      "n_x": 19,
-      "n_xy": 16,
-      "p_y": 0.684211,
-      "p_y_given_x": 0.842105,
-      "lift": 1.2308,
-      "joint_ids": [
-        "3",
-        "8",
-        "11",
-        "13",
-        "24",
-        "27",
-        "35",
-        "41",
-        "46",
-        "49",
-        "58",
-        "65",
-        "67",
-        "69",
-        "74",
-        "77"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "illusion",
-      "x_label": "Illusion not mentioned",
-      "x_severity": "low",
-      "y_key": "color",
-      "y_label": "Color codes not from video",
-      "y_severity": "medium",
-      "n_x": 26,
-      "n_xy": 8,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.307692,
-      "lift": 1.4615,
-      "joint_ids": [
-        "27",
-        "35",
-        "40",
-        "41",
-        "46",
-        "58",
-        "77",
-        "82"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "illusion",
-      "x_label": "Illusion not mentioned",
-      "x_severity": "low",
-      "y_key": "report",
-      "y_label": "Report is AI-like",
-      "y_severity": "medium",
-      "n_x": 26,
-      "n_xy": 9,
-      "p_y": 0.236842,
-      "p_y_given_x": 0.346154,
-      "lift": 1.4615,
-      "joint_ids": [
-        "3",
-        "11",
-        "13",
-        "24",
-        "35",
-        "46",
-        "47",
-        "58",
-        "72"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "illusion",
-      "x_label": "Illusion not mentioned",
-      "x_severity": "low",
-      "y_key": "extra",
-      "y_label": "Unexpected row structure",
-      "y_severity": "medium",
-      "n_x": 26,
-      "n_xy": 7,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.269231,
-      "lift": 1.2788,
-      "joint_ids": [
-        "24",
-        "27",
-        "29",
-        "58",
-        "67",
-        "72",
-        "77"
-      ]
-    },
-    {
-      "assignment": "wall",
-      "assn_name": "Wall",
-      "x_key": "illusion",
-      "x_label": "Illusion not mentioned",
-      "x_severity": "low",
-      "y_key": "pattern",
-      "y_label": "Incorrect brick pattern",
-      "y_severity": "low",
-      "n_x": 26,
-      "n_xy": 16,
-      "p_y": 0.5,
-      "p_y_given_x": 0.615385,
-      "lift": 1.2308,
-      "joint_ids": [
-        "3",
-        "8",
-        "11",
-        "13",
-        "24",
-        "27",
-        "35",
-        "41",
-        "46",
-        "49",
-        "58",
-        "65",
-        "67",
-        "69",
-        "74",
-        "77"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "method",
-      "x_label": "Method 8 is mentioned",
-      "x_severity": "high",
-      "y_key": "white",
-      "y_label": "White-on-white not discussed",
-      "y_severity": "medium",
-      "n_x": 4,
-      "n_xy": 3,
-      "p_y": 0.447368,
-      "p_y_given_x": 0.75,
-      "lift": 1.6765,
-      "joint_ids": [
-        "5",
-        "27",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "method",
-      "x_label": "Method 8 is mentioned",
-      "x_severity": "high",
-      "y_key": "pieces",
-      "y_label": "Incorrect piece pattern",
-      "y_severity": "low",
-      "n_x": 4,
-      "n_xy": 3,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.75,
-      "lift": 3.5625,
-      "joint_ids": [
-        "5",
-        "35",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "method",
-      "x_label": "Method 8 is mentioned",
-      "x_severity": "high",
-      "y_key": "style",
-      "y_label": "Changed board color",
-      "y_severity": "low",
-      "n_x": 4,
-      "n_xy": 4,
-      "p_y": 0.710526,
-      "p_y_given_x": 1.0,
-      "lift": 1.4074,
-      "joint_ids": [
-        "5",
-        "27",
-        "35",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "white",
-      "x_label": "White-on-white not discussed",
-      "x_severity": "medium",
-      "y_key": "method",
-      "y_label": "Method 8 is mentioned",
-      "y_severity": "high",
-      "n_x": 17,
-      "n_xy": 3,
-      "p_y": 0.105263,
-      "p_y_given_x": 0.176471,
-      "lift": 1.6765,
-      "joint_ids": [
-        "5",
-        "27",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "white",
-      "x_label": "White-on-white not discussed",
-      "x_severity": "medium",
-      "y_key": "pieces",
-      "y_label": "Incorrect piece pattern",
-      "y_severity": "low",
-      "n_x": 17,
-      "n_xy": 4,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.235294,
-      "lift": 1.1176,
-      "joint_ids": [
-        "5",
-        "24",
-        "49",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "white",
-      "x_label": "White-on-white not discussed",
-      "x_severity": "medium",
-      "y_key": "extra",
-      "y_label": "Unexpected modifications",
-      "y_severity": "low",
-      "n_x": 17,
-      "n_xy": 7,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.411765,
-      "lift": 1.9559,
-      "joint_ids": [
-        "24",
-        "27",
-        "40",
-        "46",
-        "49",
-        "67",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "white",
-      "x_label": "White-on-white not discussed",
-      "x_severity": "medium",
-      "y_key": "style",
-      "y_label": "Changed board color",
-      "y_severity": "low",
-      "n_x": 17,
-      "n_xy": 15,
-      "p_y": 0.710526,
-      "p_y_given_x": 0.882353,
-      "lift": 1.2418,
-      "joint_ids": [
-        "5",
-        "8",
-        "24",
-        "27",
-        "40",
-        "45",
-        "46",
-        "50",
-        "60",
-        "65",
-        "69",
-        "71",
-        "72",
-        "74",
-        "77"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "pieces",
-      "x_label": "Incorrect piece pattern",
-      "x_severity": "low",
-      "y_key": "method",
-      "y_label": "Method 8 is mentioned",
-      "y_severity": "high",
-      "n_x": 8,
-      "n_xy": 3,
-      "p_y": 0.105263,
-      "p_y_given_x": 0.375,
-      "lift": 3.5625,
-      "joint_ids": [
-        "5",
-        "35",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "pieces",
-      "x_label": "Incorrect piece pattern",
-      "x_severity": "low",
-      "y_key": "white",
-      "y_label": "White-on-white not discussed",
-      "y_severity": "medium",
-      "n_x": 8,
-      "n_xy": 4,
-      "p_y": 0.447368,
-      "p_y_given_x": 0.5,
-      "lift": 1.1176,
-      "joint_ids": [
-        "5",
-        "24",
-        "49",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "pieces",
-      "x_label": "Incorrect piece pattern",
-      "x_severity": "low",
-      "y_key": "extra",
-      "y_label": "Unexpected modifications",
-      "y_severity": "low",
-      "n_x": 8,
-      "n_xy": 3,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.375,
-      "lift": 1.7812,
-      "joint_ids": [
-        "24",
-        "49",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "pieces",
-      "x_label": "Incorrect piece pattern",
-      "x_severity": "low",
-      "y_key": "style",
-      "y_label": "Changed board color",
-      "y_severity": "low",
-      "n_x": 8,
-      "n_xy": 5,
-      "p_y": 0.710526,
-      "p_y_given_x": 0.625,
-      "lift": 0.8796,
-      "joint_ids": [
-        "5",
-        "24",
-        "35",
-        "61",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "extra",
-      "x_label": "Unexpected modifications",
-      "x_severity": "low",
-      "y_key": "white",
-      "y_label": "White-on-white not discussed",
-      "y_severity": "medium",
-      "n_x": 8,
-      "n_xy": 7,
-      "p_y": 0.447368,
-      "p_y_given_x": 0.875,
-      "lift": 1.9559,
-      "joint_ids": [
-        "24",
-        "27",
-        "40",
-        "46",
-        "49",
-        "67",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "extra",
-      "x_label": "Unexpected modifications",
-      "x_severity": "low",
-      "y_key": "pieces",
-      "y_label": "Incorrect piece pattern",
-      "y_severity": "low",
-      "n_x": 8,
-      "n_xy": 3,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.375,
-      "lift": 1.7812,
-      "joint_ids": [
-        "24",
-        "49",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "extra",
-      "x_label": "Unexpected modifications",
-      "x_severity": "low",
-      "y_key": "style",
-      "y_label": "Changed board color",
-      "y_severity": "low",
-      "n_x": 8,
-      "n_xy": 5,
-      "p_y": 0.710526,
-      "p_y_given_x": 0.625,
-      "lift": 0.8796,
-      "joint_ids": [
-        "24",
-        "27",
-        "40",
-        "46",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "style",
-      "x_label": "Changed board color",
-      "x_severity": "low",
-      "y_key": "method",
-      "y_label": "Method 8 is mentioned",
-      "y_severity": "high",
-      "n_x": 27,
-      "n_xy": 4,
-      "p_y": 0.105263,
-      "p_y_given_x": 0.148148,
-      "lift": 1.4074,
-      "joint_ids": [
-        "5",
-        "27",
-        "35",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "style",
-      "x_label": "Changed board color",
-      "x_severity": "low",
-      "y_key": "white",
-      "y_label": "White-on-white not discussed",
-      "y_severity": "medium",
-      "n_x": 27,
-      "n_xy": 15,
-      "p_y": 0.447368,
-      "p_y_given_x": 0.555556,
-      "lift": 1.2418,
-      "joint_ids": [
-        "5",
-        "8",
-        "24",
-        "27",
-        "40",
-        "45",
-        "46",
-        "50",
-        "60",
-        "65",
-        "69",
-        "71",
-        "72",
-        "74",
-        "77"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "style",
-      "x_label": "Changed board color",
-      "x_severity": "low",
-      "y_key": "pieces",
-      "y_label": "Incorrect piece pattern",
-      "y_severity": "low",
-      "n_x": 27,
-      "n_xy": 5,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.185185,
-      "lift": 0.8796,
-      "joint_ids": [
-        "5",
-        "24",
-        "35",
-        "61",
-        "71"
-      ]
-    },
-    {
-      "assignment": "chess",
-      "assn_name": "Chess",
-      "x_key": "style",
-      "x_label": "Changed board color",
-      "x_severity": "low",
-      "y_key": "extra",
-      "y_label": "Unexpected modifications",
-      "y_severity": "low",
-      "n_x": 27,
-      "n_xy": 5,
-      "p_y": 0.210526,
-      "p_y_given_x": 0.185185,
-      "lift": 0.8796,
-      "joint_ids": [
-        "24",
-        "27",
-        "40",
-        "46",
-        "71"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "start",
-      "x_label": "Starter code ignored",
-      "x_severity": "high",
-      "y_key": "var_speed",
-      "y_label": "'var_speed' is present",
-      "y_severity": "high",
-      "n_x": 3,
-      "n_xy": 3,
-      "p_y": 0.552632,
-      "p_y_given_x": 1.0,
-      "lift": 1.8095,
-      "joint_ids": [
-        "27",
-        "71",
-        "72"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "onchange",
-      "x_label": "'onchange' is present",
-      "x_severity": "high",
-      "y_key": "var_speed",
-      "y_label": "'var_speed' is present",
-      "y_severity": "high",
-      "n_x": 11,
-      "n_xy": 11,
-      "p_y": 0.552632,
-      "p_y_given_x": 1.0,
-      "lift": 1.8095,
-      "joint_ids": [
-        "3",
-        "5",
-        "20",
-        "27",
-        "35",
-        "40",
-        "45",
-        "46",
-        "49",
-        "55",
-        "65"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "onchange",
-      "x_label": "'onchange' is present",
-      "x_severity": "high",
-      "y_key": "reversed_slider",
-      "y_label": "Speed logic inversed",
-      "y_severity": "medium",
-      "n_x": 11,
-      "n_xy": 7,
-      "p_y": 0.684211,
-      "p_y_given_x": 0.636364,
-      "lift": 0.9301,
-      "joint_ids": [
-        "5",
-        "27",
-        "35",
-        "45",
-        "46",
-        "49",
-        "65"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "onchange",
-      "x_label": "'onchange' is present",
-      "x_severity": "high",
-      "y_key": "extra",
-      "y_label": "Unexpected modifications",
-      "y_severity": "low",
-      "n_x": 11,
-      "n_xy": 3,
-      "p_y": 0.131579,
-      "p_y_given_x": 0.272727,
-      "lift": 2.0727,
-      "joint_ids": [
-        "20",
-        "27",
-        "40"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "var_speed",
-      "x_label": "'var_speed' is present",
-      "x_severity": "high",
-      "y_key": "start",
-      "y_label": "Starter code ignored",
-      "y_severity": "high",
-      "n_x": 21,
-      "n_xy": 3,
-      "p_y": 0.078947,
-      "p_y_given_x": 0.142857,
-      "lift": 1.8095,
-      "joint_ids": [
-        "27",
-        "71",
-        "72"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "var_speed",
-      "x_label": "'var_speed' is present",
-      "x_severity": "high",
-      "y_key": "onchange",
-      "y_label": "'onchange' is present",
-      "y_severity": "high",
-      "n_x": 21,
-      "n_xy": 11,
-      "p_y": 0.289474,
-      "p_y_given_x": 0.52381,
-      "lift": 1.8095,
-      "joint_ids": [
-        "3",
-        "5",
-        "20",
-        "27",
-        "35",
-        "40",
-        "45",
-        "46",
-        "49",
-        "55",
-        "65"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "var_speed",
-      "x_label": "'var_speed' is present",
-      "x_severity": "high",
-      "y_key": "reversed_slider",
-      "y_label": "Speed logic inversed",
-      "y_severity": "medium",
-      "n_x": 21,
-      "n_xy": 14,
-      "p_y": 0.684211,
-      "p_y_given_x": 0.666667,
-      "lift": 0.9744,
-      "joint_ids": [
-        "5",
-        "18",
-        "27",
-        "35",
-        "41",
-        "44",
-        "45",
-        "46",
-        "49",
-        "58",
-        "60",
-        "65",
-        "72",
-        "82"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "var_speed",
-      "x_label": "'var_speed' is present",
-      "x_severity": "high",
-      "y_key": "extra",
-      "y_label": "Unexpected modifications",
-      "y_severity": "low",
-      "n_x": 21,
-      "n_xy": 4,
-      "p_y": 0.131579,
-      "p_y_given_x": 0.190476,
-      "lift": 1.4476,
-      "joint_ids": [
-        "20",
-        "27",
-        "40",
-        "72"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "reversed_slider",
-      "x_label": "Speed logic inversed",
-      "x_severity": "medium",
-      "y_key": "onchange",
-      "y_label": "'onchange' is present",
-      "y_severity": "high",
-      "n_x": 26,
-      "n_xy": 7,
-      "p_y": 0.289474,
-      "p_y_given_x": 0.269231,
-      "lift": 0.9301,
-      "joint_ids": [
-        "5",
-        "27",
-        "35",
-        "45",
-        "46",
-        "49",
-        "65"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "reversed_slider",
-      "x_label": "Speed logic inversed",
-      "x_severity": "medium",
-      "y_key": "var_speed",
-      "y_label": "'var_speed' is present",
-      "y_severity": "high",
-      "n_x": 26,
-      "n_xy": 14,
-      "p_y": 0.552632,
-      "p_y_given_x": 0.538462,
-      "lift": 0.9744,
-      "joint_ids": [
-        "5",
-        "18",
-        "27",
-        "35",
-        "41",
-        "44",
-        "45",
-        "46",
-        "49",
-        "58",
-        "60",
-        "65",
-        "72",
-        "82"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "extra",
-      "x_label": "Unexpected modifications",
-      "x_severity": "low",
-      "y_key": "onchange",
-      "y_label": "'onchange' is present",
-      "y_severity": "high",
-      "n_x": 5,
-      "n_xy": 3,
-      "p_y": 0.289474,
-      "p_y_given_x": 0.6,
-      "lift": 2.0727,
-      "joint_ids": [
-        "20",
-        "27",
-        "40"
-      ]
-    },
-    {
-      "assignment": "sorting",
-      "assn_name": "Sorting",
-      "x_key": "extra",
-      "x_label": "Unexpected modifications",
-      "x_severity": "low",
-      "y_key": "var_speed",
-      "y_label": "'var_speed' is present",
-      "y_severity": "high",
-      "n_x": 5,
-      "n_xy": 4,
-      "p_y": 0.552632,
-      "p_y_given_x": 0.8,
-      "lift": 1.4476,
-      "joint_ids": [
-        "20",
-        "27",
-        "40",
-        "72"
-      ]
-    },
-    {
-      "assignment": "gallery",
-      "assn_name": "Gallery",
-      "x_key": "onclick",
-      "x_label": "'onmousedown' is present",
-      "x_severity": "high",
-      "y_key": "discarded_data",
-      "y_label": "Does not utilize API data",
-      "y_severity": "medium",
-      "n_x": 19,
-      "n_xy": 7,
-      "p_y": 0.277778,
-      "p_y_given_x": 0.368421,
-      "lift": 1.3263,
-      "joint_ids": [
-        "3",
-        "8",
-        "11",
-        "24",
-        "49",
-        "60",
-        "67"
-      ]
-    },
-    {
-      "assignment": "gallery",
-      "assn_name": "Gallery",
-      "x_key": "onclick",
-      "x_label": "'onmousedown' is present",
-      "x_severity": "high",
-      "y_key": "random_animals",
-      "y_label": "Implements randomization",
-      "y_severity": "medium",
-      "n_x": 19,
-      "n_xy": 17,
-      "p_y": 0.75,
-      "p_y_given_x": 0.894737,
-      "lift": 1.193,
-      "joint_ids": [
-        "3",
-        "8",
-        "11",
-        "13",
-        "24",
-        "35",
-        "40",
-        "41",
-        "45",
-        "47",
-        "49",
-        "55",
-        "60",
-        "67",
-        "71",
-        "74",
-        "82"
-      ]
-    },
-    {
-      "assignment": "gallery",
-      "assn_name": "Gallery",
-      "x_key": "discarded_data",
-      "x_label": "Does not utilize API data",
-      "x_severity": "medium",
-      "y_key": "onclick",
-      "y_label": "'onmousedown' is present",
-      "y_severity": "high",
-      "n_x": 10,
-      "n_xy": 7,
-      "p_y": 0.527778,
-      "p_y_given_x": 0.7,
-      "lift": 1.3263,
-      "joint_ids": [
-        "3",
-        "8",
-        "11",
-        "24",
-        "49",
-        "60",
-        "67"
-      ]
-    },
-    {
-      "assignment": "gallery",
-      "assn_name": "Gallery",
-      "x_key": "discarded_data",
-      "x_label": "Does not utilize API data",
-      "x_severity": "medium",
-      "y_key": "random_animals",
-      "y_label": "Implements randomization",
-      "y_severity": "medium",
-      "n_x": 10,
-      "n_xy": 9,
-      "p_y": 0.75,
-      "p_y_given_x": 0.9,
-      "lift": 1.2,
-      "joint_ids": [
-        "3",
-        "8",
-        "11",
-        "18",
-        "24",
-        "49",
-        "60",
-        "67",
-        "77"
-      ]
-    },
-    {
-      "assignment": "gallery",
-      "assn_name": "Gallery",
-      "x_key": "random_animals",
-      "x_label": "Implements randomization",
-      "x_severity": "medium",
-      "y_key": "onclick",
-      "y_label": "'onmousedown' is present",
-      "y_severity": "high",
-      "n_x": 27,
-      "n_xy": 17,
-      "p_y": 0.527778,
-      "p_y_given_x": 0.62963,
-      "lift": 1.193,
-      "joint_ids": [
-        "3",
-        "8",
-        "11",
-        "13",
-        "24",
-        "35",
-        "40",
-        "41",
-        "45",
-        "47",
-        "49",
-        "55",
-        "60",
-        "67",
-        "71",
-        "74",
-        "82"
-      ]
-    },
-    {
-      "assignment": "gallery",
-      "assn_name": "Gallery",
-      "x_key": "random_animals",
-      "x_label": "Implements randomization",
-      "x_severity": "medium",
-      "y_key": "discarded_data",
-      "y_label": "Does not utilize API data",
-      "y_severity": "medium",
-      "n_x": 27,
-      "n_xy": 9,
-      "p_y": 0.277778,
-      "p_y_given_x": 0.333333,
-      "lift": 1.2,
-      "joint_ids": [
-        "3",
-        "8",
-        "11",
-        "18",
-        "24",
-        "49",
-        "60",
-        "67",
-        "77"
-      ]
-    },
-    {
-      "assignment": "qr",
-      "assn_name": "Qr",
-      "x_key": "in_stock",
-      "x_label": "'in_store' is present",
-      "x_severity": "high",
-      "y_key": "extra",
-      "y_label": "Unexpected modifications",
-      "y_severity": "medium",
-      "n_x": 19,
-      "n_xy": 7,
-      "p_y": 0.243243,
-      "p_y_given_x": 0.368421,
-      "lift": 1.5146,
-      "joint_ids": [
-        "27",
-        "35",
-        "47",
-        "65",
-        "72",
-        "74",
-        "77"
-      ]
-    },
-    {
-      "assignment": "qr",
-      "assn_name": "Qr",
-      "x_key": "extra",
-      "x_label": "Unexpected modifications",
-      "x_severity": "medium",
-      "y_key": "in_stock",
-      "y_label": "'in_store' is present",
-      "y_severity": "high",
-      "n_x": 9,
-      "n_xy": 7,
-      "p_y": 0.513514,
-      "p_y_given_x": 0.777778,
-      "lift": 1.5146,
-      "joint_ids": [
-        "27",
-        "35",
-        "47",
-        "65",
-        "72",
-        "74",
-        "77"
-      ]
-    }
-  ],
   "curated_moments": [],
   "follow_vs_grade": [
     {
       "name": "Wall",
-      "n": 19,
-      "r": 0.18621,
-      "p_r": 0.445297,
-      "rho": 0.232701,
-      "p_rho": 0.337705
+      "n": 0,
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null
     },
     {
       "name": "Chess",
-      "n": 31,
-      "r": 0.449478,
-      "p_r": 0.011189,
-      "rho": 0.485447,
-      "p_rho": 0.005636
+      "n": 0,
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null
     },
     {
       "name": "Sorting",
-      "n": 32,
-      "r": 0.405491,
-      "p_r": 0.02131,
-      "rho": 0.540236,
-      "p_rho": 0.001414
+      "n": 0,
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null
     },
     {
       "name": "Gallery",
-      "n": 33,
-      "r": 0.099803,
-      "p_r": 0.580538,
-      "rho": 0.200994,
-      "p_rho": 0.262033
+      "n": 0,
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null
     },
     {
       "name": "Qr",
-      "n": 31,
-      "r": 0.393814,
-      "p_r": 0.028379,
-      "rho": 0.411322,
-      "p_rho": 0.021514
+      "n": 0,
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null
     }
   ],
   "per_language_follow": [
     {
       "lang": "HTML",
-      "mean": 87.952095,
-      "n": 35,
-      "r": 0.082147,
-      "p_r": 0.638975,
-      "rho": 0.191255,
-      "p_rho": 0.271077
+      "mean": 87.950952,
+      "n": 0,
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null
     },
     {
       "lang": "CSS",
       "mean": 84.057381,
-      "n": 35,
-      "r": 0.286155,
-      "p_r": 0.095616,
-      "rho": 0.346753,
-      "p_rho": 0.041279
+      "n": 0,
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null
     },
     {
       "lang": "JS",
       "mean": 90.345714,
-      "n": 35,
-      "r": 0.348033,
-      "p_r": 0.040486,
-      "rho": 0.441368,
-      "p_rho": 0.00795
+      "n": 0,
+      "r": null,
+      "p_r": null,
+      "rho": null,
+      "p_rho": null
     }
   ],
   "per_language_follow_per_lesson": [
     {
       "lesson": "Wall",
       "lang": "HTML",
-      "n": 19,
-      "r": 0.177052,
-      "rho": 0.216258,
-      "p_rho": 0.373874,
-      "mean": 57.557895
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
+      "mean": 57.547368
     },
     {
       "lesson": "Wall",
       "lang": "CSS",
-      "n": 19,
-      "r": 0.317605,
-      "rho": 0.356007,
-      "p_rho": 0.134662,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 47.915789
     },
     {
       "lesson": "Chess",
       "lang": "HTML",
-      "n": 31,
-      "r": 0.45434,
-      "rho": 0.460247,
-      "p_rho": 0.00918,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 88.890323
     },
     {
       "lesson": "Chess",
       "lang": "CSS",
-      "n": 31,
-      "r": 0.31248,
-      "rho": 0.5379,
-      "p_rho": 0.001802,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 89.309677
     },
     {
       "lesson": "Chess",
       "lang": "JS",
-      "n": 31,
-      "r": 0.174431,
-      "rho": 0.312191,
-      "p_rho": 0.087302,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 84.016129
     },
     {
       "lesson": "Sorting",
       "lang": "HTML",
-      "n": 32,
-      "r": 0.362523,
-      "rho": 0.396741,
-      "p_rho": 0.024565,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 98.609375
     },
     {
       "lesson": "Sorting",
       "lang": "CSS",
-      "n": 32,
-      "r": 0.540217,
-      "rho": 0.533616,
-      "p_rho": 0.00166,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 92.45625
     },
     {
       "lesson": "Sorting",
       "lang": "JS",
-      "n": 32,
-      "r": 0.20491,
-      "rho": 0.277278,
-      "p_rho": 0.124435,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 96.803125
     },
     {
       "lesson": "Gallery",
       "lang": "HTML",
-      "n": 33,
-      "r": 0.084772,
-      "rho": 0.064152,
-      "p_rho": 0.72283,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 95.515152
     },
     {
       "lesson": "Gallery",
       "lang": "JS",
-      "n": 33,
-      "r": 0.101992,
-      "rho": 0.203408,
-      "p_rho": 0.256227,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 94.636364
     },
     {
       "lesson": "Qr",
       "lang": "HTML",
-      "n": 31,
-      "r": 0.432571,
-      "rho": 0.375815,
-      "p_rho": 0.037203,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 93.093548
     },
     {
       "lesson": "Qr",
       "lang": "CSS",
-      "n": 31,
-      "r": 0.092385,
-      "rho": 0.060391,
-      "p_rho": 0.746907,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 93.787097
     },
     {
       "lesson": "Qr",
       "lang": "JS",
-      "n": 31,
-      "r": 0.275375,
-      "rho": 0.435217,
-      "p_rho": 0.014406,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
       "mean": 90.296774
     }
   ],
@@ -6426,80 +1936,80 @@
   "comment_diff_per_lesson": [
     {
       "lesson": "Wall",
-      "n": 19,
-      "r": 0.161676,
-      "rho": 0.113961,
-      "p_rho": 0.642262,
-      "r_cplus": -0.145465,
-      "rho_cplus": -0.021364,
-      "p_cplus": 0.930822,
-      "r_cminus": -0.387378,
-      "rho_cminus": -0.369047,
-      "p_cminus": 0.119967,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
+      "r_cplus": null,
+      "rho_cplus": null,
+      "p_cplus": null,
+      "r_cminus": null,
+      "rho_cminus": null,
+      "p_cminus": null,
       "mean_cdiff": -21.894737,
       "mean_cplus": 13.736842,
       "mean_cminus": 35.631579
     },
     {
       "lesson": "Chess",
-      "n": 31,
-      "r": 0.082297,
-      "rho": 0.145119,
-      "p_rho": 0.436026,
-      "r_cplus": 0.07327,
-      "rho_cplus": 0.042805,
-      "p_cplus": 0.81915,
-      "r_cminus": -0.176642,
-      "rho_cminus": -0.181824,
-      "p_cminus": 0.327608,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
+      "r_cplus": null,
+      "rho_cplus": null,
+      "p_cplus": null,
+      "r_cminus": null,
+      "rho_cminus": null,
+      "p_cminus": null,
       "mean_cdiff": 16.193548,
       "mean_cplus": 18.935484,
       "mean_cminus": 2.741935
     },
     {
       "lesson": "Sorting",
-      "n": 32,
-      "r": 0.124049,
-      "rho": 0.292266,
-      "p_rho": 0.104548,
-      "r_cplus": 0.134076,
-      "rho_cplus": 0.231448,
-      "p_cplus": 0.202462,
-      "r_cminus": 0.068092,
-      "rho_cminus": 0.043974,
-      "p_cminus": 0.811125,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
+      "r_cplus": null,
+      "rho_cplus": null,
+      "p_cplus": null,
+      "r_cminus": null,
+      "rho_cminus": null,
+      "p_cminus": null,
       "mean_cdiff": 15.75,
       "mean_cplus": 19.5625,
       "mean_cminus": 3.8125
     },
     {
       "lesson": "Gallery",
-      "n": 33,
-      "r": 0.309204,
-      "rho": 0.246903,
-      "p_rho": 0.165987,
-      "r_cplus": 0.216976,
-      "rho_cplus": 0.093639,
-      "p_cplus": 0.604238,
-      "r_cminus": -0.227514,
-      "rho_cminus": -0.151221,
-      "p_cminus": 0.40088,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
+      "r_cplus": null,
+      "rho_cplus": null,
+      "p_cplus": null,
+      "r_cminus": null,
+      "rho_cminus": null,
+      "p_cminus": null,
       "mean_cdiff": 4.515152,
       "mean_cplus": 26.606061,
       "mean_cminus": 22.090909
     },
     {
       "lesson": "Qr",
-      "n": 31,
-      "r": 0.200879,
-      "rho": 0.243192,
-      "p_rho": 0.187408,
-      "r_cplus": 0.114182,
-      "rho_cplus": 0.069836,
-      "p_cplus": 0.708919,
-      "r_cminus": -0.23609,
-      "rho_cminus": -0.331441,
-      "p_cminus": 0.068543,
+      "n": 0,
+      "r": null,
+      "rho": null,
+      "p_rho": null,
+      "r_cplus": null,
+      "rho_cplus": null,
+      "p_cplus": null,
+      "r_cminus": null,
+      "rho_cminus": null,
+      "p_cminus": null,
       "mean_cdiff": 1.225806,
       "mean_cplus": 9.225806,
       "mean_cminus": 8.0
@@ -6508,118 +2018,106 @@
   "comment_totals": [
     {
       "label": "Total C+ (extra)",
-      "mean": 31.404762,
-      "final_grade_n": 38,
-      "final_grade_r": 0.239969,
-      "final_grade_rho": 0.368254,
-      "final_grade_p_rho": 0.022915,
-      "avg_assignments_n": 38,
-      "avg_assignments_r": 0.239969,
-      "avg_assignments_rho": 0.368254,
-      "avg_assignments_p_rho": 0.022915
+      "mean": 69.421053,
+      "final_grade_n": 0,
+      "final_grade_r": null,
+      "final_grade_rho": null,
+      "final_grade_p_rho": null,
+      "avg_assignments_n": 0,
+      "avg_assignments_r": null,
+      "avg_assignments_rho": null,
+      "avg_assignments_p_rho": null
     },
     {
       "label": "Total C- (missing)",
-      "mean": 22.154762,
-      "final_grade_n": 38,
-      "final_grade_r": 0.145933,
-      "final_grade_rho": 0.189737,
-      "final_grade_p_rho": 0.253892,
-      "avg_assignments_n": 38,
-      "avg_assignments_r": 0.145933,
-      "avg_assignments_rho": 0.189737,
-      "avg_assignments_p_rho": 0.253892
+      "mean": 48.973684,
+      "final_grade_n": 0,
+      "final_grade_r": null,
+      "final_grade_rho": null,
+      "final_grade_p_rho": null,
+      "avg_assignments_n": 0,
+      "avg_assignments_r": null,
+      "avg_assignments_rho": null,
+      "avg_assignments_p_rho": null
     },
     {
       "label": "Total C Diff (surplus)",
-      "mean": 9.25,
-      "final_grade_n": 38,
-      "final_grade_r": 0.187756,
-      "final_grade_rho": 0.157759,
-      "final_grade_p_rho": 0.344174,
-      "avg_assignments_n": 38,
-      "avg_assignments_r": 0.187756,
-      "avg_assignments_rho": 0.157759,
-      "avg_assignments_p_rho": 0.344174
+      "mean": 20.447368,
+      "final_grade_n": 0,
+      "final_grade_r": null,
+      "final_grade_rho": null,
+      "final_grade_p_rho": null,
+      "avg_assignments_n": 0,
+      "avg_assignments_r": null,
+      "avg_assignments_rho": null,
+      "avg_assignments_p_rho": null
     }
   ],
   "self_eval": {
     "avg": 1.588235,
     "corr_grade": {
-      "r": 0.464939,
-      "rho": 0.44549,
-      "p_rho": 0.008282,
-      "n": 34
+      "r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     }
   },
   "early_ai": [
     {
       "label": "AI in Wall (A1)",
-      "n_with": 30,
-      "n_without": 8,
-      "with_ai_pass_rate": 0.933333,
-      "without_ai_pass_rate": 0.875,
-      "fisher_p": 0.518729
+      "n_with": 0,
+      "n_without": 0
     },
     {
       "label": "AI in Chess (A2)",
-      "n_with": 32,
-      "n_without": 6,
-      "with_ai_pass_rate": 0.90625,
-      "without_ai_pass_rate": 1.0,
-      "fisher_p": 1.0
+      "n_with": 0,
+      "n_without": 0
     },
     {
       "label": "AI in Wall OR Chess",
-      "n_with": 35,
-      "n_without": 3,
-      "with_ai_pass_rate": 0.914286,
-      "without_ai_pass_rate": 1.0,
-      "fisher_p": 1.0
+      "n_with": 0,
+      "n_without": 0
     },
     {
       "label": "AI in Wall AND Chess",
-      "n_with": 27,
-      "n_without": 11,
-      "with_ai_pass_rate": 0.925926,
-      "without_ai_pass_rate": 0.909091,
-      "fisher_p": 1.0
+      "n_with": 0,
+      "n_without": 0
     }
   ],
   "engagement": [
     {
       "label": "Answers",
       "n": 8,
-      "n_passed": 8,
-      "pass_rate": 1.0
+      "n_passed": 0,
+      "pass_rate": 0.0
     },
     {
       "label": "Questions",
       "n": 5,
-      "n_passed": 5,
-      "pass_rate": 1.0
+      "n_passed": 0,
+      "pass_rate": 0.0
     },
     {
       "label": "Help",
       "n": 3,
-      "n_passed": 3,
-      "pass_rate": 1.0
+      "n_passed": 0,
+      "pass_rate": 0.0
     }
   ],
   "artefact_summary": {
     "n_students": 38,
     "mean_fired": 7.526316,
     "max_fired": 17,
-    "passed_mean": 7.142857,
-    "failed_mean": 12.0,
+    "passed_mean": null,
+    "failed_mean": 7.526316,
     "grade_corr": {
-      "r": -0.757179,
-      "rho": -0.714335,
-      "p_rho": 0.0,
-      "n": 38
+      "r": null,
+      "rho": null,
+      "p_rho": null,
+      "n": 0
     },
     "participation_corr": {
-      "r": -0.372439,
+      "r": -0.37231,
       "rho": -0.46821,
       "p_rho": 0.00456,
       "n": 35
@@ -6660,7 +2158,6 @@
       "p_rho": 0.034072,
       "n": 28
     },
-    "pass_fail_mannwhitney_p": 0.103048,
     "per_artefact_engagement": [
       {
         "assignment": "wall",
@@ -6670,7 +2167,7 @@
         "severity": "medium",
         "n_fired": 8,
         "participation_corr": {
-          "r": -0.178729,
+          "r": -0.1787,
           "rho": -0.120101,
           "p_rho": 0.491948,
           "n": 35
@@ -6682,22 +2179,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.093175,
-          "rho": -0.105131,
-          "p_rho": 0.341224,
-          "n": 84
+          "r": -0.232397,
+          "rho": -0.264815,
+          "p_rho": 0.108114,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.05423,
-          "rho": -0.081598,
-          "p_rho": 0.460586,
-          "n": 84
+          "r": -0.130557,
+          "rho": -0.200688,
+          "p_rho": 0.226996,
+          "n": 38
         },
         "help_corr": {
-          "r": -0.062439,
-          "rho": -0.062439,
-          "p_rho": 0.572591,
-          "n": 84
+          "r": -0.151186,
+          "rho": -0.151186,
+          "p_rho": 0.364903,
+          "n": 38
         }
       },
       {
@@ -6708,7 +2205,7 @@
         "severity": "medium",
         "n_fired": 9,
         "participation_corr": {
-          "r": 0.016995,
+          "r": 0.017046,
           "rho": -0.121268,
           "p_rho": 0.487718,
           "n": 35
@@ -6720,22 +2217,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.041451,
-          "rho": 0.012472,
-          "p_rho": 0.910347,
-          "n": 84
+          "r": -0.184549,
+          "rho": -0.150776,
+          "p_rho": 0.36622,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.057901,
-          "rho": -0.087123,
-          "p_rho": 0.43068,
-          "n": 84
+          "r": -0.140844,
+          "rho": -0.2165,
+          "p_rho": 0.191701,
+          "n": 38
         },
         "help_corr": {
-          "r": -0.066667,
-          "rho": -0.066667,
-          "p_rho": 0.546824,
-          "n": 84
+          "r": -0.163098,
+          "rho": -0.163098,
+          "p_rho": 0.327881,
+          "n": 38
         }
       },
       {
@@ -6746,7 +2243,7 @@
         "severity": "medium",
         "n_fired": 8,
         "participation_corr": {
-          "r": -0.097998,
+          "r": -0.097959,
           "rho": -0.176812,
           "p_rho": 0.309592,
           "n": 35
@@ -6758,22 +2255,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": 0.029117,
-          "rho": 0.157697,
-          "p_rho": 0.15196,
-          "n": 84
+          "r": -0.094411,
+          "rho": 0.016551,
+          "p_rho": 0.921436,
+          "n": 38
         },
         "questions_corr": {
-          "r": 0.359888,
-          "rho": 0.267233,
-          "p_rho": 0.013995,
-          "n": 84
+          "r": 0.320459,
+          "rho": 0.195671,
+          "p_rho": 0.239066,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.374634,
-          "rho": 0.374634,
-          "p_rho": 0.000447,
-          "n": 84
+          "r": 0.327569,
+          "rho": 0.327569,
+          "p_rho": 0.044687,
+          "n": 38
         }
       },
       {
@@ -6784,7 +2281,7 @@
         "severity": "low",
         "n_fired": 19,
         "participation_corr": {
-          "r": -0.091511,
+          "r": -0.091429,
           "rho": -0.203771,
           "p_rho": 0.240351,
           "n": 35
@@ -6796,22 +2293,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": 0.102149,
-          "rho": 0.202854,
-          "p_rho": 0.064224,
-          "n": 84
+          "r": -0.112509,
+          "rho": -0.02699,
+          "p_rho": 0.872212,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.054048,
-          "rho": -0.017176,
-          "p_rho": 0.876765,
-          "n": 84
+          "r": -0.206856,
+          "rho": -0.237269,
+          "p_rho": 0.151475,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.202622,
-          "rho": 0.202622,
-          "p_rho": 0.064536,
-          "n": 84
+          "r": 0.09759,
+          "rho": 0.09759,
+          "p_rho": 0.559972,
+          "n": 38
         }
       },
       {
@@ -6822,7 +2319,7 @@
         "severity": "low",
         "n_fired": 26,
         "participation_corr": {
-          "r": -0.201977,
+          "r": -0.201856,
           "rho": -0.188912,
           "p_rho": 0.277102,
           "n": 35
@@ -6834,22 +2331,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": 0.001849,
-          "rho": 0.041722,
-          "p_rho": 0.706306,
-          "n": 84
+          "r": -0.35988,
+          "rho": -0.355645,
+          "p_rho": 0.028429,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.046173,
-          "rho": 0.046631,
-          "p_rho": 0.673607,
-          "n": 84
+          "r": -0.273254,
+          "rho": -0.246421,
+          "p_rho": 0.135856,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.148675,
-          "rho": 0.148675,
-          "p_rho": 0.177103,
-          "n": 84
+          "r": -0.01105,
+          "rho": -0.01105,
+          "p_rho": 0.947503,
+          "n": 38
         }
       },
       {
@@ -6860,7 +2357,7 @@
         "severity": "high",
         "n_fired": 4,
         "participation_corr": {
-          "r": 0.035639,
+          "r": 0.035664,
           "rho": -0.036564,
           "p_rho": 0.834818,
           "n": 35
@@ -6872,22 +2369,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.064216,
-          "rho": -0.072457,
-          "p_rho": 0.512474,
-          "n": 84
+          "r": -0.154361,
+          "rho": -0.175893,
+          "p_rho": 0.290822,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.037375,
-          "rho": -0.056237,
-          "p_rho": 0.61138,
-          "n": 84
+          "r": -0.086718,
+          "rho": -0.133299,
+          "p_rho": 0.424969,
+          "n": 38
         },
         "help_corr": {
-          "r": -0.043033,
-          "rho": -0.043033,
-          "p_rho": 0.697516,
-          "n": 84
+          "r": -0.100419,
+          "rho": -0.100419,
+          "p_rho": 0.548595,
+          "n": 38
         }
       },
       {
@@ -6898,7 +2395,7 @@
         "severity": "medium",
         "n_fired": 17,
         "participation_corr": {
-          "r": -0.410005,
+          "r": -0.409961,
           "rho": -0.398451,
           "p_rho": 0.017751,
           "n": 35
@@ -6910,22 +2407,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.010637,
-          "rho": 0.124818,
-          "p_rho": 0.257945,
-          "n": 84
+          "r": -0.235207,
+          "rho": -0.115349,
+          "p_rho": 0.490439,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.046375,
-          "rho": -0.002981,
-          "p_rho": 0.978531,
-          "n": 84
+          "r": -0.18125,
+          "rho": -0.197457,
+          "p_rho": 0.234718,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.222393,
-          "rho": 0.222393,
-          "p_rho": 0.042026,
-          "n": 84
+          "r": 0.129125,
+          "rho": 0.129125,
+          "p_rho": 0.439739,
+          "n": 38
         }
       },
       {
@@ -6936,7 +2433,7 @@
         "severity": "low",
         "n_fired": 8,
         "participation_corr": {
-          "r": 0.201843,
+          "r": 0.201905,
           "rho": 0.219247,
           "p_rho": 0.205714,
           "n": 35
@@ -6948,22 +2445,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": 0.334846,
-          "rho": 0.315394,
-          "p_rho": 0.003475,
-          "n": 84
+          "r": 0.250553,
+          "rho": 0.223437,
+          "p_rho": 0.177507,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.002465,
-          "rho": 0.087718,
-          "p_rho": 0.427527,
-          "n": 84
+          "r": -0.07418,
+          "rho": -0.015052,
+          "p_rho": 0.928534,
+          "n": 38
         },
         "help_corr": {
-          "r": -0.062439,
-          "rho": -0.062439,
-          "p_rho": 0.572591,
-          "n": 84
+          "r": -0.151186,
+          "rho": -0.151186,
+          "p_rho": 0.364903,
+          "n": 38
         }
       },
       {
@@ -6974,7 +2471,7 @@
         "severity": "low",
         "n_fired": 8,
         "participation_corr": {
-          "r": -0.323063,
+          "r": -0.323045,
           "rho": -0.270226,
           "p_rho": 0.116417,
           "n": 35
@@ -6986,22 +2483,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": 0.151409,
-          "rho": 0.170839,
-          "p_rho": 0.120245,
-          "n": 84
+          "r": 0.043574,
+          "rho": 0.049653,
+          "p_rho": 0.767201,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.002465,
-          "rho": 0.087718,
-          "p_rho": 0.427527,
-          "n": 84
+          "r": -0.07418,
+          "rho": -0.015052,
+          "p_rho": 0.928534,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.156098,
-          "rho": 0.156098,
-          "p_rho": 0.156211,
-          "n": 84
+          "r": 0.088192,
+          "rho": 0.088192,
+          "p_rho": 0.598529,
+          "n": 38
         }
       },
       {
@@ -7012,7 +2509,7 @@
         "severity": "low",
         "n_fired": 27,
         "participation_corr": {
-          "r": -0.307128,
+          "r": -0.307015,
           "rho": -0.365636,
           "p_rho": 0.030773,
           "n": 35
@@ -7024,22 +2521,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": 0.071375,
-          "rho": 0.198238,
-          "p_rho": 0.070662,
-          "n": 84
+          "r": -0.27093,
+          "rho": -0.141343,
+          "p_rho": 0.397302,
+          "n": 38
         },
         "questions_corr": {
-          "r": 0.145251,
-          "rho": 0.046159,
-          "p_rho": 0.676726,
-          "n": 84
+          "r": 0.009336,
+          "rho": -0.252567,
+          "p_rho": 0.126056,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.142265,
-          "rho": 0.142265,
-          "p_rho": 0.196733,
-          "n": 84
+          "r": -0.028314,
+          "rho": -0.028314,
+          "p_rho": 0.866001,
+          "n": 38
         }
       },
       {
@@ -7050,7 +2547,7 @@
         "severity": "high",
         "n_fired": 3,
         "participation_corr": {
-          "r": 0.011438,
+          "r": 0.011462,
           "rho": -0.060939,
           "p_rho": 0.728026,
           "n": 35
@@ -7062,22 +2559,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.055268,
-          "rho": -0.062361,
-          "p_rho": 0.573072,
-          "n": 84
+          "r": -0.131757,
+          "rho": -0.150136,
+          "p_rho": 0.368281,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.032167,
-          "rho": -0.048401,
-          "p_rho": 0.661954,
-          "n": 84
+          "r": -0.074019,
+          "rho": -0.113779,
+          "p_rho": 0.496399,
+          "n": 38
         },
         "help_corr": {
-          "r": -0.037037,
-          "rho": -0.037037,
-          "p_rho": 0.738018,
-          "n": 84
+          "r": -0.085714,
+          "rho": -0.085714,
+          "p_rho": 0.608881,
+          "n": 38
         }
       },
       {
@@ -7088,7 +2585,7 @@
         "severity": "high",
         "n_fired": 11,
         "participation_corr": {
-          "r": -0.138754,
+          "r": -0.138715,
           "rho": -0.114531,
           "p_rho": 0.512386,
           "n": 35
@@ -7100,22 +2597,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": 0.048139,
-          "rho": 0.0,
-          "p_rho": 1.0,
-          "n": 84
+          "r": -0.101191,
+          "rho": -0.171099,
+          "p_rho": 0.304378,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.064883,
-          "rho": -0.097628,
-          "p_rho": 0.376975,
-          "n": 84
+          "r": -0.161373,
+          "rho": -0.248057,
+          "p_rho": 0.133194,
+          "n": 38
         },
         "help_corr": {
-          "r": -0.074706,
-          "rho": -0.074706,
-          "p_rho": 0.499439,
-          "n": 84
+          "r": -0.186871,
+          "rho": -0.186871,
+          "p_rho": 0.261269,
+          "n": 38
         }
       },
       {
@@ -7126,7 +2623,7 @@
         "severity": "high",
         "n_fired": 21,
         "participation_corr": {
-          "r": 0.007721,
+          "r": 0.007816,
           "rho": -0.050943,
           "p_rho": 0.771339,
           "n": 35
@@ -7138,22 +2635,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.0,
-          "rho": 0.0,
-          "p_rho": 1.0,
-          "n": 84
+          "r": -0.273911,
+          "rho": -0.31212,
+          "p_rho": 0.056426,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.096502,
-          "rho": -0.145204,
-          "p_rho": 0.187545,
-          "n": 84
+          "r": -0.280998,
+          "rho": -0.431938,
+          "p_rho": 0.00677,
+          "n": 38
         },
         "help_corr": {
-          "r": -0.111111,
-          "rho": -0.111111,
-          "p_rho": 0.314314,
-          "n": 84
+          "r": -0.325396,
+          "rho": -0.325396,
+          "p_rho": 0.046208,
+          "n": 38
         }
       },
       {
@@ -7164,7 +2661,7 @@
         "severity": "medium",
         "n_fired": 26,
         "participation_corr": {
-          "r": -0.083416,
+          "r": -0.083489,
           "rho": -0.2384,
           "p_rho": 0.167849,
           "n": 35
@@ -7176,22 +2673,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.114628,
-          "rho": -0.050066,
-          "p_rho": 0.651072,
-          "n": 84
+          "r": -0.541412,
+          "rho": -0.508064,
+          "p_rho": 0.001128,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.046173,
-          "rho": 0.046631,
-          "p_rho": 0.673607,
-          "n": 84
+          "r": -0.273254,
+          "rho": -0.246421,
+          "p_rho": 0.135856,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.148675,
-          "rho": 0.148675,
-          "p_rho": 0.177103,
-          "n": 84
+          "r": -0.01105,
+          "rho": -0.01105,
+          "p_rho": 0.947503,
+          "n": 38
         }
       },
       {
@@ -7202,7 +2699,7 @@
         "severity": "low",
         "n_fired": 5,
         "participation_corr": {
-          "r": -0.425371,
+          "r": -0.425369,
           "rho": -0.337888,
           "p_rho": 0.047123,
           "n": 35
@@ -7214,22 +2711,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": 0.231196,
-          "rho": 0.260865,
-          "p_rho": 0.016543,
-          "n": 84
+          "r": 0.157658,
+          "rho": 0.17965,
+          "p_rho": 0.280473,
+          "n": 38
         },
         "questions_corr": {
-          "r": 0.407507,
-          "rho": 0.159446,
-          "p_rho": 0.147412,
-          "n": 84
+          "r": 0.377542,
+          "rho": 0.102866,
+          "p_rho": 0.538844,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.222714,
-          "rho": 0.222714,
-          "p_rho": 0.041723,
-          "n": 84
+          "r": 0.17474,
+          "rho": 0.17474,
+          "p_rho": 0.294048,
+          "n": 38
         }
       },
       {
@@ -7240,7 +2737,7 @@
         "severity": "high",
         "n_fired": 19,
         "participation_corr": {
-          "r": -0.282754,
+          "r": -0.282675,
           "rho": -0.300981,
           "p_rho": 0.078925,
           "n": 35
@@ -7252,22 +2749,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.026559,
-          "rho": 0.101427,
-          "p_rho": 0.3586,
-          "n": 84
+          "r": -0.281272,
+          "rho": -0.168688,
+          "p_rho": 0.311345,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.054048,
-          "rho": -0.017176,
-          "p_rho": 0.876765,
-          "n": 84
+          "r": -0.206856,
+          "rho": -0.237269,
+          "p_rho": 0.151475,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.202622,
-          "rho": 0.202622,
-          "p_rho": 0.064536,
-          "n": 84
+          "r": 0.09759,
+          "rho": 0.09759,
+          "p_rho": 0.559972,
+          "n": 38
         }
       },
       {
@@ -7278,7 +2775,7 @@
         "severity": "medium",
         "n_fired": 10,
         "participation_corr": {
-          "r": -0.282678,
+          "r": -0.282641,
           "rho": -0.394521,
           "p_rho": 0.019013,
           "n": 35
@@ -7290,22 +2787,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": 0.005279,
-          "rho": 0.119118,
-          "p_rho": 0.280486,
-          "n": 84
+          "r": -0.141197,
+          "rho": -0.04597,
+          "p_rho": 0.784043,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.014523,
-          "rho": 0.06102,
-          "p_rho": 0.581368,
-          "n": 84
+          "r": -0.098896,
+          "rho": -0.060385,
+          "p_rho": 0.718747,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.325432,
-          "rho": 0.325432,
-          "p_rho": 0.002523,
-          "n": 84
+          "r": 0.268277,
+          "rho": 0.268277,
+          "p_rho": 0.103411,
+          "n": 38
         }
       },
       {
@@ -7316,7 +2813,7 @@
         "severity": "medium",
         "n_fired": 27,
         "participation_corr": {
-          "r": -0.204131,
+          "r": -0.20399,
           "rho": -0.20713,
           "p_rho": 0.23252,
           "n": 35
@@ -7328,22 +2825,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.00549,
-          "rho": 0.03304,
-          "p_rho": 0.76543,
-          "n": 84
+          "r": -0.39497,
+          "rho": -0.394272,
+          "p_rho": 0.014309,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.049966,
-          "rho": 0.039748,
-          "p_rho": 0.719612,
-          "n": 84
+          "r": -0.29474,
+          "rho": -0.275117,
+          "p_rho": 0.09458,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.142265,
-          "rho": 0.142265,
-          "p_rho": 0.196733,
-          "n": 84
+          "r": -0.028314,
+          "rho": -0.028314,
+          "p_rho": 0.866001,
+          "n": 38
         }
       },
       {
@@ -7354,7 +2851,7 @@
         "severity": "high",
         "n_fired": 19,
         "participation_corr": {
-          "r": -0.275401,
+          "r": -0.275332,
           "rho": -0.441503,
           "p_rho": 0.007929,
           "n": 35
@@ -7366,22 +2863,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.069462,
-          "rho": 0.009221,
-          "p_rho": 0.933657,
-          "n": 84
+          "r": -0.337526,
+          "rho": -0.283396,
+          "p_rho": 0.084679,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.054048,
-          "rho": -0.017176,
-          "p_rho": 0.876765,
-          "n": 84
+          "r": -0.206856,
+          "rho": -0.237269,
+          "p_rho": 0.151475,
+          "n": 38
         },
         "help_corr": {
-          "r": 0.202622,
-          "rho": 0.202622,
-          "p_rho": 0.064536,
-          "n": 84
+          "r": 0.09759,
+          "rho": 0.09759,
+          "p_rho": 0.559972,
+          "n": 38
         }
       },
       {
@@ -7392,7 +2889,7 @@
         "severity": "medium",
         "n_fired": 9,
         "participation_corr": {
-          "r": -0.031946,
+          "r": -0.031898,
           "rho": -0.16169,
           "p_rho": 0.353429,
           "n": 35
@@ -7404,22 +2901,22 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.099483,
-          "rho": -0.11225,
-          "p_rho": 0.30935,
-          "n": 84
+          "r": -0.250708,
+          "rho": -0.28568,
+          "p_rho": 0.082094,
+          "n": 38
         },
         "questions_corr": {
-          "r": -0.057901,
-          "rho": -0.087123,
-          "p_rho": 0.43068,
-          "n": 84
+          "r": -0.140844,
+          "rho": -0.2165,
+          "p_rho": 0.191701,
+          "n": 38
         },
         "help_corr": {
-          "r": -0.066667,
-          "rho": -0.066667,
-          "p_rho": 0.546824,
-          "n": 84
+          "r": -0.163098,
+          "rho": -0.163098,
+          "p_rho": 0.327881,
+          "n": 38
         }
       }
     ]

@@ -470,11 +470,6 @@ function obsText(raw) {
 	return !raw || !raw.trim() ? "" : raw.trim();
 }
 
-function artefactBadges(raw, assignmentName) {
-	const schema = _artefactSchema[(assignmentName || "").toLowerCase()];
-	return renderArtefactBadges(raw, schema);
-}
-
 async function openLessonDiff(student, entry) {
 	const key = findHandle(_lessonHandles, entry.name);
 	if (!key) {
@@ -501,17 +496,17 @@ function findHandle(handles, name) {
 function _attachStudentsLink(th, name, group) {
 	if (group === "assignments") {
 		th.classList.add("clickable");
-		th.title = `Open ${name} assignment instructions`;
+		th.title = `Open ${name} students`;
 		th.addEventListener("click", () => {
-			navigateToAssignments({ lesson: name });
+			navigateToStudents({ lesson: name, group: "assignments" });
 		});
 		return;
 	}
 	if (!findHandle(_lessonHandles, name)) return;
 	th.classList.add("clickable");
-	th.title = `Open ${name} lesson`;
+	th.title = `Open ${name} students`;
 	th.addEventListener("click", () => {
-		navigateToLessons({ lesson: name });
+		navigateToStudents({ lesson: name, group: "lessons" });
 	});
 }
 

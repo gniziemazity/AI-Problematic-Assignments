@@ -153,23 +153,8 @@ function _curatedRefreshGhostPairs() {
 			const pw = m.paired_with;
 			if (!pw || !pw.ghost) continue;
 			if (wrapTeacher) {
-				const candidates = wrapTeacher.querySelectorAll(
-					`.leo-mark[data-leo-side="teacher"][data-leo-ghost-offset]`,
-				);
-				for (const el of candidates) {
-					const pane = el.closest(".code-pane");
-					if (!pane || pane.dataset.paneFile !== pw.file) continue;
-					const blobPos = parseInt(el.dataset.leoPos, 10);
-					const offset = parseInt(el.dataset.leoGhostOffset, 10);
-					if (!Number.isFinite(blobPos) || !Number.isFinite(offset))
-						continue;
-					if (
-						blobPos + offset === pw.start &&
-						el.dataset.leoToken === pw.token
-					) {
-						el.classList.add("curated-ghost-paired");
-					}
-				}
+				const el = _curatedFindGhostEl(pw);
+				if (el) el.classList.add("curated-ghost-paired");
 			}
 			if (wrapStudent) {
 				const studentEl = _curatedFindLeoMarkEl(
@@ -466,7 +451,7 @@ function _curatedRefreshActiveOverlay() {
 }
 
 function _curatedDrawGhostActiveRect(ghost) {
-	const el = _curatedFindGhostElement(ghost);
+	const el = _curatedFindGhostEl(ghost, { activeOnly: true });
 	if (!el) return;
 	const pane = el.closest(".code-pane");
 	if (!pane) return;

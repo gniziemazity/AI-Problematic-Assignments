@@ -19,12 +19,8 @@ function _updateHighlightChip() {
 	}
 	const parts = [];
 	if (hasHi) {
-		const denom = _students.filter((s) => !s.ai_flagged).length;
-		const n = _students.filter(
-			(s) => !s.ai_flagged && _highlightIds.has(String(s.id)),
-		).length;
-		const pct = denom ? Math.round((n / denom) * 100) : 0;
-		parts.push(`${n}/${denom} (${pct}%)`);
+		const n = _students.filter((s) => _highlightIds.has(String(s.id))).length;
+		parts.push(`Highlighting ${n} of ${_highlightIds.size}`);
 	}
 	if (hasStar) {
 		const n = _students.filter((s) => _starIds.has(String(s.id))).length;
@@ -534,7 +530,12 @@ function _renderArtefactHighlights() {
 			runs.push({ endIdx: idx, startTh: th, endTh: th, cells });
 		}
 	}
-	const entryCount = rows.length;
+	const hiCount = rows.filter(
+		(r) => !(r._student && r._student.ai_flagged),
+	).length;
+	const denom = _students.filter((s) => !s.ai_flagged).length;
+	const hiPct = denom ? Math.round((hiCount / denom) * 100) : 0;
+	const countText = `${hiCount}/${denom} (${hiPct}%)`;
 	for (const run of runs) {
 		const lRect = run.startTh.getBoundingClientRect();
 		const rRect = run.endTh.getBoundingClientRect();
@@ -554,7 +555,7 @@ function _renderArtefactHighlights() {
 
 		const count = document.createElement("div");
 		count.className = "artefact-highlight-count";
-		count.textContent = String(entryCount);
+		count.textContent = countText;
 		count.style.left = (left + right) / 2 + "px";
 		count.style.top = top + height + 3 + "px";
 		layer.appendChild(count);

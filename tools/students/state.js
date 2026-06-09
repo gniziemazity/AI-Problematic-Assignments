@@ -14,6 +14,7 @@ let _modeParam = null;
 let _paperMode = false;
 let _highlightIds = null;
 let _starIds = null;
+let _artefactHighlights = null;
 let _sortCol = "id";
 let _sortDir = "asc";
 let _shownUnicodeCorruptionWarning = false;

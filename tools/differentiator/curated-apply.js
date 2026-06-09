@@ -100,9 +100,24 @@ function _curatedAbsorbWhitespaceGaps(text, items, get) {
 }
 
 function _curatedCleanupCorrectedText(text) {
+	const delRe = new RegExp(
+		CURATED_DEL_OPEN + "[^" + CURATED_DEL_CLOSE + "]*" + CURATED_DEL_CLOSE,
+		"g",
+	);
+	const collapse = (s) => {
+		let out = "";
+		let last = 0;
+		let m;
+		delRe.lastIndex = 0;
+		while ((m = delRe.exec(s)) !== null) {
+			out += s.slice(last, m.index).replace(/ {2,}/g, " ") + m[0];
+			last = m.index + m[0].length;
+		}
+		return out + s.slice(last).replace(/ {2,}/g, " ");
+	};
 	const lines = text.split("\n").map((line) => {
 		const indent = (line.match(/^[ \t]*/) || [""])[0];
-		return indent + line.slice(indent.length).replace(/ {2,}/g, " ");
+		return indent + collapse(line.slice(indent.length));
 	});
 	const isBlank = (l) => /^[ \t]*$/.test(l);
 	let s = 0;

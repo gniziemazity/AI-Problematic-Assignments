@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-08T13:29:35.089233",
+  "generated": "2026-06-09T15:34:30.583722",
   "n_students": 38,
   "n_llm": 15,
   "n_passed": 0,
@@ -43,12 +43,12 @@
           "label": "Color codes not from video",
           "severity": "medium",
           "n_answered": 38,
-          "n_fired": 8,
-          "hit_rate": 0.210526,
+          "n_fired": 9,
+          "hit_rate": 0.236842,
           "fired_trouble": 0,
-          "fired_ok": 8,
+          "fired_ok": 9,
           "ok_trouble": 0,
-          "safe_ok": 30,
+          "safe_ok": 29,
           "odds_ratio": null,
           "fisher_p": 1.0,
           "fired_avg_grade": null,
@@ -60,6 +60,7 @@
             "41",
             "46",
             "58",
+            "67",
             "77",
             "82"
           ],
@@ -102,12 +103,12 @@
           "label": "Unexpected row structure",
           "severity": "medium",
           "n_answered": 38,
-          "n_fired": 8,
-          "hit_rate": 0.210526,
+          "n_fired": 9,
+          "hit_rate": 0.236842,
           "fired_trouble": 0,
-          "fired_ok": 8,
+          "fired_ok": 9,
           "ok_trouble": 0,
-          "safe_ok": 30,
+          "safe_ok": 29,
           "odds_ratio": null,
           "fisher_p": 1.0,
           "fired_avg_grade": null,
@@ -117,6 +118,7 @@
             "27",
             "29",
             "30",
+            "41",
             "58",
             "67",
             "72",
@@ -222,9 +224,9 @@
       "n_total": 38,
       "n_trouble": 0,
       "n_lesson_trouble": 7,
-      "n_ai": 32,
+      "n_ai": 33,
       "n_ai_strong": 4,
-      "n_ai_upper": 18,
+      "n_ai_upper": 19,
       "n_artefact": 38,
       "avg_grade": null,
       "pass_rate": 0.0,
@@ -243,8 +245,8 @@
       "no_ai_avg_grade": null,
       "lower": "chess",
       "n_artefact_valid": 38,
-      "any_artefact_fired": 32,
-      "any_artefact_rate": 0.842105,
+      "any_artefact_fired": 33,
+      "any_artefact_rate": 0.868421,
       "n_ai_high": 4,
       "ai_high_rate": 0.105263,
       "artefacts": [
@@ -297,15 +299,15 @@
         },
         {
           "key": "white",
-          "label": "White-on-white not discussed",
+          "label": "White-on-white not mentioned",
           "severity": "medium",
           "n_answered": 38,
-          "n_fired": 17,
-          "hit_rate": 0.447368,
+          "n_fired": 18,
+          "hit_rate": 0.473684,
           "fired_trouble": 0,
-          "fired_ok": 17,
+          "fired_ok": 18,
           "ok_trouble": 0,
-          "safe_ok": 21,
+          "safe_ok": 20,
           "odds_ratio": null,
           "fisher_p": 1.0,
           "fired_avg_grade": null,
@@ -313,6 +315,7 @@
           "fired_ids": [
             "5",
             "8",
+            "13",
             "24",
             "27",
             "40",
@@ -329,8 +332,8 @@
             "74",
             "77"
           ],
-          "llm_hit_rate": 0.857143,
-          "llm_n_fired": 12,
+          "llm_hit_rate": 1.0,
+          "llm_n_fired": 14,
           "llm_n_answered": 14
         },
         {
@@ -338,12 +341,12 @@
           "label": "Incorrect piece pattern",
           "severity": "low",
           "n_answered": 38,
-          "n_fired": 8,
-          "hit_rate": 0.210526,
+          "n_fired": 9,
+          "hit_rate": 0.236842,
           "fired_trouble": 0,
-          "fired_ok": 8,
+          "fired_ok": 9,
           "ok_trouble": 0,
-          "safe_ok": 30,
+          "safe_ok": 29,
           "odds_ratio": null,
           "fisher_p": 1.0,
           "fired_avg_grade": null,
@@ -354,6 +357,7 @@
             "29",
             "35",
             "49",
+            "58",
             "61",
             "71",
             "80"
@@ -624,12 +628,12 @@
           "label": "Unexpected modifications",
           "severity": "low",
           "n_answered": 38,
-          "n_fired": 5,
-          "hit_rate": 0.131579,
+          "n_fired": 6,
+          "hit_rate": 0.157895,
           "fired_trouble": 0,
-          "fired_ok": 5,
+          "fired_ok": 6,
           "ok_trouble": 0,
-          "safe_ok": 33,
+          "safe_ok": 32,
           "odds_ratio": null,
           "fisher_p": 1.0,
           "fired_avg_grade": null,
@@ -639,10 +643,11 @@
             "27",
             "30",
             "40",
+            "71",
             "72"
           ],
-          "llm_hit_rate": 0.833333,
-          "llm_n_fired": 10,
+          "llm_hit_rate": 1.0,
+          "llm_n_fired": 12,
           "llm_n_answered": 12
         }
       ]
@@ -810,7 +815,7 @@
       "n_lesson_trouble": 0,
       "n_ai": 21,
       "n_ai_strong": 19,
-      "n_ai_upper": 21,
+      "n_ai_upper": 19,
       "n_artefact": 37,
       "avg_grade": null,
       "pass_rate": 0.0,
@@ -899,19 +904,20 @@
         {
           "key": "extra",
           "label": "Unexpected modifications",
-          "severity": "medium",
+          "severity": "low",
           "n_answered": 37,
-          "n_fired": 9,
-          "hit_rate": 0.243243,
+          "n_fired": 10,
+          "hit_rate": 0.27027,
           "fired_trouble": 0,
-          "fired_ok": 9,
+          "fired_ok": 10,
           "ok_trouble": 0,
-          "safe_ok": 28,
+          "safe_ok": 27,
           "odds_ratio": null,
           "fisher_p": 1.0,
           "fired_avg_grade": null,
           "ok_avg_grade": null,
           "fired_ids": [
+            "24",
             "27",
             "35",
             "41",
@@ -922,8 +928,8 @@
             "74",
             "77"
           ],
-          "llm_hit_rate": 0.5,
-          "llm_n_fired": 6,
+          "llm_hit_rate": 0.583333,
+          "llm_n_fired": 7,
           "llm_n_answered": 12
         }
       ]
@@ -1049,10 +1055,10 @@
         },
         {
           "key": "white",
-          "label": "White-on-white not discussed",
+          "label": "White-on-white not mentioned",
           "n_answered": 14,
-          "n_fired": 12,
-          "hit_rate": 0.857143,
+          "n_fired": 14,
+          "hit_rate": 1.0,
           "fired_ids": [
             "85",
             "86",
@@ -1061,6 +1067,8 @@
             "89",
             "90",
             "91",
+            "92",
+            "93",
             "94",
             "95",
             "96",
@@ -1209,17 +1217,19 @@
           "key": "extra",
           "label": "Unexpected modifications",
           "n_answered": 12,
-          "n_fired": 10,
-          "hit_rate": 0.833333,
+          "n_fired": 12,
+          "hit_rate": 1.0,
           "fired_ids": [
             "85",
             "86",
             "87",
+            "89",
             "90",
             "91",
             "92",
             "93",
             "94",
+            "95",
             "96",
             "99"
           ]
@@ -1318,11 +1328,12 @@
           "key": "extra",
           "label": "Unexpected modifications",
           "n_answered": 12,
-          "n_fired": 6,
-          "hit_rate": 0.5,
+          "n_fired": 7,
+          "hit_rate": 0.583333,
           "fired_ids": [
             "85",
             "86",
+            "89",
             "90",
             "92",
             "93",
@@ -1450,10 +1461,10 @@
     },
     {
       "label": "Self-evaluation \u2192 AI flags",
-      "r": -0.44454,
-      "p_r": 0.008437,
-      "rho": -0.322423,
-      "p_rho": 0.062924,
+      "r": -0.461474,
+      "p_r": 0.006012,
+      "rho": -0.342732,
+      "p_rho": 0.047227,
       "n": 34
     },
     {
@@ -1552,7 +1563,7 @@
       },
       {
         "key": "white",
-        "label": "White-on-white not discussed",
+        "label": "White-on-white not mentioned",
         "severity": "medium"
       },
       {
@@ -1629,7 +1640,7 @@
       {
         "key": "extra",
         "label": "Unexpected modifications",
-        "severity": "medium"
+        "severity": "low"
       }
     ]
   },
@@ -2106,10 +2117,10 @@
   ],
   "artefact_summary": {
     "n_students": 38,
-    "mean_fired": 7.526316,
+    "mean_fired": 7.684211,
     "max_fired": 17,
     "passed_mean": null,
-    "failed_mean": 7.526316,
+    "failed_mean": 7.684211,
     "grade_corr": {
       "r": null,
       "rho": null,
@@ -2117,45 +2128,45 @@
       "n": 0
     },
     "participation_corr": {
-      "r": -0.37231,
-      "rho": -0.46821,
-      "p_rho": 0.00456,
+      "r": -0.360413,
+      "rho": -0.457862,
+      "p_rho": 0.005679,
       "n": 35
     },
     "self_eval_corr": {
-      "r": -0.366244,
-      "rho": -0.262079,
-      "p_rho": 0.13431,
+      "r": -0.367154,
+      "rho": -0.276953,
+      "p_rho": 0.112809,
       "n": 34
     },
     "answers_corr": {
-      "r": -0.436711,
-      "rho": -0.367217,
-      "p_rho": 0.023332,
+      "r": -0.435526,
+      "rho": -0.372838,
+      "p_rho": 0.021146,
       "n": 38
     },
     "questions_corr": {
-      "r": -0.276345,
-      "rho": -0.373834,
-      "p_rho": 0.020776,
+      "r": -0.273038,
+      "rho": -0.360336,
+      "p_rho": 0.026262,
       "n": 38
     },
     "help_corr": {
-      "r": -0.014519,
-      "rho": -0.008934,
-      "p_rho": 0.957547,
+      "r": -0.001284,
+      "rho": -0.004471,
+      "p_rho": 0.978745,
       "n": 38
     },
     "kahoot_corr": {
-      "r": -0.567499,
+      "r": -0.577508,
       "rho": -0.5244,
       "p_rho": 0.119688,
       "n": 10
     },
     "quiz_stii_corr": {
-      "r": -0.459998,
-      "rho": -0.401762,
-      "p_rho": 0.034072,
+      "r": -0.463548,
+      "rho": -0.394947,
+      "p_rho": 0.037526,
       "n": 28
     },
     "per_artefact_engagement": [
@@ -2165,35 +2176,35 @@
         "key": "color",
         "label": "Color codes not from video",
         "severity": "medium",
-        "n_fired": 8,
+        "n_fired": 9,
         "participation_corr": {
-          "r": -0.1787,
-          "rho": -0.120101,
-          "p_rho": 0.491948,
+          "r": -0.257158,
+          "rho": -0.212174,
+          "p_rho": 0.221086,
           "n": 35
         },
         "self_eval_corr": {
-          "r": -0.152952,
-          "rho": -0.139613,
-          "p_rho": 0.430991,
+          "r": -0.199667,
+          "rho": -0.19333,
+          "p_rho": 0.273295,
           "n": 34
         },
         "answers_corr": {
-          "r": -0.232397,
-          "rho": -0.264815,
-          "p_rho": 0.108114,
+          "r": -0.250708,
+          "rho": -0.28568,
+          "p_rho": 0.082094,
           "n": 38
         },
         "questions_corr": {
-          "r": -0.130557,
-          "rho": -0.200688,
-          "p_rho": 0.226996,
+          "r": -0.086783,
+          "rho": -0.038489,
+          "p_rho": 0.818542,
           "n": 38
         },
         "help_corr": {
-          "r": -0.151186,
-          "rho": -0.151186,
-          "p_rho": 0.364903,
+          "r": 0.066447,
+          "rho": 0.066447,
+          "p_rho": 0.691836,
           "n": 38
         }
       },
@@ -2241,35 +2252,35 @@
         "key": "extra",
         "label": "Unexpected row structure",
         "severity": "medium",
-        "n_fired": 8,
+        "n_fired": 9,
         "participation_corr": {
-          "r": -0.097959,
-          "rho": -0.176812,
-          "p_rho": 0.309592,
+          "r": -0.05262,
+          "rho": -0.134742,
+          "p_rho": 0.440278,
           "n": 35
         },
         "self_eval_corr": {
-          "r": -0.152524,
-          "rho": -0.148082,
-          "p_rho": 0.403275,
+          "r": -0.19826,
+          "rho": -0.199973,
+          "p_rho": 0.25683,
           "n": 34
         },
         "answers_corr": {
-          "r": -0.094411,
-          "rho": 0.016551,
-          "p_rho": 0.921436,
+          "r": -0.11839,
+          "rho": -0.015871,
+          "p_rho": 0.924653,
           "n": 38
         },
         "questions_corr": {
-          "r": 0.320459,
-          "rho": 0.195671,
-          "p_rho": 0.239066,
+          "r": 0.291648,
+          "rho": 0.163578,
+          "p_rho": 0.32644,
           "n": 38
         },
         "help_corr": {
-          "r": 0.327569,
-          "rho": 0.327569,
-          "p_rho": 0.044687,
+          "r": 0.295993,
+          "rho": 0.295993,
+          "p_rho": 0.071177,
           "n": 38
         }
       },
@@ -2391,13 +2402,13 @@
         "assignment": "chess",
         "assn_name": "Chess",
         "key": "white",
-        "label": "White-on-white not discussed",
+        "label": "White-on-white not mentioned",
         "severity": "medium",
-        "n_fired": 17,
+        "n_fired": 18,
         "participation_corr": {
-          "r": -0.409961,
-          "rho": -0.398451,
-          "p_rho": 0.017751,
+          "r": -0.430985,
+          "rho": -0.44018,
+          "p_rho": 0.00814,
           "n": 35
         },
         "self_eval_corr": {
@@ -2407,21 +2418,21 @@
           "n": 34
         },
         "answers_corr": {
-          "r": -0.235207,
-          "rho": -0.115349,
-          "p_rho": 0.490439,
+          "r": -0.257943,
+          "rho": -0.141895,
+          "p_rho": 0.395442,
           "n": 38
         },
         "questions_corr": {
-          "r": -0.18125,
-          "rho": -0.197457,
-          "p_rho": 0.234718,
+          "r": -0.193818,
+          "rho": -0.217116,
+          "p_rho": 0.190411,
           "n": 38
         },
         "help_corr": {
-          "r": 0.129125,
-          "rho": 0.129125,
-          "p_rho": 0.439739,
+          "r": 0.113156,
+          "rho": 0.113156,
+          "p_rho": 0.498777,
           "n": 38
         }
       },
@@ -2431,35 +2442,35 @@
         "key": "pieces",
         "label": "Incorrect piece pattern",
         "severity": "low",
-        "n_fired": 8,
+        "n_fired": 9,
         "participation_corr": {
-          "r": 0.201905,
-          "rho": 0.219247,
-          "p_rho": 0.205714,
+          "r": 0.207201,
+          "rho": 0.202113,
+          "p_rho": 0.24428,
           "n": 35
         },
         "self_eval_corr": {
-          "r": 0.206191,
-          "rho": 0.247025,
-          "p_rho": 0.158998,
+          "r": 0.147415,
+          "rho": 0.18096,
+          "p_rho": 0.305747,
           "n": 34
         },
         "answers_corr": {
-          "r": 0.250553,
-          "rho": 0.223437,
-          "p_rho": 0.177507,
+          "r": 0.212406,
+          "rho": 0.182518,
+          "p_rho": 0.272739,
           "n": 38
         },
         "questions_corr": {
-          "r": -0.07418,
-          "rho": -0.015052,
-          "p_rho": 0.928534,
+          "r": -0.086783,
+          "rho": -0.038489,
+          "p_rho": 0.818542,
           "n": 38
         },
         "help_corr": {
-          "r": -0.151186,
-          "rho": -0.151186,
-          "p_rho": 0.364903,
+          "r": -0.163098,
+          "rho": -0.163098,
+          "p_rho": 0.327881,
           "n": 38
         }
       },
@@ -2697,35 +2708,35 @@
         "key": "extra",
         "label": "Unexpected modifications",
         "severity": "low",
-        "n_fired": 5,
+        "n_fired": 6,
         "participation_corr": {
-          "r": -0.425369,
-          "rho": -0.337888,
-          "p_rho": 0.047123,
+          "r": -0.339897,
+          "rho": -0.274874,
+          "p_rho": 0.110027,
           "n": 35
         },
         "self_eval_corr": {
-          "r": 0.076566,
-          "rho": 0.139381,
-          "p_rho": 0.431764,
+          "r": 0.006332,
+          "rho": 0.056355,
+          "p_rho": 0.751576,
           "n": 34
         },
         "answers_corr": {
-          "r": 0.157658,
-          "rho": 0.17965,
-          "p_rho": 0.280473,
+          "r": 0.113675,
+          "rho": 0.129531,
+          "p_rho": 0.438289,
           "n": 38
         },
         "questions_corr": {
-          "r": 0.377542,
-          "rho": 0.102866,
-          "p_rho": 0.538844,
+          "r": 0.331745,
+          "rho": 0.067313,
+          "p_rho": 0.688024,
           "n": 38
         },
         "help_corr": {
-          "r": 0.17474,
-          "rho": 0.17474,
-          "p_rho": 0.294048,
+          "r": 0.140859,
+          "rho": 0.140859,
+          "p_rho": 0.398935,
           "n": 38
         }
       },
@@ -2886,36 +2897,36 @@
         "assn_name": "Qr",
         "key": "extra",
         "label": "Unexpected modifications",
-        "severity": "medium",
-        "n_fired": 9,
+        "severity": "low",
+        "n_fired": 10,
         "participation_corr": {
-          "r": -0.031898,
-          "rho": -0.16169,
-          "p_rho": 0.353429,
+          "r": -0.031773,
+          "rho": -0.174766,
+          "p_rho": 0.315315,
           "n": 35
         },
         "self_eval_corr": {
-          "r": -0.153321,
-          "rho": -0.129394,
-          "p_rho": 0.465791,
+          "r": -0.068624,
+          "rho": -0.03016,
+          "p_rho": 0.865544,
           "n": 34
         },
         "answers_corr": {
-          "r": -0.250708,
-          "rho": -0.28568,
-          "p_rho": 0.082094,
+          "r": -0.205072,
+          "rho": -0.176217,
+          "p_rho": 0.289921,
           "n": 38
         },
         "questions_corr": {
-          "r": -0.140844,
-          "rho": -0.2165,
-          "p_rho": 0.191701,
+          "r": -0.151091,
+          "rho": -0.232251,
+          "p_rho": 0.160576,
           "n": 38
         },
         "help_corr": {
-          "r": -0.163098,
-          "rho": -0.163098,
-          "p_rho": 0.327881,
+          "r": -0.174964,
+          "rho": -0.174964,
+          "p_rho": 0.293419,
           "n": 38
         }
       }

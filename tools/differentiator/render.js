@@ -228,33 +228,13 @@ function _getInsertAnchors(studentFileName) {
 		}
 		for (const g of groups.values()) {
 			g.marks.sort((a, b) => a.start - b.start);
-			const tText = (
-				(typeof _teacherFiles !== "undefined" && _teacherFiles[g.tFile]) ||
-				""
-			).replace(/\r\n/g, "\n");
-			for (let i = 0; i < g.marks.length; i++) {
-				const m = g.marks[i];
-				let lead;
-				if (i === 0) {
-					const ls = tText.lastIndexOf("\n", m.start - 1) + 1;
-					const prefix = tText.slice(ls, m.start);
-					if (/^[ \t]*$/.test(prefix)) lead = "\n" + prefix;
-					else {
-						const w = prefix.match(/[ \t]+$/);
-						lead = w ? w[0] : "";
-					}
-				} else {
-					const gap = tText.slice(g.marks[i - 1].end, m.start);
-					lead = /[^ \t\r\n]/.test(gap) ? " " : gap;
-				}
-				out.push({
-					pos: g.pos,
-					token: m.token,
-					lead,
-					teacher_file: g.tFile,
-					teacher_pos: m.start,
-				});
-			}
+			const first = g.marks[0];
+			out.push({
+				pos: g.pos,
+				token: first.token,
+				teacher_file: g.tFile,
+				teacher_pos: first.start,
+			});
 		}
 	}
 	const sFiles = _currentMarksEntry?.student_files;

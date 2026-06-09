@@ -19,8 +19,12 @@ function _updateHighlightChip() {
 	}
 	const parts = [];
 	if (hasHi) {
-		const n = _students.filter((s) => _highlightIds.has(String(s.id))).length;
-		parts.push(`Highlighting ${n} of ${_highlightIds.size}`);
+		const denom = _students.filter((s) => !s.ai_flagged).length;
+		const n = _students.filter(
+			(s) => !s.ai_flagged && _highlightIds.has(String(s.id)),
+		).length;
+		const pct = denom ? Math.round((n / denom) * 100) : 0;
+		parts.push(`${n}/${denom} (${pct}%)`);
 	}
 	if (hasStar) {
 		const n = _students.filter((s) => _starIds.has(String(s.id))).length;

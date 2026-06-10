@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-10T14:16:33.252608",
+  "generated": "2026-06-10T15:29:17.159025",
   "n_students": 38,
   "n_llm": 15,
   "n_passed": 0,
@@ -20,10 +20,10 @@
       "pass_rate": 0.0,
       "trouble_rate": null,
       "ai_rate": null,
-      "follow_avg": 98.744444,
+      "follow_avg": 57.431579,
       "odds_ratio": null,
       "fisher_p": null,
-      "n_followed": 18,
+      "n_followed": 19,
       "scatter": [],
       "ai_trouble": 0,
       "ai_pass": 0,
@@ -1389,26 +1389,26 @@
     },
     {
       "label": "Participation \u2192 Pre-typing speed",
-      "r": 0.089569,
-      "p_r": 0.644042,
-      "rho": 0.281138,
-      "p_rho": 0.139578,
+      "r": 0.091448,
+      "p_r": 0.637076,
+      "rho": 0.086721,
+      "p_rho": 0.654653,
       "n": 29
     },
     {
       "label": "Participation \u2192 Typing improvement",
-      "r": 0.289594,
-      "p_r": 0.191127,
-      "rho": 0.227619,
-      "p_rho": 0.308316,
+      "r": 0.103029,
+      "p_r": 0.648205,
+      "rho": 0.185771,
+      "p_rho": 0.407828,
       "n": 22
     },
     {
       "label": "Participation \u2192 Final quiz",
-      "r": 0.388536,
-      "p_r": 0.041025,
-      "rho": 0.330368,
-      "p_rho": 0.085974,
+      "r": 0.352882,
+      "p_r": 0.065489,
+      "rho": 0.385878,
+      "p_rho": 0.04255,
       "n": 28
     },
     {
@@ -1477,10 +1477,10 @@
     },
     {
       "label": "Self-evaluation \u2192 Participation",
-      "r": 0.039996,
-      "p_r": 0.8251,
-      "rho": 0.053326,
-      "p_rho": 0.768197,
+      "r": 0.055827,
+      "p_r": 0.757642,
+      "rho": 0.052861,
+      "p_rho": 0.770163,
       "n": 33
     }
   ],
@@ -1752,7 +1752,7 @@
   "per_language_follow": [
     {
       "lang": "HTML",
-      "mean": 92.65381,
+      "mean": 88.07181,
       "n": 0,
       "r": null,
       "p_r": null,
@@ -1761,7 +1761,7 @@
     },
     {
       "lang": "CSS",
-      "mean": 91.486667,
+      "mean": 84.068571,
       "n": 0,
       "r": null,
       "p_r": null,
@@ -1786,7 +1786,7 @@
       "r": null,
       "rho": null,
       "p_rho": null,
-      "mean": 98.8
+      "mean": 58.415789
     },
     {
       "lesson": "Wall",
@@ -1795,7 +1795,7 @@
       "r": null,
       "rho": null,
       "p_rho": null,
-      "mean": 97.727778
+      "mean": 48.047368
     },
     {
       "lesson": "Chess",
@@ -1957,9 +1957,9 @@
       "r_cminus": null,
       "rho_cminus": null,
       "p_cminus": null,
-      "mean_cdiff": -28.315789,
-      "mean_cplus": 41.526316,
-      "mean_cminus": 69.842105
+      "mean_cdiff": -21.894737,
+      "mean_cplus": 13.736842,
+      "mean_cminus": 35.631579
     },
     {
       "lesson": "Chess",
@@ -2029,7 +2029,7 @@
   "comment_totals": [
     {
       "label": "Total C+ (extra)",
-      "mean": 83.315789,
+      "mean": 69.421053,
       "final_grade_n": 0,
       "final_grade_r": null,
       "final_grade_rho": null,
@@ -2041,7 +2041,7 @@
     },
     {
       "label": "Total C- (missing)",
-      "mean": 66.078947,
+      "mean": 48.973684,
       "final_grade_n": 0,
       "final_grade_r": null,
       "final_grade_rho": null,
@@ -2053,7 +2053,7 @@
     },
     {
       "label": "Total C Diff (surplus)",
-      "mean": 17.236842,
+      "mean": 20.447368,
       "final_grade_n": 0,
       "final_grade_r": null,
       "final_grade_rho": null,
@@ -2128,9 +2128,9 @@
       "n": 0
     },
     "participation_corr": {
-      "r": -0.440429,
-      "rho": -0.577192,
-      "p_rho": 0.000283,
+      "r": -0.370628,
+      "rho": -0.457299,
+      "p_rho": 0.005747,
       "n": 35
     },
     "self_eval_corr": {
@@ -2178,9 +2178,9 @@
         "severity": "medium",
         "n_fired": 9,
         "participation_corr": {
-          "r": -0.204145,
-          "rho": -0.205116,
-          "p_rho": 0.237192,
+          "r": -0.263137,
+          "rho": -0.212174,
+          "p_rho": 0.221086,
           "n": 35
         },
         "self_eval_corr": {
@@ -2216,9 +2216,9 @@
         "severity": "medium",
         "n_fired": 9,
         "participation_corr": {
-          "r": -0.110717,
-          "rho": -0.282978,
-          "p_rho": 0.09952,
+          "r": 0.012416,
+          "rho": -0.121268,
+          "p_rho": 0.487718,
           "n": 35
         },
         "self_eval_corr": {
@@ -2254,9 +2254,9 @@
         "severity": "medium",
         "n_fired": 9,
         "participation_corr": {
-          "r": 0.150443,
-          "rho": 0.060638,
-          "p_rho": 0.72932,
+          "r": -0.057077,
+          "rho": -0.141479,
+          "p_rho": 0.417541,
           "n": 35
         },
         "self_eval_corr": {
@@ -2292,9 +2292,9 @@
         "severity": "low",
         "n_fired": 19,
         "participation_corr": {
-          "r": -0.26234,
-          "rho": -0.396249,
-          "p_rho": 0.018449,
+          "r": -0.100155,
+          "rho": -0.203771,
+          "p_rho": 0.240351,
           "n": 35
         },
         "self_eval_corr": {
@@ -2330,9 +2330,9 @@
         "severity": "low",
         "n_fired": 26,
         "participation_corr": {
-          "r": -0.370226,
-          "rho": -0.353473,
-          "p_rho": 0.037251,
+          "r": -0.21609,
+          "rho": -0.188912,
+          "p_rho": 0.277102,
           "n": 35
         },
         "self_eval_corr": {
@@ -2368,9 +2368,9 @@
         "severity": "high",
         "n_fired": 4,
         "participation_corr": {
-          "r": -0.07949,
-          "rho": -0.19502,
-          "p_rho": 0.261577,
+          "r": 0.03372,
+          "rho": -0.036564,
+          "p_rho": 0.834818,
           "n": 35
         },
         "self_eval_corr": {
@@ -2406,9 +2406,9 @@
         "severity": "medium",
         "n_fired": 18,
         "participation_corr": {
-          "r": -0.461376,
-          "rho": -0.445928,
-          "p_rho": 0.007256,
+          "r": -0.441785,
+          "rho": -0.44018,
+          "p_rho": 0.00814,
           "n": 35
         },
         "self_eval_corr": {
@@ -2444,9 +2444,9 @@
         "severity": "low",
         "n_fired": 9,
         "participation_corr": {
-          "r": 0.020986,
-          "rho": -0.057269,
-          "p_rho": 0.743839,
+          "r": 0.204218,
+          "rho": 0.202113,
+          "p_rho": 0.24428,
           "n": 35
         },
         "self_eval_corr": {
@@ -2482,9 +2482,9 @@
         "severity": "low",
         "n_fired": 8,
         "participation_corr": {
-          "r": -0.289875,
-          "rho": -0.337807,
-          "p_rho": 0.047179,
+          "r": -0.329208,
+          "rho": -0.270226,
+          "p_rho": 0.116417,
           "n": 35
         },
         "self_eval_corr": {
@@ -2520,9 +2520,9 @@
         "severity": "low",
         "n_fired": 27,
         "participation_corr": {
-          "r": -0.234994,
-          "rho": -0.207208,
-          "p_rho": 0.232338,
+          "r": -0.30385,
+          "rho": -0.365636,
+          "p_rho": 0.030773,
           "n": 35
         },
         "self_eval_corr": {
@@ -2558,9 +2558,9 @@
         "severity": "high",
         "n_fired": 3,
         "participation_corr": {
-          "r": 0.108837,
-          "rho": 0.048755,
-          "p_rho": 0.780914,
+          "r": 0.009312,
+          "rho": -0.060939,
+          "p_rho": 0.728026,
           "n": 35
         },
         "self_eval_corr": {
@@ -2596,9 +2596,9 @@
         "severity": "high",
         "n_fired": 11,
         "participation_corr": {
-          "r": -0.281361,
-          "rho": -0.350354,
-          "p_rho": 0.039079,
+          "r": -0.144865,
+          "rho": -0.114531,
+          "p_rho": 0.512386,
           "n": 35
         },
         "self_eval_corr": {
@@ -2634,9 +2634,9 @@
         "severity": "high",
         "n_fired": 21,
         "participation_corr": {
-          "r": -0.125172,
-          "rho": -0.316999,
-          "p_rho": 0.063531,
+          "r": -0.001169,
+          "rho": -0.050943,
+          "p_rho": 0.771339,
           "n": 35
         },
         "self_eval_corr": {
@@ -2672,9 +2672,9 @@
         "severity": "medium",
         "n_fired": 26,
         "participation_corr": {
-          "r": -0.053382,
-          "rho": -0.110267,
-          "p_rho": 0.52831,
+          "r": -0.077803,
+          "rho": -0.23244,
+          "p_rho": 0.179052,
           "n": 35
         },
         "self_eval_corr": {
@@ -2710,9 +2710,9 @@
         "severity": "low",
         "n_fired": 6,
         "participation_corr": {
-          "r": -0.137505,
-          "rho": -0.105106,
-          "p_rho": 0.547905,
+          "r": -0.346652,
+          "rho": -0.282958,
+          "p_rho": 0.099545,
           "n": 35
         },
         "self_eval_corr": {
@@ -2748,9 +2748,9 @@
         "severity": "high",
         "n_fired": 19,
         "participation_corr": {
-          "r": -0.523527,
-          "rho": -0.647438,
-          "p_rho": 2.6e-05,
+          "r": -0.294127,
+          "rho": -0.300981,
+          "p_rho": 0.078925,
           "n": 35
         },
         "self_eval_corr": {
@@ -2786,9 +2786,9 @@
         "severity": "medium",
         "n_fired": 10,
         "participation_corr": {
-          "r": -0.252209,
-          "rho": -0.244245,
-          "p_rho": 0.157358,
+          "r": -0.289998,
+          "rho": -0.394521,
+          "p_rho": 0.019013,
           "n": 35
         },
         "self_eval_corr": {
@@ -2824,9 +2824,9 @@
         "severity": "medium",
         "n_fired": 27,
         "participation_corr": {
-          "r": -0.265058,
-          "rho": -0.284823,
-          "p_rho": 0.097239,
+          "r": -0.20025,
+          "rho": -0.200657,
+          "p_rho": 0.247767,
           "n": 35
         },
         "self_eval_corr": {
@@ -2862,9 +2862,9 @@
         "severity": "high",
         "n_fired": 19,
         "participation_corr": {
-          "r": -0.238685,
-          "rho": -0.294356,
-          "p_rho": 0.08608,
+          "r": -0.268346,
+          "rho": -0.435843,
+          "p_rho": 0.008867,
           "n": 35
         },
         "self_eval_corr": {
@@ -2900,9 +2900,9 @@
         "severity": "low",
         "n_fired": 10,
         "participation_corr": {
-          "r": 0.00565,
-          "rho": -0.174778,
-          "p_rho": 0.31528,
+          "r": -0.037024,
+          "rho": -0.174766,
+          "p_rho": 0.315315,
           "n": 35
         },
         "self_eval_corr": {

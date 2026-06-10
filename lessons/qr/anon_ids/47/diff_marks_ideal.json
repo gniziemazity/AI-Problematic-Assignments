@@ -9,7 +9,7 @@
 				"end": 19,
 				"insert_at": {
 					"file": "123456.css",
-					"pos": 21
+					"pos": 26
 				},
 				"timestamp": "12:41:14.043"
 			},
@@ -18,14 +18,11 @@
 				"label": "missing",
 				"start": 19,
 				"end": 22,
-				"paired_with": {
+				"timestamp": "12:41:14.808",
+				"insert_at": {
 					"file": "123456.css",
-					"start": 21,
-					"end": 26,
-					"token": "green",
-					"label": "extra"
-				},
-				"timestamp": "12:41:14.808"
+					"pos": 26
+				}
 			},
 			{
 				"token": "/",
@@ -745,14 +742,7 @@
 				"token": "green",
 				"label": "extra",
 				"start": 21,
-				"end": 26,
-				"paired_with": {
-					"file": "123456.css",
-					"start": 19,
-					"end": 22,
-					"token": "280",
-					"label": "missing"
-				}
+				"end": 26
 			},
 			{
 				"token": "/",

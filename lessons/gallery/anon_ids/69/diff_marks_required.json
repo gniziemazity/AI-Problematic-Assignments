@@ -1,18 +1,7 @@
 {
-	"token_matching": "ideal",
+	"token_matching": "required",
 	"teacher_files": {
 		"reconstructed.html": [
-			{
-				"token": "!",
-				"label": "missing",
-				"start": 263,
-				"end": 264,
-				"insert_at": {
-					"file": "123456.html",
-					"pos": 296
-				},
-				"timestamp": "12:30:40"
-			},
 			{
 				"token": "myNumber",
 				"label": "missing",
@@ -420,20 +409,6 @@
 					"label": "extra"
 				},
 				"timestamp": "12:58:07.899"
-			},
-			{
-				"token": ";",
-				"label": "missing",
-				"start": 1439,
-				"end": 1440,
-				"timestamp": "13:02:35",
-				"paired_with": {
-					"file": "123456.html",
-					"start": 1753,
-					"end": 1754,
-					"token": ",",
-					"label": "extra"
-				}
 			},
 			{
 				"token": "/",
@@ -965,6 +940,17 @@
 				"timestamp": "13:34:46"
 			},
 			{
+				"token": ";",
+				"label": "missing",
+				"start": 3374,
+				"end": 3375,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 4299
+				},
+				"timestamp": "13:38:10.869"
+			},
+			{
 				"token": "}",
 				"label": "missing",
 				"start": 3379,
@@ -973,18 +959,12 @@
 					"file": "123456.html",
 					"pos": 4299
 				},
-				"timestamp": "13:36:11.676"
+				"timestamp": "13:35:58.376"
 			}
 		]
 	},
 	"student_files": {
 		"123456.html": [
-			{
-				"token": "\"",
-				"label": "extra",
-				"start": 27,
-				"end": 28
-			},
 			{
 				"token": "/",
 				"label": "extra",
@@ -1400,14 +1380,7 @@
 				"token": ",",
 				"label": "extra",
 				"start": 1753,
-				"end": 1754,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 1439,
-					"end": 1440,
-					"token": ";",
-					"label": "missing"
-				}
+				"end": 1754
 			},
 			{
 				"token": "/",

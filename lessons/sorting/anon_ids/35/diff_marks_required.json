@@ -1,5 +1,5 @@
 {
-	"token_matching": "ideal",
+	"token_matching": "required",
 	"teacher_files": {
 		"reconstructed.html": [
 			{
@@ -229,55 +229,14 @@
 				"label": "missing",
 				"start": 1005,
 				"end": 1015,
-				"insert_at": {
+				"paired_with": {
 					"file": "index.html",
-					"pos": 1357
+					"start": 938,
+					"end": 948,
+					"token": "bubblesort",
+					"label": "extra"
 				},
-				"timestamp": "11:08:34"
-			},
-			{
-				"token": "(",
-				"label": "missing",
-				"start": 1015,
-				"end": 1016,
-				"insert_at": {
-					"file": "index.html",
-					"pos": 1357
-				},
-				"timestamp": "11:08:34"
-			},
-			{
-				"token": "array",
-				"label": "missing",
-				"start": 1016,
-				"end": 1021,
-				"insert_at": {
-					"file": "index.html",
-					"pos": 1357
-				},
-				"timestamp": "11:08:34"
-			},
-			{
-				"token": ")",
-				"label": "missing",
-				"start": 1021,
-				"end": 1022,
-				"insert_at": {
-					"file": "index.html",
-					"pos": 1357
-				},
-				"timestamp": "11:08:34"
-			},
-			{
-				"token": ";",
-				"label": "missing",
-				"start": 1022,
-				"end": 1023,
-				"insert_at": {
-					"file": "index.html",
-					"pos": 1357
-				},
-				"timestamp": "11:08:34"
+				"timestamp": "11:08:34.118"
 			},
 			{
 				"token": "arr",
@@ -394,63 +353,14 @@
 				"token": "bubblesort",
 				"label": "extra",
 				"start": 938,
-				"end": 948
-			},
-			{
-				"token": "(",
-				"label": "ghost_extra",
-				"start": 948,
-				"end": 949,
+				"end": 948,
 				"paired_with": {
 					"file": "reconstructed.html",
-					"start": 657,
-					"end": 658,
-					"token": "(",
-					"ghost": true
-				},
-				"removal_ts": "11:08:31"
-			},
-			{
-				"token": "array",
-				"label": "ghost_extra",
-				"start": 949,
-				"end": 954,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 658,
-					"end": 663,
-					"token": "array",
-					"ghost": true
-				},
-				"removal_ts": "11:08:31"
-			},
-			{
-				"token": ")",
-				"label": "ghost_extra",
-				"start": 954,
-				"end": 955,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 663,
-					"end": 664,
-					"token": ")",
-					"ghost": true
-				},
-				"removal_ts": "11:08:31"
-			},
-			{
-				"token": ";",
-				"label": "ghost_extra",
-				"start": 955,
-				"end": 956,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 664,
-					"end": 665,
-					"token": ";",
-					"ghost": true
-				},
-				"removal_ts": "11:08:31"
+					"start": 1005,
+					"end": 1015,
+					"token": "bubbleSort",
+					"label": "missing"
+				}
 			},
 			{
 				"token": ",",

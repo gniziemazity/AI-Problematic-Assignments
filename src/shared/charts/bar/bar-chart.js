@@ -210,7 +210,16 @@ class BarChart {
 							if (useBarW >= textW + 4) {
 								if (bh >= 14) {
 									ctx.fillStyle = ds.labelColor ?? "#fff";
-									ctx.fillText(label, bx + useBarW / 2, by + bh - 2);
+									if (this._options.barLabelAtTop) {
+										ctx.textBaseline = "top";
+										ctx.fillText(label, bx + useBarW / 2, by + 2);
+									} else {
+										ctx.fillText(
+											label,
+											bx + useBarW / 2,
+											by + bh - 2,
+										);
+									}
 								} else {
 									ctx.fillStyle = ds.outsideLabelColor ?? "#555";
 									ctx.fillText(label, bx + useBarW / 2, by - 2);

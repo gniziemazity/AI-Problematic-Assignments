@@ -13,6 +13,7 @@ function addStackedShareCard(
 	const box = el("div", "chart-box");
 	card.appendChild(box);
 	const restCounts = totalCounts.map((t, i) => t - subsetCounts[i]);
+	const baseColor = opts.color ?? THEME.label;
 	const chart = new BarChart(box, {
 		yMin: 0,
 		yMax: yMax ?? Math.max(...totalCounts, 1) + 1,
@@ -34,8 +35,8 @@ function addStackedShareCard(
 	chart.setData(labels, [
 		{
 			data: subsetCounts,
-			backgroundColor: THEME.label,
-			borderColor: THEME.label,
+			backgroundColor: baseColor,
+			borderColor: baseColor,
 		},
 		{
 			data: restCounts,
@@ -64,6 +65,7 @@ function addStackedBarCard(parent, title, labels, series, opts = {}) {
 			opts.tooltipCallback ??
 			((_l, val, si) => [`${series[si].label}: ${Math.round(val)}`]),
 		barLabel: opts.barLabel,
+		barLabelAtTop: opts.barLabelAtTop,
 	});
 	chart.setData(
 		labels,
@@ -112,9 +114,12 @@ function addAiUseCard(parent, title, labels, strong, medium, none, totals) {
 				if (!totals[gi]) return null;
 				if (si === 0) return strong[gi] ? pct(strong[gi], gi) + "%" : null;
 				if (si === 1)
-					return medium[gi] ? pct(strong[gi] + medium[gi], gi) + "%" : null;
+					return medium[gi]
+						? pct(strong[gi] + medium[gi], gi) + "%"
+						: null;
 				return null;
 			},
+			barLabelAtTop: true,
 		},
 	);
 }

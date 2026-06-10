@@ -49,11 +49,6 @@ function inlineFilesInHtml(html, filesMap) {
 	return result;
 }
 
-// Builds a self-contained preview document from a student/teacher HTML file:
-// injects a <base href> so same-folder relative refs resolve off the host,
-// a media shim so JS-loaded media (new Audio('x.mp3')) maps by basename, and
-// inlines css/js + media by basename (the inlineFilesInHtml pass).
-// `mediaUris` maps basename -> resolvable URL; `filesMap` maps basename -> css/js text.
 function buildPreviewSrcdoc(html, filesMap, mediaUris, baseUrl) {
 	let out = String(html || "");
 	const inject = [];
@@ -63,7 +58,10 @@ function buildPreviewSrcdoc(html, filesMap, mediaUris, baseUrl) {
 		if (/^(?:blob|https?):/i.test(url)) mediaMap[name] = url;
 	}
 	if (Object.keys(mediaMap).length) {
-		const json = JSON.stringify(mediaMap).replace(/<\/script/gi, "<\\/script");
+		const json = JSON.stringify(mediaMap).replace(
+			/<\/script/gi,
+			"<\\/script",
+		);
 		inject.push(
 			"<script>(function(){const __M=" +
 				json +

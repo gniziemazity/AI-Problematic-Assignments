@@ -1,5 +1,5 @@
 {
-	"token_matching": "ideal",
+	"token_matching": "required",
 	"teacher_files": {
 		"reconstructed.html": [
 			{
@@ -3840,20 +3840,6 @@
 					"label": "extra"
 				},
 				"timestamp": "12:53:29"
-			},
-			{
-				"token": "html",
-				"label": "missing",
-				"start": 3520,
-				"end": 3524,
-				"paired_with": {
-					"file": "chess game.html",
-					"start": 3405,
-					"end": 3408,
-					"token": "htm",
-					"label": "extra"
-				},
-				"timestamp": "11:53:51"
 			}
 		]
 	},
@@ -4030,97 +4016,6 @@
 				"end": 3264
 			},
 			{
-				"token": "console",
-				"label": "ghost_extra",
-				"start": 3281,
-				"end": 3288,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 3496,
-					"end": 3503,
-					"token": "console",
-					"ghost": true
-				}
-			},
-			{
-				"token": ".",
-				"label": "ghost_extra",
-				"start": 3288,
-				"end": 3289,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 3503,
-					"end": 3504,
-					"token": ".",
-					"ghost": true
-				}
-			},
-			{
-				"token": "log",
-				"label": "ghost_extra",
-				"start": 3289,
-				"end": 3292,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 3504,
-					"end": 3507,
-					"token": "log",
-					"ghost": true
-				}
-			},
-			{
-				"token": "(",
-				"label": "ghost_extra",
-				"start": 3292,
-				"end": 3293,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 3507,
-					"end": 3508,
-					"token": "(",
-					"ghost": true
-				}
-			},
-			{
-				"token": "element",
-				"label": "ghost_extra",
-				"start": 3293,
-				"end": 3300,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 3508,
-					"end": 3515,
-					"token": "element",
-					"ghost": true
-				}
-			},
-			{
-				"token": ")",
-				"label": "ghost_extra",
-				"start": 3300,
-				"end": 3301,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 3515,
-					"end": 3516,
-					"token": ")",
-					"ghost": true
-				}
-			},
-			{
-				"token": ";",
-				"label": "ghost_extra",
-				"start": 3301,
-				"end": 3302,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 3516,
-					"end": 3517,
-					"token": ";",
-					"ghost": true
-				}
-			},
-			{
 				"token": "element",
 				"label": "extra",
 				"start": 3319,
@@ -4191,19 +4086,6 @@
 				"label": "extra",
 				"start": 3357,
 				"end": 3358
-			},
-			{
-				"token": "htm",
-				"label": "extra",
-				"start": 3405,
-				"end": 3408,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 3520,
-					"end": 3524,
-					"token": "html",
-					"label": "missing"
-				}
 			}
 		]
 	}

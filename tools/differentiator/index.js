@@ -142,15 +142,20 @@ const _BORROW_ALIGNMENT_ORDER = [
 	"token-lev-star",
 ];
 
+let _borrowedAlignmentKey = null;
+
 function _borrowedAlignments() {
+	if (_borrowedAlignmentKey != null) {
+		const cached = _allMarks[_borrowedAlignmentKey];
+		if (cached && cached.alignments && Object.keys(cached.alignments).length) {
+			return cached.alignments;
+		}
+		_borrowedAlignmentKey = null;
+	}
 	for (const mode of _BORROW_ALIGNMENT_ORDER) {
 		const m = _allMarks[mode];
 		if (m && m.alignments && Object.keys(m.alignments).length) {
-			return m.alignments;
-		}
-	}
-	for (const m of Object.values(_allMarks)) {
-		if (m && m.alignments && Object.keys(m.alignments).length) {
+			_borrowedAlignmentKey = mode;
 			return m.alignments;
 		}
 	}
@@ -168,10 +173,6 @@ const _BORROW_GHOSTS_ORDER = [
 function _borrowedTeacherGhosts(fileName) {
 	for (const mode of _BORROW_GHOSTS_ORDER) {
 		const m = _allMarks[mode];
-		const list = m && m.teacher_ghosts && m.teacher_ghosts[fileName];
-		if (list && list.length) return list;
-	}
-	for (const m of Object.values(_allMarks)) {
 		const list = m && m.teacher_ghosts && m.teacher_ghosts[fileName];
 		if (list && list.length) return list;
 	}
@@ -198,6 +199,7 @@ function _applyIncomingData(data) {
 
 	if (data.allMarks) {
 		_allMarks = data.allMarks;
+		_borrowedAlignmentKey = null;
 		_diffMode = defaultDiffModeKey(_allMarks, _diffMode);
 		_refreshModeSelect();
 		_applyCurrentMarks();
@@ -215,6 +217,23 @@ function _applyIncomingData(data) {
 					const hadNoMarks = _diffMode == null || !_allMarks[_diffMode];
 					_refreshModeSelect();
 					if (hadNoMarks) _applyCurrentMarks();
+					if (
+						_linePaddingEnabled &&
+						!(_currentMarksEntry && _currentMarksEntry.alignments) &&
+						_borrowedAlignments() &&
+						_teacherFiles &&
+						Object.keys(_teacherFiles).length
+					) {
+						const savedT = _saveState("teacher");
+						const savedS = _saveState("student");
+						renderPanel("teacher", _teacherFiles, _teacherMarks);
+						renderPanel("student", _studentFiles, _studentMarks);
+						_restoreState("teacher", savedT);
+						_restoreState("student", savedS);
+						if (typeof _curatedEditMode !== "undefined" && _curatedEditMode) {
+							requestAnimationFrame(() => _curatedRefreshOverlays());
+						}
+					}
 				}
 			});
 		}
@@ -454,14 +473,14 @@ function _refreshLinePaddingButton() {
 	const btn = document.getElementById("btn-line-padding");
 	if (!btn) return;
 	btn.classList.toggle("is-toggle-on", _linePaddingEnabled);
-	btn.textContent = _linePaddingEnabled ? "⇲ Padding" : "⇱ Padding";
+	btn.textContent = "↕️ Padding";
 }
 
 function _refreshLineNumbersButton() {
 	const btn = document.getElementById("btn-line-numbers");
 	if (!btn) return;
 	btn.classList.toggle("is-toggle-on", _lineNumbersEnabled);
-	btn.textContent = _lineNumbersEnabled ? "Line №" : "Line №";
+	btn.textContent = "🔢 Line №";
 }
 
 function _applyLineNumbersClass() {
@@ -510,7 +529,7 @@ function _refreshMissingColorButton() {
 	const btn = document.getElementById("btn-missing-color");
 	if (!btn) return;
 	btn.classList.toggle("is-toggle-on", _diffMissingLangColor);
-	btn.textContent = _diffMissingLangColor ? "🎨 Lang color" : "🎨 Red";
+	btn.textContent = "🎨 Lang color";
 }
 
 function toggleMissingLangColor() {

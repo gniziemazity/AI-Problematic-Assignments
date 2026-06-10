@@ -17,7 +17,7 @@ const FV_LOADING_HTML =
 
 const FV_LOADING_EDITOR_HTML =
 	'<div style="display:flex;align-items:center;justify-content:center;' +
-	'height:100%;color:#999;font-family:\'Segoe UI\',sans-serif;font-size:13px">Loading…</div>';
+	"height:100%;color:#999;font-family:'Segoe UI',sans-serif;font-size:13px\">Loading…</div>";
 
 class FileViewer {
 	constructor(opts = {}) {

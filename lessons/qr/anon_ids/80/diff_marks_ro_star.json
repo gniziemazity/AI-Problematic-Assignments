@@ -2969,89 +2969,1455 @@
       "}"
     ],
     "tokens": {
-      "function": {
+      "camera": {
+        "teacher": [
+          {
+            "file": "123456.css",
+            "pos": 572,
+            "seq_idx": 143,
+            "label": "missing",
+            "seq_idx_aug": 154
+          },
+          {
+            "file": "123456.js",
+            "pos": 32,
+            "seq_idx": 158,
+            "label": null,
+            "seq_idx_aug": 169
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 442,
+            "seq_idx": 501,
+            "label": null,
+            "seq_idx_aug": 522
+          }
+        ],
+        "student": [
+          {
+            "file": "index.html",
+            "pos": 459,
+            "seq_idx": 162,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 635,
+            "seq_idx": 361,
+            "label": "extra"
+          },
+          {
+            "file": "123456.js",
+            "pos": 32,
+            "seq_idx": 376,
+            "label": null
+          }
+        ]
+      },
+      "}": {
+        "teacher": [
+          {
+            "file": "123456.css",
+            "pos": 43,
+            "seq_idx": 10,
+            "label": null,
+            "seq_idx_aug": 10
+          },
+          {
+            "file": "123456.css",
+            "pos": 128,
+            "seq_idx": 33,
+            "label": null,
+            "seq_idx_aug": 33
+          },
+          {
+            "file": "123456.css",
+            "pos": 181,
+            "seq_idx": 53,
+            "label": null,
+            "seq_idx_aug": 56
+          },
+          {
+            "file": "123456.css",
+            "pos": 205,
+            "seq_idx": 62,
+            "label": null,
+            "seq_idx_aug": 71
+          },
+          {
+            "file": "123456.css",
+            "pos": 512,
+            "seq_idx": 129,
+            "label": null,
+            "seq_idx_aug": 140
+          },
+          {
+            "file": "123456.css",
+            "pos": 568,
+            "seq_idx": 141,
+            "label": null,
+            "seq_idx_aug": 152
+          },
+          {
+            "file": "123456.css",
+            "pos": 595,
+            "seq_idx": 150,
+            "label": null,
+            "seq_idx_aug": 161
+          },
+          {
+            "file": "123456.js",
+            "pos": 223,
+            "seq_idx": 204,
+            "label": "missing",
+            "seq_idx_aug": 215
+          },
+          {
+            "file": "123456.js",
+            "pos": 316,
+            "seq_idx": 229,
+            "label": "missing",
+            "seq_idx_aug": 240
+          },
+          {
+            "file": "123456.js",
+            "pos": 318,
+            "seq_idx": 230,
+            "label": null,
+            "seq_idx_aug": 241
+          },
+          {
+            "file": "123456.js",
+            "pos": 392,
+            "seq_idx": 246,
+            "label": null,
+            "seq_idx_aug": 257
+          },
+          {
+            "file": "123456.js",
+            "pos": 398,
+            "seq_idx": 249,
+            "label": null,
+            "seq_idx_aug": 260
+          },
+          {
+            "file": "123456.js",
+            "pos": 518,
+            "seq_idx": 281,
+            "label": null,
+            "seq_idx_aug": 299
+          },
+          {
+            "file": "123456.js",
+            "pos": 569,
+            "seq_idx": 298,
+            "label": null,
+            "seq_idx_aug": 316
+          },
+          {
+            "file": "123456.js",
+            "pos": 573,
+            "seq_idx": 301,
+            "label": null,
+            "seq_idx_aug": 319
+          },
+          {
+            "file": "123456.js",
+            "pos": 617,
+            "seq_idx": 313,
+            "label": null,
+            "seq_idx_aug": 331
+          },
+          {
+            "file": "123456.js",
+            "pos": 707,
+            "seq_idx": 338,
+            "label": null,
+            "seq_idx_aug": 356
+          }
+        ],
+        "student": [
+          {
+            "file": "123456.css",
+            "pos": 45,
+            "seq_idx": 230,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 141,
+            "seq_idx": 253,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 200,
+            "seq_idx": 271,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 226,
+            "seq_idx": 280,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 569,
+            "seq_idx": 347,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 630,
+            "seq_idx": 359,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 660,
+            "seq_idx": 368,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 246,
+            "seq_idx": 422,
+            "label": "extra"
+          },
+          {
+            "file": "123456.js",
+            "pos": 359,
+            "seq_idx": 447,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 362,
+            "seq_idx": 448,
+            "label": "extra"
+          },
+          {
+            "file": "123456.js",
+            "pos": 443,
+            "seq_idx": 464,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 455,
+            "seq_idx": 467,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 612,
+            "seq_idx": 499,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 673,
+            "seq_idx": 516,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 677,
+            "seq_idx": 519,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 723,
+            "seq_idx": 531,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 818,
+            "seq_idx": 556,
+            "label": null
+          }
+        ]
+      },
+      "-": {
+        "teacher": [
+          {
+            "file": "123456.css",
+            "pos": 9,
+            "seq_idx": 3,
+            "label": null,
+            "seq_idx_aug": 3
+          },
+          {
+            "file": "123456.css",
+            "pos": 10,
+            "seq_idx": 4,
+            "label": null,
+            "seq_idx_aug": 4
+          },
+          {
+            "file": "123456.css",
+            "pos": 74,
+            "seq_idx": 18,
+            "label": null,
+            "seq_idx_aug": 18
+          },
+          {
+            "file": "123456.css",
+            "pos": 100,
+            "seq_idx": 24,
+            "label": null,
+            "seq_idx_aug": 24
+          },
+          {
+            "file": "123456.css",
+            "pos": 141,
+            "seq_idx": 37,
+            "label": null,
+            "seq_idx_aug": 37
+          },
+          {
+            "file": "123456.css",
+            "pos": 171,
+            "seq_idx": 48,
+            "label": null,
+            "seq_idx_aug": 51
+          },
+          {
+            "file": "123456.css",
+            "pos": 172,
+            "seq_idx": 49,
+            "label": null,
+            "seq_idx_aug": 52
+          },
+          {
+            "file": "123456.css",
+            "pos": 287,
+            "seq_idx": 75,
+            "label": null,
+            "seq_idx_aug": 84
+          },
+          {
+            "file": "123456.css",
+            "pos": 309,
+            "seq_idx": 81,
+            "label": null,
+            "seq_idx_aug": 90
+          },
+          {
+            "file": "123456.css",
+            "pos": 347,
+            "seq_idx": 93,
+            "label": null,
+            "seq_idx_aug": 104
+          },
+          {
+            "file": "123456.css",
+            "pos": 348,
+            "seq_idx": 94,
+            "label": null,
+            "seq_idx_aug": 105
+          },
+          {
+            "file": "123456.css",
+            "pos": 499,
+            "seq_idx": 120,
+            "label": null,
+            "seq_idx_aug": 131
+          },
+          {
+            "file": "123456.css",
+            "pos": 505,
+            "seq_idx": 124,
+            "label": null,
+            "seq_idx_aug": 135
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 61,
+            "seq_idx": 361,
+            "label": null,
+            "seq_idx_aug": 380
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 111,
+            "seq_idx": 378,
+            "label": null,
+            "seq_idx_aug": 397
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 126,
+            "seq_idx": 382,
+            "label": null,
+            "seq_idx_aug": 401
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 498,
+            "seq_idx": 522,
+            "label": null,
+            "seq_idx_aug": 543
+          },
+          {
+            "file": "123456.css",
+            "pos": 205,
+            "blob_offset": 11,
+            "ghost": true,
+            "del_ts": 1773830612606,
+            "seq_idx_aug": 66
+          }
+        ],
+        "student": [
+          {
+            "file": "index.html",
+            "pos": 62,
+            "seq_idx": 22,
+            "label": null
+          },
+          {
+            "file": "index.html",
+            "pos": 114,
+            "seq_idx": 39,
+            "label": null
+          },
+          {
+            "file": "index.html",
+            "pos": 129,
+            "seq_idx": 43,
+            "label": null
+          },
+          {
+            "file": "index.html",
+            "pos": 515,
+            "seq_idx": 183,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 12,
+            "seq_idx": 223,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 13,
+            "seq_idx": 224,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 81,
+            "seq_idx": 238,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 110,
+            "seq_idx": 244,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 156,
+            "seq_idx": 257,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 187,
+            "seq_idx": 266,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 188,
+            "seq_idx": 267,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 315,
+            "seq_idx": 293,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 340,
+            "seq_idx": 299,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 381,
+            "seq_idx": 311,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 382,
+            "seq_idx": 312,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 556,
+            "seq_idx": 338,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 562,
+            "seq_idx": 342,
+            "label": null
+          }
+        ]
+      },
+      ":": {
+        "teacher": [
+          {
+            "file": "123456.css",
+            "pos": 0,
+            "seq_idx": 0,
+            "label": null,
+            "seq_idx_aug": 0
+          },
+          {
+            "file": "123456.css",
+            "pos": 16,
+            "seq_idx": 6,
+            "label": null,
+            "seq_idx_aug": 6
+          },
+          {
+            "file": "123456.css",
+            "pos": 61,
+            "seq_idx": 14,
+            "label": null,
+            "seq_idx_aug": 14
+          },
+          {
+            "file": "123456.css",
+            "pos": 84,
+            "seq_idx": 20,
+            "label": null,
+            "seq_idx_aug": 20
+          },
+          {
+            "file": "123456.css",
+            "pos": 106,
+            "seq_idx": 26,
+            "label": null,
+            "seq_idx_aug": 26
+          },
+          {
+            "file": "123456.css",
+            "pos": 123,
+            "seq_idx": 30,
+            "label": null,
+            "seq_idx_aug": 30
+          },
+          {
+            "file": "123456.css",
+            "pos": 148,
+            "seq_idx": 39,
+            "label": null,
+            "seq_idx_aug": 39
+          },
+          {
+            "file": "123456.css",
+            "pos": 165,
+            "seq_idx": 45,
+            "label": null,
+            "seq_idx_aug": 45
+          },
+          {
+            "file": "123456.css",
+            "pos": 197,
+            "seq_idx": 58,
+            "label": null,
+            "seq_idx_aug": 61
+          },
+          {
+            "file": "123456.css",
+            "pos": 224,
+            "seq_idx": 67,
+            "label": null,
+            "seq_idx_aug": 76
+          },
+          {
+            "file": "123456.css",
+            "pos": 269,
+            "seq_idx": 71,
+            "label": null,
+            "seq_idx_aug": 80
+          },
+          {
+            "file": "123456.css",
+            "pos": 293,
+            "seq_idx": 77,
+            "label": null,
+            "seq_idx_aug": 86
+          },
+          {
+            "file": "123456.css",
+            "pos": 316,
+            "seq_idx": 83,
+            "label": null,
+            "seq_idx_aug": 92
+          },
+          {
+            "file": "123456.css",
+            "pos": 331,
+            "seq_idx": 88,
+            "label": null,
+            "seq_idx_aug": 97
+          },
+          {
+            "file": "123456.css",
+            "pos": 395,
+            "seq_idx": 99,
+            "label": null,
+            "seq_idx_aug": 110
+          },
+          {
+            "file": "123456.css",
+            "pos": 446,
+            "seq_idx": 105,
+            "label": null,
+            "seq_idx_aug": 116
+          },
+          {
+            "file": "123456.css",
+            "pos": 462,
+            "seq_idx": 109,
+            "label": null,
+            "seq_idx_aug": 120
+          },
+          {
+            "file": "123456.css",
+            "pos": 472,
+            "seq_idx": 113,
+            "label": null,
+            "seq_idx_aug": 124
+          },
+          {
+            "file": "123456.css",
+            "pos": 487,
+            "seq_idx": 117,
+            "label": null,
+            "seq_idx_aug": 128
+          },
+          {
+            "file": "123456.css",
+            "pos": 540,
+            "seq_idx": 134,
+            "label": null,
+            "seq_idx_aug": 145
+          },
+          {
+            "file": "123456.css",
+            "pos": 560,
+            "seq_idx": 138,
+            "label": null,
+            "seq_idx_aug": 149
+          },
+          {
+            "file": "123456.css",
+            "pos": 587,
+            "seq_idx": 146,
+            "label": null,
+            "seq_idx_aug": 157
+          },
+          {
+            "file": "123456.js",
+            "pos": 376,
+            "seq_idx": 242,
+            "label": null,
+            "seq_idx_aug": 253
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 480,
+            "seq_idx": 514,
+            "label": null,
+            "seq_idx_aug": 535
+          },
+          {
+            "file": "123456.css",
+            "pos": 205,
+            "blob_offset": 17,
+            "ghost": true,
+            "del_ts": 1773830612612,
+            "seq_idx_aug": 68
+          }
+        ],
+        "student": [
+          {
+            "file": "index.html",
+            "pos": 497,
+            "seq_idx": 175,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 0,
+            "seq_idx": 220,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 19,
+            "seq_idx": 226,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 65,
+            "seq_idx": 234,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 91,
+            "seq_idx": 240,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 116,
+            "seq_idx": 246,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 136,
+            "seq_idx": 250,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 163,
+            "seq_idx": 259,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 181,
+            "seq_idx": 263,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 218,
+            "seq_idx": 276,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 247,
+            "seq_idx": 285,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 294,
+            "seq_idx": 289,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 321,
+            "seq_idx": 295,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 347,
+            "seq_idx": 301,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 365,
+            "seq_idx": 306,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 442,
+            "seq_idx": 317,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 494,
+            "seq_idx": 323,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 513,
+            "seq_idx": 327,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 526,
+            "seq_idx": 331,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 544,
+            "seq_idx": 335,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 599,
+            "seq_idx": 352,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 622,
+            "seq_idx": 356,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 652,
+            "seq_idx": 364,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 427,
+            "seq_idx": 460,
+            "label": null
+          }
+        ]
+      },
+      "console": {
         "teacher": [
           {
             "file": "123456.js",
-            "pos": 67,
-            "seq_idx": 167,
+            "pos": 548,
+            "seq_idx": 291,
             "label": null,
-            "seq_idx_aug": 178
+            "seq_idx_aug": 309
           },
           {
             "file": "123456.js",
-            "pos": 321,
-            "seq_idx": 231,
-            "label": "missing",
-            "seq_idx_aug": 242
-          },
-          {
-            "file": "123456.js",
-            "pos": 403,
-            "seq_idx": 251,
-            "label": null,
-            "seq_idx_aug": 262
-          },
-          {
-            "file": "123456.js",
-            "pos": 529,
-            "seq_idx": 286,
-            "label": null,
-            "seq_idx_aug": 304
-          },
-          {
-            "file": "123456.js",
-            "pos": 576,
-            "seq_idx": 302,
-            "label": null,
-            "seq_idx_aug": 320
-          },
-          {
-            "file": "123456.js",
-            "pos": 620,
-            "seq_idx": 314,
-            "label": null,
-            "seq_idx_aug": 332
+            "pos": 516,
+            "blob_offset": 3,
+            "ghost": true,
+            "del_ts": 1773832743537,
+            "seq_idx_aug": 292
           }
         ],
         "student": [
           {
             "file": "123456.js",
-            "pos": 66,
-            "seq_idx": 385,
+            "pos": 649,
+            "seq_idx": 509,
+            "label": null
+          }
+        ]
+      },
+      ";": {
+        "teacher": [
+          {
+            "file": "123456.css",
+            "pos": 22,
+            "seq_idx": 9,
+            "label": null,
+            "seq_idx_aug": 9
+          },
+          {
+            "file": "123456.css",
+            "pos": 67,
+            "seq_idx": 16,
+            "label": null,
+            "seq_idx_aug": 16
+          },
+          {
+            "file": "123456.css",
+            "pos": 92,
+            "seq_idx": 22,
+            "label": null,
+            "seq_idx_aug": 22
+          },
+          {
+            "file": "123456.css",
+            "pos": 114,
+            "seq_idx": 28,
+            "label": null,
+            "seq_idx_aug": 28
+          },
+          {
+            "file": "123456.css",
+            "pos": 126,
+            "seq_idx": 32,
+            "label": null,
+            "seq_idx_aug": 32
+          },
+          {
+            "file": "123456.css",
+            "pos": 157,
+            "seq_idx": 43,
+            "label": null,
+            "seq_idx_aug": 43
+          },
+          {
+            "file": "123456.css",
+            "pos": 179,
+            "seq_idx": 52,
+            "label": null,
+            "seq_idx_aug": 55
+          },
+          {
+            "file": "123456.css",
+            "pos": 203,
+            "seq_idx": 61,
+            "label": null,
+            "seq_idx_aug": 64
+          },
+          {
+            "file": "123456.css",
+            "pos": 229,
+            "seq_idx": 69,
+            "label": null,
+            "seq_idx_aug": 78
+          },
+          {
+            "file": "123456.css",
+            "pos": 274,
+            "seq_idx": 73,
+            "label": null,
+            "seq_idx_aug": 82
+          },
+          {
+            "file": "123456.css",
+            "pos": 300,
+            "seq_idx": 79,
+            "label": null,
+            "seq_idx_aug": 88
+          },
+          {
+            "file": "123456.css",
+            "pos": 321,
+            "seq_idx": 86,
+            "label": null,
+            "seq_idx_aug": 95
+          },
+          {
+            "file": "123456.css",
+            "pos": 355,
+            "seq_idx": 97,
+            "label": null,
+            "seq_idx_aug": 108
+          },
+          {
+            "file": "123456.css",
+            "pos": 412,
+            "seq_idx": 103,
+            "label": null,
+            "seq_idx_aug": 114
+          },
+          {
+            "file": "123456.css",
+            "pos": 456,
+            "seq_idx": 107,
+            "label": null,
+            "seq_idx_aug": 118
+          },
+          {
+            "file": "123456.css",
+            "pos": 465,
+            "seq_idx": 111,
+            "label": null,
+            "seq_idx_aug": 122
+          },
+          {
+            "file": "123456.css",
+            "pos": 475,
+            "seq_idx": 115,
+            "label": null,
+            "seq_idx_aug": 126
+          },
+          {
+            "file": "123456.css",
+            "pos": 510,
+            "seq_idx": 128,
+            "label": null,
+            "seq_idx_aug": 139
+          },
+          {
+            "file": "123456.css",
+            "pos": 550,
+            "seq_idx": 136,
+            "label": null,
+            "seq_idx_aug": 147
+          },
+          {
+            "file": "123456.css",
+            "pos": 566,
+            "seq_idx": 140,
+            "label": null,
+            "seq_idx_aug": 151
+          },
+          {
+            "file": "123456.css",
+            "pos": 593,
+            "seq_idx": 149,
+            "label": null,
+            "seq_idx_aug": 160
+          },
+          {
+            "file": "123456.js",
+            "pos": 40,
+            "seq_idx": 161,
+            "label": null,
+            "seq_idx_aug": 172
+          },
+          {
+            "file": "123456.js",
+            "pos": 64,
+            "seq_idx": 166,
+            "label": null,
+            "seq_idx_aug": 177
+          },
+          {
+            "file": "123456.js",
+            "pos": 117,
+            "seq_idx": 176,
+            "label": null,
+            "seq_idx_aug": 187
+          },
+          {
+            "file": "123456.js",
+            "pos": 153,
+            "seq_idx": 185,
+            "label": null,
+            "seq_idx_aug": 196
+          },
+          {
+            "file": "123456.js",
+            "pos": 181,
+            "seq_idx": 193,
+            "label": null,
+            "seq_idx_aug": 204
+          },
+          {
+            "file": "123456.js",
+            "pos": 220,
+            "seq_idx": 203,
+            "label": "missing",
+            "seq_idx_aug": 214
+          },
+          {
+            "file": "123456.js",
+            "pos": 247,
+            "seq_idx": 210,
+            "label": null,
+            "seq_idx_aug": 221
+          },
+          {
+            "file": "123456.js",
+            "pos": 273,
+            "seq_idx": 218,
+            "label": null,
+            "seq_idx_aug": 229
+          },
+          {
+            "file": "123456.js",
+            "pos": 313,
+            "seq_idx": 228,
+            "label": "missing",
+            "seq_idx_aug": 239
+          },
+          {
+            "file": "123456.js",
+            "pos": 454,
+            "seq_idx": 265,
+            "label": null,
+            "seq_idx_aug": 276
+          },
+          {
+            "file": "123456.js",
+            "pos": 494,
+            "seq_idx": 276,
+            "label": null,
+            "seq_idx_aug": 287
+          },
+          {
+            "file": "123456.js",
+            "pos": 514,
+            "seq_idx": 280,
+            "label": null,
+            "seq_idx_aug": 291
+          },
+          {
+            "file": "123456.js",
+            "pos": 566,
+            "seq_idx": 297,
+            "label": null,
+            "seq_idx_aug": 315
+          },
+          {
+            "file": "123456.js",
+            "pos": 571,
+            "seq_idx": 300,
+            "label": null,
+            "seq_idx_aug": 318
+          },
+          {
+            "file": "123456.js",
+            "pos": 615,
+            "seq_idx": 312,
+            "label": null,
+            "seq_idx_aug": 330
+          },
+          {
+            "file": "123456.js",
+            "pos": 678,
+            "seq_idx": 329,
+            "label": null,
+            "seq_idx_aug": 347
+          },
+          {
+            "file": "123456.js",
+            "pos": 705,
+            "seq_idx": 337,
+            "label": null,
+            "seq_idx_aug": 355
+          },
+          {
+            "file": "123456.css",
+            "pos": 167,
+            "blob_offset": 4,
+            "ghost": true,
+            "del_ts": 1773830517027,
+            "seq_idx_aug": 48
+          },
+          {
+            "file": "123456.css",
+            "pos": 205,
+            "blob_offset": 22,
+            "ghost": true,
+            "del_ts": 1773830612617,
+            "seq_idx_aug": 70
+          },
+          {
+            "file": "123456.css",
+            "pos": 343,
+            "blob_offset": 4,
+            "ghost": true,
+            "del_ts": 1773830545383,
+            "seq_idx_aug": 101
+          },
+          {
+            "file": "123456.js",
+            "pos": 516,
+            "blob_offset": 20,
+            "ghost": true,
+            "del_ts": 1773832743548,
+            "seq_idx_aug": 298
+          }
+        ],
+        "student": [
+          {
+            "file": "123456.css",
+            "pos": 25,
+            "seq_idx": 229,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 71,
+            "seq_idx": 236,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 99,
+            "seq_idx": 242,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 124,
+            "seq_idx": 248,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 139,
+            "seq_idx": 252,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 170,
+            "seq_idx": 261,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 195,
+            "seq_idx": 270,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 224,
+            "seq_idx": 279,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 252,
+            "seq_idx": 287,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 299,
+            "seq_idx": 291,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 328,
+            "seq_idx": 297,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 352,
+            "seq_idx": 304,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 389,
+            "seq_idx": 315,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 459,
+            "seq_idx": 321,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 504,
+            "seq_idx": 325,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 516,
+            "seq_idx": 329,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 529,
+            "seq_idx": 333,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 567,
+            "seq_idx": 346,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 609,
+            "seq_idx": 354,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 628,
+            "seq_idx": 358,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 658,
+            "seq_idx": 367,
             "label": null
           },
           {
             "file": "123456.js",
-            "pos": 365,
-            "seq_idx": 449,
+            "pos": 40,
+            "seq_idx": 379,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 63,
+            "seq_idx": 384,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 118,
+            "seq_idx": 394,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 161,
+            "seq_idx": 403,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 206,
+            "seq_idx": 413,
             "label": "extra"
           },
           {
             "file": "123456.js",
-            "pos": 466,
-            "seq_idx": 469,
+            "pos": 240,
+            "seq_idx": 421,
             "label": null
           },
           {
             "file": "123456.js",
-            "pos": 626,
-            "seq_idx": 504,
+            "pos": 275,
+            "seq_idx": 428,
             "label": null
           },
           {
             "file": "123456.js",
-            "pos": 680,
-            "seq_idx": 520,
+            "pos": 321,
+            "seq_idx": 438,
+            "label": "extra"
+          },
+          {
+            "file": "123456.js",
+            "pos": 353,
+            "seq_idx": 446,
             "label": null
           },
           {
             "file": "123456.js",
-            "pos": 726,
-            "seq_idx": 532,
+            "pos": 524,
+            "seq_idx": 483,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 573,
+            "seq_idx": 494,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 602,
+            "seq_idx": 498,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 667,
+            "seq_idx": 515,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 675,
+            "seq_idx": 518,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 721,
+            "seq_idx": 530,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 786,
+            "seq_idx": 547,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 816,
+            "seq_idx": 555,
             "label": null
           }
         ]
+      },
+      "Document": {
+        "teacher": [
+          {
+            "file": "reconstructed.html",
+            "pos": 148,
+            "blob_offset": 0,
+            "ghost": true,
+            "del_ts": 1773829177776,
+            "seq_idx_aug": 412
+          }
+        ],
+        "student": []
+      },
+      "none": {
+        "teacher": [
+          {
+            "file": "123456.css",
+            "pos": 562,
+            "seq_idx": 139,
+            "label": null,
+            "seq_idx_aug": 150
+          },
+          {
+            "file": "123456.js",
+            "pos": 215,
+            "seq_idx": 201,
+            "label": "missing",
+            "seq_idx_aug": 212
+          }
+        ],
+        "student": [
+          {
+            "file": "123456.css",
+            "pos": 624,
+            "seq_idx": 357,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 201,
+            "seq_idx": 411,
+            "label": "extra"
+          }
+        ]
+      },
+      "lime": {
+        "teacher": [
+          {
+            "file": "123456.css",
+            "pos": 343,
+            "blob_offset": 0,
+            "ghost": true,
+            "del_ts": 1773830545825,
+            "seq_idx_aug": 100
+          }
+        ],
+        "student": []
       },
       "{": {
         "teacher": [
@@ -3279,6 +4645,110 @@
             "label": null
           }
         ]
+      },
+      "else": {
+        "teacher": [
+          {
+            "file": "123456.js",
+            "pos": 225,
+            "seq_idx": 205,
+            "label": "missing",
+            "seq_idx_aug": 216
+          }
+        ],
+        "student": [
+          {
+            "file": "123456.js",
+            "pos": 248,
+            "seq_idx": 423,
+            "label": "extra"
+          }
+        ]
+      },
+      "startScanner": {
+        "teacher": [
+          {
+            "file": "123456.js",
+            "pos": 139,
+            "seq_idx": 182,
+            "label": null,
+            "seq_idx_aug": 193
+          },
+          {
+            "file": "123456.js",
+            "pos": 330,
+            "seq_idx": 232,
+            "label": "missing",
+            "seq_idx_aug": 243
+          }
+        ],
+        "student": [
+          {
+            "file": "123456.js",
+            "pos": 147,
+            "seq_idx": 400,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 374,
+            "seq_idx": 450,
+            "label": "extra"
+          }
+        ]
+      },
+      "color": {
+        "teacher": [
+          {
+            "file": "123456.css",
+            "pos": 160,
+            "seq_idx": 44,
+            "label": null,
+            "seq_idx_aug": 44
+          },
+          {
+            "file": "123456.css",
+            "pos": 288,
+            "seq_idx": 76,
+            "label": null,
+            "seq_idx_aug": 85
+          },
+          {
+            "file": "123456.css",
+            "pos": 205,
+            "blob_offset": 12,
+            "ghost": true,
+            "del_ts": 1773830612611,
+            "seq_idx_aug": 67
+          }
+        ],
+        "student": [
+          {
+            "file": "123456.css",
+            "pos": 176,
+            "seq_idx": 262,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 316,
+            "seq_idx": 294,
+            "label": null
+          }
+        ]
+      },
+      "jpg": {
+        "teacher": [
+          {
+            "file": "reconstructed.html",
+            "pos": 303,
+            "blob_offset": 0,
+            "ghost": true,
+            "del_ts": 1773829835529,
+            "seq_idx_aug": 466
+          }
+        ],
+        "student": []
       },
       "\"": {
         "teacher": [
@@ -3898,66 +5368,81 @@
           }
         ]
       },
-      "log": {
-        "teacher": [
-          {
-            "file": "123456.js",
-            "pos": 516,
-            "blob_offset": 11,
-            "ghost": true,
-            "del_ts": 1773832743541,
-            "seq_idx_aug": 294
-          }
-        ],
-        "student": []
-      },
-      "none": {
+      "#": {
         "teacher": [
           {
             "file": "123456.css",
-            "pos": 562,
-            "seq_idx": 139,
+            "pos": 18,
+            "seq_idx": 7,
             "label": null,
-            "seq_idx_aug": 150
+            "seq_idx_aug": 7
           },
           {
-            "file": "123456.js",
-            "pos": 215,
-            "seq_idx": 201,
+            "file": "123456.css",
+            "pos": 184,
+            "seq_idx": 54,
+            "label": null,
+            "seq_idx_aug": 57
+          },
+          {
+            "file": "123456.css",
+            "pos": 208,
+            "seq_idx": 63,
+            "label": null,
+            "seq_idx_aug": 72
+          },
+          {
+            "file": "123456.css",
+            "pos": 515,
+            "seq_idx": 130,
+            "label": null,
+            "seq_idx_aug": 141
+          },
+          {
+            "file": "123456.css",
+            "pos": 571,
+            "seq_idx": 142,
             "label": "missing",
-            "seq_idx_aug": 212
+            "seq_idx_aug": 153
+          },
+          {
+            "file": "123456.css",
+            "pos": 167,
+            "blob_offset": 0,
+            "ghost": true,
+            "del_ts": 1773830517547,
+            "seq_idx_aug": 46
           }
         ],
         "student": [
           {
             "file": "123456.css",
-            "pos": 624,
-            "seq_idx": 357,
+            "pos": 21,
+            "seq_idx": 227,
             "label": null
           },
           {
-            "file": "123456.js",
-            "pos": 201,
-            "seq_idx": 411,
-            "label": "extra"
-          }
-        ]
-      },
-      "else": {
-        "teacher": [
+            "file": "123456.css",
+            "pos": 203,
+            "seq_idx": 272,
+            "label": null
+          },
           {
-            "file": "123456.js",
-            "pos": 225,
-            "seq_idx": 205,
-            "label": "missing",
-            "seq_idx_aug": 216
-          }
-        ],
-        "student": [
+            "file": "123456.css",
+            "pos": 229,
+            "seq_idx": 281,
+            "label": null
+          },
           {
-            "file": "123456.js",
-            "pos": 248,
-            "seq_idx": 423,
+            "file": "123456.css",
+            "pos": 572,
+            "seq_idx": 348,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 634,
+            "seq_idx": 360,
             "label": "extra"
           }
         ]
@@ -3989,51 +5474,6 @@
           }
         ]
       },
-      "camera": {
-        "teacher": [
-          {
-            "file": "123456.css",
-            "pos": 572,
-            "seq_idx": 143,
-            "label": "missing",
-            "seq_idx_aug": 154
-          },
-          {
-            "file": "123456.js",
-            "pos": 32,
-            "seq_idx": 158,
-            "label": null,
-            "seq_idx_aug": 169
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 442,
-            "seq_idx": 501,
-            "label": null,
-            "seq_idx_aug": 522
-          }
-        ],
-        "student": [
-          {
-            "file": "index.html",
-            "pos": 459,
-            "seq_idx": 162,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 635,
-            "seq_idx": 361,
-            "label": "extra"
-          },
-          {
-            "file": "123456.js",
-            "pos": 32,
-            "seq_idx": 376,
-            "label": null
-          }
-        ]
-      },
       "block": {
         "teacher": [
           {
@@ -4053,269 +5493,55 @@
           }
         ]
       },
-      "}": {
+      "text": {
         "teacher": [
           {
-            "file": "123456.css",
-            "pos": 43,
-            "seq_idx": 10,
-            "label": null,
-            "seq_idx_aug": 10
-          },
-          {
-            "file": "123456.css",
-            "pos": 128,
-            "seq_idx": 33,
-            "label": null,
-            "seq_idx_aug": 33
-          },
-          {
-            "file": "123456.css",
-            "pos": 181,
-            "seq_idx": 53,
-            "label": null,
-            "seq_idx_aug": 56
-          },
-          {
-            "file": "123456.css",
-            "pos": 205,
-            "seq_idx": 62,
-            "label": null,
-            "seq_idx_aug": 71
-          },
-          {
-            "file": "123456.css",
-            "pos": 512,
-            "seq_idx": 129,
-            "label": null,
-            "seq_idx_aug": 140
-          },
-          {
-            "file": "123456.css",
-            "pos": 568,
-            "seq_idx": 141,
-            "label": null,
-            "seq_idx_aug": 152
-          },
-          {
-            "file": "123456.css",
-            "pos": 595,
-            "seq_idx": 150,
-            "label": null,
-            "seq_idx_aug": 161
-          },
-          {
             "file": "123456.js",
-            "pos": 223,
-            "seq_idx": 204,
-            "label": "missing",
-            "seq_idx_aug": 215
-          },
-          {
-            "file": "123456.js",
-            "pos": 316,
-            "seq_idx": 229,
-            "label": "missing",
-            "seq_idx_aug": 240
-          },
-          {
-            "file": "123456.js",
-            "pos": 318,
-            "seq_idx": 230,
-            "label": null,
-            "seq_idx_aug": 241
-          },
-          {
-            "file": "123456.js",
-            "pos": 392,
-            "seq_idx": 246,
-            "label": null,
-            "seq_idx_aug": 257
-          },
-          {
-            "file": "123456.js",
-            "pos": 398,
-            "seq_idx": 249,
-            "label": null,
-            "seq_idx_aug": 260
-          },
-          {
-            "file": "123456.js",
-            "pos": 518,
-            "seq_idx": 281,
-            "label": null,
-            "seq_idx_aug": 299
-          },
-          {
-            "file": "123456.js",
-            "pos": 569,
-            "seq_idx": 298,
-            "label": null,
-            "seq_idx_aug": 316
-          },
-          {
-            "file": "123456.js",
-            "pos": 573,
-            "seq_idx": 301,
-            "label": null,
-            "seq_idx_aug": 319
-          },
-          {
-            "file": "123456.js",
-            "pos": 617,
-            "seq_idx": 313,
-            "label": null,
-            "seq_idx_aug": 331
-          },
-          {
-            "file": "123456.js",
-            "pos": 707,
-            "seq_idx": 338,
-            "label": null,
-            "seq_idx_aug": 356
-          }
-        ],
-        "student": [
-          {
-            "file": "123456.css",
-            "pos": 45,
-            "seq_idx": 230,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 141,
+            "pos": 413,
             "seq_idx": 253,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 200,
-            "seq_idx": 271,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 226,
-            "seq_idx": 280,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 569,
-            "seq_idx": 347,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 630,
-            "seq_idx": 359,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 660,
-            "seq_idx": 368,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 246,
-            "seq_idx": 422,
-            "label": "extra"
-          },
-          {
-            "file": "123456.js",
-            "pos": 359,
-            "seq_idx": 447,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 362,
-            "seq_idx": 448,
-            "label": "extra"
-          },
-          {
-            "file": "123456.js",
-            "pos": 443,
-            "seq_idx": 464,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 455,
-            "seq_idx": 467,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 612,
-            "seq_idx": 499,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 673,
-            "seq_idx": 516,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 677,
-            "seq_idx": 519,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 723,
-            "seq_idx": 531,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 818,
-            "seq_idx": 556,
-            "label": null
-          }
-        ]
-      },
-      "color": {
-        "teacher": [
-          {
-            "file": "123456.css",
-            "pos": 160,
-            "seq_idx": 44,
             "label": null,
-            "seq_idx_aug": 44
+            "seq_idx_aug": 264
           },
           {
-            "file": "123456.css",
-            "pos": 288,
-            "seq_idx": 76,
+            "file": "123456.js",
+            "pos": 449,
+            "seq_idx": 263,
             "label": null,
-            "seq_idx_aug": 85
+            "seq_idx_aug": 274
           },
           {
-            "file": "123456.css",
-            "pos": 205,
-            "blob_offset": 12,
+            "file": "reconstructed.html",
+            "pos": 513,
+            "seq_idx": 528,
+            "label": null,
+            "seq_idx_aug": 549
+          },
+          {
+            "file": "123456.js",
+            "pos": 516,
+            "blob_offset": 15,
             "ghost": true,
-            "del_ts": 1773830612611,
-            "seq_idx_aug": 67
+            "del_ts": 1773832743546,
+            "seq_idx_aug": 296
           }
         ],
         "student": [
           {
-            "file": "123456.css",
-            "pos": 176,
-            "seq_idx": 262,
+            "file": "index.html",
+            "pos": 530,
+            "seq_idx": 189,
             "label": null
           },
           {
-            "file": "123456.css",
-            "pos": 316,
-            "seq_idx": 294,
+            "file": "123456.js",
+            "pos": 475,
+            "seq_idx": 471,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 519,
+            "seq_idx": 481,
             "label": null
           }
         ]
@@ -4378,607 +5604,6 @@
           }
         ]
       },
-      "-": {
-        "teacher": [
-          {
-            "file": "123456.css",
-            "pos": 9,
-            "seq_idx": 3,
-            "label": null,
-            "seq_idx_aug": 3
-          },
-          {
-            "file": "123456.css",
-            "pos": 10,
-            "seq_idx": 4,
-            "label": null,
-            "seq_idx_aug": 4
-          },
-          {
-            "file": "123456.css",
-            "pos": 74,
-            "seq_idx": 18,
-            "label": null,
-            "seq_idx_aug": 18
-          },
-          {
-            "file": "123456.css",
-            "pos": 100,
-            "seq_idx": 24,
-            "label": null,
-            "seq_idx_aug": 24
-          },
-          {
-            "file": "123456.css",
-            "pos": 141,
-            "seq_idx": 37,
-            "label": null,
-            "seq_idx_aug": 37
-          },
-          {
-            "file": "123456.css",
-            "pos": 171,
-            "seq_idx": 48,
-            "label": null,
-            "seq_idx_aug": 51
-          },
-          {
-            "file": "123456.css",
-            "pos": 172,
-            "seq_idx": 49,
-            "label": null,
-            "seq_idx_aug": 52
-          },
-          {
-            "file": "123456.css",
-            "pos": 287,
-            "seq_idx": 75,
-            "label": null,
-            "seq_idx_aug": 84
-          },
-          {
-            "file": "123456.css",
-            "pos": 309,
-            "seq_idx": 81,
-            "label": null,
-            "seq_idx_aug": 90
-          },
-          {
-            "file": "123456.css",
-            "pos": 347,
-            "seq_idx": 93,
-            "label": null,
-            "seq_idx_aug": 104
-          },
-          {
-            "file": "123456.css",
-            "pos": 348,
-            "seq_idx": 94,
-            "label": null,
-            "seq_idx_aug": 105
-          },
-          {
-            "file": "123456.css",
-            "pos": 499,
-            "seq_idx": 120,
-            "label": null,
-            "seq_idx_aug": 131
-          },
-          {
-            "file": "123456.css",
-            "pos": 505,
-            "seq_idx": 124,
-            "label": null,
-            "seq_idx_aug": 135
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 61,
-            "seq_idx": 361,
-            "label": null,
-            "seq_idx_aug": 380
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 111,
-            "seq_idx": 378,
-            "label": null,
-            "seq_idx_aug": 397
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 126,
-            "seq_idx": 382,
-            "label": null,
-            "seq_idx_aug": 401
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 498,
-            "seq_idx": 522,
-            "label": null,
-            "seq_idx_aug": 543
-          },
-          {
-            "file": "123456.css",
-            "pos": 205,
-            "blob_offset": 11,
-            "ghost": true,
-            "del_ts": 1773830612606,
-            "seq_idx_aug": 66
-          }
-        ],
-        "student": [
-          {
-            "file": "index.html",
-            "pos": 62,
-            "seq_idx": 22,
-            "label": null
-          },
-          {
-            "file": "index.html",
-            "pos": 114,
-            "seq_idx": 39,
-            "label": null
-          },
-          {
-            "file": "index.html",
-            "pos": 129,
-            "seq_idx": 43,
-            "label": null
-          },
-          {
-            "file": "index.html",
-            "pos": 515,
-            "seq_idx": 183,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 12,
-            "seq_idx": 223,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 13,
-            "seq_idx": 224,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 81,
-            "seq_idx": 238,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 110,
-            "seq_idx": 244,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 156,
-            "seq_idx": 257,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 187,
-            "seq_idx": 266,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 188,
-            "seq_idx": 267,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 315,
-            "seq_idx": 293,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 340,
-            "seq_idx": 299,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 381,
-            "seq_idx": 311,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 382,
-            "seq_idx": 312,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 556,
-            "seq_idx": 338,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 562,
-            "seq_idx": 342,
-            "label": null
-          }
-        ]
-      },
-      "jpg": {
-        "teacher": [
-          {
-            "file": "reconstructed.html",
-            "pos": 303,
-            "blob_offset": 0,
-            "ghost": true,
-            "del_ts": 1773829835529,
-            "seq_idx_aug": 466
-          }
-        ],
-        "student": []
-      },
-      "console": {
-        "teacher": [
-          {
-            "file": "123456.js",
-            "pos": 548,
-            "seq_idx": 291,
-            "label": null,
-            "seq_idx_aug": 309
-          },
-          {
-            "file": "123456.js",
-            "pos": 516,
-            "blob_offset": 3,
-            "ghost": true,
-            "del_ts": 1773832743537,
-            "seq_idx_aug": 292
-          }
-        ],
-        "student": [
-          {
-            "file": "123456.js",
-            "pos": 649,
-            "seq_idx": 509,
-            "label": null
-          }
-        ]
-      },
-      ":": {
-        "teacher": [
-          {
-            "file": "123456.css",
-            "pos": 0,
-            "seq_idx": 0,
-            "label": null,
-            "seq_idx_aug": 0
-          },
-          {
-            "file": "123456.css",
-            "pos": 16,
-            "seq_idx": 6,
-            "label": null,
-            "seq_idx_aug": 6
-          },
-          {
-            "file": "123456.css",
-            "pos": 61,
-            "seq_idx": 14,
-            "label": null,
-            "seq_idx_aug": 14
-          },
-          {
-            "file": "123456.css",
-            "pos": 84,
-            "seq_idx": 20,
-            "label": null,
-            "seq_idx_aug": 20
-          },
-          {
-            "file": "123456.css",
-            "pos": 106,
-            "seq_idx": 26,
-            "label": null,
-            "seq_idx_aug": 26
-          },
-          {
-            "file": "123456.css",
-            "pos": 123,
-            "seq_idx": 30,
-            "label": null,
-            "seq_idx_aug": 30
-          },
-          {
-            "file": "123456.css",
-            "pos": 148,
-            "seq_idx": 39,
-            "label": null,
-            "seq_idx_aug": 39
-          },
-          {
-            "file": "123456.css",
-            "pos": 165,
-            "seq_idx": 45,
-            "label": null,
-            "seq_idx_aug": 45
-          },
-          {
-            "file": "123456.css",
-            "pos": 197,
-            "seq_idx": 58,
-            "label": null,
-            "seq_idx_aug": 61
-          },
-          {
-            "file": "123456.css",
-            "pos": 224,
-            "seq_idx": 67,
-            "label": null,
-            "seq_idx_aug": 76
-          },
-          {
-            "file": "123456.css",
-            "pos": 269,
-            "seq_idx": 71,
-            "label": null,
-            "seq_idx_aug": 80
-          },
-          {
-            "file": "123456.css",
-            "pos": 293,
-            "seq_idx": 77,
-            "label": null,
-            "seq_idx_aug": 86
-          },
-          {
-            "file": "123456.css",
-            "pos": 316,
-            "seq_idx": 83,
-            "label": null,
-            "seq_idx_aug": 92
-          },
-          {
-            "file": "123456.css",
-            "pos": 331,
-            "seq_idx": 88,
-            "label": null,
-            "seq_idx_aug": 97
-          },
-          {
-            "file": "123456.css",
-            "pos": 395,
-            "seq_idx": 99,
-            "label": null,
-            "seq_idx_aug": 110
-          },
-          {
-            "file": "123456.css",
-            "pos": 446,
-            "seq_idx": 105,
-            "label": null,
-            "seq_idx_aug": 116
-          },
-          {
-            "file": "123456.css",
-            "pos": 462,
-            "seq_idx": 109,
-            "label": null,
-            "seq_idx_aug": 120
-          },
-          {
-            "file": "123456.css",
-            "pos": 472,
-            "seq_idx": 113,
-            "label": null,
-            "seq_idx_aug": 124
-          },
-          {
-            "file": "123456.css",
-            "pos": 487,
-            "seq_idx": 117,
-            "label": null,
-            "seq_idx_aug": 128
-          },
-          {
-            "file": "123456.css",
-            "pos": 540,
-            "seq_idx": 134,
-            "label": null,
-            "seq_idx_aug": 145
-          },
-          {
-            "file": "123456.css",
-            "pos": 560,
-            "seq_idx": 138,
-            "label": null,
-            "seq_idx_aug": 149
-          },
-          {
-            "file": "123456.css",
-            "pos": 587,
-            "seq_idx": 146,
-            "label": null,
-            "seq_idx_aug": 157
-          },
-          {
-            "file": "123456.js",
-            "pos": 376,
-            "seq_idx": 242,
-            "label": null,
-            "seq_idx_aug": 253
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 480,
-            "seq_idx": 514,
-            "label": null,
-            "seq_idx_aug": 535
-          },
-          {
-            "file": "123456.css",
-            "pos": 205,
-            "blob_offset": 17,
-            "ghost": true,
-            "del_ts": 1773830612612,
-            "seq_idx_aug": 68
-          }
-        ],
-        "student": [
-          {
-            "file": "index.html",
-            "pos": 497,
-            "seq_idx": 175,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 0,
-            "seq_idx": 220,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 19,
-            "seq_idx": 226,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 65,
-            "seq_idx": 234,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 91,
-            "seq_idx": 240,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 116,
-            "seq_idx": 246,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 136,
-            "seq_idx": 250,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 163,
-            "seq_idx": 259,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 181,
-            "seq_idx": 263,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 218,
-            "seq_idx": 276,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 247,
-            "seq_idx": 285,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 294,
-            "seq_idx": 289,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 321,
-            "seq_idx": 295,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 347,
-            "seq_idx": 301,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 365,
-            "seq_idx": 306,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 442,
-            "seq_idx": 317,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 494,
-            "seq_idx": 323,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 513,
-            "seq_idx": 327,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 526,
-            "seq_idx": 331,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 544,
-            "seq_idx": 335,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 599,
-            "seq_idx": 352,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 622,
-            "seq_idx": 356,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 652,
-            "seq_idx": 364,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 427,
-            "seq_idx": 460,
-            "label": null
-          }
-        ]
-      },
       "red": {
         "teacher": [
           {
@@ -4992,58 +5617,305 @@
         ],
         "student": []
       },
-      "text": {
+      "(": {
         "teacher": [
           {
-            "file": "123456.js",
-            "pos": 413,
-            "seq_idx": 253,
+            "file": "123456.css",
+            "pos": 170,
+            "seq_idx": 47,
             "label": null,
-            "seq_idx_aug": 264
+            "seq_idx_aug": 50
+          },
+          {
+            "file": "123456.css",
+            "pos": 346,
+            "seq_idx": 92,
+            "label": null,
+            "seq_idx_aug": 103
+          },
+          {
+            "file": "123456.css",
+            "pos": 498,
+            "seq_idx": 119,
+            "label": null,
+            "seq_idx_aug": 130
           },
           {
             "file": "123456.js",
-            "pos": 449,
-            "seq_idx": 263,
+            "pos": 30,
+            "seq_idx": 156,
             "label": null,
-            "seq_idx_aug": 274
+            "seq_idx_aug": 167
+          },
+          {
+            "file": "123456.js",
+            "pos": 89,
+            "seq_idx": 169,
+            "label": null,
+            "seq_idx_aug": 180
+          },
+          {
+            "file": "123456.js",
+            "pos": 123,
+            "seq_idx": 178,
+            "label": null,
+            "seq_idx_aug": 189
+          },
+          {
+            "file": "123456.js",
+            "pos": 151,
+            "seq_idx": 183,
+            "label": null,
+            "seq_idx_aug": 194
+          },
+          {
+            "file": "123456.js",
+            "pos": 245,
+            "seq_idx": 208,
+            "label": null,
+            "seq_idx_aug": 219
+          },
+          {
+            "file": "123456.js",
+            "pos": 342,
+            "seq_idx": 233,
+            "label": "missing",
+            "seq_idx_aug": 244
+          },
+          {
+            "file": "123456.js",
+            "pos": 360,
+            "seq_idx": 239,
+            "label": null,
+            "seq_idx_aug": 250
+          },
+          {
+            "file": "123456.js",
+            "pos": 412,
+            "seq_idx": 252,
+            "label": null,
+            "seq_idx_aug": 263
+          },
+          {
+            "file": "123456.js",
+            "pos": 448,
+            "seq_idx": 262,
+            "label": null,
+            "seq_idx_aug": 273
+          },
+          {
+            "file": "123456.js",
+            "pos": 471,
+            "seq_idx": 267,
+            "label": null,
+            "seq_idx_aug": 278
+          },
+          {
+            "file": "123456.js",
+            "pos": 512,
+            "seq_idx": 278,
+            "label": null,
+            "seq_idx_aug": 289
+          },
+          {
+            "file": "123456.js",
+            "pos": 528,
+            "seq_idx": 285,
+            "label": null,
+            "seq_idx_aug": 303
+          },
+          {
+            "file": "123456.js",
+            "pos": 538,
+            "seq_idx": 287,
+            "label": null,
+            "seq_idx_aug": 305
+          },
+          {
+            "file": "123456.js",
+            "pos": 561,
+            "seq_idx": 294,
+            "label": null,
+            "seq_idx_aug": 312
+          },
+          {
+            "file": "123456.js",
+            "pos": 596,
+            "seq_idx": 304,
+            "label": null,
+            "seq_idx_aug": 322
+          },
+          {
+            "file": "123456.js",
+            "pos": 613,
+            "seq_idx": 310,
+            "label": null,
+            "seq_idx_aug": 328
+          },
+          {
+            "file": "123456.js",
+            "pos": 641,
+            "seq_idx": 316,
+            "label": null,
+            "seq_idx_aug": 334
           },
           {
             "file": "reconstructed.html",
-            "pos": 513,
-            "seq_idx": 528,
+            "pos": 410,
+            "seq_idx": 487,
             "label": null,
-            "seq_idx_aug": 549
+            "seq_idx_aug": 508
           },
           {
             "file": "123456.js",
             "pos": 516,
-            "blob_offset": 15,
+            "blob_offset": 14,
             "ghost": true,
-            "del_ts": 1773832743546,
-            "seq_idx_aug": 296
+            "del_ts": 1773832743542,
+            "seq_idx_aug": 295
           }
         ],
         "student": [
           {
             "file": "index.html",
-            "pos": 530,
-            "seq_idx": 189,
+            "pos": 428,
+            "seq_idx": 148,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 186,
+            "seq_idx": 265,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 380,
+            "seq_idx": 310,
+            "label": null
+          },
+          {
+            "file": "123456.css",
+            "pos": 555,
+            "seq_idx": 337,
             "label": null
           },
           {
             "file": "123456.js",
-            "pos": 475,
-            "seq_idx": 471,
+            "pos": 30,
+            "seq_idx": 374,
             "label": null
           },
           {
             "file": "123456.js",
-            "pos": 519,
-            "seq_idx": 481,
+            "pos": 88,
+            "seq_idx": 387,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 126,
+            "seq_idx": 396,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 159,
+            "seq_idx": 401,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 273,
+            "seq_idx": 426,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 386,
+            "seq_idx": 451,
+            "label": "extra"
+          },
+          {
+            "file": "123456.js",
+            "pos": 406,
+            "seq_idx": 457,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 474,
+            "seq_idx": 470,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 518,
+            "seq_idx": 480,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 550,
+            "seq_idx": 485,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 600,
+            "seq_idx": 496,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 625,
+            "seq_idx": 503,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 634,
+            "seq_idx": 505,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 662,
+            "seq_idx": 512,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 700,
+            "seq_idx": 522,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 719,
+            "seq_idx": 528,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 747,
+            "seq_idx": 534,
             "label": null
           }
         ]
+      },
+      "log": {
+        "teacher": [
+          {
+            "file": "123456.js",
+            "pos": 516,
+            "blob_offset": 11,
+            "ghost": true,
+            "del_ts": 1773832743541,
+            "seq_idx_aug": 294
+          }
+        ],
+        "student": []
       },
       "=": {
         "teacher": [
@@ -5428,534 +6300,171 @@
           }
         ]
       },
-      ";": {
+      "function": {
+        "teacher": [
+          {
+            "file": "123456.js",
+            "pos": 67,
+            "seq_idx": 167,
+            "label": null,
+            "seq_idx_aug": 178
+          },
+          {
+            "file": "123456.js",
+            "pos": 321,
+            "seq_idx": 231,
+            "label": "missing",
+            "seq_idx_aug": 242
+          },
+          {
+            "file": "123456.js",
+            "pos": 403,
+            "seq_idx": 251,
+            "label": null,
+            "seq_idx_aug": 262
+          },
+          {
+            "file": "123456.js",
+            "pos": 529,
+            "seq_idx": 286,
+            "label": null,
+            "seq_idx_aug": 304
+          },
+          {
+            "file": "123456.js",
+            "pos": 576,
+            "seq_idx": 302,
+            "label": null,
+            "seq_idx_aug": 320
+          },
+          {
+            "file": "123456.js",
+            "pos": 620,
+            "seq_idx": 314,
+            "label": null,
+            "seq_idx_aug": 332
+          }
+        ],
+        "student": [
+          {
+            "file": "123456.js",
+            "pos": 66,
+            "seq_idx": 385,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 365,
+            "seq_idx": 449,
+            "label": "extra"
+          },
+          {
+            "file": "123456.js",
+            "pos": 466,
+            "seq_idx": 469,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 626,
+            "seq_idx": 504,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 680,
+            "seq_idx": 520,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 726,
+            "seq_idx": 532,
+            "label": null
+          }
+        ]
+      },
+      "style": {
+        "teacher": [
+          {
+            "file": "123456.js",
+            "pos": 198,
+            "seq_idx": 196,
+            "label": "missing",
+            "seq_idx_aug": 207
+          },
+          {
+            "file": "123456.js",
+            "pos": 290,
+            "seq_idx": 221,
+            "label": "missing",
+            "seq_idx_aug": 232
+          },
+          {
+            "file": "123456.js",
+            "pos": 663,
+            "seq_idx": 324,
+            "label": null,
+            "seq_idx_aug": 342
+          },
+          {
+            "file": "123456.js",
+            "pos": 688,
+            "seq_idx": 332,
+            "label": null,
+            "seq_idx_aug": 350
+          }
+        ],
+        "student": [
+          {
+            "file": "123456.js",
+            "pos": 184,
+            "seq_idx": 406,
+            "label": "extra"
+          },
+          {
+            "file": "123456.js",
+            "pos": 298,
+            "seq_idx": 431,
+            "label": "extra"
+          },
+          {
+            "file": "123456.js",
+            "pos": 771,
+            "seq_idx": 542,
+            "label": null
+          },
+          {
+            "file": "123456.js",
+            "pos": 799,
+            "seq_idx": 550,
+            "label": null
+          }
+        ]
+      },
+      "280": {
         "teacher": [
           {
             "file": "123456.css",
-            "pos": 22,
-            "seq_idx": 9,
+            "pos": 19,
+            "seq_idx": 8,
             "label": null,
-            "seq_idx_aug": 9
-          },
-          {
-            "file": "123456.css",
-            "pos": 67,
-            "seq_idx": 16,
-            "label": null,
-            "seq_idx_aug": 16
-          },
-          {
-            "file": "123456.css",
-            "pos": 92,
-            "seq_idx": 22,
-            "label": null,
-            "seq_idx_aug": 22
-          },
-          {
-            "file": "123456.css",
-            "pos": 114,
-            "seq_idx": 28,
-            "label": null,
-            "seq_idx_aug": 28
-          },
-          {
-            "file": "123456.css",
-            "pos": 126,
-            "seq_idx": 32,
-            "label": null,
-            "seq_idx_aug": 32
-          },
-          {
-            "file": "123456.css",
-            "pos": 157,
-            "seq_idx": 43,
-            "label": null,
-            "seq_idx_aug": 43
-          },
-          {
-            "file": "123456.css",
-            "pos": 179,
-            "seq_idx": 52,
-            "label": null,
-            "seq_idx_aug": 55
-          },
-          {
-            "file": "123456.css",
-            "pos": 203,
-            "seq_idx": 61,
-            "label": null,
-            "seq_idx_aug": 64
-          },
-          {
-            "file": "123456.css",
-            "pos": 229,
-            "seq_idx": 69,
-            "label": null,
-            "seq_idx_aug": 78
-          },
-          {
-            "file": "123456.css",
-            "pos": 274,
-            "seq_idx": 73,
-            "label": null,
-            "seq_idx_aug": 82
-          },
-          {
-            "file": "123456.css",
-            "pos": 300,
-            "seq_idx": 79,
-            "label": null,
-            "seq_idx_aug": 88
-          },
-          {
-            "file": "123456.css",
-            "pos": 321,
-            "seq_idx": 86,
-            "label": null,
-            "seq_idx_aug": 95
-          },
-          {
-            "file": "123456.css",
-            "pos": 355,
-            "seq_idx": 97,
-            "label": null,
-            "seq_idx_aug": 108
-          },
-          {
-            "file": "123456.css",
-            "pos": 412,
-            "seq_idx": 103,
-            "label": null,
-            "seq_idx_aug": 114
-          },
-          {
-            "file": "123456.css",
-            "pos": 456,
-            "seq_idx": 107,
-            "label": null,
-            "seq_idx_aug": 118
-          },
-          {
-            "file": "123456.css",
-            "pos": 465,
-            "seq_idx": 111,
-            "label": null,
-            "seq_idx_aug": 122
-          },
-          {
-            "file": "123456.css",
-            "pos": 475,
-            "seq_idx": 115,
-            "label": null,
-            "seq_idx_aug": 126
-          },
-          {
-            "file": "123456.css",
-            "pos": 510,
-            "seq_idx": 128,
-            "label": null,
-            "seq_idx_aug": 139
-          },
-          {
-            "file": "123456.css",
-            "pos": 550,
-            "seq_idx": 136,
-            "label": null,
-            "seq_idx_aug": 147
-          },
-          {
-            "file": "123456.css",
-            "pos": 566,
-            "seq_idx": 140,
-            "label": null,
-            "seq_idx_aug": 151
-          },
-          {
-            "file": "123456.css",
-            "pos": 593,
-            "seq_idx": 149,
-            "label": null,
-            "seq_idx_aug": 160
-          },
-          {
-            "file": "123456.js",
-            "pos": 40,
-            "seq_idx": 161,
-            "label": null,
-            "seq_idx_aug": 172
-          },
-          {
-            "file": "123456.js",
-            "pos": 64,
-            "seq_idx": 166,
-            "label": null,
-            "seq_idx_aug": 177
-          },
-          {
-            "file": "123456.js",
-            "pos": 117,
-            "seq_idx": 176,
-            "label": null,
-            "seq_idx_aug": 187
-          },
-          {
-            "file": "123456.js",
-            "pos": 153,
-            "seq_idx": 185,
-            "label": null,
-            "seq_idx_aug": 196
-          },
-          {
-            "file": "123456.js",
-            "pos": 181,
-            "seq_idx": 193,
-            "label": null,
-            "seq_idx_aug": 204
-          },
-          {
-            "file": "123456.js",
-            "pos": 220,
-            "seq_idx": 203,
-            "label": "missing",
-            "seq_idx_aug": 214
-          },
-          {
-            "file": "123456.js",
-            "pos": 247,
-            "seq_idx": 210,
-            "label": null,
-            "seq_idx_aug": 221
-          },
-          {
-            "file": "123456.js",
-            "pos": 273,
-            "seq_idx": 218,
-            "label": null,
-            "seq_idx_aug": 229
-          },
-          {
-            "file": "123456.js",
-            "pos": 313,
-            "seq_idx": 228,
-            "label": "missing",
-            "seq_idx_aug": 239
-          },
-          {
-            "file": "123456.js",
-            "pos": 454,
-            "seq_idx": 265,
-            "label": null,
-            "seq_idx_aug": 276
-          },
-          {
-            "file": "123456.js",
-            "pos": 494,
-            "seq_idx": 276,
-            "label": null,
-            "seq_idx_aug": 287
-          },
-          {
-            "file": "123456.js",
-            "pos": 514,
-            "seq_idx": 280,
-            "label": null,
-            "seq_idx_aug": 291
-          },
-          {
-            "file": "123456.js",
-            "pos": 566,
-            "seq_idx": 297,
-            "label": null,
-            "seq_idx_aug": 315
-          },
-          {
-            "file": "123456.js",
-            "pos": 571,
-            "seq_idx": 300,
-            "label": null,
-            "seq_idx_aug": 318
-          },
-          {
-            "file": "123456.js",
-            "pos": 615,
-            "seq_idx": 312,
-            "label": null,
-            "seq_idx_aug": 330
-          },
-          {
-            "file": "123456.js",
-            "pos": 678,
-            "seq_idx": 329,
-            "label": null,
-            "seq_idx_aug": 347
-          },
-          {
-            "file": "123456.js",
-            "pos": 705,
-            "seq_idx": 337,
-            "label": null,
-            "seq_idx_aug": 355
+            "seq_idx_aug": 8
           },
           {
             "file": "123456.css",
             "pos": 167,
-            "blob_offset": 4,
+            "blob_offset": 1,
             "ghost": true,
-            "del_ts": 1773830517027,
-            "seq_idx_aug": 48
-          },
-          {
-            "file": "123456.css",
-            "pos": 205,
-            "blob_offset": 22,
-            "ghost": true,
-            "del_ts": 1773830612617,
-            "seq_idx_aug": 70
-          },
-          {
-            "file": "123456.css",
-            "pos": 343,
-            "blob_offset": 4,
-            "ghost": true,
-            "del_ts": 1773830545383,
-            "seq_idx_aug": 101
-          },
-          {
-            "file": "123456.js",
-            "pos": 516,
-            "blob_offset": 20,
-            "ghost": true,
-            "del_ts": 1773832743548,
-            "seq_idx_aug": 298
+            "del_ts": 1773830517394,
+            "seq_idx_aug": 47
           }
         ],
         "student": [
           {
             "file": "123456.css",
-            "pos": 25,
-            "seq_idx": 229,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 71,
-            "seq_idx": 236,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 99,
-            "seq_idx": 242,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 124,
-            "seq_idx": 248,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 139,
-            "seq_idx": 252,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 170,
-            "seq_idx": 261,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 195,
-            "seq_idx": 270,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 224,
-            "seq_idx": 279,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 252,
-            "seq_idx": 287,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 299,
-            "seq_idx": 291,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 328,
-            "seq_idx": 297,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 352,
-            "seq_idx": 304,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 389,
-            "seq_idx": 315,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 459,
-            "seq_idx": 321,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 504,
-            "seq_idx": 325,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 516,
-            "seq_idx": 329,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 529,
-            "seq_idx": 333,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 567,
-            "seq_idx": 346,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 609,
-            "seq_idx": 354,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 628,
-            "seq_idx": 358,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 658,
-            "seq_idx": 367,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 40,
-            "seq_idx": 379,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 63,
-            "seq_idx": 384,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 118,
-            "seq_idx": 394,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 161,
-            "seq_idx": 403,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 206,
-            "seq_idx": 413,
-            "label": "extra"
-          },
-          {
-            "file": "123456.js",
-            "pos": 240,
-            "seq_idx": 421,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 275,
-            "seq_idx": 428,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 321,
-            "seq_idx": 438,
-            "label": "extra"
-          },
-          {
-            "file": "123456.js",
-            "pos": 353,
-            "seq_idx": 446,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 524,
-            "seq_idx": 483,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 573,
-            "seq_idx": 494,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 602,
-            "seq_idx": 498,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 667,
-            "seq_idx": 515,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 675,
-            "seq_idx": 518,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 721,
-            "seq_idx": 530,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 786,
-            "seq_idx": 547,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 816,
-            "seq_idx": 555,
+            "pos": 22,
+            "seq_idx": 228,
             "label": null
           }
         ]
@@ -6260,127 +6769,43 @@
           }
         ]
       },
-      "startScanner": {
+      "!": {
         "teacher": [
           {
             "file": "123456.js",
-            "pos": 139,
-            "seq_idx": 182,
+            "pos": 107,
+            "seq_idx": 174,
             "label": null,
-            "seq_idx_aug": 193
+            "seq_idx_aug": 185
           },
-          {
-            "file": "123456.js",
-            "pos": 330,
-            "seq_idx": 232,
-            "label": "missing",
-            "seq_idx_aug": 243
-          }
-        ],
-        "student": [
-          {
-            "file": "123456.js",
-            "pos": 147,
-            "seq_idx": 400,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 374,
-            "seq_idx": 450,
-            "label": "extra"
-          }
-        ]
-      },
-      "Document": {
-        "teacher": [
           {
             "file": "reconstructed.html",
-            "pos": 148,
+            "pos": 1,
+            "seq_idx": 340,
+            "label": null,
+            "seq_idx_aug": 359
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 0,
             "blob_offset": 0,
             "ghost": true,
-            "del_ts": 1773829177776,
-            "seq_idx_aug": 412
-          }
-        ],
-        "student": []
-      },
-      "#": {
-        "teacher": [
-          {
-            "file": "123456.css",
-            "pos": 18,
-            "seq_idx": 7,
-            "label": null,
-            "seq_idx_aug": 7
-          },
-          {
-            "file": "123456.css",
-            "pos": 184,
-            "seq_idx": 54,
-            "label": null,
-            "seq_idx_aug": 57
-          },
-          {
-            "file": "123456.css",
-            "pos": 208,
-            "seq_idx": 63,
-            "label": null,
-            "seq_idx_aug": 72
-          },
-          {
-            "file": "123456.css",
-            "pos": 515,
-            "seq_idx": 130,
-            "label": null,
-            "seq_idx_aug": 141
-          },
-          {
-            "file": "123456.css",
-            "pos": 571,
-            "seq_idx": 142,
-            "label": "missing",
-            "seq_idx_aug": 153
-          },
-          {
-            "file": "123456.css",
-            "pos": 167,
-            "blob_offset": 0,
-            "ghost": true,
-            "del_ts": 1773830517547,
-            "seq_idx_aug": 46
+            "del_ts": 1773829174121,
+            "seq_idx_aug": 357
           }
         ],
         "student": [
           {
-            "file": "123456.css",
-            "pos": 21,
-            "seq_idx": 227,
+            "file": "index.html",
+            "pos": 1,
+            "seq_idx": 1,
             "label": null
           },
           {
-            "file": "123456.css",
-            "pos": 203,
-            "seq_idx": 272,
+            "file": "123456.js",
+            "pos": 108,
+            "seq_idx": 392,
             "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 229,
-            "seq_idx": 281,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 572,
-            "seq_idx": 348,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 634,
-            "seq_idx": 360,
-            "label": "extra"
           }
         ]
       },
@@ -6439,351 +6864,6 @@
             "pos": 285,
             "seq_idx": 429,
             "label": "extra"
-          }
-        ]
-      },
-      "style": {
-        "teacher": [
-          {
-            "file": "123456.js",
-            "pos": 198,
-            "seq_idx": 196,
-            "label": "missing",
-            "seq_idx_aug": 207
-          },
-          {
-            "file": "123456.js",
-            "pos": 290,
-            "seq_idx": 221,
-            "label": "missing",
-            "seq_idx_aug": 232
-          },
-          {
-            "file": "123456.js",
-            "pos": 663,
-            "seq_idx": 324,
-            "label": null,
-            "seq_idx_aug": 342
-          },
-          {
-            "file": "123456.js",
-            "pos": 688,
-            "seq_idx": 332,
-            "label": null,
-            "seq_idx_aug": 350
-          }
-        ],
-        "student": [
-          {
-            "file": "123456.js",
-            "pos": 184,
-            "seq_idx": 406,
-            "label": "extra"
-          },
-          {
-            "file": "123456.js",
-            "pos": 298,
-            "seq_idx": 431,
-            "label": "extra"
-          },
-          {
-            "file": "123456.js",
-            "pos": 771,
-            "seq_idx": 542,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 799,
-            "seq_idx": 550,
-            "label": null
-          }
-        ]
-      },
-      "(": {
-        "teacher": [
-          {
-            "file": "123456.css",
-            "pos": 170,
-            "seq_idx": 47,
-            "label": null,
-            "seq_idx_aug": 50
-          },
-          {
-            "file": "123456.css",
-            "pos": 346,
-            "seq_idx": 92,
-            "label": null,
-            "seq_idx_aug": 103
-          },
-          {
-            "file": "123456.css",
-            "pos": 498,
-            "seq_idx": 119,
-            "label": null,
-            "seq_idx_aug": 130
-          },
-          {
-            "file": "123456.js",
-            "pos": 30,
-            "seq_idx": 156,
-            "label": null,
-            "seq_idx_aug": 167
-          },
-          {
-            "file": "123456.js",
-            "pos": 89,
-            "seq_idx": 169,
-            "label": null,
-            "seq_idx_aug": 180
-          },
-          {
-            "file": "123456.js",
-            "pos": 123,
-            "seq_idx": 178,
-            "label": null,
-            "seq_idx_aug": 189
-          },
-          {
-            "file": "123456.js",
-            "pos": 151,
-            "seq_idx": 183,
-            "label": null,
-            "seq_idx_aug": 194
-          },
-          {
-            "file": "123456.js",
-            "pos": 245,
-            "seq_idx": 208,
-            "label": null,
-            "seq_idx_aug": 219
-          },
-          {
-            "file": "123456.js",
-            "pos": 342,
-            "seq_idx": 233,
-            "label": "missing",
-            "seq_idx_aug": 244
-          },
-          {
-            "file": "123456.js",
-            "pos": 360,
-            "seq_idx": 239,
-            "label": null,
-            "seq_idx_aug": 250
-          },
-          {
-            "file": "123456.js",
-            "pos": 412,
-            "seq_idx": 252,
-            "label": null,
-            "seq_idx_aug": 263
-          },
-          {
-            "file": "123456.js",
-            "pos": 448,
-            "seq_idx": 262,
-            "label": null,
-            "seq_idx_aug": 273
-          },
-          {
-            "file": "123456.js",
-            "pos": 471,
-            "seq_idx": 267,
-            "label": null,
-            "seq_idx_aug": 278
-          },
-          {
-            "file": "123456.js",
-            "pos": 512,
-            "seq_idx": 278,
-            "label": null,
-            "seq_idx_aug": 289
-          },
-          {
-            "file": "123456.js",
-            "pos": 528,
-            "seq_idx": 285,
-            "label": null,
-            "seq_idx_aug": 303
-          },
-          {
-            "file": "123456.js",
-            "pos": 538,
-            "seq_idx": 287,
-            "label": null,
-            "seq_idx_aug": 305
-          },
-          {
-            "file": "123456.js",
-            "pos": 561,
-            "seq_idx": 294,
-            "label": null,
-            "seq_idx_aug": 312
-          },
-          {
-            "file": "123456.js",
-            "pos": 596,
-            "seq_idx": 304,
-            "label": null,
-            "seq_idx_aug": 322
-          },
-          {
-            "file": "123456.js",
-            "pos": 613,
-            "seq_idx": 310,
-            "label": null,
-            "seq_idx_aug": 328
-          },
-          {
-            "file": "123456.js",
-            "pos": 641,
-            "seq_idx": 316,
-            "label": null,
-            "seq_idx_aug": 334
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 410,
-            "seq_idx": 487,
-            "label": null,
-            "seq_idx_aug": 508
-          },
-          {
-            "file": "123456.js",
-            "pos": 516,
-            "blob_offset": 14,
-            "ghost": true,
-            "del_ts": 1773832743542,
-            "seq_idx_aug": 295
-          }
-        ],
-        "student": [
-          {
-            "file": "index.html",
-            "pos": 428,
-            "seq_idx": 148,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 186,
-            "seq_idx": 265,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 380,
-            "seq_idx": 310,
-            "label": null
-          },
-          {
-            "file": "123456.css",
-            "pos": 555,
-            "seq_idx": 337,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 30,
-            "seq_idx": 374,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 88,
-            "seq_idx": 387,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 126,
-            "seq_idx": 396,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 159,
-            "seq_idx": 401,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 273,
-            "seq_idx": 426,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 386,
-            "seq_idx": 451,
-            "label": "extra"
-          },
-          {
-            "file": "123456.js",
-            "pos": 406,
-            "seq_idx": 457,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 474,
-            "seq_idx": 470,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 518,
-            "seq_idx": 480,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 550,
-            "seq_idx": 485,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 600,
-            "seq_idx": 496,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 625,
-            "seq_idx": 503,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 634,
-            "seq_idx": 505,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 662,
-            "seq_idx": 512,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 700,
-            "seq_idx": 522,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 719,
-            "seq_idx": 528,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 747,
-            "seq_idx": 534,
-            "label": null
           }
         ]
       },
@@ -7070,86 +7150,6 @@
             "file": "123456.js",
             "pos": 757,
             "seq_idx": 538,
-            "label": null
-          }
-        ]
-      },
-      "lime": {
-        "teacher": [
-          {
-            "file": "123456.css",
-            "pos": 343,
-            "blob_offset": 0,
-            "ghost": true,
-            "del_ts": 1773830545825,
-            "seq_idx_aug": 100
-          }
-        ],
-        "student": []
-      },
-      "!": {
-        "teacher": [
-          {
-            "file": "123456.js",
-            "pos": 107,
-            "seq_idx": 174,
-            "label": null,
-            "seq_idx_aug": 185
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1,
-            "seq_idx": 340,
-            "label": null,
-            "seq_idx_aug": 359
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 0,
-            "blob_offset": 0,
-            "ghost": true,
-            "del_ts": 1773829174121,
-            "seq_idx_aug": 357
-          }
-        ],
-        "student": [
-          {
-            "file": "index.html",
-            "pos": 1,
-            "seq_idx": 1,
-            "label": null
-          },
-          {
-            "file": "123456.js",
-            "pos": 108,
-            "seq_idx": 392,
-            "label": null
-          }
-        ]
-      },
-      "280": {
-        "teacher": [
-          {
-            "file": "123456.css",
-            "pos": 19,
-            "seq_idx": 8,
-            "label": null,
-            "seq_idx_aug": 8
-          },
-          {
-            "file": "123456.css",
-            "pos": 167,
-            "blob_offset": 1,
-            "ghost": true,
-            "del_ts": 1773830517394,
-            "seq_idx_aug": 47
-          }
-        ],
-        "student": [
-          {
-            "file": "123456.css",
-            "pos": 22,
-            "seq_idx": 228,
             "label": null
           }
         ]

@@ -1368,233 +1368,193 @@
       ">"
     ],
     "tokens": {
-      "100": {
+      "width": {
         "teacher": [
           {
             "file": "reconstructed.html",
-            "pos": 297,
-            "seq_idx": 73,
+            "pos": 273,
+            "seq_idx": 67,
             "label": null,
-            "seq_idx_aug": 86,
+            "seq_idx_aug": 80,
             "match_idx": 0
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 893,
-            "seq_idx": 240,
-            "label": null,
-            "seq_idx_aug": 258,
-            "match_idx": 1
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1195,
-            "seq_idx": 301,
-            "label": null,
-            "seq_idx_aug": 319,
-            "match_idx": 2
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1557,
-            "seq_idx": 404,
-            "label": "missing",
-            "seq_idx_aug": 422
-          }
-        ],
-        "student": [
-          {
-            "file": "sorting visualizer.html",
-            "pos": 447,
-            "seq_idx": 71,
-            "label": null,
-            "match_idx": 0
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1217,
-            "seq_idx": 238,
-            "label": null,
-            "match_idx": 1
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1526,
-            "seq_idx": 294,
-            "label": null,
-            "match_idx": 2
-          }
-        ]
-      },
-      ":": {
-        "teacher": [
-          {
-            "file": "reconstructed.html",
-            "pos": 98,
-            "seq_idx": 26,
-            "label": null,
-            "seq_idx_aug": 26,
-            "match_idx": 0
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 124,
-            "seq_idx": 32,
-            "label": null,
-            "seq_idx_aug": 32,
-            "match_idx": 1
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 149,
-            "seq_idx": 38,
-            "label": null,
-            "seq_idx_aug": 41,
-            "match_idx": 2
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 195,
-            "seq_idx": 48,
-            "label": null,
-            "seq_idx_aug": 55,
-            "match_idx": 3
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 215,
-            "seq_idx": 52,
-            "label": null,
-            "seq_idx_aug": 65,
-            "match_idx": 4
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 238,
-            "seq_idx": 58,
-            "label": null,
-            "seq_idx_aug": 71,
-            "match_idx": 5
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 278,
-            "seq_idx": 68,
-            "label": null,
-            "seq_idx_aug": 81,
-            "match_idx": 6
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 295,
-            "seq_idx": 72,
-            "label": null,
-            "seq_idx_aug": 85,
-            "match_idx": 7
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 323,
-            "seq_idx": 79,
-            "label": null,
-            "seq_idx_aug": 92,
-            "match_idx": 8
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 342,
-            "seq_idx": 83,
-            "label": null,
-            "seq_idx_aug": 96,
-            "match_idx": 9
           },
           {
             "file": "reconstructed.html",
             "pos": 185,
-            "blob_offset": 9,
+            "blob_offset": 4,
             "ghost": true,
-            "del_ts": 1771836608734,
-            "seq_idx_aug": 51
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 204,
-            "blob_offset": 20,
-            "ghost": true,
-            "del_ts": 1771836609328,
-            "seq_idx_aug": 61
+            "del_ts": 1771836608733,
+            "seq_idx_aug": 50
           }
         ],
         "student": [
           {
             "file": "sorting visualizer.html",
-            "pos": 133,
-            "seq_idx": 26,
+            "pos": 411,
+            "seq_idx": 65,
+            "label": null,
+            "match_idx": 0
+          }
+        ]
+      },
+      "200px": {
+        "teacher": [
+          {
+            "file": "reconstructed.html",
+            "pos": 197,
+            "seq_idx": 49,
+            "label": null,
+            "seq_idx_aug": 56,
+            "match_idx": 0
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 185,
+            "blob_offset": 11,
+            "ghost": true,
+            "del_ts": 1771836608740,
+            "seq_idx_aug": 52
+          }
+        ],
+        "student": [
+          {
+            "file": "sorting visualizer.html",
+            "pos": 281,
+            "seq_idx": 49,
+            "label": null,
+            "match_idx": 0
+          }
+        ]
+      },
+      "array": {
+        "teacher": [
+          {
+            "file": "reconstructed.html",
+            "pos": 510,
+            "seq_idx": 131,
+            "label": null,
+            "seq_idx_aug": 144,
+            "match_idx": 0
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 581,
+            "seq_idx": 155,
+            "label": null,
+            "seq_idx_aug": 168,
+            "match_idx": 1
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 728,
+            "seq_idx": 190,
+            "label": null,
+            "seq_idx_aug": 208,
+            "match_idx": 2
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 882,
+            "seq_idx": 235,
+            "label": null,
+            "seq_idx_aug": 253,
+            "match_idx": 3
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1016,
+            "seq_idx": 249,
+            "label": "missing",
+            "seq_idx_aug": 267
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1184,
+            "seq_idx": 296,
+            "label": null,
+            "seq_idx_aug": 314,
+            "match_idx": 4
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 644,
+            "blob_offset": 14,
+            "ghost": true,
+            "del_ts": 1771837711587,
+            "seq_idx_aug": 182
+          }
+        ],
+        "student": [
+          {
+            "file": "sorting visualizer.html",
+            "pos": 750,
+            "seq_idx": 129,
             "label": null,
             "match_idx": 0
           },
           {
             "file": "sorting visualizer.html",
-            "pos": 168,
-            "seq_idx": 32,
+            "pos": 836,
+            "seq_idx": 153,
             "label": null,
             "match_idx": 1
           },
           {
             "file": "sorting visualizer.html",
-            "pos": 208,
-            "seq_idx": 38,
+            "pos": 1005,
+            "seq_idx": 188,
             "label": null,
             "match_idx": 2
           },
           {
             "file": "sorting visualizer.html",
-            "pos": 279,
-            "seq_idx": 48,
+            "pos": 1206,
+            "seq_idx": 233,
             "label": null,
             "match_idx": 3
           },
           {
             "file": "sorting visualizer.html",
-            "pos": 311,
-            "seq_idx": 52,
-            "label": null,
-            "match_idx": 4
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 346,
-            "seq_idx": 58,
+            "pos": 1517,
+            "seq_idx": 289,
             "label": null,
             "match_idx": 5
+          }
+        ]
+      },
+      "bubbleSort": {
+        "teacher": [
+          {
+            "file": "reconstructed.html",
+            "pos": 1005,
+            "seq_idx": 247,
+            "label": "missing",
+            "seq_idx_aug": 265
           },
           {
-            "file": "sorting visualizer.html",
-            "pos": 416,
-            "seq_idx": 66,
+            "file": "reconstructed.html",
+            "pos": 1239,
+            "seq_idx": 311,
             "label": null,
-            "match_idx": 6
+            "seq_idx_aug": 329,
+            "match_idx": 0
           },
           {
-            "file": "sorting visualizer.html",
-            "pos": 445,
-            "seq_idx": 70,
-            "label": null,
-            "match_idx": 7
-          },
+            "file": "reconstructed.html",
+            "pos": 644,
+            "blob_offset": 3,
+            "ghost": true,
+            "del_ts": 1771837711581,
+            "seq_idx_aug": 180
+          }
+        ],
+        "student": [
           {
             "file": "sorting visualizer.html",
-            "pos": 485,
-            "seq_idx": 77,
+            "pos": 1594,
+            "seq_idx": 304,
             "label": null,
-            "match_idx": 8
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 516,
-            "seq_idx": 81,
-            "label": null,
-            "match_idx": 9
+            "match_idx": 1
           }
         ]
       },
@@ -1624,340 +1584,6 @@
             "seq_idx": 74,
             "label": null,
             "match_idx": 0
-          }
-        ]
-      },
-      "(": {
-        "teacher": [
-          {
-            "file": "reconstructed.html",
-            "pos": 527,
-            "seq_idx": 135,
-            "label": null,
-            "seq_idx_aug": 148,
-            "match_idx": 0
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 547,
-            "seq_idx": 140,
-            "label": null,
-            "seq_idx_aug": 153,
-            "match_idx": 1
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 603,
-            "seq_idx": 163,
-            "label": null,
-            "seq_idx_aug": 176,
-            "match_idx": 2
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 689,
-            "seq_idx": 173,
-            "label": null,
-            "seq_idx_aug": 191,
-            "match_idx": 3
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 712,
-            "seq_idx": 182,
-            "label": null,
-            "seq_idx_aug": 200,
-            "match_idx": 4
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 787,
-            "seq_idx": 205,
-            "label": null,
-            "seq_idx_aug": 223,
-            "match_idx": 5
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 822,
-            "seq_idx": 214,
-            "label": null,
-            "seq_idx_aug": 232,
-            "match_idx": 6
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 850,
-            "seq_idx": 223,
-            "label": null,
-            "seq_idx_aug": 241,
-            "match_idx": 7
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1015,
-            "seq_idx": 248,
-            "label": "missing",
-            "seq_idx_aug": 266
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1050,
-            "seq_idx": 254,
-            "label": null,
-            "seq_idx_aug": 272,
-            "match_idx": 8
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1103,
-            "seq_idx": 263,
-            "label": null,
-            "seq_idx_aug": 281,
-            "match_idx": 9
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1120,
-            "seq_idx": 270,
-            "label": null,
-            "seq_idx_aug": 288,
-            "match_idx": 10
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1249,
-            "seq_idx": 312,
-            "label": null,
-            "seq_idx_aug": 330,
-            "match_idx": 11
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1301,
-            "seq_idx": 324,
-            "label": null,
-            "seq_idx_aug": 342,
-            "match_idx": 12
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1345,
-            "seq_idx": 342,
-            "label": null,
-            "seq_idx_aug": 360,
-            "match_idx": 13
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1497,
-            "seq_idx": 390,
-            "label": null,
-            "seq_idx_aug": 408,
-            "match_idx": 14
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1525,
-            "seq_idx": 396,
-            "label": null,
-            "seq_idx_aug": 414,
-            "match_idx": 15
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1547,
-            "seq_idx": 401,
-            "label": null,
-            "seq_idx_aug": 419,
-            "match_idx": 16
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1591,
-            "seq_idx": 412,
-            "label": null,
-            "seq_idx_aug": 430,
-            "match_idx": 17
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 644,
-            "blob_offset": 13,
-            "ghost": true,
-            "del_ts": 1771837711582,
-            "seq_idx_aug": 181
-          }
-        ],
-        "student": [
-          {
-            "file": "sorting visualizer.html",
-            "pos": 767,
-            "seq_idx": 133,
-            "label": null,
-            "match_idx": 0
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 792,
-            "seq_idx": 138,
-            "label": null,
-            "match_idx": 1
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 858,
-            "seq_idx": 161,
-            "label": null,
-            "match_idx": 2
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 957,
-            "seq_idx": 171,
-            "label": null,
-            "match_idx": 3
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 989,
-            "seq_idx": 180,
-            "label": null,
-            "match_idx": 4
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1075,
-            "seq_idx": 203,
-            "label": null,
-            "match_idx": 5
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1122,
-            "seq_idx": 212,
-            "label": null,
-            "match_idx": 6
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1162,
-            "seq_idx": 221,
-            "label": null,
-            "match_idx": 7
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1348,
-            "seq_idx": 247,
-            "label": null,
-            "match_idx": 9
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1410,
-            "seq_idx": 256,
-            "label": null,
-            "match_idx": 10
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1439,
-            "seq_idx": 263,
-            "label": null,
-            "match_idx": 11
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1604,
-            "seq_idx": 305,
-            "label": null,
-            "match_idx": 12
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1697,
-            "seq_idx": 317,
-            "label": null,
-            "match_idx": 13
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1759,
-            "seq_idx": 335,
-            "label": null,
-            "match_idx": 14
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 2008,
-            "seq_idx": 383,
-            "label": null,
-            "match_idx": 15
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 2057,
-            "seq_idx": 389,
-            "label": null,
-            "match_idx": 16
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 2079,
-            "seq_idx": 394,
-            "label": null,
-            "match_idx": 17
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 2174,
-            "seq_idx": 405,
-            "label": null,
-            "match_idx": 18
-          }
-        ]
-      },
-      "html": {
-        "teacher": [
-          {
-            "file": "reconstructed.html",
-            "pos": 10,
-            "seq_idx": 3,
-            "label": null,
-            "seq_idx_aug": 3,
-            "match_idx": 0
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 17,
-            "seq_idx": 6,
-            "label": null,
-            "seq_idx_aug": 6,
-            "match_idx": 1
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1630,
-            "seq_idx": 427,
-            "label": "missing",
-            "seq_idx_aug": 445
-          }
-        ],
-        "student": [
-          {
-            "file": "sorting visualizer.html",
-            "pos": 10,
-            "seq_idx": 3,
-            "label": null,
-            "match_idx": 0
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 17,
-            "seq_idx": 6,
-            "label": null,
-            "match_idx": 1
           }
         ]
       },
@@ -2263,43 +1889,175 @@
           }
         ]
       },
-      "200px": {
+      ":": {
         "teacher": [
           {
             "file": "reconstructed.html",
-            "pos": 197,
-            "seq_idx": 49,
+            "pos": 98,
+            "seq_idx": 26,
             "label": null,
-            "seq_idx_aug": 56,
+            "seq_idx_aug": 26,
             "match_idx": 0
           },
           {
             "file": "reconstructed.html",
+            "pos": 124,
+            "seq_idx": 32,
+            "label": null,
+            "seq_idx_aug": 32,
+            "match_idx": 1
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 149,
+            "seq_idx": 38,
+            "label": null,
+            "seq_idx_aug": 41,
+            "match_idx": 2
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 195,
+            "seq_idx": 48,
+            "label": null,
+            "seq_idx_aug": 55,
+            "match_idx": 3
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 215,
+            "seq_idx": 52,
+            "label": null,
+            "seq_idx_aug": 65,
+            "match_idx": 4
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 238,
+            "seq_idx": 58,
+            "label": null,
+            "seq_idx_aug": 71,
+            "match_idx": 5
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 278,
+            "seq_idx": 68,
+            "label": null,
+            "seq_idx_aug": 81,
+            "match_idx": 6
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 295,
+            "seq_idx": 72,
+            "label": null,
+            "seq_idx_aug": 85,
+            "match_idx": 7
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 323,
+            "seq_idx": 79,
+            "label": null,
+            "seq_idx_aug": 92,
+            "match_idx": 8
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 342,
+            "seq_idx": 83,
+            "label": null,
+            "seq_idx_aug": 96,
+            "match_idx": 9
+          },
+          {
+            "file": "reconstructed.html",
             "pos": 185,
-            "blob_offset": 11,
+            "blob_offset": 9,
             "ghost": true,
-            "del_ts": 1771836608740,
-            "seq_idx_aug": 52
+            "del_ts": 1771836608734,
+            "seq_idx_aug": 51
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 204,
+            "blob_offset": 20,
+            "ghost": true,
+            "del_ts": 1771836609328,
+            "seq_idx_aug": 61
           }
         ],
         "student": [
           {
             "file": "sorting visualizer.html",
-            "pos": 281,
-            "seq_idx": 49,
+            "pos": 133,
+            "seq_idx": 26,
             "label": null,
             "match_idx": 0
-          }
-        ]
-      },
-      "getElementsByClassname": {
-        "teacher": [],
-        "student": [
+          },
           {
             "file": "sorting visualizer.html",
-            "pos": 1388,
-            "seq_idx": 255,
-            "label": "extra"
+            "pos": 168,
+            "seq_idx": 32,
+            "label": null,
+            "match_idx": 1
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 208,
+            "seq_idx": 38,
+            "label": null,
+            "match_idx": 2
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 279,
+            "seq_idx": 48,
+            "label": null,
+            "match_idx": 3
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 311,
+            "seq_idx": 52,
+            "label": null,
+            "match_idx": 4
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 346,
+            "seq_idx": 58,
+            "label": null,
+            "match_idx": 5
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 416,
+            "seq_idx": 66,
+            "label": null,
+            "match_idx": 6
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 445,
+            "seq_idx": 70,
+            "label": null,
+            "match_idx": 7
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 485,
+            "seq_idx": 77,
+            "label": null,
+            "match_idx": 8
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 516,
+            "seq_idx": 81,
+            "label": null,
+            "match_idx": 9
           }
         ]
       },
@@ -2482,178 +2240,59 @@
           }
         ]
       },
-      "width": {
+      "10": {
+        "teacher": [],
+        "student": [
+          {
+            "file": "sorting visualizer.html",
+            "pos": 2089,
+            "seq_idx": 397,
+            "label": "extra"
+          }
+        ]
+      },
+      "html": {
         "teacher": [
           {
             "file": "reconstructed.html",
-            "pos": 273,
-            "seq_idx": 67,
+            "pos": 10,
+            "seq_idx": 3,
             "label": null,
-            "seq_idx_aug": 80,
+            "seq_idx_aug": 3,
             "match_idx": 0
           },
           {
             "file": "reconstructed.html",
-            "pos": 185,
-            "blob_offset": 4,
-            "ghost": true,
-            "del_ts": 1771836608733,
-            "seq_idx_aug": 50
+            "pos": 17,
+            "seq_idx": 6,
+            "label": null,
+            "seq_idx_aug": 6,
+            "match_idx": 1
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1630,
+            "seq_idx": 427,
+            "label": "missing",
+            "seq_idx_aug": 445
           }
         ],
         "student": [
           {
             "file": "sorting visualizer.html",
-            "pos": 411,
-            "seq_idx": 65,
-            "label": null,
-            "match_idx": 0
-          }
-        ]
-      },
-      "array": {
-        "teacher": [
-          {
-            "file": "reconstructed.html",
-            "pos": 510,
-            "seq_idx": 131,
-            "label": null,
-            "seq_idx_aug": 144,
-            "match_idx": 0
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 581,
-            "seq_idx": 155,
-            "label": null,
-            "seq_idx_aug": 168,
-            "match_idx": 1
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 728,
-            "seq_idx": 190,
-            "label": null,
-            "seq_idx_aug": 208,
-            "match_idx": 2
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 882,
-            "seq_idx": 235,
-            "label": null,
-            "seq_idx_aug": 253,
-            "match_idx": 3
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1016,
-            "seq_idx": 249,
-            "label": "missing",
-            "seq_idx_aug": 267
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1184,
-            "seq_idx": 296,
-            "label": null,
-            "seq_idx_aug": 314,
-            "match_idx": 4
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 644,
-            "blob_offset": 14,
-            "ghost": true,
-            "del_ts": 1771837711587,
-            "seq_idx_aug": 182
-          }
-        ],
-        "student": [
-          {
-            "file": "sorting visualizer.html",
-            "pos": 750,
-            "seq_idx": 129,
+            "pos": 10,
+            "seq_idx": 3,
             "label": null,
             "match_idx": 0
           },
           {
             "file": "sorting visualizer.html",
-            "pos": 836,
-            "seq_idx": 153,
-            "label": null,
-            "match_idx": 1
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1005,
-            "seq_idx": 188,
-            "label": null,
-            "match_idx": 2
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1206,
-            "seq_idx": 233,
-            "label": null,
-            "match_idx": 3
-          },
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1517,
-            "seq_idx": 289,
-            "label": null,
-            "match_idx": 5
-          }
-        ]
-      },
-      "bubbleSort": {
-        "teacher": [
-          {
-            "file": "reconstructed.html",
-            "pos": 1005,
-            "seq_idx": 247,
-            "label": "missing",
-            "seq_idx_aug": 265
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 1239,
-            "seq_idx": 311,
-            "label": null,
-            "seq_idx_aug": 329,
-            "match_idx": 0
-          },
-          {
-            "file": "reconstructed.html",
-            "pos": 644,
-            "blob_offset": 3,
-            "ghost": true,
-            "del_ts": 1771837711581,
-            "seq_idx_aug": 180
-          }
-        ],
-        "student": [
-          {
-            "file": "sorting visualizer.html",
-            "pos": 1594,
-            "seq_idx": 304,
+            "pos": 17,
+            "seq_idx": 6,
             "label": null,
             "match_idx": 1
           }
         ]
-      },
-      "getElementsByClassName": {
-        "teacher": [
-          {
-            "file": "reconstructed.html",
-            "pos": 1081,
-            "seq_idx": 262,
-            "label": "missing",
-            "seq_idx_aug": 280
-          }
-        ],
-        "student": []
       },
       ";": {
         "teacher": [
@@ -3232,6 +2871,378 @@
           }
         ]
       },
+      "getElementsByClassname": {
+        "teacher": [],
+        "student": [
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1388,
+            "seq_idx": 255,
+            "label": "extra"
+          }
+        ]
+      },
+      "100": {
+        "teacher": [
+          {
+            "file": "reconstructed.html",
+            "pos": 297,
+            "seq_idx": 73,
+            "label": null,
+            "seq_idx_aug": 86,
+            "match_idx": 0
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 893,
+            "seq_idx": 240,
+            "label": null,
+            "seq_idx_aug": 258,
+            "match_idx": 1
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1195,
+            "seq_idx": 301,
+            "label": null,
+            "seq_idx_aug": 319,
+            "match_idx": 2
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1557,
+            "seq_idx": 404,
+            "label": "missing",
+            "seq_idx_aug": 422
+          }
+        ],
+        "student": [
+          {
+            "file": "sorting visualizer.html",
+            "pos": 447,
+            "seq_idx": 71,
+            "label": null,
+            "match_idx": 0
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1217,
+            "seq_idx": 238,
+            "label": null,
+            "match_idx": 1
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1526,
+            "seq_idx": 294,
+            "label": null,
+            "match_idx": 2
+          }
+        ]
+      },
+      "(": {
+        "teacher": [
+          {
+            "file": "reconstructed.html",
+            "pos": 527,
+            "seq_idx": 135,
+            "label": null,
+            "seq_idx_aug": 148,
+            "match_idx": 0
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 547,
+            "seq_idx": 140,
+            "label": null,
+            "seq_idx_aug": 153,
+            "match_idx": 1
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 603,
+            "seq_idx": 163,
+            "label": null,
+            "seq_idx_aug": 176,
+            "match_idx": 2
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 689,
+            "seq_idx": 173,
+            "label": null,
+            "seq_idx_aug": 191,
+            "match_idx": 3
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 712,
+            "seq_idx": 182,
+            "label": null,
+            "seq_idx_aug": 200,
+            "match_idx": 4
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 787,
+            "seq_idx": 205,
+            "label": null,
+            "seq_idx_aug": 223,
+            "match_idx": 5
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 822,
+            "seq_idx": 214,
+            "label": null,
+            "seq_idx_aug": 232,
+            "match_idx": 6
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 850,
+            "seq_idx": 223,
+            "label": null,
+            "seq_idx_aug": 241,
+            "match_idx": 7
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1015,
+            "seq_idx": 248,
+            "label": "missing",
+            "seq_idx_aug": 266
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1050,
+            "seq_idx": 254,
+            "label": null,
+            "seq_idx_aug": 272,
+            "match_idx": 8
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1103,
+            "seq_idx": 263,
+            "label": null,
+            "seq_idx_aug": 281,
+            "match_idx": 9
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1120,
+            "seq_idx": 270,
+            "label": null,
+            "seq_idx_aug": 288,
+            "match_idx": 10
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1249,
+            "seq_idx": 312,
+            "label": null,
+            "seq_idx_aug": 330,
+            "match_idx": 11
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1301,
+            "seq_idx": 324,
+            "label": null,
+            "seq_idx_aug": 342,
+            "match_idx": 12
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1345,
+            "seq_idx": 342,
+            "label": null,
+            "seq_idx_aug": 360,
+            "match_idx": 13
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1497,
+            "seq_idx": 390,
+            "label": null,
+            "seq_idx_aug": 408,
+            "match_idx": 14
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1525,
+            "seq_idx": 396,
+            "label": null,
+            "seq_idx_aug": 414,
+            "match_idx": 15
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1547,
+            "seq_idx": 401,
+            "label": null,
+            "seq_idx_aug": 419,
+            "match_idx": 16
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 1591,
+            "seq_idx": 412,
+            "label": null,
+            "seq_idx_aug": 430,
+            "match_idx": 17
+          },
+          {
+            "file": "reconstructed.html",
+            "pos": 644,
+            "blob_offset": 13,
+            "ghost": true,
+            "del_ts": 1771837711582,
+            "seq_idx_aug": 181
+          }
+        ],
+        "student": [
+          {
+            "file": "sorting visualizer.html",
+            "pos": 767,
+            "seq_idx": 133,
+            "label": null,
+            "match_idx": 0
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 792,
+            "seq_idx": 138,
+            "label": null,
+            "match_idx": 1
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 858,
+            "seq_idx": 161,
+            "label": null,
+            "match_idx": 2
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 957,
+            "seq_idx": 171,
+            "label": null,
+            "match_idx": 3
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 989,
+            "seq_idx": 180,
+            "label": null,
+            "match_idx": 4
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1075,
+            "seq_idx": 203,
+            "label": null,
+            "match_idx": 5
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1122,
+            "seq_idx": 212,
+            "label": null,
+            "match_idx": 6
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1162,
+            "seq_idx": 221,
+            "label": null,
+            "match_idx": 7
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1348,
+            "seq_idx": 247,
+            "label": null,
+            "match_idx": 9
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1410,
+            "seq_idx": 256,
+            "label": null,
+            "match_idx": 10
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1439,
+            "seq_idx": 263,
+            "label": null,
+            "match_idx": 11
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1604,
+            "seq_idx": 305,
+            "label": null,
+            "match_idx": 12
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1697,
+            "seq_idx": 317,
+            "label": null,
+            "match_idx": 13
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 1759,
+            "seq_idx": 335,
+            "label": null,
+            "match_idx": 14
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 2008,
+            "seq_idx": 383,
+            "label": null,
+            "match_idx": 15
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 2057,
+            "seq_idx": 389,
+            "label": null,
+            "match_idx": 16
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 2079,
+            "seq_idx": 394,
+            "label": null,
+            "match_idx": 17
+          },
+          {
+            "file": "sorting visualizer.html",
+            "pos": 2174,
+            "seq_idx": 405,
+            "label": null,
+            "match_idx": 18
+          }
+        ]
+      },
+      "end": {
+        "teacher": [
+          {
+            "file": "reconstructed.html",
+            "pos": 245,
+            "seq_idx": 61,
+            "label": "missing",
+            "seq_idx_aug": 74
+          }
+        ],
+        "student": []
+      },
       "color": {
         "teacher": [
           {
@@ -3261,28 +3272,17 @@
           }
         ]
       },
-      "end": {
+      "getElementsByClassName": {
         "teacher": [
           {
             "file": "reconstructed.html",
-            "pos": 245,
-            "seq_idx": 61,
+            "pos": 1081,
+            "seq_idx": 262,
             "label": "missing",
-            "seq_idx_aug": 74
+            "seq_idx_aug": 280
           }
         ],
         "student": []
-      },
-      "10": {
-        "teacher": [],
-        "student": [
-          {
-            "file": "sorting visualizer.html",
-            "pos": 2089,
-            "seq_idx": 397,
-            "label": "extra"
-          }
-        ]
       }
     },
     "teacher_seq_aug": [

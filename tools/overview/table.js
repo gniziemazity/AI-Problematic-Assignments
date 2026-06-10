@@ -97,11 +97,7 @@ function renderTable() {
 			col("Obs", "lhd");
 			obsHeader(a, "");
 		} else {
-			_attachStudentsLink(
-				grp("Assignment", 1, true),
-				a.name,
-				"assignments",
-			);
+			_attachStudentsLink(grp("Assignment", 1, true), a.name, "assignments");
 			obsHeader(a, "", true);
 		}
 	}
@@ -220,7 +216,10 @@ function renderTable() {
 		tr.appendChild(pc);
 
 		tr.appendChild(
-			cell(formatInteractionCounts(s.total_a, s.total_q, s.total_h), "col-int"),
+			cell(
+				formatInteractionCounts(s.total_a, s.total_q, s.total_h),
+				"col-int",
+			),
 		);
 		tr.appendChild(
 			followAvg(s) >= 0

@@ -359,10 +359,6 @@ async function loadCourse(ds) {
 }
 
 async function _gatherSubmittedIds(ds) {
-	// Per assignment, the set of student ids whose anon_ids/<sid>/ folder
-	// actually holds files. A student who did the assignment but forgot to
-	// attach code has an empty (or absent) folder and must be excluded, so the
-	// overview can suppress the differentiator link like students.html does.
 	const out = {};
 	let deep = false;
 	for (const path of ds.files.keys()) {
@@ -372,9 +368,6 @@ async function _gatherSubmittedIds(ds) {
 		const key = `assignments/${m[1].toLowerCase()}`;
 		(out[key] || (out[key] = new Set())).add(String(m[2]).toLowerCase());
 	}
-	// Deep sources (folder picker / manifest) list every file, so the scan above
-	// is authoritative. The served source only lists folders shallowly, so an
-	// empty anon_ids/<sid>/ still appears — list each one to check it has files.
 	if (deep || typeof listServerDir !== "function") return out;
 	let dirs;
 	try {

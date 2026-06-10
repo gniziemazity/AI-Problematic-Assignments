@@ -104,12 +104,9 @@
 				"label": "missing",
 				"start": 622,
 				"end": 627,
-				"paired_with": {
+				"insert_at": {
 					"file": "123456.html",
-					"start": 652,
-					"end": 659,
-					"token": "studing",
-					"label": "extra"
+					"pos": 659
 				},
 				"timestamp": "12:35:31.258"
 			},
@@ -1154,7 +1151,7 @@
 				"end": 2489,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:33.257"
 			},
@@ -1165,7 +1162,7 @@
 				"end": 2490,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:33.449"
 			},
@@ -1176,7 +1173,7 @@
 				"end": 2493,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:34.111"
 			},
@@ -1187,7 +1184,7 @@
 				"end": 2494,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:34.331"
 			},
@@ -1198,7 +1195,7 @@
 				"end": 2495,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:34.620"
 			},
@@ -1209,7 +1206,7 @@
 				"end": 2497,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:35.254"
 			},
@@ -1220,7 +1217,7 @@
 				"end": 2498,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:35.578"
 			},
@@ -1231,7 +1228,7 @@
 				"end": 2500,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:37.240"
 			},
@@ -1242,7 +1239,7 @@
 				"end": 2501,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:37.501"
 			},
@@ -1253,7 +1250,7 @@
 				"end": 2502,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:37.769"
 			},
@@ -1264,7 +1261,7 @@
 				"end": 2503,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:38.049"
 			},
@@ -1275,7 +1272,7 @@
 				"end": 2504,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3053
+					"pos": 2995
 				},
 				"timestamp": "13:23:38.474"
 			},
@@ -1630,7 +1627,7 @@
 				"end": 3006,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3655
+					"pos": 3667
 				},
 				"timestamp": "13:33:53.872"
 			},
@@ -1641,7 +1638,7 @@
 				"end": 3012,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3655
+					"pos": 3667
 				},
 				"timestamp": "13:33:55.549"
 			},
@@ -1652,7 +1649,7 @@
 				"end": 3015,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3655
+					"pos": 3667
 				},
 				"timestamp": "13:33:56.247"
 			},
@@ -1663,7 +1660,7 @@
 				"end": 3016,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3655
+					"pos": 3667
 				},
 				"timestamp": "13:33:56.552"
 			},
@@ -1674,7 +1671,7 @@
 				"end": 3021,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3655
+					"pos": 3667
 				},
 				"timestamp": "13:33:58.460"
 			},
@@ -1685,7 +1682,7 @@
 				"end": 3022,
 				"insert_at": {
 					"file": "123456.html",
-					"pos": 3655
+					"pos": 3667
 				},
 				"timestamp": "13:33:59.175"
 			},
@@ -1878,14 +1875,7 @@
 				"token": "studing",
 				"label": "extra",
 				"start": 652,
-				"end": 659,
-				"paired_with": {
-					"file": "reconstructed.html",
-					"start": 622,
-					"end": 627,
-					"token": "study",
-					"label": "missing"
-				}
+				"end": 659
 			},
 			{
 				"token": ",",

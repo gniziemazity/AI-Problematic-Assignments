@@ -74,8 +74,6 @@ function renderStats() {
 			5,
 			"dec1",
 		);
-		const submittedAssn = py.assignments.map((a) => a.n_submitted ?? 0);
-
 		const lessonTroubleEntries = py.assignments.filter(
 			(a) => a.follow_avg != null,
 		);
@@ -105,6 +103,7 @@ function renderStats() {
 				copyVals,
 				lessonTotals,
 				Math.max(...lessonTotals, 1) + 1,
+				{ color: THEME.red },
 			);
 		}
 
@@ -381,15 +380,15 @@ function renderStats() {
 	}
 
 	if (py.engagement?.length) {
-		const card = mkCard(
-			body,
-			"Engagement (Answers / Questions / Help)",
-			"sm",
-		);
-		let html =
-			'<table class="st-tbl"><tr><th>Type</th><th>n</th><th>Pass rate</th></tr>';
+		const card = mkCard(body, "Engagement", "sm");
+		let html = '<table class="st-tbl">';
+		const _engLabel = {
+			Answers: "Students answering questions",
+			Questions: "Students asking questions",
+			Help: "Students accepting help",
+		};
 		py.engagement.forEach((e) => {
-			html += `<tr><td>${escHtml(e.label)}</td><td>${e.n}</td><td>${fmtPct(e.pass_rate)}</td></tr>`;
+			html += `<tr><td>${escHtml(_engLabel[e.label] ?? e.label)}</td><td>${e.n}</td></tr>`;
 		});
 		card.insertAdjacentHTML("beforeend", html + "</table>");
 	}

@@ -91,7 +91,12 @@ function renderLessonStats(body) {
 			yMin: 0,
 			yMax: Math.max(...all, 1) + 1,
 			tooltipCallback: (_l, val, si) => [
-				["Answered", "Unanswered", "Question", "Help"][si] +
+				[
+					"Teacher Questions (Answered)",
+					"Teacher Questions (Unanswered)",
+					"Student Questions",
+					"Providing Help",
+				][si] +
 					": " +
 					Math.round(val),
 			],
@@ -188,5 +193,4 @@ function renderLessonStats(body) {
 			"dec1",
 		);
 	}
-
 }

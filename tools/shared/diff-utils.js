@@ -64,6 +64,9 @@ const THEME = {
 	chartInsertMarker: _cssVar("--clr-chart-insert-marker"),
 	chartDotMutedFill: _cssVar("--clr-chart-dot-muted-fill"),
 	chartDotMutedStroke: _cssVar("--clr-chart-dot-muted-stroke"),
+	tipBgBlue: _cssVar("--clr-tip-bg-blue"),
+	tipBgOrange: _cssVar("--clr-tip-bg-orange"),
+	tipBgGreen: _cssVar("--clr-tip-bg-green"),
 };
 
 const LANG_COLORS = {
@@ -442,7 +445,15 @@ function buildToolUrl(
 function navigateToStudents(args = {}) {
 	window.open(buildToolUrl("students.html", args), "_blank");
 }
-function openInNewTab(url) {
+function openInNewTab(url, focus = false) {
+	if (focus) {
+		const win = window.open(url, "_blank");
+		if (win) {
+			win.opener = null;
+			win.focus();
+			return;
+		}
+	}
 	const a = document.createElement("a");
 	a.href = url;
 	a.target = "_blank";
@@ -464,8 +475,8 @@ function previewBaseTarget(html) {
 		return s.replace(/(<html\b[^>]*>)/i, "$1" + tag);
 	return tag + s;
 }
-function navigateToDifferentiator(args = {}) {
-	openInNewTab(buildToolUrl("differentiator.html", args));
+function navigateToDifferentiator(args = {}, focus = false) {
+	openInNewTab(buildToolUrl("differentiator.html", args), focus);
 }
 function navigateToTimeline(args = {}) {
 	openInNewTab(buildToolUrl("timeline.html", args));
@@ -804,7 +815,8 @@ function _hmsToSeconds(hms, sessionDate) {
 	return dt.getTime() / 1000;
 }
 
-const _FOLLOW_DESC_RE = /([+-])(.+?)\s+\((\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?)\)/g;
+const _FOLLOW_DESC_RE =
+	/([+-])(.+?)\s+\((\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?)\)(?:\s*~([0-9.]+))?/g;
 
 function parseFollowEvents(descText, sessionDate) {
 	const events = [];
@@ -813,11 +825,13 @@ function parseFollowEvents(descText, sessionDate) {
 	let m;
 	while ((m = re.exec(String(descText))) !== null) {
 		const rawLabel = m[1] + m[2];
-		events.push({
+		const ev = {
 			label: rawLabel,
 			ts: _hmsToSeconds(m[3], sessionDate),
 			...parseFollowLabel(rawLabel),
-		});
+		};
+		if (m[4] != null) ev.sim = parseFloat(m[4]);
+		events.push(ev);
 	}
 	return events;
 }

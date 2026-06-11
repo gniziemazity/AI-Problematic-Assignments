@@ -1,0 +1,881 @@
+{
+  "token_matching": "minimal",
+  "teacher_files": {
+    "123456.css": [
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 24,
+        "end": 25
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 25,
+        "end": 26
+      },
+      {
+        "token": "CSS",
+        "label": "comment",
+        "start": 27,
+        "end": 30
+      },
+      {
+        "token": "variable",
+        "label": "comment",
+        "start": 31,
+        "end": 39
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 40,
+        "end": 41
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 41,
+        "end": 42
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 231,
+        "end": 232
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 232,
+        "end": 233
+      },
+      {
+        "token": "3",
+        "label": "comment",
+        "start": 234,
+        "end": 235
+      },
+      {
+        "token": "%",
+        "label": "comment",
+        "start": 235,
+        "end": 236
+      },
+      {
+        "token": "of",
+        "label": "comment",
+        "start": 237,
+        "end": 239
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 240,
+        "end": 243
+      },
+      {
+        "token": "viewport",
+        "label": "comment",
+        "start": 244,
+        "end": 252
+      },
+      {
+        "token": "width",
+        "label": "comment",
+        "start": 253,
+        "end": 258
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 259,
+        "end": 260
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 260,
+        "end": 261
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 357,
+        "end": 358
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 358,
+        "end": 359
+      },
+      {
+        "token": "does",
+        "label": "comment",
+        "start": 360,
+        "end": 364
+      },
+      {
+        "token": "not",
+        "label": "comment",
+        "start": 365,
+        "end": 368
+      },
+      {
+        "token": "affect",
+        "label": "comment",
+        "start": 369,
+        "end": 375
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 376,
+        "end": 379
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 380,
+        "end": 384
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 385,
+        "end": 386
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 386,
+        "end": 387
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 414,
+        "end": 415
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 415,
+        "end": 416
+      },
+      {
+        "token": "affects",
+        "label": "comment",
+        "start": 417,
+        "end": 424
+      },
+      {
+        "token": "the",
+        "label": "comment",
+        "start": 425,
+        "end": 428
+      },
+      {
+        "token": "size",
+        "label": "comment",
+        "start": 429,
+        "end": 433
+      },
+      {
+        "token": "*",
+        "label": "comment",
+        "start": 434,
+        "end": 435
+      },
+      {
+        "token": "/",
+        "label": "comment",
+        "start": 435,
+        "end": 436
+      },
+      {
+        "token": "mapContainer",
+        "label": "missing",
+        "start": 516,
+        "end": 528,
+        "paired_with": {
+          "file": "123456.css",
+          "start": 463,
+          "end": 475,
+          "token": "mapcontainer",
+          "label": "extra"
+        },
+        "timestamp": "12:50:07.768"
+      }
+    ],
+    "123456.js": [],
+    "reconstructed.html": [
+      {
+        "token": "mapContainer",
+        "label": "missing",
+        "start": 271,
+        "end": 283,
+        "paired_with": {
+          "file": "index.html",
+          "start": 319,
+          "end": 331,
+          "token": "mapcontainer",
+          "label": "extra"
+        },
+        "timestamp": "12:50:05.345"
+      },
+      {
+        "token": "id",
+        "label": "missing",
+        "start": 308,
+        "end": 310,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 360
+        },
+        "timestamp": "12:31:25.626"
+      },
+      {
+        "token": "=",
+        "label": "missing",
+        "start": 310,
+        "end": 311,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 360
+        },
+        "timestamp": "12:31:25.856"
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 311,
+        "end": 312,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 360
+        },
+        "timestamp": "12:31:26.515"
+      },
+      {
+        "token": "map",
+        "label": "missing",
+        "start": 312,
+        "end": 315,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 360
+        },
+        "timestamp": "12:31:27.486"
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 315,
+        "end": 316,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 360
+        },
+        "timestamp": "12:31:26.515"
+      },
+      {
+        "token": "<",
+        "label": "missing",
+        "start": 462,
+        "end": 463,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:46.381"
+      },
+      {
+        "token": "script",
+        "label": "missing",
+        "start": 463,
+        "end": 469,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:47.673"
+      },
+      {
+        "token": "src",
+        "label": "missing",
+        "start": 470,
+        "end": 473,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:48.559"
+      },
+      {
+        "token": "=",
+        "label": "missing",
+        "start": 473,
+        "end": 474,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:48.773"
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 474,
+        "end": 475,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:49.475"
+      },
+      {
+        "token": "https",
+        "label": "missing",
+        "start": 475,
+        "end": 480,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:50.422"
+      },
+      {
+        "token": ":",
+        "label": "missing",
+        "start": 480,
+        "end": 481,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:50.571"
+      },
+      {
+        "token": "/",
+        "label": "missing",
+        "start": 481,
+        "end": 482,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:50.743"
+      },
+      {
+        "token": "/",
+        "label": "missing",
+        "start": 482,
+        "end": 483,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:50.962"
+      },
+      {
+        "token": "unpkg",
+        "label": "missing",
+        "start": 483,
+        "end": 488,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:51.928"
+      },
+      {
+        "token": ".",
+        "label": "missing",
+        "start": 488,
+        "end": 489,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:52.210"
+      },
+      {
+        "token": "com",
+        "label": "missing",
+        "start": 489,
+        "end": 492,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:52.875"
+      },
+      {
+        "token": "/",
+        "label": "missing",
+        "start": 492,
+        "end": 493,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:52.996"
+      },
+      {
+        "token": "html5",
+        "label": "missing",
+        "start": 493,
+        "end": 498,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:54.075"
+      },
+      {
+        "token": "-",
+        "label": "missing",
+        "start": 498,
+        "end": 499,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:54.209"
+      },
+      {
+        "token": "qrcode",
+        "label": "missing",
+        "start": 499,
+        "end": 505,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:55.667"
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 505,
+        "end": 506,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:49.475"
+      },
+      {
+        "token": "type",
+        "label": "missing",
+        "start": 507,
+        "end": 511,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:57.063"
+      },
+      {
+        "token": "=",
+        "label": "missing",
+        "start": 511,
+        "end": 512,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:57.290"
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 512,
+        "end": 513,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:57.892"
+      },
+      {
+        "token": "text",
+        "label": "missing",
+        "start": 513,
+        "end": 517,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:06:02.121"
+      },
+      {
+        "token": "/",
+        "label": "missing",
+        "start": 517,
+        "end": 518,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:06:02.343"
+      },
+      {
+        "token": "javascript",
+        "label": "missing",
+        "start": 518,
+        "end": 528,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:06:04.645"
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 528,
+        "end": 529,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:05:57.892"
+      },
+      {
+        "token": ">",
+        "label": "missing",
+        "start": 529,
+        "end": 530,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:06:05.501"
+      },
+      {
+        "token": "<",
+        "label": "missing",
+        "start": 530,
+        "end": 531,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:06:51.011"
+      },
+      {
+        "token": "/",
+        "label": "missing",
+        "start": 531,
+        "end": 532,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:06:51.011"
+      },
+      {
+        "token": "script",
+        "label": "missing",
+        "start": 532,
+        "end": 538,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:06:51.011"
+      },
+      {
+        "token": ">",
+        "label": "missing",
+        "start": 538,
+        "end": 539,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "13:06:51.011"
+      },
+      {
+        "token": "<",
+        "label": "missing",
+        "start": 542,
+        "end": 543,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:52:43.997"
+      },
+      {
+        "token": "script",
+        "label": "missing",
+        "start": 543,
+        "end": 549,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:52:45.286"
+      },
+      {
+        "token": "src",
+        "label": "missing",
+        "start": 550,
+        "end": 553,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:52:46.196"
+      },
+      {
+        "token": "=",
+        "label": "missing",
+        "start": 553,
+        "end": 554,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:52:46.360"
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 554,
+        "end": 555,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:52:47.087"
+      },
+      {
+        "token": "123456",
+        "label": "missing",
+        "start": 555,
+        "end": 561,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:52:48.540"
+      },
+      {
+        "token": ".",
+        "label": "missing",
+        "start": 561,
+        "end": 562,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:52:48.877"
+      },
+      {
+        "token": "js",
+        "label": "missing",
+        "start": 562,
+        "end": 564,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:52:49.268"
+      },
+      {
+        "token": "\"",
+        "label": "missing",
+        "start": 564,
+        "end": 565,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:52:47.087"
+      },
+      {
+        "token": ">",
+        "label": "missing",
+        "start": 565,
+        "end": 566,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:53:03.064"
+      },
+      {
+        "token": "<",
+        "label": "missing",
+        "start": 566,
+        "end": 567,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:53:08.112"
+      },
+      {
+        "token": "/",
+        "label": "missing",
+        "start": 567,
+        "end": 568,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:53:08.112"
+      },
+      {
+        "token": "script",
+        "label": "missing",
+        "start": 568,
+        "end": 574,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:53:08.112"
+      },
+      {
+        "token": ">",
+        "label": "missing",
+        "start": 574,
+        "end": 575,
+        "insert_at": {
+          "file": "index.html",
+          "pos": 516
+        },
+        "timestamp": "12:53:08.112"
+      }
+    ]
+  },
+  "student_files": {
+    "index.html": [
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 229,
+        "end": 230
+      },
+      {
+        "token": "script",
+        "label": "extra",
+        "start": 230,
+        "end": 236
+      },
+      {
+        "token": "src",
+        "label": "extra",
+        "start": 237,
+        "end": 240
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 240,
+        "end": 241
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 241,
+        "end": 242
+      },
+      {
+        "token": "123456",
+        "label": "extra",
+        "start": 242,
+        "end": 248
+      },
+      {
+        "token": ".",
+        "label": "extra",
+        "start": 248,
+        "end": 249
+      },
+      {
+        "token": "js",
+        "label": "extra",
+        "start": 249,
+        "end": 251
+      },
+      {
+        "token": "\"",
+        "label": "extra",
+        "start": 251,
+        "end": 252
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 252,
+        "end": 253
+      },
+      {
+        "token": "<",
+        "label": "extra",
+        "start": 253,
+        "end": 254
+      },
+      {
+        "token": "/",
+        "label": "extra",
+        "start": 254,
+        "end": 255
+      },
+      {
+        "token": "script",
+        "label": "extra",
+        "start": 255,
+        "end": 261
+      },
+      {
+        "token": ">",
+        "label": "extra",
+        "start": 261,
+        "end": 262
+      },
+      {
+        "token": "mapcontainer",
+        "label": "extra",
+        "start": 319,
+        "end": 331,
+        "paired_with": {
+          "file": "reconstructed.html",
+          "start": 271,
+          "end": 283,
+          "token": "mapContainer",
+          "label": "missing"
+        }
+      },
+      {
+        "token": "=",
+        "label": "extra",
+        "start": 428,
+        "end": 429
+      }
+    ],
+    "123456.css": [
+      {
+        "token": "mapcontainer",
+        "label": "extra",
+        "start": 463,
+        "end": 475,
+        "paired_with": {
+          "file": "123456.css",
+          "start": 516,
+          "end": 528,
+          "token": "mapContainer",
+          "label": "missing"
+        }
+      }
+    ],
+    "123456.js": []
+  }
+}

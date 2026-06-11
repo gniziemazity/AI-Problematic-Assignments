@@ -1,0 +1,158 @@
+{
+	"token_matching": "minimal",
+	"teacher_files": {
+		"reconstructed.html": [
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 392,
+				"end": 393
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 393,
+				"end": 394
+			},
+			{
+				"token": "1",
+				"label": "comment",
+				"start": 395,
+				"end": 396
+			},
+			{
+				"token": "fraction",
+				"label": "comment",
+				"start": 397,
+				"end": 405
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 406,
+				"end": 407
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 407,
+				"end": 408
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 3083,
+				"end": 3084
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 3084,
+				"end": 3085
+			},
+			{
+				"token": "anonymous",
+				"label": "comment",
+				"start": 3086,
+				"end": 3095
+			},
+			{
+				"token": "function",
+				"label": "comment",
+				"start": 3096,
+				"end": 3104
+			},
+			{
+				"token": "replaceChildren",
+				"label": "missing",
+				"start": 3294,
+				"end": 3309,
+				"timestamp": "12:52:19",
+				"paired_with": {
+					"file": "index-123456.html",
+					"start": 4241,
+					"end": 4256,
+					"token": "replacechildren",
+					"label": "extra"
+				}
+			}
+		]
+	},
+	"student_files": {
+		"index-123456.html": [
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 466,
+				"end": 467
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 467,
+				"end": 468
+			},
+			{
+				"token": "1",
+				"label": "comment",
+				"start": 468,
+				"end": 469
+			},
+			{
+				"token": "fraction",
+				"label": "comment",
+				"start": 470,
+				"end": 478
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 478,
+				"end": 479
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 479,
+				"end": 480
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 3924,
+				"end": 3925
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 3925,
+				"end": 3926
+			},
+			{
+				"token": "anonymous",
+				"label": "comment",
+				"start": 3927,
+				"end": 3936
+			},
+			{
+				"token": "function",
+				"label": "comment",
+				"start": 3937,
+				"end": 3945
+			},
+			{
+				"token": "replacechildren",
+				"label": "extra",
+				"start": 4241,
+				"end": 4256,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 3294,
+					"end": 3309,
+					"token": "replaceChildren",
+					"label": "missing"
+				}
+			}
+		]
+	}
+}

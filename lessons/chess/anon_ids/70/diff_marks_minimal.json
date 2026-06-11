@@ -1,0 +1,162 @@
+{
+	"token_matching": "minimal",
+	"teacher_files": {
+		"reconstructed.html": [
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 392,
+				"end": 393
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 393,
+				"end": 394
+			},
+			{
+				"token": "1",
+				"label": "comment",
+				"start": 395,
+				"end": 396
+			},
+			{
+				"token": "fraction",
+				"label": "comment",
+				"start": 397,
+				"end": 405
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 406,
+				"end": 407
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 407,
+				"end": 408
+			},
+			{
+				"token": "let",
+				"label": "missing",
+				"start": 2908,
+				"end": 2911,
+				"insert_at": {
+					"file": "index.html",
+					"pos": 3873
+				},
+				"timestamp": "12:56:53"
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 3083,
+				"end": 3084
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 3084,
+				"end": 3085
+			},
+			{
+				"token": "anonymous",
+				"label": "comment",
+				"start": 3086,
+				"end": 3095
+			},
+			{
+				"token": "function",
+				"label": "comment",
+				"start": 3096,
+				"end": 3104
+			}
+		]
+	},
+	"student_files": {
+		"index.html": [
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 547,
+				"end": 548
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 548,
+				"end": 549
+			},
+			{
+				"token": "1",
+				"label": "comment",
+				"start": 550,
+				"end": 551
+			},
+			{
+				"token": "fraction",
+				"label": "comment",
+				"start": 552,
+				"end": 560
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 561,
+				"end": 562
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 562,
+				"end": 563
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 1093,
+				"end": 1094
+			},
+			{
+				"token": "const",
+				"label": "ghost_extra",
+				"start": 3868,
+				"end": 3873,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 2908,
+					"end": 2913,
+					"token": "const",
+					"ghost": true
+				},
+				"removal_ts": "12:56:51"
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 4081,
+				"end": 4082
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 4082,
+				"end": 4083
+			},
+			{
+				"token": "anonymous",
+				"label": "comment",
+				"start": 4084,
+				"end": 4093
+			},
+			{
+				"token": "function",
+				"label": "comment",
+				"start": 4094,
+				"end": 4102
+			}
+		]
+	}
+}

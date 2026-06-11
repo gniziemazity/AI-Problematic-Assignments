@@ -1,0 +1,467 @@
+{
+	"token_matching": "minimal",
+	"teacher_files": {
+		"reconstructed.html": [
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 392,
+				"end": 393
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 393,
+				"end": 394
+			},
+			{
+				"token": "1",
+				"label": "comment",
+				"start": 395,
+				"end": 396
+			},
+			{
+				"token": "fraction",
+				"label": "comment",
+				"start": 397,
+				"end": 405
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 406,
+				"end": 407
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 407,
+				"end": 408
+			},
+			{
+				"token": "let",
+				"label": "missing",
+				"start": 2908,
+				"end": 2911,
+				"timestamp": "12:56:53",
+				"insert_at": {
+					"file": "lesson2.html",
+					"pos": 3961
+				}
+			},
+			{
+				"token": "selectedPiece",
+				"label": "missing",
+				"start": 2912,
+				"end": 2925,
+				"timestamp": "12:51:24",
+				"paired_with": {
+					"file": "lesson2.html",
+					"start": 3962,
+					"end": 3975,
+					"token": "selectedpiece",
+					"label": "extra"
+				}
+			},
+			{
+				"token": "document",
+				"label": "missing",
+				"start": 2951,
+				"end": 2959,
+				"paired_with": {
+					"file": "lesson2.html",
+					"start": 4010,
+					"end": 4018,
+					"token": "documnet",
+					"label": "extra"
+				},
+				"timestamp": "12:37:53"
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 3083,
+				"end": 3084
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 3084,
+				"end": 3085
+			},
+			{
+				"token": "anonymous",
+				"label": "comment",
+				"start": 3086,
+				"end": 3095
+			},
+			{
+				"token": "function",
+				"label": "comment",
+				"start": 3096,
+				"end": 3104
+			},
+			{
+				"token": "border",
+				"label": "missing",
+				"start": 3229,
+				"end": 3235,
+				"paired_with": {
+					"file": "lesson2.html",
+					"start": 4400,
+					"end": 4406,
+					"token": "broder",
+					"label": "extra"
+				},
+				"timestamp": "12:45:17"
+			},
+			{
+				"token": "selectedPiece",
+				"label": "missing",
+				"start": 3256,
+				"end": 3269,
+				"timestamp": "12:52:11",
+				"paired_with": {
+					"file": "lesson2.html",
+					"start": 4451,
+					"end": 4464,
+					"token": "selectedpiece",
+					"label": "extra"
+				}
+			},
+			{
+				"token": "replaceChildren",
+				"label": "missing",
+				"start": 3294,
+				"end": 3309,
+				"insert_at": {
+					"file": "lesson2.html",
+					"pos": 4519
+				},
+				"timestamp": "12:52:19"
+			},
+			{
+				"token": "selectedPiece",
+				"label": "missing",
+				"start": 3310,
+				"end": 3323,
+				"paired_with": {
+					"file": "lesson2.html",
+					"start": 4520,
+					"end": 4533,
+					"token": "selectedpisce",
+					"label": "extra"
+				},
+				"timestamp": "12:52:27"
+			},
+			{
+				"token": "selectedPiece",
+				"label": "missing",
+				"start": 3331,
+				"end": 3344,
+				"paired_with": {
+					"file": "lesson2.html",
+					"start": 4556,
+					"end": 4569,
+					"token": "selectedpiece",
+					"label": "extra"
+				},
+				"timestamp": "12:52:30"
+			},
+			{
+				"token": "selectedPiece",
+				"label": "missing",
+				"start": 3404,
+				"end": 3417,
+				"paired_with": {
+					"file": "lesson2.html",
+					"start": 4688,
+					"end": 4701,
+					"token": "selectedpiece",
+					"label": "extra"
+				},
+				"timestamp": "12:53:29"
+			},
+			{
+				"token": "border",
+				"label": "missing",
+				"start": 3460,
+				"end": 3466,
+				"paired_with": {
+					"file": "lesson2.html",
+					"start": 4759,
+					"end": 4765,
+					"token": "broder",
+					"label": "extra"
+				},
+				"timestamp": "12:35:31"
+			}
+		]
+	},
+	"student_files": {
+		"lesson2.html": [
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 537,
+				"end": 538
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 538,
+				"end": 539
+			},
+			{
+				"token": "1",
+				"label": "comment",
+				"start": 539,
+				"end": 540
+			},
+			{
+				"token": "fraction",
+				"label": "comment",
+				"start": 541,
+				"end": 549
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 550,
+				"end": 551
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 551,
+				"end": 552
+			},
+			{
+				"token": "const",
+				"label": "ghost_extra",
+				"start": 3956,
+				"end": 3961,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 2908,
+					"end": 2913,
+					"token": "const",
+					"ghost": true
+				},
+				"removal_ts": "12:56:51"
+			},
+			{
+				"token": "selectedpiece",
+				"label": "extra",
+				"start": 3962,
+				"end": 3975,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 2912,
+					"end": 2925,
+					"token": "selectedPiece",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "documnet",
+				"label": "extra",
+				"start": 4010,
+				"end": 4018,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 2951,
+					"end": 2959,
+					"token": "document",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 4166,
+				"end": 4167
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 4167,
+				"end": 4168
+			},
+			{
+				"token": "anonymous",
+				"label": "comment",
+				"start": 4168,
+				"end": 4177
+			},
+			{
+				"token": "function",
+				"label": "comment",
+				"start": 4178,
+				"end": 4186
+			},
+			{
+				"token": "broder",
+				"label": "extra",
+				"start": 4400,
+				"end": 4406,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 3229,
+					"end": 3235,
+					"token": "border",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "selectedpiece",
+				"label": "extra",
+				"start": 4451,
+				"end": 4464,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 3256,
+					"end": 3269,
+					"token": "selectedPiece",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "replace",
+				"label": "extra",
+				"start": 4503,
+				"end": 4510
+			},
+			{
+				"token": "Children",
+				"label": "extra",
+				"start": 4511,
+				"end": 4519
+			},
+			{
+				"token": "selectedpisce",
+				"label": "extra",
+				"start": 4520,
+				"end": 4533,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 3310,
+					"end": 3323,
+					"token": "selectedPiece",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "selectedpiece",
+				"label": "extra",
+				"start": 4556,
+				"end": 4569,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 3331,
+					"end": 3344,
+					"token": "selectedPiece",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "selectedpiece",
+				"label": "extra",
+				"start": 4688,
+				"end": 4701,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 3404,
+					"end": 3417,
+					"token": "selectedPiece",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "broder",
+				"label": "extra",
+				"start": 4759,
+				"end": 4765,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 3460,
+					"end": 3466,
+					"token": "border",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "element",
+				"label": "extra",
+				"start": 4843,
+				"end": 4850
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 4850,
+				"end": 4851
+			},
+			{
+				"token": "style",
+				"label": "extra",
+				"start": 4851,
+				"end": 4856
+			},
+			{
+				"token": ".",
+				"label": "extra",
+				"start": 4856,
+				"end": 4857
+			},
+			{
+				"token": "broder",
+				"label": "extra",
+				"start": 4857,
+				"end": 4863
+			},
+			{
+				"token": "=",
+				"label": "extra",
+				"start": 4864,
+				"end": 4865
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 4866,
+				"end": 4867
+			},
+			{
+				"token": "4px",
+				"label": "extra",
+				"start": 4867,
+				"end": 4870
+			},
+			{
+				"token": "solid",
+				"label": "extra",
+				"start": 4871,
+				"end": 4876
+			},
+			{
+				"token": "red",
+				"label": "extra",
+				"start": 4877,
+				"end": 4880
+			},
+			{
+				"token": "\"",
+				"label": "extra",
+				"start": 4880,
+				"end": 4881
+			},
+			{
+				"token": ";",
+				"label": "extra",
+				"start": 4881,
+				"end": 4882
+			}
+		]
+	}
+}

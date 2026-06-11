@@ -335,7 +335,11 @@ function _curatedApplyToStudent(opts) {
 				}
 				return true;
 			};
-			if (op.kind === "insert" || op.kind === "swap" || op.kind === "move-ins") {
+			if (
+				op.kind === "insert" ||
+				op.kind === "swap" ||
+				op.kind === "move-ins"
+			) {
 				const srcText =
 					op.kind === "move-ins"
 						? origText
@@ -474,7 +478,9 @@ function _curatedReindent(text, ext, lp) {
 				}
 				if (!isFinite(min)) min = 0;
 				const pad = "\t".repeat(depth);
-				out.push(visual.map((s) => pad + s.slice(min)).join(CURATED_DEL_NL));
+				out.push(
+					visual.map((s) => pad + s.slice(min)).join(CURATED_DEL_NL),
+				);
 			} else out.push("");
 			continue;
 		}
@@ -513,7 +519,9 @@ function _curatedMarkedToHtml(text) {
 				.map((line) => {
 					const lead = (line.match(/^[ \t]*/) || [""])[0];
 					const rest = line.slice(lead.length);
-					return rest ? lead + `<span class="tw-del">${rest}</span>` : line;
+					return rest
+						? lead + `<span class="tw-del">${rest}</span>`
+						: line;
 				})
 				.join("\n"),
 		)
@@ -720,8 +728,10 @@ function _curatedMarkedToLineHtml(marked, nums) {
 			const inner = sl
 				.map((seg) => {
 					const t = escHtml(seg.text);
-					if (seg.style === "ins") return `<span class="tw-ins">${t}</span>`;
-					if (seg.style === "del") return `<span class="tw-del">${t}</span>`;
+					if (seg.style === "ins")
+						return `<span class="tw-ins">${t}</span>`;
+					if (seg.style === "del")
+						return `<span class="tw-del">${t}</span>`;
 					return t;
 				})
 				.join("");
@@ -881,7 +891,10 @@ function _curatedCorrectedCodeBlocks() {
 }
 
 function _curatedDownloadCorrectedCodeImage() {
-	_curatedRenderBlocksToImage(_curatedCorrectedCodeBlocks(), "corrected-code.png");
+	_curatedRenderBlocksToImage(
+		_curatedCorrectedCodeBlocks(),
+		"corrected-code.png",
+	);
 }
 
 function _curatedCorrectionsHtml() {
@@ -991,6 +1004,128 @@ function _curatedBuildCorrectionsListEl(blocks) {
 		list.appendChild(row);
 	}
 	return list;
+}
+
+function _curatedTokenParity(out) {
+	if (typeof _diffNonCommentTokens !== "function") return null;
+	out = out || _curatedApplyToStudent();
+	const teacher = _teacherFiles || {};
+	const teacherNames = Object.keys(teacher);
+	const outNames = Object.keys(out);
+	if (!teacherNames.length || !outNames.length) return null;
+
+	// Set check: pool all non-comment tokens on each side. This is independent
+	// of how files are keyed/paired (corrected output may be keyed by student
+	// filename, not teacher's, when files are matched by extension).
+	const tAll = [];
+	for (const n of teacherNames)
+		for (const t of _diffNonCommentTokens(teacher[n] || "", n)) tAll.push(t);
+	const cAll = [];
+	for (const n of outNames)
+		for (const t of _diffNonCommentTokens(out[n] != null ? out[n] : "", n))
+			cAll.push(t);
+
+	const freq = new Map();
+	for (const t of tAll) freq.set(t, (freq.get(t) || 0) + 1);
+	let extra = 0;
+	for (const t of cAll) {
+		const k = freq.get(t) || 0;
+		if (k > 0) freq.set(t, k - 1);
+		else extra++;
+	}
+	let missing = 0;
+	for (const v of freq.values()) missing += v;
+	const sameSet = extra === 0 && missing === 0;
+
+	// Order check: only meaningful when the sets match. Pair files by extension
+	// (one per ext is the common case); if any ext is ambiguous, don't claim
+	// the order matches.
+	let sameOrder = sameSet;
+	if (sameSet) {
+		const byExt = (names) => {
+			const g = {};
+			for (const n of names) {
+				const e = (getFileExt(n) || "").toLowerCase();
+				(g[e] = g[e] || []).push(n);
+			}
+			return g;
+		};
+		const tg = byExt(teacherNames);
+		const cg = byExt(outNames);
+		for (const e of new Set([...Object.keys(tg), ...Object.keys(cg)])) {
+			const tl = tg[e] || [];
+			const cl = cg[e] || [];
+			if (tl.length !== 1 || cl.length !== 1) {
+				sameOrder = false;
+				break;
+			}
+			const tT = _diffNonCommentTokens(teacher[tl[0]] || "", tl[0]);
+			const cT = _diffNonCommentTokens(
+				out[cl[0]] != null ? out[cl[0]] : "",
+				cl[0],
+			);
+			if (tT.length !== cT.length || !tT.every((x, i) => x === cT[i])) {
+				sameOrder = false;
+				break;
+			}
+		}
+	}
+	return { sameSet, sameOrder, extra, missing };
+}
+
+function _curatedParityInfo(p) {
+	if (p.sameOrder)
+		return {
+			clr: _cssVar("--clr-green") || "#1a7f37",
+			text: "✓ Same tokens & order",
+			title:
+				"Applying these corrections reproduces the teacher's non-comment " +
+				"tokens exactly, in the same order.",
+		};
+	if (p.sameSet)
+		return {
+			clr: _cssVar("--clr-orange") || "#bf8700",
+			text: "✓ Same tokens · reordered",
+			title:
+				"Applying these corrections reproduces the same set of teacher " +
+				"non-comment tokens, but in a different order.",
+		};
+	const parts = [];
+	if (p.extra) parts.push(`+${p.extra}`);
+	if (p.missing) parts.push(`−${p.missing}`);
+	return {
+		clr: _cssVar("--clr-red") || "#c1121f",
+		text: `Δ ${parts.join(" · ")}`,
+		title:
+			"Applying these corrections does not reproduce the teacher's tokens: " +
+			"+N surplus, −M missing (non-comment tokens).",
+	};
+}
+
+function _curatedApplyParityStyle(el, info) {
+	el.textContent = info.text;
+	el.title = info.title;
+	el.style.color = info.clr;
+	el.style.borderColor = info.clr;
+	el.style.background =
+		typeof _hexToRgba === "function" && /^#/.test(info.clr)
+			? _hexToRgba(info.clr, 0.12)
+			: "transparent";
+}
+
+function _curatedUpdateParityIndicator() {
+	const el = document.getElementById("curated-parity-line");
+	if (!el) return;
+	const p =
+		typeof _curatedEditMode !== "undefined" && _curatedEditMode
+			? _curatedTokenParity()
+			: null;
+	if (!p) {
+		el.style.display = "none";
+		return;
+	}
+	el.style.display = "";
+	_curatedApplyParityStyle(el, _curatedParityInfo(p));
 }
 
 function _curatedPreview() {

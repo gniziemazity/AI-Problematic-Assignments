@@ -958,6 +958,20 @@
 				"timestamp": "13:29:15.871"
 			},
 			{
+				"token": "'",
+				"label": "missing",
+				"start": 2703,
+				"end": 2704,
+				"paired_with": {
+					"file": "123456.html",
+					"start": 3098,
+					"end": 3099,
+					"token": "\"",
+					"label": "extra"
+				},
+				"timestamp": "13:28:30.981"
+			},
+			{
 				"token": "/",
 				"label": "comment",
 				"start": 2747,
@@ -1884,7 +1898,14 @@
 				"token": "\"",
 				"label": "extra",
 				"start": 3098,
-				"end": 3099
+				"end": 3099,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 2703,
+					"end": 2704,
+					"token": "'",
+					"label": "missing"
+				}
 			},
 			{
 				"token": "/",

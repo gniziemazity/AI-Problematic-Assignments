@@ -1,0 +1,903 @@
+{
+	"token_matching": "minimal",
+	"teacher_files": {
+		"reconstructed.html": [
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 460,
+				"end": 461
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 461,
+				"end": 462
+			},
+			{
+				"token": "global",
+				"label": "comment",
+				"start": 463,
+				"end": 469
+			},
+			{
+				"token": "variables",
+				"label": "comment",
+				"start": 470,
+				"end": 479
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 607,
+				"end": 608
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 608,
+				"end": 609
+			},
+			{
+				"token": "numbers",
+				"label": "comment",
+				"start": 610,
+				"end": 617
+			},
+			{
+				"token": "between",
+				"label": "comment",
+				"start": 618,
+				"end": 625
+			},
+			{
+				"token": "0",
+				"label": "comment",
+				"start": 626,
+				"end": 627
+			},
+			{
+				"token": "and",
+				"label": "comment",
+				"start": 628,
+				"end": 631
+			},
+			{
+				"token": "1",
+				"label": "comment",
+				"start": 632,
+				"end": 633
+			},
+			{
+				"token": "createElement",
+				"label": "missing",
+				"start": 774,
+				"end": 787,
+				"paired_with": {
+					"file": "123456.html",
+					"start": 1099,
+					"end": 1113,
+					"token": "createrElement",
+					"label": "extra"
+				},
+				"timestamp": "10:39:45"
+			},
+			{
+				"token": "visualizer",
+				"label": "missing",
+				"start": 800,
+				"end": 810,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1121
+				},
+				"timestamp": "10:40:27.992"
+			},
+			{
+				"token": ".",
+				"label": "missing",
+				"start": 810,
+				"end": 811,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1121
+				},
+				"timestamp": "10:40:28.151"
+			},
+			{
+				"token": "appendChild",
+				"label": "missing",
+				"start": 811,
+				"end": 822,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1121
+				},
+				"timestamp": "10:40:30.229"
+			},
+			{
+				"token": "(",
+				"label": "missing",
+				"start": 822,
+				"end": 823,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1121
+				},
+				"timestamp": "10:40:30.435"
+			},
+			{
+				"token": "bar",
+				"label": "missing",
+				"start": 823,
+				"end": 826,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1121
+				},
+				"timestamp": "10:40:31.317"
+			},
+			{
+				"token": ")",
+				"label": "missing",
+				"start": 826,
+				"end": 827,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1121
+				},
+				"timestamp": "10:40:31.505"
+			},
+			{
+				"token": ";",
+				"label": "missing",
+				"start": 827,
+				"end": 828,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1121
+				},
+				"timestamp": "10:40:32.101"
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 904,
+				"end": 905
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 905,
+				"end": 906
+			},
+			{
+				"token": "+",
+				"label": "comment",
+				"start": 907,
+				"end": 908
+			},
+			{
+				"token": "here",
+				"label": "comment",
+				"start": 909,
+				"end": 913
+			},
+			{
+				"token": "is",
+				"label": "comment",
+				"start": 914,
+				"end": 916
+			},
+			{
+				"token": "string",
+				"label": "comment",
+				"start": 923,
+				"end": 929
+			},
+			{
+				"token": "concatenation",
+				"label": "comment",
+				"start": 930,
+				"end": 943
+			},
+			{
+				"token": "because",
+				"label": "comment",
+				"start": 944,
+				"end": 951
+			},
+			{
+				"token": "the",
+				"label": "comment",
+				"start": 958,
+				"end": 961
+			},
+			{
+				"token": "second",
+				"label": "comment",
+				"start": 962,
+				"end": 968
+			},
+			{
+				"token": "item",
+				"label": "comment",
+				"start": 969,
+				"end": 973
+			},
+			{
+				"token": "\"",
+				"label": "comment",
+				"start": 974,
+				"end": 975
+			},
+			{
+				"token": "%",
+				"label": "comment",
+				"start": 975,
+				"end": 976
+			},
+			{
+				"token": "\"",
+				"label": "comment",
+				"start": 976,
+				"end": 977
+			},
+			{
+				"token": "is",
+				"label": "comment",
+				"start": 978,
+				"end": 980
+			},
+			{
+				"token": "a",
+				"label": "comment",
+				"start": 981,
+				"end": 982
+			},
+			{
+				"token": "string",
+				"label": "comment",
+				"start": 983,
+				"end": 989
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 990,
+				"end": 991
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 991,
+				"end": 992
+			},
+			{
+				"token": "bubbleSort",
+				"label": "missing",
+				"start": 1005,
+				"end": 1015,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1329
+				},
+				"timestamp": "11:08:34.028"
+			},
+			{
+				"token": "(",
+				"label": "missing",
+				"start": 1015,
+				"end": 1016,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1329
+				},
+				"timestamp": "11:08:34.028"
+			},
+			{
+				"token": "array",
+				"label": "missing",
+				"start": 1016,
+				"end": 1021,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1329
+				},
+				"timestamp": "11:08:34.028"
+			},
+			{
+				"token": ")",
+				"label": "missing",
+				"start": 1021,
+				"end": 1022,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1329
+				},
+				"timestamp": "11:08:34.028"
+			},
+			{
+				"token": ";",
+				"label": "missing",
+				"start": 1022,
+				"end": 1023,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1329
+				},
+				"timestamp": "11:08:34.028"
+			},
+			{
+				"token": "updateBars",
+				"label": "missing",
+				"start": 1040,
+				"end": 1050,
+				"paired_with": {
+					"file": "123456.html",
+					"start": 1351,
+					"end": 1361,
+					"token": "updatebars",
+					"label": "extra"
+				},
+				"timestamp": "11:08:38.342"
+			},
+			{
+				"token": "getElementsByClassName",
+				"label": "missing",
+				"start": 1081,
+				"end": 1103,
+				"timestamp": "11:09:28",
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1427
+				}
+			},
+			{
+				"token": ";",
+				"label": "missing",
+				"start": 1130,
+				"end": 1131,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1467
+				},
+				"timestamp": "11:09:57.512"
+			},
+			{
+				"token": "i",
+				"label": "missing",
+				"start": 1132,
+				"end": 1133,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1467
+				},
+				"timestamp": "11:09:57.854"
+			},
+			{
+				"token": "bars",
+				"label": "missing",
+				"start": 1136,
+				"end": 1140,
+				"paired_with": {
+					"file": "123456.html",
+					"start": 1470,
+					"end": 1475,
+					"token": "array",
+					"label": "extra"
+				},
+				"timestamp": "11:09:58.993"
+			},
+			{
+				"token": "}",
+				"label": "missing",
+				"start": 1215,
+				"end": 1216,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1574
+				},
+				"timestamp": "11:08:40"
+			},
+			{
+				"token": "bubbleSort",
+				"label": "missing",
+				"start": 1239,
+				"end": 1249,
+				"paired_with": {
+					"file": "123456.html",
+					"start": 1603,
+					"end": 1613,
+					"token": "bubblesort",
+					"label": "extra"
+				},
+				"timestamp": "10:57:42"
+			},
+			{
+				"token": ">",
+				"label": "missing",
+				"start": 1357,
+				"end": 1358,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1776
+				},
+				"timestamp": "10:59:45"
+			},
+			{
+				"token": "arr",
+				"label": "missing",
+				"start": 1359,
+				"end": 1362,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1776
+				},
+				"timestamp": "10:59:46"
+			},
+			{
+				"token": "[",
+				"label": "missing",
+				"start": 1362,
+				"end": 1363,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1776
+				},
+				"timestamp": "10:59:46"
+			},
+			{
+				"token": "i",
+				"label": "missing",
+				"start": 1363,
+				"end": 1364,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1776
+				},
+				"timestamp": "10:59:47"
+			},
+			{
+				"token": "]",
+				"label": "missing",
+				"start": 1364,
+				"end": 1365,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1776
+				},
+				"timestamp": "10:59:47"
+			},
+			{
+				"token": "-",
+				"label": "missing",
+				"start": 1394,
+				"end": 1395,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1821
+				},
+				"timestamp": "11:01:03.607"
+			},
+			{
+				"token": "1",
+				"label": "missing",
+				"start": 1396,
+				"end": 1397,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1821
+				},
+				"timestamp": "11:01:04.198"
+			},
+			{
+				"token": "arr",
+				"label": "missing",
+				"start": 1407,
+				"end": 1410,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:06.389"
+			},
+			{
+				"token": "[",
+				"label": "missing",
+				"start": 1410,
+				"end": 1411,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:06.650"
+			},
+			{
+				"token": "i",
+				"label": "missing",
+				"start": 1411,
+				"end": 1412,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:06.835"
+			},
+			{
+				"token": "-",
+				"label": "missing",
+				"start": 1413,
+				"end": 1414,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:07.252"
+			},
+			{
+				"token": "1",
+				"label": "missing",
+				"start": 1415,
+				"end": 1416,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:07.757"
+			},
+			{
+				"token": "]",
+				"label": "missing",
+				"start": 1416,
+				"end": 1417,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:08.184"
+			},
+			{
+				"token": "=",
+				"label": "missing",
+				"start": 1418,
+				"end": 1419,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:08.961"
+			},
+			{
+				"token": "arr",
+				"label": "missing",
+				"start": 1420,
+				"end": 1423,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:09.861"
+			},
+			{
+				"token": "[",
+				"label": "missing",
+				"start": 1423,
+				"end": 1424,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:10.052"
+			},
+			{
+				"token": "i",
+				"label": "missing",
+				"start": 1424,
+				"end": 1425,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:10.368"
+			},
+			{
+				"token": "]",
+				"label": "missing",
+				"start": 1425,
+				"end": 1426,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:10.513"
+			},
+			{
+				"token": ";",
+				"label": "missing",
+				"start": 1426,
+				"end": 1427,
+				"insert_at": {
+					"file": "123456.html",
+					"pos": 1823
+				},
+				"timestamp": "11:01:10.683"
+			},
+			{
+				"token": "setTimeout",
+				"label": "missing",
+				"start": 1537,
+				"end": 1547,
+				"paired_with": {
+					"file": "123456.html",
+					"start": 1993,
+					"end": 2003,
+					"token": "setTimeOut",
+					"label": "extra"
+				},
+				"timestamp": "11:14:18"
+			}
+		]
+	},
+	"student_files": {
+		"123456.html": [
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 713,
+				"end": 714
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 714,
+				"end": 715
+			},
+			{
+				"token": "global",
+				"label": "comment",
+				"start": 715,
+				"end": 721
+			},
+			{
+				"token": "variables",
+				"label": "comment",
+				"start": 722,
+				"end": 731
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 895,
+				"end": 896
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 896,
+				"end": 897
+			},
+			{
+				"token": "numbers",
+				"label": "comment",
+				"start": 898,
+				"end": 905
+			},
+			{
+				"token": "between",
+				"label": "comment",
+				"start": 906,
+				"end": 913
+			},
+			{
+				"token": "0",
+				"label": "comment",
+				"start": 914,
+				"end": 915
+			},
+			{
+				"token": "and",
+				"label": "comment",
+				"start": 916,
+				"end": 919
+			},
+			{
+				"token": "1",
+				"label": "comment",
+				"start": 920,
+				"end": 921
+			},
+			{
+				"token": "createrElement",
+				"label": "extra",
+				"start": 1099,
+				"end": 1113,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 774,
+					"end": 787,
+					"token": "createElement",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 1221,
+				"end": 1222
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 1222,
+				"end": 1223
+			},
+			{
+				"token": "+",
+				"label": "comment",
+				"start": 1224,
+				"end": 1225
+			},
+			{
+				"token": "here",
+				"label": "comment",
+				"start": 1226,
+				"end": 1230
+			},
+			{
+				"token": "is",
+				"label": "comment",
+				"start": 1231,
+				"end": 1233
+			},
+			{
+				"token": "string",
+				"label": "comment",
+				"start": 1234,
+				"end": 1240
+			},
+			{
+				"token": "concatenation",
+				"label": "comment",
+				"start": 1241,
+				"end": 1254
+			},
+			{
+				"token": "because",
+				"label": "comment",
+				"start": 1255,
+				"end": 1262
+			},
+			{
+				"token": "the",
+				"label": "comment",
+				"start": 1263,
+				"end": 1266
+			},
+			{
+				"token": "second",
+				"label": "comment",
+				"start": 1267,
+				"end": 1273
+			},
+			{
+				"token": "item",
+				"label": "comment",
+				"start": 1274,
+				"end": 1278
+			},
+			{
+				"token": "\"",
+				"label": "comment",
+				"start": 1279,
+				"end": 1280
+			},
+			{
+				"token": "%",
+				"label": "comment",
+				"start": 1280,
+				"end": 1281
+			},
+			{
+				"token": "\"",
+				"label": "comment",
+				"start": 1281,
+				"end": 1282
+			},
+			{
+				"token": "is",
+				"label": "comment",
+				"start": 1283,
+				"end": 1285
+			},
+			{
+				"token": "a",
+				"label": "comment",
+				"start": 1286,
+				"end": 1287
+			},
+			{
+				"token": "string",
+				"label": "comment",
+				"start": 1288,
+				"end": 1294
+			},
+			{
+				"token": "*",
+				"label": "comment",
+				"start": 1295,
+				"end": 1296
+			},
+			{
+				"token": "/",
+				"label": "comment",
+				"start": 1296,
+				"end": 1297
+			},
+			{
+				"token": "updatebars",
+				"label": "extra",
+				"start": 1351,
+				"end": 1361,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 1040,
+					"end": 1050,
+					"token": "updateBars",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "get",
+				"label": "extra",
+				"start": 1404,
+				"end": 1407
+			},
+			{
+				"token": "ElementsByClassName",
+				"label": "extra",
+				"start": 1408,
+				"end": 1427
+			},
+			{
+				"token": "array",
+				"label": "extra",
+				"start": 1470,
+				"end": 1475,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 1136,
+					"end": 1140,
+					"token": "bars",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "bubblesort",
+				"label": "extra",
+				"start": 1603,
+				"end": 1613,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 1239,
+					"end": 1249,
+					"token": "bubbleSort",
+					"label": "missing"
+				}
+			},
+			{
+				"token": "setTimeOut",
+				"label": "extra",
+				"start": 1993,
+				"end": 2003,
+				"paired_with": {
+					"file": "reconstructed.html",
+					"start": 1537,
+					"end": 1547,
+					"token": "setTimeout",
+					"label": "missing"
+				}
+			}
+		]
+	}
+}

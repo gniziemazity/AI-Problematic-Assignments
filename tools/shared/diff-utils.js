@@ -2,20 +2,16 @@
 
 const REMARKS_BASES = [
 	{ key: "ideal", label: "Ideal" },
-	{ key: "required", label: "Required" },
+	{ key: "minimal", label: "Minimal" },
 	{ key: "leo_star", label: "LEO*" },
 	{ key: "leo", label: "LEO" },
 	{ key: "lcs_star", label: "LCS*" },
 	{ key: "lcs", label: "LCS" },
-	{ key: "lev_star", label: "Lev*" },
-	{ key: "lev", label: "Lev" },
-	{ key: "ro_star", label: "R/O*" },
-	{ key: "ro", label: "R/O" },
 	{ key: "git_star", label: "Git*" },
 	{ key: "git", label: "Git" },
 ];
 
-const DEFAULT_BASIS_ORDER = ["ideal", "required", "leo_star", "leo"];
+const DEFAULT_BASIS_ORDER = ["ideal", "minimal", "leo_star", "leo"];
 
 function _cssVar(name) {
 	return getComputedStyle(document.documentElement)
@@ -524,19 +520,15 @@ const DIFF_MARKS_FILES = {
 	leo: "diff_marks_leo.json",
 	"token-lcs": "diff_marks_lcs.json",
 	"token-lcs-star": "diff_marks_lcs_star.json",
-	"token-lev": "diff_marks_lev.json",
-	"token-lev-star": "diff_marks_lev_star.json",
-	"line-ro": "diff_marks_ro.json",
-	"line-ro-star": "diff_marks_ro_star.json",
 	"line-git": "diff_marks_git.json",
 	"line-git-star": "diff_marks_git_star.json",
 	ideal: "diff_marks_ideal.json",
-	required: "diff_marks_required.json",
+	minimal: "diff_marks_minimal.json",
 };
 
-const DIFF_MARKS_PRIORITY = ["ideal", "required", "", "leo"];
+const DIFF_MARKS_PRIORITY = ["ideal", "minimal", "", "leo"];
 
-const CURATED_MODES = new Set(["ideal", "required"]);
+const CURATED_MODES = new Set(["ideal", "minimal"]);
 
 function diffModeFromFilename(filename) {
 	const lower = String(filename || "").toLowerCase();
@@ -550,7 +542,7 @@ function defaultDiffModeKey(allMarks, requestedMode = null) {
 	const has = (k) => Object.prototype.hasOwnProperty.call(allMarks, k);
 	if (requestedMode != null && has(requestedMode)) return requestedMode;
 	if (has("ideal")) return "ideal";
-	if (has("required")) return "required";
+	if (has("minimal")) return "minimal";
 	if (has("")) return "";
 	if (has("leo")) return "leo";
 	return Object.keys(allMarks)[0] ?? null;

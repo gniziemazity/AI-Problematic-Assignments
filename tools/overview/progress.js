@@ -94,6 +94,15 @@ function _addProgressFollowBoxplot(body, students) {
 			item.appendChild(document.createTextNode(label));
 			legend.appendChild(item);
 		}
+		const meanHint = el("span");
+		meanHint.style.cssText =
+			"display:inline-flex;align-items:center;gap:4px;";
+		const dot = el("span");
+		dot.style.cssText =
+			"display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--clr-label);box-shadow:0 0 0 1.5px #fff inset;";
+		meanHint.appendChild(dot);
+		meanHint.appendChild(document.createTextNode("mean"));
+		legend.appendChild(meanHint);
 		header.appendChild(legend);
 	}
 	section.appendChild(header);

@@ -27,16 +27,12 @@ let _diffMissingLangColor =
 	localStorage.getItem("diff-missing-lang-color") !== "off";
 
 const DIFF_MODE_OPTIONS = [
-	{ key: "required", label: "Required" },
+	{ key: "minimal", label: "Minimal" },
 	{ key: "ideal", label: "Ideal" },
 	{ key: "", label: "LEO*" },
 	{ key: "leo", label: "LEO" },
 	{ key: "token-lcs-star", label: "LCS*" },
 	{ key: "token-lcs", label: "LCS" },
-	{ key: "token-lev-star", label: "Lev*" },
-	{ key: "token-lev", label: "Lev" },
-	{ key: "line-ro-star", label: "R/O*" },
-	{ key: "line-ro", label: "R/O" },
 	{ key: "line-git-star", label: "Git*" },
 	{ key: "line-git", label: "Git" },
 ];
@@ -132,14 +128,10 @@ function _activateFileTab(side, name) {
 const _BORROW_ALIGNMENT_ORDER = [
 	"line-git",
 	"line-git-star",
-	"line-ro",
-	"line-ro-star",
 	"leo",
 	"",
 	"token-lcs",
 	"token-lcs-star",
-	"token-lev",
-	"token-lev-star",
 ];
 
 let _borrowedAlignmentKey = null;
@@ -147,7 +139,11 @@ let _borrowedAlignmentKey = null;
 function _borrowedAlignments() {
 	if (_borrowedAlignmentKey != null) {
 		const cached = _allMarks[_borrowedAlignmentKey];
-		if (cached && cached.alignments && Object.keys(cached.alignments).length) {
+		if (
+			cached &&
+			cached.alignments &&
+			Object.keys(cached.alignments).length
+		) {
 			return cached.alignments;
 		}
 		_borrowedAlignmentKey = null;
@@ -165,8 +161,6 @@ function _borrowedAlignments() {
 const _BORROW_GHOSTS_ORDER = [
 	"",
 	"token-lcs-star",
-	"token-lev-star",
-	"line-ro-star",
 	"line-git-star",
 ];
 
@@ -230,7 +224,10 @@ function _applyIncomingData(data) {
 						renderPanel("student", _studentFiles, _studentMarks);
 						_restoreState("teacher", savedT);
 						_restoreState("student", savedS);
-						if (typeof _curatedEditMode !== "undefined" && _curatedEditMode) {
+						if (
+							typeof _curatedEditMode !== "undefined" &&
+							_curatedEditMode
+						) {
 							requestAnimationFrame(() => _curatedRefreshOverlays());
 						}
 					}
@@ -335,7 +332,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 				t.matches("input, textarea, select, [contenteditable=true]")
 			)
 				return;
-			const SHORTCUTS = { r: "required", i: "ideal", l: "" };
+			const SHORTCUTS = { m: "minimal", i: "ideal", l: "" };
 			const mode = SHORTCUTS[ev.key.toLowerCase()];
 			if (mode === undefined) return;
 			const hasOption = Array.from(modeSelect.options).some(

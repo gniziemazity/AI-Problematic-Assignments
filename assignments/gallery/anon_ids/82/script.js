@@ -1,7 +1,7 @@
 let myNumber = 25.2; 
 console.log(myNumber);
 
-const myString = "I study at Karelia";
+const myString = "I study at Academy";
 console.log(myString);
 
 let myBoolean = true;
@@ -15,7 +15,7 @@ console.log(!42, !"ABC", ![]);
 console.log(!null, !undefined, !0); // zero is "falsy" //
 
 // arrays are like python lists //
-const myArray = [1, 2, 3, "Karelia", true, null];
+const myArray = [1, 2, 3, "Academy", true, null];
 myArray.length = 0;
 myArray[0] = 9;
 myArray[1] = 8;
@@ -86,9 +86,9 @@ a %= 4;
 a **= 10;
 console.log(a);
 
-const s1 = "Welcome to Karelia!";
-const s2 = 'Welcome to "Karelia"!';
-const s3 = "Welcome to \"Karelia\"!"; // escaping with //
+const s1 = "Welcome to Academy!";
+const s2 = 'Welcome to "Academy"!';
+const s3 = "Welcome to \"Academy\"!"; // escaping with //
 console.log(s1, s2, s3);
 
 const age = 36;

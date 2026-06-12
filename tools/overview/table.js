@@ -62,7 +62,7 @@ function renderTable() {
 			const tip = schema
 				.map(
 					(e) =>
-						`${escHtml(String(e.code || e.key || "?"))}: ${escHtml(
+						`${artefactCodeHtml(String(e.code || e.key || "?"))}: ${escHtml(
 							e.label || "",
 						)}`,
 				)

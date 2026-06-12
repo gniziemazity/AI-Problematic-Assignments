@@ -573,6 +573,10 @@ function formatInteractionCounts(a, q, h) {
 	return [fmt(a, "🙋"), fmt(q, "❓"), fmt(h, "🤝")].filter(Boolean).join(" ");
 }
 
+function artefactCodeHtml(code) {
+	return escHtml(String(code)).replace(/_(\w+)/g, "<sub>$1</sub>");
+}
+
 function renderArtefactBadges(raw, schema) {
 	const code = (raw ?? "").trim();
 	if (!isArtefactPattern(code)) return null;
@@ -645,11 +649,15 @@ function buildArtefactSummaryHtml(raw, schema) {
 		const entry = schemaArr[i];
 		const fired = code[i] === "1";
 		const label = entry && entry.label ? entry.label : `bit ${i + 1}`;
+		const entryCode = entry && (entry.code || entry.key);
+		const codeHtml = entryCode ? `${artefactCodeHtml(entryCode)}: ` : "";
 		const clr = fired
 			? artefactFiredColorFor((entry && entry.severity) || "high")
 			: THEME.artefactOk;
 		const style = fired ? "font-weight:bold" : `color:${THEME.muted}`;
-		lines.push(`<div style="${style}">${sq(clr)}${escHtml(label)}</div>`);
+		lines.push(
+			`<div style="${style}">${sq(clr)}${codeHtml}${escHtml(label)}</div>`,
+		);
 	}
 	return lines.join("");
 }

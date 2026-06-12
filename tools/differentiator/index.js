@@ -158,11 +158,7 @@ function _borrowedAlignments() {
 	return null;
 }
 
-const _BORROW_GHOSTS_ORDER = [
-	"",
-	"token-lcs-star",
-	"line-git-star",
-];
+const _BORROW_GHOSTS_ORDER = ["", "token-lcs-star", "line-git-star"];
 
 function _borrowedTeacherGhosts(fileName) {
 	for (const mode of _BORROW_GHOSTS_ORDER) {
